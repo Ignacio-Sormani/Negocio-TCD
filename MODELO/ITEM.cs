@@ -1,0 +1,49 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MODELO
+{
+    public abstract class ITEM
+    {
+        public string codigoItem { get; set; }
+        public virtual PRODUCTO producto { get; set; }
+        public Int32 cantidad { get; set; }
+
+        public override string ToString()
+        {
+            return producto.descripcion + " x " + cantidad;
+        }
+    }
+
+    public class ITEMV : ITEM
+    {
+        public decimal precioUnitarioVenta { get; set; }
+        public virtual VENTA venta { get; set; }
+
+        public decimal subtotal { get; set; }
+        public void calcularSubtotal()
+        {
+            subtotal = precioUnitarioVenta * cantidad;
+        }
+    }
+
+    public class ITEMOC : ITEM
+    {
+        public virtual ORDENDECOMPRA ordenCompra { get; set; }
+        
+    }
+
+    public class ITEMRC : ITEM
+    {
+        public decimal precioUnitarioCompra { get; set; }
+        public virtual REMITODECOMPRA remitoCompra { get; set; }
+        public decimal subtotal { get; set; }
+        public void calcularSubtotal()
+        {
+            subtotal = precioUnitarioCompra * cantidad;
+        }
+    }
+}

@@ -1,0 +1,98 @@
+c:\users\usuario\documents\visual studio 2015\Projects\Negocio-TCD\VISTA\bin\Debug\VISTA.exe.config
+c:\users\usuario\documents\visual studio 2015\Projects\Negocio-TCD\VISTA\bin\Debug\VISTA.exe
+c:\users\usuario\documents\visual studio 2015\Projects\Negocio-TCD\VISTA\bin\Debug\VISTA.pdb
+c:\users\usuario\documents\visual studio 2015\Projects\Negocio-TCD\VISTA\bin\Debug\CONTROLADORA.dll
+c:\users\usuario\documents\visual studio 2015\Projects\Negocio-TCD\VISTA\bin\Debug\EntityFramework.dll
+c:\users\usuario\documents\visual studio 2015\Projects\Negocio-TCD\VISTA\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\usuario\documents\visual studio 2015\Projects\Negocio-TCD\VISTA\bin\Debug\MODELO.dll
+c:\users\usuario\documents\visual studio 2015\Projects\Negocio-TCD\VISTA\bin\Debug\CONTROLADORA.pdb
+c:\users\usuario\documents\visual studio 2015\Projects\Negocio-TCD\VISTA\bin\Debug\MODELO.pdb
+c:\users\usuario\documents\visual studio 2015\Projects\Negocio-TCD\VISTA\bin\Debug\EntityFramework.xml
+c:\users\usuario\documents\visual studio 2015\Projects\Negocio-TCD\VISTA\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\usuario\documents\visual studio 2015\Projects\Negocio-TCD\VISTA\obj\Debug\VISTA.csprojResolveAssemblyReference.cache
+c:\users\usuario\documents\visual studio 2015\Projects\Negocio-TCD\VISTA\obj\Debug\VISTA.Properties.Resources.resources
+c:\users\usuario\documents\visual studio 2015\Projects\Negocio-TCD\VISTA\obj\Debug\VISTA.csproj.GenerateResource.Cache
+c:\users\usuario\documents\visual studio 2015\Projects\Negocio-TCD\VISTA\obj\Debug\VISTA.exe
+c:\users\usuario\documents\visual studio 2015\Projects\Negocio-TCD\VISTA\obj\Debug\VISTA.pdb
+c:\users\usuario\documents\visual studio 2015\Projects\Negocio-TCD\VISTA\obj\Debug\VISTA.frmMenuPrincipal.resources
+c:\users\usuario\documents\visual studio 2015\Projects\Negocio-TCD\VISTA\obj\Debug\VISTA.frmInsumos.resources
+c:\users\usuario\documents\visual studio 2015\Projects\Negocio-TCD\VISTA\obj\Debug\VISTA.frmMovimientosAlmacen.resources
+c:\users\usuario\documents\visual studio 2015\Projects\Negocio-TCD\VISTA\bin\Debug\DATOS.dll
+c:\users\usuario\documents\visual studio 2015\Projects\Negocio-TCD\VISTA\bin\Debug\DATOS.pdb
+c:\users\usuario\documents\visual studio 2015\Projects\Negocio-TCD\VISTA\obj\Debug\VISTA.frmDetalleMovimiento.resources
+c:\users\usuario\documents\visual studio 2015\Projects\Negocio-TCD\VISTA\obj\Debug\VISTA.frmInsumo.resources
+c:\users\usuario\documents\visual studio 2015\Projects\Negocio-TCD\VISTA\obj\Debug\VISTA.frmMovimientoAlmacen.resources
+F:\Negocio-TCD\VISTA\bin\Debug\VISTA.exe.config
+F:\Negocio-TCD\VISTA\obj\Debug\VISTA.exe
+F:\Negocio-TCD\VISTA\obj\Debug\VISTA.pdb
+F:\Negocio-TCD\VISTA\bin\Debug\VISTA.exe
+F:\Negocio-TCD\VISTA\bin\Debug\VISTA.pdb
+F:\Negocio-TCD\VISTA\bin\Debug\CONTROLADORA.dll
+F:\Negocio-TCD\VISTA\bin\Debug\EntityFramework.dll
+F:\Negocio-TCD\VISTA\bin\Debug\EntityFramework.SqlServer.dll
+F:\Negocio-TCD\VISTA\bin\Debug\MODELO.dll
+F:\Negocio-TCD\VISTA\bin\Debug\DATOS.dll
+F:\Negocio-TCD\VISTA\bin\Debug\CONTROLADORA.pdb
+F:\Negocio-TCD\VISTA\bin\Debug\MODELO.pdb
+F:\Negocio-TCD\VISTA\bin\Debug\EntityFramework.xml
+F:\Negocio-TCD\VISTA\bin\Debug\EntityFramework.SqlServer.xml
+F:\Negocio-TCD\VISTA\bin\Debug\DATOS.pdb
+F:\Negocio-TCD\VISTA\obj\Debug\VISTA.csprojResolveAssemblyReference.cache
+F:\Negocio-TCD\VISTA\obj\Debug\VISTA.frmMenuPrincipal.resources
+F:\Negocio-TCD\VISTA\obj\Debug\VISTA.Properties.Resources.resources
+F:\Negocio-TCD\VISTA\obj\Debug\VISTA.csproj.GenerateResource.Cache
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\bin\Debug\VISTA.exe.config
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.exe
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.pdb
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmMenuPrincipal.resources
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.Properties.Resources.resources
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.csproj.GenerateResource.Cache
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\bin\Debug\VISTA.exe
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\bin\Debug\VISTA.pdb
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\bin\Debug\CONTROLADORA.dll
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\bin\Debug\EntityFramework.dll
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\bin\Debug\MODELO.dll
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\bin\Debug\DATOS.dll
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\bin\Debug\CONTROLADORA.pdb
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\bin\Debug\MODELO.pdb
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\bin\Debug\EntityFramework.xml
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\bin\Debug\DATOS.pdb
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmVenta.resources
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmVentas.resources
+E:\Negocio-TCD\VISTA\bin\Debug\VISTA.exe.config
+E:\Negocio-TCD\VISTA\obj\Debug\VISTA.exe
+E:\Negocio-TCD\VISTA\obj\Debug\VISTA.pdb
+F:\Negocio-TCD\VISTA\obj\Debug\VISTA.frmVenta.resources
+F:\Negocio-TCD\VISTA\obj\Debug\VISTA.frmVentas.resources
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmCategoria.resources
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\bin\Debug\VISTA.exe.config
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\bin\Debug\VISTA.exe
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\bin\Debug\VISTA.pdb
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\bin\Debug\CONTROLADORA.dll
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\bin\Debug\EntityFramework.dll
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\bin\Debug\EntityFramework.SqlServer.dll
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\bin\Debug\MODELO.dll
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\bin\Debug\DATOS.dll
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\bin\Debug\CONTROLADORA.pdb
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\bin\Debug\CONTROLADORA.dll.config
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\bin\Debug\MODELO.pdb
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\bin\Debug\MODELO.dll.config
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\bin\Debug\EntityFramework.xml
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\bin\Debug\EntityFramework.SqlServer.xml
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\bin\Debug\DATOS.pdb
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\bin\Debug\DATOS.dll.config
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\obj\Debug\VISTA.csprojResolveAssemblyReference.cache
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\obj\Debug\VISTA.frmCategoria.resources
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\obj\Debug\VISTA.frmMenuPrincipal.resources
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\obj\Debug\VISTA.frmVenta.resources
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\obj\Debug\VISTA.frmVentas.resources
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\obj\Debug\VISTA.Properties.Resources.resources
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\obj\Debug\VISTA.csproj.GenerateResource.Cache
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\obj\Debug\VISTA.csproj.CoreCompileInputs.cache
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\obj\Debug\VISTA.exe
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\obj\Debug\VISTA.pdb
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\obj\Debug\VISTA.frmMarca.resources
+D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\VISTA\obj\Debug\VISTA.frmMarcas.resources

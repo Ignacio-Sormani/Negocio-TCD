@@ -1,0 +1,76 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace VISTA
+{
+    public partial class frmMarcas : Form
+    {
+        CONTROLADORA.cMARCAS cMARCAS;
+        //agregar MODELO.USUARIO oUSUARIO en el parametro y boton seleccionar para el CU-buscar
+        public frmMarcas()
+        {
+            InitializeComponent();
+
+            cMARCAS = CONTROLADORA.cMARCAS.obtener_instancia();
+            btnSELECCIONAR.Visible = false;
+            armar_grilla();
+        }
+
+        #region FUNCIONES 
+        private void armar_grilla() {
+            dgvMARCAS.DataSource = null;
+            dgvMARCAS.DataSource = cMARCAS.obtener_marcas(txtBUSCAR.Text);
+        }
+        #endregion
+
+        private void btnBUSCAR_Click(object sender, EventArgs e)
+        {
+            armar_grilla();
+        }
+
+        private void btnSALIR_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnAGREGAR_Click(object sender, EventArgs e)
+        {
+            frmMarca frmMarca = new frmMarca(new MODELO.MARCA(), "A");
+            DialogResult dr = frmMarca.ShowDialog();
+            if (dr == DialogResult.OK)
+                armar_grilla();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (dgvMARCAS.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar una marca de la lista", "Marcas - Atencion!");
+                return;
+            }
+            frmMarca frmMarca = new frmMarca(cMARCAS.obtener_marca(Convert.ToInt32(dgvMARCAS.CurrentRow.Cells[0].Value)), "M");
+            DialogResult dr = frmMarca.ShowDialog();
+            if (dr == System.Windows.Forms.DialogResult.OK)
+                armar_grilla();
+        }
+
+        private void btnCONSULTAR_Click(object sender, EventArgs e)
+        {
+            if (dgvMARCAS.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar una marca de la lista", "Marcas - Atencion!");
+                return;
+            }
+            frmMarca frmMarca = new frmMarca(cMARCAS.obtener_marca(Convert.ToInt32(dgvMARCAS.CurrentRow.Cells[0].Value)), "C");
+            frmMarca.ShowDialog();
+        }
+
+    }
+}
