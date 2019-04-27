@@ -16,5 +16,20 @@ namespace VISTA
         {
             InitializeComponent();
         }
+
+        private void btnGENERARBACKUP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRESTAURARSISTEMA_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVOLVER_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

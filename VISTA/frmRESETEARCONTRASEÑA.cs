@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace VISTA
 {
-    public partial class frmCambiarClave : Form
+    public partial class frmResetearContraseña : Form
     {
-        public frmCambiarClave()
+        public frmResetearContraseña()
         {
             InitializeComponent();
+        }
+
+        private void btnRESETEARCLAVE_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVOLVER_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -16,5 +16,20 @@ namespace VISTA
         {
             InitializeComponent();
         }
+
+        private void btnLOGIN_Click(object sender, EventArgs e)
+        {
+
+        }        
+
+        private void btnCERRAR_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblRESETEARCONTRASEÑA_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

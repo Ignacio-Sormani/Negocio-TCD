@@ -60,12 +60,6 @@
     <Compile Include="frmBackup.Designer.cs">
       <DependentUpon>frmBackup.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCambiarClave.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCambiarClave.Designer.cs">
-      <DependentUpon>frmCambiarClave.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,11 +180,11 @@
     <Compile Include="frmProveedores.Designer.cs">
       <DependentUpon>frmProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRecuperarClave.cs">
+    <Compile Include="frmCambiarContraseña.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRecuperarClave.Designer.cs">
-      <DependentUpon>frmRecuperarClave.cs</DependentUpon>
+    <Compile Include="frmCambiarContraseña.Designer.cs">
+      <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRemito.cs">
       <SubType>Form</SubType>
@@ -209,6 +203,12 @@
     </Compile>
     <Compile Include="frmReporte.Designer.cs">
       <DependentUpon>frmReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmResetearContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResetearContraseña.Designer.cs">
+      <DependentUpon>frmResetearContraseña.cs</DependentUpon>
     </Compile>
     <Compile Include="frmUsuario.cs">
       <SubType>Form</SubType>
@@ -236,11 +236,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBackup.resx">
+      <DependentUpon>frmBackup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCategoria.resx">
       <DependentUpon>frmCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCategorias.resx">
       <DependentUpon>frmCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMarca.resx">
       <DependentUpon>frmMarca.cs</DependentUpon>
@@ -251,8 +257,14 @@
     <EmbeddedResource Include="frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCambiarContraseña.resx">
+      <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReporte.resx">
       <DependentUpon>frmReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRESETEARCONTRASEÑA.resx">
+      <DependentUpon>frmResetearContraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVenta.resx">
       <DependentUpon>frmVenta.cs</DependentUpon>
