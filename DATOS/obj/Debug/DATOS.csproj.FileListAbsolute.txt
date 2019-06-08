@@ -56,3 +56,19 @@ D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\DATOS\obj\Debug\DATOS.pdb
 D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations.NegocioTCD.resources
 D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\DATOS\obj\Debug\DATOS.csproj.GenerateResource.Cache
 C:\Users\Usuario\Desktop\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations.NegocioTCD.resources
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\bin\Debug\DATOS.dll.config
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\bin\Debug\DATOS.dll
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\bin\Debug\DATOS.pdb
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\bin\Debug\EntityFramework.dll
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\bin\Debug\MODELO.dll
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\bin\Debug\MODELO.pdb
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\bin\Debug\MODELO.dll.config
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\bin\Debug\EntityFramework.xml
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\obj\Debug\DATOS.csprojResolveAssemblyReference.cache
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\obj\Debug\DATOS.csproj.CoreCompileInputs.cache
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\obj\Debug\DATOS.dll
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\obj\Debug\DATOS.pdb
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations.NegocioTCD.resources
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\obj\Debug\DATOS.csproj.GenerateResource.Cache

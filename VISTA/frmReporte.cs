@@ -33,4 +33,5 @@ namespace VISTA
             series.Points.Clear();
         }
         */ // para limpiar el grafico
+    }
 }

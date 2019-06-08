@@ -41,6 +41,9 @@
             modelBuilder.Entity<MODELO.ORDENDECOMPRA>()
                 .HasKey(_ => _.codigoOrdenCompra);
 
+            modelBuilder.Entity<MODELO.ITEM>()
+                .HasKey(_ => _.codigoItem);
+
             modelBuilder.Entity<MODELO.ITEMOC>()
                 .HasKey(_ => _.codigoItem);
 
@@ -90,7 +93,7 @@
 
             modelBuilder.Entity<MODELO.ACCESO>()
                 .HasKey(_ => _.codigoAcceso);
-            
+
 
             modelBuilder.Entity<MODELO.ORDENDECOMPRA>()
                 .HasRequired(oc => oc.proveedor)

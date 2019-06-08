@@ -15,7 +15,6 @@ namespace CONTROLADORA
                 instancia = new cITEMS();
             return instancia;
         }
-
         DATOS.NEGOCIO oNegocio;
         private cITEMS()
         {

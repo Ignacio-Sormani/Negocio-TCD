@@ -39,3 +39,14 @@ D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\MODELO\obj\Debug\MODELO.csprojResolveAs
 D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\MODELO\obj\Debug\MODELO.csproj.CoreCompileInputs.cache
 D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\MODELO\obj\Debug\MODELO.dll
 D:\.NET 2019\LAFALCE_SORMANI\Negocio-TCD\MODELO\obj\Debug\MODELO.pdb
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\MODELO\bin\Debug\MODELO.dll.config
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\MODELO\bin\Debug\MODELO.dll
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\MODELO\bin\Debug\MODELO.pdb
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\MODELO\bin\Debug\EntityFramework.dll
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\MODELO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\MODELO\bin\Debug\EntityFramework.xml
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\MODELO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\MODELO\obj\Debug\MODELO.csprojResolveAssemblyReference.cache
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\MODELO\obj\Debug\MODELO.csproj.CoreCompileInputs.cache
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\MODELO\obj\Debug\MODELO.dll
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\MODELO\obj\Debug\MODELO.pdb

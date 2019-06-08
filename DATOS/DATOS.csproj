@@ -49,11 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201904082009041_Negocio-TCD.cs" />
-    <Compile Include="Migrations\201904082009041_Negocio-TCD.Designer.cs">
-      <DependentUpon>201904082009041_Negocio-TCD.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NEGOCIO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -69,11 +64,6 @@
       <Project>{97d99600-4bb2-4a17-a197-18ab2df46f4e}</Project>
       <Name>MODELO</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904082009041_Negocio-TCD.resx">
-      <DependentUpon>201904082009041_Negocio-TCD.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
