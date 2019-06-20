@@ -29,28 +29,21 @@
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<MODELO.LOCALIDAD>()
                 .HasKey(_ => _.codigoLocalidad);
 
             modelBuilder.Entity<MODELO.PROVEEDOR>()
-                .HasKey(_ => _.codigoProveedor);
-                // .HasRequired(_ => _.localidad); hay que agregar esto, tiraba error del cascade on delete
+                .HasKey(_ => _.codigoProveedor)
+                .HasRequired(_ => _.localidad);
 
             modelBuilder.Entity<MODELO.ORDENDECOMPRA>()
                 .HasKey(_ => _.codigoOrdenCompra);
 
             modelBuilder.Entity<MODELO.ITEM>()
-                .HasKey(_ => _.codigoItem);
-
-            modelBuilder.Entity<MODELO.ITEMOC>()
-                .HasKey(_ => _.codigoItem);
-
-            modelBuilder.Entity<MODELO.ITEMRC>()
-                .HasKey(_ => _.codigoItem);
-
-            modelBuilder.Entity<MODELO.ITEMV>()
                 .HasKey(_ => _.codigoItem);
 
             modelBuilder.Entity<MODELO.CATEGORIA>()
@@ -71,7 +64,7 @@
 
             modelBuilder.Entity<MODELO.VENTA>()
                 .HasKey(_ => _.codigoVenta);
-
+            
             modelBuilder.Entity<MODELO.CLIENTE>()
                 .HasKey(_ => _.codigoCliente)
                 .HasRequired(_ => _.localidad);
@@ -97,7 +90,7 @@
 
             modelBuilder.Entity<MODELO.ORDENDECOMPRA>()
                 .HasRequired(oc => oc.proveedor)
-                .WithMany(p => p.ordenesCompra);
+                .WithMany(p => p.ordenesCompra);// esto no se si va
 
             modelBuilder.Entity<MODELO.ORDENDECOMPRA>()
                 .HasMany(oc => oc.remitosCompra)
@@ -105,7 +98,7 @@
 
             modelBuilder.Entity<MODELO.ORDENDECOMPRA>()
                 .HasMany(oc => oc.itemsoc)
-                .WithRequired(ioc => ioc.ordenCompra);
+                .WithRequired(ioc => ioc.ordenCompra);//withoptional?
 
             modelBuilder.Entity<MODELO.ITEM>()
                 .HasRequired(i => i.producto)
@@ -113,7 +106,7 @@
 
             modelBuilder.Entity<MODELO.REMITODECOMPRA>()
                 .HasMany(rc => rc.itemsrc)
-                .WithRequired(irc => irc.remitoCompra);
+                .WithRequired(irc => irc.remitoCompra);//withoptional?
 
             modelBuilder.Entity<MODELO.VENTA>()
                 .HasRequired(v => v.cliente)
@@ -173,7 +166,7 @@
     // sobre cómo configurar y usar un modelo Code First, vea http://go.microsoft.com/fwlink/?LinkId=390109.
 
     // public virtual DbSet<MyEntity> MyEntities { get; set; }
-}
+    }
 
     //public class MyEntity
     //{

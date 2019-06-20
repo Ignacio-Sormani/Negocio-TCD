@@ -15,6 +15,8 @@ namespace VISTA
         public frmGrupo()
         {
             InitializeComponent();
+
+            ckbACTIVO.Checked = true;
         }
     }
 }

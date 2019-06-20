@@ -15,6 +15,8 @@ namespace VISTA
         public frmUsuario()
         {
             InitializeComponent();
+
+            ckbACTIVO.Checked = true;
         }
     }
 }

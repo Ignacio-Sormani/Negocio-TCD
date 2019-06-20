@@ -15,6 +15,7 @@ namespace MODELO
         }
         public Int32 codigoGrupo { get; set; }
         public string nombre { get; set; }
+        public bool estado { get; set; }
         public virtual ICollection<USUARIO> usuarios { get; set; }
         public virtual ICollection<ACCION> acciones { get; set; }
 

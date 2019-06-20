@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace CONTROLADORA
 {
@@ -63,19 +65,45 @@ namespace CONTROLADORA
                 return false;
             }
         }
+
+        public static void crear_excel()
+        {
+            string FileTest = "C:\\Users\\Usuario\\Documents\\Excel\\Planilla.xlsx";
+            if (File.Exists(FileTest))
+            {
+                File.Delete(FileTest);
+            }
+            Excel.Application oApp;
+            Excel.Worksheet oSheet;
+            Excel.Workbook oBook;
+            oApp = new Excel.Application();
+            oBook = oApp.Workbooks.Add();
+            oSheet = (Excel.Worksheet)oBook.Worksheets.get_Item(1);
+            oSheet.Cells[1, 1] = "12345";
+
+            oBook.SaveAs(FileTest);
+            oBook.Close();
+            oApp.Quit();
+
+
+        }
+
+
+
+
+        #endregion
+
+        #region VALIDACIONES
+        /*public static bool validar_mail(string mail)
+        {
+
+
+
+
+            return true;
+        }*/
+        #endregion
+
+
     }
-    #endregion
-
-    #region VALIDACIONES
-    /*public static bool validar_mail(string mail)
-    {
-
-
-
-
-        return true;
-    }*/
-    #endregion
-
-
 }

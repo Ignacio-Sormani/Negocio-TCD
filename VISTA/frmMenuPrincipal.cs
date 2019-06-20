@@ -18,11 +18,7 @@ namespace VISTA
             InitializeComponent();            
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            GenerarBackUp();
-        }
-
+        
         public void GenerarBackUp()
         {
             DateTime d = DateTime.Now;
@@ -63,6 +59,18 @@ namespace VISTA
             }
 
 
+        }
+
+
+
+        private void btnBACKUP_Click(object sender, EventArgs e)
+        {
+            GenerarBackUp();
+        }
+
+        private void btnEXCEL_Click(object sender, EventArgs e)
+        {
+            CONTROLADORA.FUNCIONES.crear_excel();
         }
     }
 }

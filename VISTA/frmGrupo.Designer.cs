@@ -28,11 +28,143 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.lblACCIONES = new System.Windows.Forms.Label();
+            this.lblUSUARIOS = new System.Windows.Forms.Label();
+            this.clbUSUARIOS = new System.Windows.Forms.CheckedListBox();
+            this.btnCANCELAR = new System.Windows.Forms.Button();
+            this.btnGUARDAR = new System.Windows.Forms.Button();
+            this.lblGRUPO = new System.Windows.Forms.Label();
+            this.txtUSUARIO = new System.Windows.Forms.TextBox();
+            this.lblESTADO = new System.Windows.Forms.Label();
+            this.ckbACTIVO = new System.Windows.Forms.CheckBox();
+            this.tvACCIONES = new System.Windows.Forms.TreeView();
+            this.SuspendLayout();
+            // 
+            // lblACCIONES
+            // 
+            this.lblACCIONES.AutoSize = true;
+            this.lblACCIONES.Location = new System.Drawing.Point(20, 240);
+            this.lblACCIONES.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblACCIONES.Name = "lblACCIONES";
+            this.lblACCIONES.Size = new System.Drawing.Size(54, 13);
+            this.lblACCIONES.TabIndex = 41;
+            this.lblACCIONES.Text = "Acciones:";
+            // 
+            // lblUSUARIOS
+            // 
+            this.lblUSUARIOS.AutoSize = true;
+            this.lblUSUARIOS.Location = new System.Drawing.Point(20, 100);
+            this.lblUSUARIOS.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUSUARIOS.Name = "lblUSUARIOS";
+            this.lblUSUARIOS.Size = new System.Drawing.Size(51, 13);
+            this.lblUSUARIOS.TabIndex = 40;
+            this.lblUSUARIOS.Text = "Usuarios:";
+            // 
+            // clbUSUARIOS
+            // 
+            this.clbUSUARIOS.FormattingEnabled = true;
+            this.clbUSUARIOS.Location = new System.Drawing.Point(20, 120);
+            this.clbUSUARIOS.Name = "clbUSUARIOS";
+            this.clbUSUARIOS.Size = new System.Drawing.Size(320, 109);
+            this.clbUSUARIOS.TabIndex = 39;
+            // 
+            // btnCANCELAR
+            // 
+            this.btnCANCELAR.Location = new System.Drawing.Point(80, 478);
+            this.btnCANCELAR.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCANCELAR.Name = "btnCANCELAR";
+            this.btnCANCELAR.Size = new System.Drawing.Size(194, 35);
+            this.btnCANCELAR.TabIndex = 38;
+            this.btnCANCELAR.Text = "Cancelar";
+            this.btnCANCELAR.UseVisualStyleBackColor = true;
+            // 
+            // btnGUARDAR
+            // 
+            this.btnGUARDAR.Location = new System.Drawing.Point(80, 424);
+            this.btnGUARDAR.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGUARDAR.Name = "btnGUARDAR";
+            this.btnGUARDAR.Size = new System.Drawing.Size(194, 35);
+            this.btnGUARDAR.TabIndex = 37;
+            this.btnGUARDAR.Text = "Guardar";
+            this.btnGUARDAR.UseVisualStyleBackColor = true;
+            // 
+            // lblGRUPO
+            // 
+            this.lblGRUPO.AutoSize = true;
+            this.lblGRUPO.Location = new System.Drawing.Point(20, 24);
+            this.lblGRUPO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGRUPO.Name = "lblGRUPO";
+            this.lblGRUPO.Size = new System.Drawing.Size(94, 13);
+            this.lblGRUPO.TabIndex = 36;
+            this.lblGRUPO.Text = "Nombre de Grupo:";
+            // 
+            // txtUSUARIO
+            // 
+            this.txtUSUARIO.Location = new System.Drawing.Point(140, 24);
+            this.txtUSUARIO.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUSUARIO.Name = "txtUSUARIO";
+            this.txtUSUARIO.Size = new System.Drawing.Size(194, 20);
+            this.txtUSUARIO.TabIndex = 35;
+            // 
+            // lblESTADO
+            // 
+            this.lblESTADO.AutoSize = true;
+            this.lblESTADO.Location = new System.Drawing.Point(20, 60);
+            this.lblESTADO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblESTADO.Name = "lblESTADO";
+            this.lblESTADO.Size = new System.Drawing.Size(43, 13);
+            this.lblESTADO.TabIndex = 43;
+            this.lblESTADO.Text = "Estado:";
+            // 
+            // ckbACTIVO
+            // 
+            this.ckbACTIVO.AutoSize = true;
+            this.ckbACTIVO.Location = new System.Drawing.Point(140, 60);
+            this.ckbACTIVO.Name = "ckbACTIVO";
+            this.ckbACTIVO.Size = new System.Drawing.Size(56, 17);
+            this.ckbACTIVO.TabIndex = 44;
+            this.ckbACTIVO.Text = "Activo";
+            this.ckbACTIVO.UseVisualStyleBackColor = true;
+            // 
+            // tvACCIONES
+            // 
+            this.tvACCIONES.Location = new System.Drawing.Point(20, 260);
+            this.tvACCIONES.Name = "tvACCIONES";
+            this.tvACCIONES.Size = new System.Drawing.Size(320, 140);
+            this.tvACCIONES.TabIndex = 45;
+            // 
+            // frmGrupo
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(360, 537);
+            this.Controls.Add(this.tvACCIONES);
+            this.Controls.Add(this.ckbACTIVO);
+            this.Controls.Add(this.lblESTADO);
+            this.Controls.Add(this.lblACCIONES);
+            this.Controls.Add(this.lblUSUARIOS);
+            this.Controls.Add(this.clbUSUARIOS);
+            this.Controls.Add(this.btnCANCELAR);
+            this.Controls.Add(this.btnGUARDAR);
+            this.Controls.Add(this.lblGRUPO);
+            this.Controls.Add(this.txtUSUARIO);
+            this.Name = "frmGrupo";
             this.Text = "frmGrupo";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+        private System.Windows.Forms.Label lblACCIONES;
+        private System.Windows.Forms.Label lblUSUARIOS;
+        private System.Windows.Forms.CheckedListBox clbUSUARIOS;
+        private System.Windows.Forms.Button btnCANCELAR;
+        private System.Windows.Forms.Button btnGUARDAR;
+        private System.Windows.Forms.Label lblGRUPO;
+        private System.Windows.Forms.TextBox txtUSUARIO;
+        private System.Windows.Forms.Label lblESTADO;
+        private System.Windows.Forms.CheckBox ckbACTIVO;
+        private System.Windows.Forms.TreeView tvACCIONES;
     }
 }
