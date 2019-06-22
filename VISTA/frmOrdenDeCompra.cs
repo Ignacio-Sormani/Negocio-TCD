@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VISTA
 {
-    public partial class frmOrdenesDePago : Form
+    public partial class frmOrdenDeCompra : Form
     {
-        public frmOrdenesDePago()
+        public frmOrdenDeCompra()
         {
             InitializeComponent();
         }

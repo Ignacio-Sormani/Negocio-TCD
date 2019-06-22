@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnELIMINAR = new System.Windows.Forms.Button();
             this.lblUSUARIO = new System.Windows.Forms.Label();
             this.btnCONSULTAR = new System.Windows.Forms.Button();
             this.btnBUSCAR = new System.Windows.Forms.Button();
@@ -37,18 +36,9 @@
             this.btnMODIFICAR = new System.Windows.Forms.Button();
             this.btnAGREGAR = new System.Windows.Forms.Button();
             this.dgvUSUARIOS = new System.Windows.Forms.DataGridView();
+            this.btnCAMBIARESTADO = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUSUARIOS)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnELIMINAR
-            // 
-            this.btnELIMINAR.Location = new System.Drawing.Point(233, 360);
-            this.btnELIMINAR.Margin = new System.Windows.Forms.Padding(2);
-            this.btnELIMINAR.Name = "btnELIMINAR";
-            this.btnELIMINAR.Size = new System.Drawing.Size(194, 35);
-            this.btnELIMINAR.TabIndex = 42;
-            this.btnELIMINAR.Text = "Eliminar (desactivar)";
-            this.btnELIMINAR.UseVisualStyleBackColor = true;
             // 
             // lblUSUARIO
             // 
@@ -69,6 +59,7 @@
             this.btnCONSULTAR.TabIndex = 40;
             this.btnCONSULTAR.Text = "Consultar";
             this.btnCONSULTAR.UseVisualStyleBackColor = true;
+            this.btnCONSULTAR.Click += new System.EventHandler(this.btnCONSULTAR_Click);
             // 
             // btnBUSCAR
             // 
@@ -89,6 +80,7 @@
             this.btnSALIR.TabIndex = 37;
             this.btnSALIR.Text = "Salir";
             this.btnSALIR.UseVisualStyleBackColor = true;
+            this.btnSALIR.Click += new System.EventHandler(this.btnSALIR_Click);
             // 
             // txtBUSCAR
             // 
@@ -107,6 +99,7 @@
             this.btnMODIFICAR.TabIndex = 36;
             this.btnMODIFICAR.Text = "Modificar";
             this.btnMODIFICAR.UseVisualStyleBackColor = true;
+            this.btnMODIFICAR.Click += new System.EventHandler(this.btnMODIFICAR_Click);
             // 
             // btnAGREGAR
             // 
@@ -117,6 +110,7 @@
             this.btnAGREGAR.TabIndex = 35;
             this.btnAGREGAR.Text = "Agregar";
             this.btnAGREGAR.UseVisualStyleBackColor = true;
+            this.btnAGREGAR.Click += new System.EventHandler(this.btnAGREGAR_Click);
             // 
             // dgvUSUARIOS
             // 
@@ -128,12 +122,23 @@
             this.dgvUSUARIOS.Size = new System.Drawing.Size(414, 278);
             this.dgvUSUARIOS.TabIndex = 34;
             // 
+            // btnCAMBIARESTADO
+            // 
+            this.btnCAMBIARESTADO.Location = new System.Drawing.Point(233, 360);
+            this.btnCAMBIARESTADO.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCAMBIARESTADO.Name = "btnCAMBIARESTADO";
+            this.btnCAMBIARESTADO.Size = new System.Drawing.Size(194, 35);
+            this.btnCAMBIARESTADO.TabIndex = 42;
+            this.btnCAMBIARESTADO.Text = "Cambiar Estado (Activo/Inactivo)";
+            this.btnCAMBIARESTADO.UseVisualStyleBackColor = true;
+            this.btnCAMBIARESTADO.Click += new System.EventHandler(this.btnCAMBIARESTADO_Click);
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(440, 445);
-            this.Controls.Add(this.btnELIMINAR);
+            this.Controls.Add(this.btnCAMBIARESTADO);
             this.Controls.Add(this.lblUSUARIO);
             this.Controls.Add(this.btnCONSULTAR);
             this.Controls.Add(this.btnBUSCAR);
@@ -151,8 +156,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnELIMINAR;
         private System.Windows.Forms.Label lblUSUARIO;
         private System.Windows.Forms.Button btnCONSULTAR;
         private System.Windows.Forms.Button btnBUSCAR;
@@ -161,5 +164,6 @@
         private System.Windows.Forms.Button btnMODIFICAR;
         private System.Windows.Forms.Button btnAGREGAR;
         private System.Windows.Forms.DataGridView dgvUSUARIOS;
+        private System.Windows.Forms.Button btnCAMBIARESTADO;
     }
 }

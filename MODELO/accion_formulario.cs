@@ -14,6 +14,7 @@ namespace MODELO
         public string control { get; set; }
         public string descripcion { get; set; }
         public string formulario { get; set; }
+        public string modulo { get; set; }
     }
     public class formulario : System.Attribute
     {
@@ -24,7 +25,6 @@ namespace MODELO
         public string nombre { get; set; }
         public string descripcion { get; set; }
         public string modulo { get; set; }
-
         public List<accion> acciones { get; set; }
 
         

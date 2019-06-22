@@ -10,8 +10,12 @@ using System.Windows.Forms;
 
 namespace VISTA
 {
+    [MODELO.formulario(nombre = "frmBackup", descripcion = "Gestionar Backup", modulo = "Seguridad")]
+    [MODELO.accion(control = "btnGENERARBACKUP", descripcion = "Generar Backup", formulario = "frmBackup", modulo = "Seguridad")]
+    [MODELO.accion(control = "btnRECUPERARBACKUP", descripcion = "Recuperar Backup", formulario = "frmBackup", modulo = "Seguridad")]
+
     public partial class frmBackup : Form
-    {
+    {        
         public frmBackup()
         {
             InitializeComponent();
@@ -22,7 +26,7 @@ namespace VISTA
 
         }
 
-        private void btnRESTAURARSISTEMA_Click(object sender, EventArgs e)
+        private void btnRECUPERARBACKUP_Click(object sender, EventArgs e)
         {
 
         }
@@ -31,5 +35,7 @@ namespace VISTA
         {
             this.Close();
         }
+
+        
     }
 }

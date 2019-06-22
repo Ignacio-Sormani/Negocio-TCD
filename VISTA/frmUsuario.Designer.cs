@@ -50,9 +50,9 @@
             this.lblGRUPOS.Location = new System.Drawing.Point(20, 224);
             this.lblGRUPOS.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGRUPOS.Name = "lblGRUPOS";
-            this.lblGRUPOS.Size = new System.Drawing.Size(43, 13);
+            this.lblGRUPOS.Size = new System.Drawing.Size(44, 13);
             this.lblGRUPOS.TabIndex = 31;
-            this.lblGRUPOS.Text = "Estado:";
+            this.lblGRUPOS.Text = "Grupos:";
             // 
             // clbGRUPOS
             // 

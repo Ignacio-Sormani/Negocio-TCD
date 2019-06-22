@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnELIMINAR = new System.Windows.Forms.Button();
+            this.btnCAMBIARESTADO = new System.Windows.Forms.Button();
             this.lblGRUPO = new System.Windows.Forms.Label();
             this.btnCONSULTAR = new System.Windows.Forms.Button();
             this.btnBUSCAR = new System.Windows.Forms.Button();
@@ -40,15 +40,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvGRUPOS)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnELIMINAR
+            // btnCAMBIARESTADO
             // 
-            this.btnELIMINAR.Location = new System.Drawing.Point(233, 360);
-            this.btnELIMINAR.Margin = new System.Windows.Forms.Padding(2);
-            this.btnELIMINAR.Name = "btnELIMINAR";
-            this.btnELIMINAR.Size = new System.Drawing.Size(194, 35);
-            this.btnELIMINAR.TabIndex = 51;
-            this.btnELIMINAR.Text = "Eliminar (desactivar)";
-            this.btnELIMINAR.UseVisualStyleBackColor = true;
+            this.btnCAMBIARESTADO.Location = new System.Drawing.Point(233, 360);
+            this.btnCAMBIARESTADO.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCAMBIARESTADO.Name = "btnCAMBIARESTADO";
+            this.btnCAMBIARESTADO.Size = new System.Drawing.Size(194, 35);
+            this.btnCAMBIARESTADO.TabIndex = 51;
+            this.btnCAMBIARESTADO.Text = "Cambiar Estado (Activo/Inactivo)";
+            this.btnCAMBIARESTADO.UseVisualStyleBackColor = true;
+            this.btnCAMBIARESTADO.Click += new System.EventHandler(this.btnCAMBIARESTADO_Click);
             // 
             // lblGRUPO
             // 
@@ -69,6 +70,7 @@
             this.btnCONSULTAR.TabIndex = 49;
             this.btnCONSULTAR.Text = "Consultar";
             this.btnCONSULTAR.UseVisualStyleBackColor = true;
+            this.btnCONSULTAR.Click += new System.EventHandler(this.btnCONSULTAR_Click);
             // 
             // btnBUSCAR
             // 
@@ -107,6 +109,7 @@
             this.btnMODIFICAR.TabIndex = 45;
             this.btnMODIFICAR.Text = "Modificar";
             this.btnMODIFICAR.UseVisualStyleBackColor = true;
+            this.btnMODIFICAR.Click += new System.EventHandler(this.btnMODIFICAR_Click);
             // 
             // btnAGREGAR
             // 
@@ -117,6 +120,7 @@
             this.btnAGREGAR.TabIndex = 44;
             this.btnAGREGAR.Text = "Agregar";
             this.btnAGREGAR.UseVisualStyleBackColor = true;
+            this.btnAGREGAR.Click += new System.EventHandler(this.btnAGREGAR_Click);
             // 
             // dgvGRUPOS
             // 
@@ -133,7 +137,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(440, 445);
-            this.Controls.Add(this.btnELIMINAR);
+            this.Controls.Add(this.btnCAMBIARESTADO);
             this.Controls.Add(this.lblGRUPO);
             this.Controls.Add(this.btnCONSULTAR);
             this.Controls.Add(this.btnBUSCAR);
@@ -152,7 +156,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnELIMINAR;
+        private System.Windows.Forms.Button btnCAMBIARESTADO;
         private System.Windows.Forms.Label lblGRUPO;
         private System.Windows.Forms.Button btnCONSULTAR;
         private System.Windows.Forms.Button btnBUSCAR;

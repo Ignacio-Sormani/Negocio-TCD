@@ -10,6 +10,10 @@ using System.Windows.Forms;
 
 namespace VISTA
 {
+    [MODELO.formulario(nombre = "frmLocalidades", descripcion = "Gestionar Localidades", modulo = "Gestiones")]
+    [MODELO.accion(control = "btnAGREGAR", descripcion = "Agregar Localidad", formulario = "frmLocalidades", modulo = "Gestiones")]
+    [MODELO.accion(control = "btnCONSULTAR", descripcion = "Consultar Localidad", formulario = "frmLocalidades", modulo = "Gestiones")]
+    [MODELO.accion(control = "btnMODIFICAR", descripcion = "Modificar Localidad", formulario = "frmLocalidades", modulo = "Gestiones")]
     public partial class frmLocalidades : Form
     {
         CONTROLADORA.cLOCALIDADES cLOCALIDADES;

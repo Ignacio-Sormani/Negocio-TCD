@@ -1,6 +1,6 @@
 ﻿namespace VISTA
 {
-    partial class frmOrdenDePago
+    partial class frmOrdenDeCompra
     {
         /// <summary>
         /// Required designer variable.

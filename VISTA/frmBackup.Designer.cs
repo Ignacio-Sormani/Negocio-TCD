@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnRESTAURARSISTEMA = new System.Windows.Forms.Button();
+            this.btnRECUPERARBACKUP = new System.Windows.Forms.Button();
             this.btnGENERARBACKUP = new System.Windows.Forms.Button();
             this.lblBACKUP = new System.Windows.Forms.Label();
             this.btnVOLVER = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnRESTAURARSISTEMA
+            // btnRECUPERARBACKUP
             // 
-            this.btnRESTAURARSISTEMA.Location = new System.Drawing.Point(200, 80);
-            this.btnRESTAURARSISTEMA.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRESTAURARSISTEMA.Name = "btnRESTAURARSISTEMA";
-            this.btnRESTAURARSISTEMA.Size = new System.Drawing.Size(150, 30);
-            this.btnRESTAURARSISTEMA.TabIndex = 18;
-            this.btnRESTAURARSISTEMA.Text = "Restaurar sistema";
-            this.btnRESTAURARSISTEMA.UseVisualStyleBackColor = true;
-            this.btnRESTAURARSISTEMA.Click += new System.EventHandler(this.btnRESTAURARSISTEMA_Click);
+            this.btnRECUPERARBACKUP.Location = new System.Drawing.Point(200, 80);
+            this.btnRECUPERARBACKUP.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRECUPERARBACKUP.Name = "btnRECUPERARBACKUP";
+            this.btnRECUPERARBACKUP.Size = new System.Drawing.Size(150, 30);
+            this.btnRECUPERARBACKUP.TabIndex = 18;
+            this.btnRECUPERARBACKUP.Text = "Recuperar backup";
+            this.btnRECUPERARBACKUP.UseVisualStyleBackColor = true;
+            this.btnRECUPERARBACKUP.Click += new System.EventHandler(this.btnRECUPERARBACKUP_Click);
             // 
             // btnGENERARBACKUP
             // 
@@ -86,7 +86,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 261);
             this.Controls.Add(this.btnVOLVER);
-            this.Controls.Add(this.btnRESTAURARSISTEMA);
+            this.Controls.Add(this.btnRECUPERARBACKUP);
             this.Controls.Add(this.btnGENERARBACKUP);
             this.Controls.Add(this.lblBACKUP);
             this.Name = "frmBackup";
@@ -98,7 +98,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnRESTAURARSISTEMA;
+        private System.Windows.Forms.Button btnRECUPERARBACKUP;
         private System.Windows.Forms.Button btnGENERARBACKUP;
         private System.Windows.Forms.Label lblBACKUP;
         private System.Windows.Forms.Button btnVOLVER;

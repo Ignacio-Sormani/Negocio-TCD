@@ -18,7 +18,7 @@ namespace MODELO
         public string nombreApellido { get; set; }
         public string clave { get; set; }
         public string mail { get; set; }
-        public string estado { get; set; }
+        public bool estadoActivo { get; set; }
         public bool conectado { get; set; }
         public virtual ICollection<GRUPO> grupos { get; set; }
         public virtual ICollection<ACCESO> accesos { get; set; }

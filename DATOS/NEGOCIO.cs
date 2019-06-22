@@ -85,12 +85,12 @@
                 .HasKey(_ => _.codigoAccion);
 
             modelBuilder.Entity<MODELO.ACCESO>()
-                .HasKey(_ => _.codigoAcceso);
-
+                .HasKey(_ => _.codigoAcceso)
+                .HasRequired(_ => _.usuario);
 
             modelBuilder.Entity<MODELO.ORDENDECOMPRA>()
                 .HasRequired(oc => oc.proveedor)
-                .WithMany(p => p.ordenesCompra);// esto no se si va
+                .WithMany(p => p.ordenesCompra);
 
             modelBuilder.Entity<MODELO.ORDENDECOMPRA>()
                 .HasMany(oc => oc.remitosCompra)
@@ -98,7 +98,7 @@
 
             modelBuilder.Entity<MODELO.ORDENDECOMPRA>()
                 .HasMany(oc => oc.itemsoc)
-                .WithRequired(ioc => ioc.ordenCompra);//withoptional?
+                .WithRequired(ioc => ioc.ordenCompra);
 
             modelBuilder.Entity<MODELO.ITEM>()
                 .HasRequired(i => i.producto)
@@ -106,7 +106,7 @@
 
             modelBuilder.Entity<MODELO.REMITODECOMPRA>()
                 .HasMany(rc => rc.itemsrc)
-                .WithRequired(irc => irc.remitoCompra);//withoptional?
+                .WithRequired(irc => irc.remitoCompra);
 
             modelBuilder.Entity<MODELO.VENTA>()
                 .HasRequired(v => v.cliente)
@@ -115,7 +115,6 @@
             modelBuilder.Entity<MODELO.VENTA>()
                 .HasMany(v => v.itemsv)
                 .WithRequired(iv => iv.venta);
-
             
             modelBuilder.Entity<MODELO.VENTA>()
                 .HasMany(v => v.pagos)
