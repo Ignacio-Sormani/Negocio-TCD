@@ -87,6 +87,7 @@
             // 
             this.lblRESETEARCONTRASEÑA.AutoSize = true;
             this.lblRESETEARCONTRASEÑA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRESETEARCONTRASEÑA.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblRESETEARCONTRASEÑA.Location = new System.Drawing.Point(120, 160);
             this.lblRESETEARCONTRASEÑA.Name = "lblRESETEARCONTRASEÑA";
             this.lblRESETEARCONTRASEÑA.Size = new System.Drawing.Size(142, 15);

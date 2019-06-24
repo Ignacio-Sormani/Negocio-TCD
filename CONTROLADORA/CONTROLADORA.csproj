@@ -57,7 +57,7 @@
     <Compile Include="cGRUPOS.cs" />
     <Compile Include="cITEMS.cs" />
     <Compile Include="cLOCALIDADES.cs" />
-    <Compile Include="cLOGINS.cs" />
+    <Compile Include="cACCESOS.cs" />
     <Compile Include="cMARCAS.cs" />
     <Compile Include="cREMITOSDECOMPRA.cs" />
     <Compile Include="cORDENESDECOMPRA.cs" />

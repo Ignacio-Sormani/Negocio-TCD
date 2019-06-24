@@ -21,5 +21,32 @@ namespace CONTROLADORA
         {
             oNegocio = DATOS.NEGOCIO.obtener_instancia();
         }
+
+        public void agregar_usuario(MODELO.USUARIO oUsuario)
+        {
+            oNegocio.USUARIOS.Add(oUsuario);
+            oNegocio.SaveChanges();
+        }
+
+        public void modificar_usuario(MODELO.USUARIO oUsuario)
+        {
+            oNegocio.Entry(oUsuario).State = System.Data.Entity.EntityState.Modified;
+            oNegocio.SaveChanges();
+        }
+
+        public MODELO.USUARIO obtener_usuario_nombre(string usuario)
+        {
+            return oNegocio.USUARIOS.FirstOrDefault(u => u.nombreDeUsuario.ToLower() == usuario.ToLower());
+        }
+
+        public MODELO.USUARIO obtener_usuario_mail(string mail)
+        {
+            return oNegocio.USUARIOS.FirstOrDefault(u => u.mail == mail);
+        }
+
+        public Int32 cantidad_usuarios_conectados()
+        {
+            return oNegocio.USUARIOS.Count(_ => _.conectado == true);
+        }
     }
 }

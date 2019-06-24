@@ -1,6 +1,6 @@
 ﻿namespace VISTA
 {
-    partial class frmMisDatos
+    partial class frmMiPerfil
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "frmMisDatos";
+            this.Text = "frmMiPerfil";
         }
 
         #endregion

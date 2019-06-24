@@ -17,6 +17,7 @@ namespace VISTA
     public partial class frmLocalidades : Form
     {
         CONTROLADORA.cLOCALIDADES cLOCALIDADES;
+        //agregar MODELO.USUARIO oUSUARIO en el parametro y boton seleccionar para el CU-buscar
         public frmLocalidades()
         {
             InitializeComponent();

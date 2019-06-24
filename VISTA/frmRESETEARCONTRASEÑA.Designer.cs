@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtCONTRAVIEJA = new System.Windows.Forms.TextBox();
+            this.txtMAIL = new System.Windows.Forms.TextBox();
             this.btnVOLVER = new System.Windows.Forms.Button();
             this.btnRESETEARCLAVE = new System.Windows.Forms.Button();
             this.lblMAIL = new System.Windows.Forms.Label();
             this.lblRESETEARCONTRA = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // txtCONTRAVIEJA
+            // txtMAIL
             // 
-            this.txtCONTRAVIEJA.Location = new System.Drawing.Point(100, 100);
-            this.txtCONTRAVIEJA.Name = "txtCONTRAVIEJA";
-            this.txtCONTRAVIEJA.Size = new System.Drawing.Size(240, 20);
-            this.txtCONTRAVIEJA.TabIndex = 29;
+            this.txtMAIL.Location = new System.Drawing.Point(100, 100);
+            this.txtMAIL.Name = "txtMAIL";
+            this.txtMAIL.Size = new System.Drawing.Size(240, 20);
+            this.txtMAIL.TabIndex = 29;
             // 
             // btnVOLVER
             // 
@@ -91,7 +91,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 261);
-            this.Controls.Add(this.txtCONTRAVIEJA);
+            this.Controls.Add(this.txtMAIL);
             this.Controls.Add(this.btnVOLVER);
             this.Controls.Add(this.btnRESETEARCLAVE);
             this.Controls.Add(this.lblMAIL);
@@ -105,7 +105,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtCONTRAVIEJA;
+        private System.Windows.Forms.TextBox txtMAIL;
         private System.Windows.Forms.Button btnVOLVER;
         private System.Windows.Forms.Button btnRESETEARCLAVE;
         private System.Windows.Forms.Label lblMAIL;

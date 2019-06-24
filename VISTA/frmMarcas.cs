@@ -27,12 +27,11 @@ namespace VISTA
             armar_grilla();
         }
 
-        #region FUNCIONES 
+
         private void armar_grilla() {
             dgvMARCAS.DataSource = null;
             dgvMARCAS.DataSource = cMARCAS.obtener_marcas(txtBUSCAR.Text);
         }
-        #endregion
 
         private void btnBUSCAR_Click(object sender, EventArgs e)
         {

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VISTA
 {
-    public partial class frmMisDatos : Form
+    public partial class frmMiPerfil : Form
     {
-        public frmMisDatos()
+        public frmMiPerfil()
         {
             InitializeComponent();
         }

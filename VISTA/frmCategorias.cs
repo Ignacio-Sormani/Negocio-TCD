@@ -27,13 +27,11 @@ namespace VISTA
             armar_grilla();
         }
 
-        #region FUNCIONES 
         private void armar_grilla()
         {
             dgvCATEGORIAS.DataSource = null;
             dgvCATEGORIAS.DataSource = cCATEGORIAS.obtener_categorias(txtBUSCAR.Text);
         }
-        #endregion
 
         private void btnBUSCAR_Click(object sender, EventArgs e)
         {
