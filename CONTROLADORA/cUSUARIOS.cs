@@ -34,6 +34,20 @@ namespace CONTROLADORA
             oNegocio.SaveChanges();
         }
 
+        public MODELO.USUARIO obtener_usuario(Int32 codigo)
+        {
+            return oNegocio.USUARIOS.Find(codigo);
+        }
+
+        public System.Collections.IEnumerable obtener_usuarios(string nombre)
+        {
+            var usuarios = from usuario in oNegocio.USUARIOS.Include("grupos").ToList()
+                           where usuario.nombreDeUsuario.ToLower().Contains(nombre.ToLower())
+                           select usuario;
+            return usuarios.ToList();
+
+        }
+
         public MODELO.USUARIO obtener_usuario_nombre(string usuario)
         {
             return oNegocio.USUARIOS.FirstOrDefault(u => u.nombreDeUsuario.ToLower() == usuario.ToLower());
