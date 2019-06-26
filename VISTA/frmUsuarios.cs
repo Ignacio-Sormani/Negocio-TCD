@@ -35,22 +35,47 @@ namespace VISTA
 
         private void btnAGREGAR_Click(object sender, EventArgs e)
         {
-
+            frmUsuario frmUsuario = new frmUsuario(new MODELO.USUARIO(), "A");
+            DialogResult dr = frmUsuario.ShowDialog();
+            if (dr == DialogResult.OK)
+                armar_grilla();
         }
 
         private void btnCONSULTAR_Click(object sender, EventArgs e)
         {
-
+            if (dgvUSUARIOS.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar un usuario de la lista", "Usuarios - Atencion!");
+                return;
+            }
+            frmUsuario frmUsuario = new frmUsuario(cUSUARIOS.obtener_usuario(Convert.ToInt32(dgvUSUARIOS.CurrentRow.Cells[0].Value)), "M");
+            DialogResult dr = frmUsuario.ShowDialog();
         }
 
         private void btnMODIFICAR_Click(object sender, EventArgs e)
         {
-
+            if (dgvUSUARIOS.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar un usuario de la lista", "Usuarios - Atencion!");
+                return;
+            }
+            frmUsuario frmUsuario = new frmUsuario(cUSUARIOS.obtener_usuario(Convert.ToInt32(dgvUSUARIOS.CurrentRow.Cells[0].Value)), "M");
+            DialogResult dr = frmUsuario.ShowDialog();
+            if (dr == System.Windows.Forms.DialogResult.OK)
+                armar_grilla();
         }
 
         private void btnCAMBIARESTADO_Click(object sender, EventArgs e)
         {
-
+            if (dgvUSUARIOS.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar un usuario de la lista", "Usuarios - Atencion!");
+                return;
+            }
+            MODELO.USUARIO oUsuario = cUSUARIOS.obtener_usuario(Convert.ToInt32(dgvUSUARIOS.CurrentRow.Cells[0].Value));
+            oUsuario.estadoActivo = !oUsuario.estadoActivo;
+            cUSUARIOS.modificar_usuario(oUsuario);
+            armar_grilla();
         }
 
         private void btnSALIR_Click(object sender, EventArgs e)

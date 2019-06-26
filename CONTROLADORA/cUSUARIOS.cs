@@ -62,5 +62,14 @@ namespace CONTROLADORA
         {
             return oNegocio.USUARIOS.Count(_ => _.conectado == true);
         }
+
+        public System.Collections.IEnumerable obtener_grupos()
+        {
+            var grupos = from grupo in oNegocio.GRUPOS.ToList()
+                         where grupo.estadoActivo == true
+                         select grupo;
+            return grupos.ToList();
+        }
+    }
     }
 }

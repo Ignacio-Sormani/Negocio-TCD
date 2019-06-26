@@ -145,6 +145,7 @@
             this.btnCANCELAR.TabIndex = 21;
             this.btnCANCELAR.Text = "Cancelar";
             this.btnCANCELAR.UseVisualStyleBackColor = true;
+            this.btnCANCELAR.Click += new System.EventHandler(this.btnCANCELAR_Click);
             // 
             // btnGUARDAR
             // 
@@ -155,6 +156,7 @@
             this.btnGUARDAR.TabIndex = 20;
             this.btnGUARDAR.Text = "Guardar";
             this.btnGUARDAR.UseVisualStyleBackColor = true;
+            this.btnGUARDAR.Click += new System.EventHandler(this.btnGUARDAR_Click);
             // 
             // lblUSUARIO
             // 
@@ -195,6 +197,7 @@
             this.Controls.Add(this.txtUSUARIO);
             this.Name = "frmUsuario";
             this.Text = "frmUsuario";
+            this.Load += new System.EventHandler(this.frmUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

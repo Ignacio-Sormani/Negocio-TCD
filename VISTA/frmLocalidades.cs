@@ -42,7 +42,7 @@ namespace VISTA
 
         private void btnAGREGAR_Click(object sender, EventArgs e)
         {
-            frmLocalidad frmLocalidad = new frmLocalidad("A");
+            frmLocalidad frmLocalidad = new frmLocalidad(new MODELO.LOCALIDAD(), "A");
             DialogResult dr = frmLocalidad.ShowDialog();
             if (dr == DialogResult.OK) {
                 armarGrilla("");

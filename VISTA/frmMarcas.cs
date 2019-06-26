@@ -28,7 +28,8 @@ namespace VISTA
         }
 
 
-        private void armar_grilla() {
+        private void armar_grilla()
+        {
             dgvMARCAS.DataSource = null;
             dgvMARCAS.DataSource = cMARCAS.obtener_marcas(txtBUSCAR.Text);
         }
