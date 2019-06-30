@@ -48,7 +48,7 @@ namespace VISTA
                 MessageBox.Show("Debe seleccionar un usuario de la lista", "Usuarios - Atencion!");
                 return;
             }
-            frmUsuario frmUsuario = new frmUsuario(cUSUARIOS.obtener_usuario(Convert.ToInt32(dgvUSUARIOS.CurrentRow.Cells[0].Value)), "M");
+            frmUsuario frmUsuario = new frmUsuario(cUSUARIOS.obtener_usuario(Convert.ToInt32(dgvUSUARIOS.CurrentRow.Cells[0].Value)), "C");
             DialogResult dr = frmUsuario.ShowDialog();
         }
 

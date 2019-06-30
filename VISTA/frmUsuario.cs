@@ -13,7 +13,7 @@ namespace VISTA
     public partial class frmUsuario : Form
     {
         MODELO.USUARIO oUsuario;
-        public string ACCION;
+        string ACCION;
         CONTROLADORA.cUSUARIOS cUSUARIOS;
         bool bGrupo;
         public frmUsuario(MODELO.USUARIO miUsuario, string miAccion)
@@ -68,29 +68,48 @@ namespace VISTA
 
         private void btnCANCELAR_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtMARCA.Text))
+            if (string.IsNullOrEmpty(txtUSUARIO.Text))
             {
-                MessageBox.Show("Debe ingresar un valor de marca correcto", "Marca - Atencion!");
+                MessageBox.Show("Debe ingresar un nombre de usuario correcto");
                 return;
             }
-
-            if (!cMARCAS.verificar_marca_existente(txtMARCA.Text)) //verificar este doble if
+            if (!cUSUARIOS.verificar_usuario_existente(txtUSUARIO.Text)) //verificar este doble if
             {
-                if (!(ACCION == "M" && oMarca.marca == txtMARCA.Text))
+                if (!(ACCION == "M" && oUsuario.nombreDeUsuario == txtUSUARIO.Text))
                 {
-                    MessageBox.Show("La marca ingresada ya existe", "Marca - Atencion!");
+                    MessageBox.Show("El usuario ingresado ya existe");
                     return;
                 }
             }
+            if (string.IsNullOrEmpty(txtNOMBRE.Text))
+            {
+                MessageBox.Show("Debe ingresar un nombre y apellido correcto", "Usuario - Atencion!");
+                return;
+            }
+            if (string.IsNullOrEmpty(txtMAIL.Text) || CONTROLADORA.FUNCIONES.validar_mail(txtMAIL.Text))
+            {
+                MessageBox.Show("Debe ingresar un mail correcto");
+                return;
+            }
+            if (string.IsNullOrEmpty(txtCLAVE.Text) || txtCLAVE.TextLength < 6 || txtCLAVE.TextLength > 10))
+            {
+                MessageBox.Show("Debe ingresar una contraseña de entre 6 y 10 caracteres");
+                return;
+            }
 
-            oMarca.marca = txtMARCA.Text;
+            oUsuario.nombreDeUsuario = txtUSUARIO.Text;
+            oUsuario.nombreApellido = txtNOMBRE.Text;
+            oUsuario.mail = txtMAIL.Text;            
+            oUsuario.conectado = false;
+            oUsuario.estadoActivo = ckbACTIVO.Checked;
             if (ACCION == "A")
             {
-                cMARCAS.agregar_marca(oMarca);
+                oUsuario.clave = CONTROLADORA.FUNCIONES.encriptar_clave(txtCLAVE.Text);
+                cUSUARIOS.agregar_usuario(oUsuario);
             }
             else
             {
-                cMARCAS.modificar_marca(oMarca);
+                cUSUARIOS.modificar_usuario(oUsuario);
             }
             this.DialogResult = DialogResult.OK;
         }
@@ -98,6 +117,21 @@ namespace VISTA
         private void btnGUARDAR_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
+        }
+
+        private void clbGRUPOS_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            if (bGrupo == false) return;
+
+            MODELO.GRUPO oGrupo = (MODELO.GRUPO)clbGRUPOS.SelectedItem;
+            if (e.NewValue == CheckState.Checked)
+            {
+                oUsuario.grupos.Add(oGrupo);
+            }
+            else
+            {
+                oUsuario.grupos.Remove(oGrupo);
+            }
         }
     }
 }

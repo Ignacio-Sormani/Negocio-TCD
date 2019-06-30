@@ -13,7 +13,7 @@ namespace VISTA
     public partial class frmCategoria : Form
     {
         MODELO.CATEGORIA oCategoria;
-        public string ACCION;
+        string ACCION;
         CONTROLADORA.cCATEGORIAS cCATEGORIAS;
         public frmCategoria(MODELO.CATEGORIA miCategoria, string miAccion)
         {
@@ -43,14 +43,14 @@ namespace VISTA
         {
             if (string.IsNullOrEmpty(txtCATEGORIA.Text))
             {
-                MessageBox.Show("Debe ingresar un valor de categoria correcto", "Categoria - Atencion!");
+                MessageBox.Show("Debe ingresar un valor de categoria correcto");
                 return;
             }
             if (!cCATEGORIAS.verificar_categoria_existente(txtCATEGORIA.Text)) //verificar este doble if
             {
                 if (!(ACCION == "M" && oCategoria.categoria == txtCATEGORIA.Text))
                 { 
-                    MessageBox.Show("La categoria ingresada ya existe", "Categoria - Atencion!");
+                    MessageBox.Show("La categoria ingresada ya existe");
                     return;
                 }
             }

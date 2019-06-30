@@ -13,7 +13,7 @@ namespace VISTA
     public partial class frmMarca : Form
     {
         MODELO.MARCA oMarca;
-        public string ACCION;
+        string ACCION;
         CONTROLADORA.cMARCAS cMARCAS;
         public frmMarca(MODELO.MARCA miMarca, string miAccion)
         {
@@ -44,7 +44,7 @@ namespace VISTA
         {
             if (string.IsNullOrEmpty(txtMARCA.Text))
             {
-                MessageBox.Show("Debe ingresar un valor de marca correcto", "Marca - Atencion!");
+                MessageBox.Show("Debe ingresar un valor de marca correcto");
                 return;
             }
             
@@ -52,7 +52,7 @@ namespace VISTA
             {
                 if (!(ACCION == "M" && oMarca.marca == txtMARCA.Text))
                 {
-                    MessageBox.Show("La marca ingresada ya existe", "Marca - Atencion!");
+                    MessageBox.Show("La marca ingresada ya existe");
                     return;
                 }
             }            

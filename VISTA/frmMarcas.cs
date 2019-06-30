@@ -56,7 +56,7 @@ namespace VISTA
         {
             if (dgvMARCAS.CurrentRow == null)
             {
-                MessageBox.Show("Debe seleccionar una marca de la lista", "Marcas - Atencion!");
+                MessageBox.Show("Debe seleccionar una marca de la lista");
                 return;
             }
             frmMarca frmMarca = new frmMarca(cMARCAS.obtener_marca(Convert.ToInt32(dgvMARCAS.CurrentRow.Cells[0].Value)), "M");
@@ -69,7 +69,7 @@ namespace VISTA
         {
             if (dgvMARCAS.CurrentRow == null)
             {
-                MessageBox.Show("Debe seleccionar una marca de la lista", "Marcas - Atencion!");
+                MessageBox.Show("Debe seleccionar una marca de la lista");
                 return;
             }
             frmMarca frmMarca = new frmMarca(cMARCAS.obtener_marca(Convert.ToInt32(dgvMARCAS.CurrentRow.Cells[0].Value)), "C");

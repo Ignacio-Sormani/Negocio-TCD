@@ -26,7 +26,7 @@ namespace VISTA
         {
             if (!string.IsNullOrWhiteSpace(txtCONTRANUEVA1.Text))
             {
-                MessageBox.Show("Debe ingresar una contraseña antigua", "ERROR - CAMPO INCOMPLETO");
+                MessageBox.Show("Debe ingresar una contraseña antigua");
                 return;
             }
             //...

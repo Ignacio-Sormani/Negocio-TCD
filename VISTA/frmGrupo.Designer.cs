@@ -34,7 +34,7 @@
             this.btnCANCELAR = new System.Windows.Forms.Button();
             this.btnGUARDAR = new System.Windows.Forms.Button();
             this.lblGRUPO = new System.Windows.Forms.Label();
-            this.txtUSUARIO = new System.Windows.Forms.TextBox();
+            this.txtGRUPO = new System.Windows.Forms.TextBox();
             this.lblESTADO = new System.Windows.Forms.Label();
             this.ckbACTIVO = new System.Windows.Forms.CheckBox();
             this.tvACCIONES = new System.Windows.Forms.TreeView();
@@ -67,6 +67,7 @@
             this.clbUSUARIOS.Name = "clbUSUARIOS";
             this.clbUSUARIOS.Size = new System.Drawing.Size(320, 109);
             this.clbUSUARIOS.TabIndex = 39;
+            this.clbUSUARIOS.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbUSUARIOS_ItemCheck);
             // 
             // btnCANCELAR
             // 
@@ -77,6 +78,7 @@
             this.btnCANCELAR.TabIndex = 38;
             this.btnCANCELAR.Text = "Cancelar";
             this.btnCANCELAR.UseVisualStyleBackColor = true;
+            this.btnCANCELAR.Click += new System.EventHandler(this.btnCANCELAR_Click);
             // 
             // btnGUARDAR
             // 
@@ -87,6 +89,7 @@
             this.btnGUARDAR.TabIndex = 37;
             this.btnGUARDAR.Text = "Guardar";
             this.btnGUARDAR.UseVisualStyleBackColor = true;
+            this.btnGUARDAR.Click += new System.EventHandler(this.btnGUARDAR_Click);
             // 
             // lblGRUPO
             // 
@@ -98,13 +101,13 @@
             this.lblGRUPO.TabIndex = 36;
             this.lblGRUPO.Text = "Nombre de Grupo:";
             // 
-            // txtUSUARIO
+            // txtGRUPO
             // 
-            this.txtUSUARIO.Location = new System.Drawing.Point(140, 24);
-            this.txtUSUARIO.Margin = new System.Windows.Forms.Padding(2);
-            this.txtUSUARIO.Name = "txtUSUARIO";
-            this.txtUSUARIO.Size = new System.Drawing.Size(194, 20);
-            this.txtUSUARIO.TabIndex = 35;
+            this.txtGRUPO.Location = new System.Drawing.Point(140, 24);
+            this.txtGRUPO.Margin = new System.Windows.Forms.Padding(2);
+            this.txtGRUPO.Name = "txtGRUPO";
+            this.txtGRUPO.Size = new System.Drawing.Size(194, 20);
+            this.txtGRUPO.TabIndex = 35;
             // 
             // lblESTADO
             // 
@@ -132,6 +135,7 @@
             this.tvACCIONES.Name = "tvACCIONES";
             this.tvACCIONES.Size = new System.Drawing.Size(320, 140);
             this.tvACCIONES.TabIndex = 45;
+            this.tvACCIONES.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.tvACCIONES_AfterCheck);
             // 
             // frmGrupo
             // 
@@ -147,9 +151,10 @@
             this.Controls.Add(this.btnCANCELAR);
             this.Controls.Add(this.btnGUARDAR);
             this.Controls.Add(this.lblGRUPO);
-            this.Controls.Add(this.txtUSUARIO);
+            this.Controls.Add(this.txtGRUPO);
             this.Name = "frmGrupo";
             this.Text = "frmGrupo";
+            this.Load += new System.EventHandler(this.frmGrupo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,7 +167,7 @@
         private System.Windows.Forms.Button btnCANCELAR;
         private System.Windows.Forms.Button btnGUARDAR;
         private System.Windows.Forms.Label lblGRUPO;
-        private System.Windows.Forms.TextBox txtUSUARIO;
+        private System.Windows.Forms.TextBox txtGRUPO;
         private System.Windows.Forms.Label lblESTADO;
         private System.Windows.Forms.CheckBox ckbACTIVO;
         private System.Windows.Forms.TreeView tvACCIONES;

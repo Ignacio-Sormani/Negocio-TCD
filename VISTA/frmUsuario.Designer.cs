@@ -61,6 +61,7 @@
             this.clbGRUPOS.Name = "clbGRUPOS";
             this.clbGRUPOS.Size = new System.Drawing.Size(320, 154);
             this.clbGRUPOS.TabIndex = 30;
+            this.clbGRUPOS.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbGRUPOS_ItemCheck);
             // 
             // ckbACTIVO
             // 
@@ -97,6 +98,7 @@
             this.txtCLAVE.Location = new System.Drawing.Point(140, 144);
             this.txtCLAVE.Margin = new System.Windows.Forms.Padding(2);
             this.txtCLAVE.Name = "txtCLAVE";
+            this.txtCLAVE.PasswordChar = '*';
             this.txtCLAVE.Size = new System.Drawing.Size(194, 20);
             this.txtCLAVE.TabIndex = 26;
             // 

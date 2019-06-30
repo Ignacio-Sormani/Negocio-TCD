@@ -13,7 +13,7 @@ namespace VISTA
     public partial class frmLocalidad : Form
     {
         MODELO.LOCALIDAD oLocalidad;
-        public string Accion;
+        string Accion;
         CONTROLADORA.cLOCALIDADES cLocalidades;
         public frmLocalidad(MODELO.LOCALIDAD miLocalidad, string miAccion)
         {

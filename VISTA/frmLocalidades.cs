@@ -22,22 +22,13 @@ namespace VISTA
         {
             InitializeComponent();
             cLOCALIDADES = CONTROLADORA.cLOCALIDADES.obtener_instancia();
-            armarGrilla("");
+            armarGrilla();
         }
 
-        public void armarGrilla(string localidad) {
+        public void armarGrilla()
+        {
             dgvLocalidades.DataSource = null;
-            dgvLocalidades.DataSource = cLOCALIDADES.obtener_localidades(localidad);
-        }
-
-        private void btnSALIR_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnBUSCAR_Click(object sender, EventArgs e)
-        {
-            armarGrilla(txtBuscar.Text);
+            dgvLocalidades.DataSource = cLOCALIDADES.obtener_localidades(txtBuscar.Text);
         }
 
         private void btnAGREGAR_Click(object sender, EventArgs e)
@@ -45,24 +36,8 @@ namespace VISTA
             frmLocalidad frmLocalidad = new frmLocalidad(new MODELO.LOCALIDAD(), "A");
             DialogResult dr = frmLocalidad.ShowDialog();
             if (dr == DialogResult.OK) {
-                armarGrilla("");
+                armarGrilla();
             }
-        }
-
-        private void btnELIMINAR_Click(object sender, EventArgs e)
-        {
-            MODELO.LOCALIDAD oLocalidad = cLOCALIDADES.obtener_localidad(Convert.ToInt32(dgvLocalidades.CurrentRow.Cells[0].Value));
-            DialogResult dr = MessageBox.Show("Desea eliminar la localidad?", "Eliminar", MessageBoxButtons.YesNo);
-            if (dr == DialogResult.Yes) {
-                cLOCALIDADES.eliminar_localidad(oLocalidad);
-                armarGrilla("");
-            }
-
-        }
-
-        private void btnTODOS_Click(object sender, EventArgs e)
-        {
-            armarGrilla("");
         }
 
         private void btnMODIFICAR_Click(object sender, EventArgs e)
@@ -75,8 +50,19 @@ namespace VISTA
             frmLocalidad frmLocalidad = new frmLocalidad(oLocalidad,"M");
             DialogResult dr = frmLocalidad.ShowDialog();
             if (dr == DialogResult.OK) {
-            armarGrilla("");
+            armarGrilla();
             }
         }
+
+        private void btnSALIR_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnBUSCAR_Click(object sender, EventArgs e)
+        {
+            armarGrilla();
+        }
+
     }
 }

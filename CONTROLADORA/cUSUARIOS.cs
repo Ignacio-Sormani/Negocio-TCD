@@ -45,7 +45,6 @@ namespace CONTROLADORA
                            where usuario.nombreDeUsuario.ToLower().Contains(nombre.ToLower())
                            select usuario;
             return usuarios.ToList();
-
         }
 
         public MODELO.USUARIO obtener_usuario_nombre(string usuario)
@@ -70,6 +69,12 @@ namespace CONTROLADORA
                          select grupo;
             return grupos.ToList();
         }
-    }
+        public bool verificar_usuario_existente(string nombreUsuario) //verificar esta funcion
+        {
+            if (oNegocio.USUARIOS.Count(_ => _.nombreDeUsuario == nombreUsuario) > 0)
+                return false;
+            else
+                return true;
+        }
     }
 }

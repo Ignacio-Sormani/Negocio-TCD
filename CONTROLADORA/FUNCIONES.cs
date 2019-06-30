@@ -168,7 +168,7 @@ namespace CONTROLADORA
         #endregion
 
         #region VALIDACIONES
-        public static bool validar_mail(string mail)
+        public static bool validar_mail(string mail) //verificar que funcione
         {
             string expresion;
             expresion = @"\A(\w+\.?\w*\@\w+\.)(com)\Z";

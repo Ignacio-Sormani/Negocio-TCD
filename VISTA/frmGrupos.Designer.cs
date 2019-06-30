@@ -81,6 +81,7 @@
             this.btnBUSCAR.TabIndex = 48;
             this.btnBUSCAR.Text = "Buscar";
             this.btnBUSCAR.UseVisualStyleBackColor = true;
+            this.btnBUSCAR.Click += new System.EventHandler(this.btnBUSCAR_Click);
             // 
             // btnSALIR
             // 
@@ -91,6 +92,7 @@
             this.btnSALIR.TabIndex = 46;
             this.btnSALIR.Text = "Salir";
             this.btnSALIR.UseVisualStyleBackColor = true;
+            this.btnSALIR.Click += new System.EventHandler(this.btnSALIR_Click);
             // 
             // txtBUSCAR
             // 

@@ -55,7 +55,7 @@ namespace VISTA
         {
             if (dgvCATEGORIAS.CurrentRow == null)
             {
-                MessageBox.Show("Debe seleccionar una categoria de la lista", "Categorias - Atencion!");
+                MessageBox.Show("Debe seleccionar una categoria de la lista");
                 return;
             }
             frmCategoria frmCategoria = new frmCategoria(cCATEGORIAS.obtener_categoria(Convert.ToInt32(dgvCATEGORIAS.CurrentRow.Cells[0].Value)), "M");
@@ -68,7 +68,7 @@ namespace VISTA
         {
             if (dgvCATEGORIAS.CurrentRow == null)
             {
-                MessageBox.Show("Debe seleccionar una categoria de la lista", "Categorias - Atencion!");
+                MessageBox.Show("Debe seleccionar una categoria de la lista");
                 return;
             }
             frmCategoria frmCategoria = new frmCategoria(cCATEGORIAS.obtener_categoria(Convert.ToInt32(dgvCATEGORIAS.CurrentRow.Cells[0].Value)), "C");

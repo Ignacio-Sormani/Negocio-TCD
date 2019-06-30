@@ -17,29 +17,75 @@ namespace VISTA
     [MODELO.accion(control = "btnCAMBIARESTADO", descripcion = "Cambiar Estado Grupo", formulario = "frmGrupos", modulo = "Seguridad")]
     public partial class frmGrupos : Form
     {
+        CONTROLADORA.cGRUPOS cGRUPOS;
+        //agregar MODELO.USUARIO oUSUARIO en el parametro y boton seleccionar para el CU-buscar
         public frmGrupos()
         {
             InitializeComponent();
+
+            cGRUPOS = CONTROLADORA.cGRUPOS.obtener_instancia();
+            armar_grilla();
+        }
+
+        public void armar_grilla()
+        {
+            dgvGRUPOS.DataSource = null;
+            dgvGRUPOS.DataSource = cGRUPOS.obtener_grupos(txtBUSCAR.Text);
         }
 
         private void btnAGREGAR_Click(object sender, EventArgs e)
         {
-
+            frmGrupo frmGrupo = new frmGrupo(new MODELO.GRUPO(), "A");
+            DialogResult dr = frmGrupo.ShowDialog();
+            if (dr == DialogResult.OK)
+                armar_grilla();
         }
 
         private void btnCONSULTAR_Click(object sender, EventArgs e)
         {
-
+            if (dgvGRUPOS.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar un grupo de la lista");
+                return;
+            }
+            frmGrupo frmGrupo = new frmGrupo(cGRUPOS.obtener_grupo(Convert.ToInt32(dgvGRUPOS.CurrentRow.Cells[0].Value)), "C");
+            DialogResult dr = frmGrupo.ShowDialog();
         }
 
         private void btnMODIFICAR_Click(object sender, EventArgs e)
         {
-
+            if (dgvGRUPOS.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar un grupo de la lista");
+                return;
+            }
+            frmGrupo frmGrupo = new frmGrupo(cGRUPOS.obtener_grupo(Convert.ToInt32(dgvGRUPOS.CurrentRow.Cells[0].Value)), "M");
+            DialogResult dr = frmGrupo.ShowDialog();
+            if (dr == System.Windows.Forms.DialogResult.OK)
+                armar_grilla();
         }
 
         private void btnCAMBIARESTADO_Click(object sender, EventArgs e)
         {
+            if (dgvGRUPOS.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar un usuario de la lista", "Usuarios - Atencion!");
+                return;
+            }
+            MODELO.GRUPO oGrupo = cGRUPOS.obtener_grupo(Convert.ToInt32(dgvGRUPOS.CurrentRow.Cells[0].Value));
+            oGrupo.estadoActivo = !oGrupo.estadoActivo;
+            cGRUPOS.modificar_grupo(oGrupo);
+            armar_grilla();
+        }
 
+        private void btnSALIR_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnBUSCAR_Click(object sender, EventArgs e)
+        {
+            armar_grilla();
         }
     }
 }
