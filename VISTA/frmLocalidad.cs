@@ -31,7 +31,7 @@ namespace VISTA
                 txtLOCALIDAD.Text = oLocalidad.localidad;
                 txtCP.Text = oLocalidad.codigoPostal.ToString();
             }
-            if (Accion == "C") //agregar el boton consulta
+            if (Accion == "C")
             {
                 txtLOCALIDAD.Enabled = false;
                 btnCANCELAR.Text = "Cerrar";
@@ -63,12 +63,12 @@ namespace VISTA
                 cLocalidades.modificar_localidad(oLocalidad);
             }
             this.DialogResult = DialogResult.OK;
-
         }
+
 
         private void btnCANCELAR_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
+           this.DialogResult = DialogResult.Cancel;
         }
     }
 }

@@ -36,7 +36,7 @@
             // 
             // btnCANCELAR
             // 
-            this.btnCANCELAR.Location = new System.Drawing.Point(9, 157);
+            this.btnCANCELAR.Location = new System.Drawing.Point(80, 134);
             this.btnCANCELAR.Margin = new System.Windows.Forms.Padding(2);
             this.btnCANCELAR.Name = "btnCANCELAR";
             this.btnCANCELAR.Size = new System.Drawing.Size(194, 35);
@@ -47,7 +47,7 @@
             // 
             // btnGUARDAR
             // 
-            this.btnGUARDAR.Location = new System.Drawing.Point(9, 103);
+            this.btnGUARDAR.Location = new System.Drawing.Point(80, 80);
             this.btnGUARDAR.Margin = new System.Windows.Forms.Padding(2);
             this.btnGUARDAR.Name = "btnGUARDAR";
             this.btnGUARDAR.Size = new System.Drawing.Size(194, 35);
@@ -59,30 +59,30 @@
             // lblCATEGORIA
             // 
             this.lblCATEGORIA.AutoSize = true;
-            this.lblCATEGORIA.Location = new System.Drawing.Point(9, 47);
+            this.lblCATEGORIA.Location = new System.Drawing.Point(20, 24);
             this.lblCATEGORIA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCATEGORIA.Name = "lblCATEGORIA";
             this.lblCATEGORIA.Size = new System.Drawing.Size(110, 13);
-            this.lblCATEGORIA.TabIndex = 5;
+            this.lblCATEGORIA.TabIndex = 33;
             this.lblCATEGORIA.Text = "Nombre de Categoria:";
             // 
             // txtCATEGORIA
             // 
-            this.txtCATEGORIA.Location = new System.Drawing.Point(9, 72);
+            this.txtCATEGORIA.Location = new System.Drawing.Point(140, 24);
             this.txtCATEGORIA.Margin = new System.Windows.Forms.Padding(2);
             this.txtCATEGORIA.Name = "txtCATEGORIA";
             this.txtCATEGORIA.Size = new System.Drawing.Size(194, 20);
-            this.txtCATEGORIA.TabIndex = 4;
+            this.txtCATEGORIA.TabIndex = 32;
             // 
             // frmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(213, 238);
-            this.Controls.Add(this.btnCANCELAR);
-            this.Controls.Add(this.btnGUARDAR);
+            this.ClientSize = new System.Drawing.Size(360, 202);
             this.Controls.Add(this.lblCATEGORIA);
             this.Controls.Add(this.txtCATEGORIA);
+            this.Controls.Add(this.btnCANCELAR);
+            this.Controls.Add(this.btnGUARDAR);
             this.Name = "frmCategoria";
             this.Text = "frmCategoria";
             this.Load += new System.EventHandler(this.frmCategoria_Load);

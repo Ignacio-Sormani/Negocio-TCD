@@ -49,7 +49,7 @@ namespace VISTA
                 return;
             }
             frmGrupo frmGrupo = new frmGrupo(cGRUPOS.obtener_grupo(Convert.ToInt32(dgvGRUPOS.CurrentRow.Cells[0].Value)), "C");
-            DialogResult dr = frmGrupo.ShowDialog();
+            frmGrupo.ShowDialog();
         }
 
         private void btnMODIFICAR_Click(object sender, EventArgs e)
@@ -69,7 +69,7 @@ namespace VISTA
         {
             if (dgvGRUPOS.CurrentRow == null)
             {
-                MessageBox.Show("Debe seleccionar un usuario de la lista", "Usuarios - Atencion!");
+                MessageBox.Show("Debe seleccionar un usuario de la lista");
                 return;
             }
             MODELO.GRUPO oGrupo = cGRUPOS.obtener_grupo(Convert.ToInt32(dgvGRUPOS.CurrentRow.Cells[0].Value));

@@ -28,34 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtMARCA = new System.Windows.Forms.TextBox();
-            this.lblMARCA = new System.Windows.Forms.Label();
             this.btnCANCELAR = new System.Windows.Forms.Button();
             this.btnGUARDAR = new System.Windows.Forms.Button();
+            this.lblMARCA = new System.Windows.Forms.Label();
+            this.txtMARCA = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // txtMARCA
-            // 
-            this.txtMARCA.Location = new System.Drawing.Point(9, 49);
-            this.txtMARCA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtMARCA.Name = "txtMARCA";
-            this.txtMARCA.Size = new System.Drawing.Size(194, 20);
-            this.txtMARCA.TabIndex = 0;
-            // 
-            // lblMARCA
-            // 
-            this.lblMARCA.AutoSize = true;
-            this.lblMARCA.Location = new System.Drawing.Point(9, 24);
-            this.lblMARCA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblMARCA.Name = "lblMARCA";
-            this.lblMARCA.Size = new System.Drawing.Size(95, 13);
-            this.lblMARCA.TabIndex = 1;
-            this.lblMARCA.Text = "Nombre de Marca:";
             // 
             // btnCANCELAR
             // 
-            this.btnCANCELAR.Location = new System.Drawing.Point(9, 134);
-            this.btnCANCELAR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCANCELAR.Location = new System.Drawing.Point(80, 134);
+            this.btnCANCELAR.Margin = new System.Windows.Forms.Padding(2);
             this.btnCANCELAR.Name = "btnCANCELAR";
             this.btnCANCELAR.Size = new System.Drawing.Size(194, 35);
             this.btnCANCELAR.TabIndex = 3;
@@ -65,7 +47,7 @@
             // 
             // btnGUARDAR
             // 
-            this.btnGUARDAR.Location = new System.Drawing.Point(9, 80);
+            this.btnGUARDAR.Location = new System.Drawing.Point(80, 80);
             this.btnGUARDAR.Margin = new System.Windows.Forms.Padding(2);
             this.btnGUARDAR.Name = "btnGUARDAR";
             this.btnGUARDAR.Size = new System.Drawing.Size(194, 35);
@@ -74,16 +56,34 @@
             this.btnGUARDAR.UseVisualStyleBackColor = true;
             this.btnGUARDAR.Click += new System.EventHandler(this.btnGUARDAR_Click);
             // 
+            // lblMARCA
+            // 
+            this.lblMARCA.AutoSize = true;
+            this.lblMARCA.Location = new System.Drawing.Point(20, 20);
+            this.lblMARCA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMARCA.Name = "lblMARCA";
+            this.lblMARCA.Size = new System.Drawing.Size(95, 13);
+            this.lblMARCA.TabIndex = 37;
+            this.lblMARCA.Text = "Nombre de Marca:";
+            // 
+            // txtMARCA
+            // 
+            this.txtMARCA.Location = new System.Drawing.Point(140, 20);
+            this.txtMARCA.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMARCA.Name = "txtMARCA";
+            this.txtMARCA.Size = new System.Drawing.Size(194, 20);
+            this.txtMARCA.TabIndex = 36;
+            // 
             // frmMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(213, 238);
-            this.Controls.Add(this.btnCANCELAR);
-            this.Controls.Add(this.btnGUARDAR);
+            this.ClientSize = new System.Drawing.Size(360, 202);
             this.Controls.Add(this.lblMARCA);
             this.Controls.Add(this.txtMARCA);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.btnCANCELAR);
+            this.Controls.Add(this.btnGUARDAR);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMarca";
             this.Text = "frmMarca";
             this.Load += new System.EventHandler(this.frmMarca_Load);
@@ -93,10 +93,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtMARCA;
-        private System.Windows.Forms.Label lblMARCA;
         private System.Windows.Forms.Button btnCANCELAR;
         private System.Windows.Forms.Button btnGUARDAR;
+        private System.Windows.Forms.Label lblMARCA;
+        private System.Windows.Forms.TextBox txtMARCA;
     }
 }

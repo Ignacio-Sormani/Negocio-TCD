@@ -91,7 +91,7 @@ namespace VISTA
                 MessageBox.Show("Debe ingresar un mail correcto");
                 return;
             }
-            if (string.IsNullOrEmpty(txtCLAVE.Text) || txtCLAVE.TextLength < 6 || txtCLAVE.TextLength > 10))
+            if (string.IsNullOrEmpty(txtCLAVE.Text) || txtCLAVE.TextLength < 6 || txtCLAVE.TextLength > 10)
             {
                 MessageBox.Show("Debe ingresar una contraseña de entre 6 y 10 caracteres");
                 return;

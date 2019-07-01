@@ -146,3 +146,15 @@ C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmReporte.resources
 C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmResetearContraseña.resources
 C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmUsuario.resources
 C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmUsuarios.resources
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmArchivoDeDatos.resources
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmCliente.resources
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmClientes.resources
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmMiPerfil.resources
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmOrdenDeCompra.resources
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmOrdenesDeCompra.resources
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmProducto.resources
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmProductos.resources
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmProveedor.resources
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmProveedores.resources
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmRemito.resources
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmRemitos.resources

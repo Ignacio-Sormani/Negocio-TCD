@@ -22,7 +22,7 @@ namespace MODELO
         public Int32 cantidadMinima { get; set; }
         public Int32 cantidadOperativa { get; set; }
         public string estado { get; set; }
-        public bool Activo { get; set; }
+        public bool estadoActivo { get; set; }
         public virtual ICollection<ITEM> items { get; set; }
         public string asignar_estado(bool p)
         {

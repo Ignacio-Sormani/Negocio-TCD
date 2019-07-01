@@ -27,10 +27,9 @@ namespace VISTA
 
         public void armarGrilla()
         {
-            dgvLocalidades.DataSource = null;
-            dgvLocalidades.DataSource = cLOCALIDADES.obtener_localidades(txtBuscar.Text);
+            dgvLOCALIDADES.DataSource = null;
+            dgvLOCALIDADES.DataSource = cLOCALIDADES.obtener_localidades(txtBUSCAR.Text);
         }
-
         private void btnAGREGAR_Click(object sender, EventArgs e)
         {
             frmLocalidad frmLocalidad = new frmLocalidad(new MODELO.LOCALIDAD(), "A");
@@ -42,16 +41,26 @@ namespace VISTA
 
         private void btnMODIFICAR_Click(object sender, EventArgs e)
         {
-            if (dgvLocalidades.CurrentRow == null) {
+            if (dgvLOCALIDADES.CurrentRow == null) {
                 MessageBox.Show("Debe seleccionar una localidad a modificar");
                 return;
             }
-            MODELO.LOCALIDAD oLocalidad = cLOCALIDADES.obtener_localidad(Convert.ToInt32(dgvLocalidades.CurrentRow.Cells[0].Value));
-            frmLocalidad frmLocalidad = new frmLocalidad(oLocalidad,"M");
+            frmLocalidad frmLocalidad = new frmLocalidad(cLOCALIDADES.obtener_localidad(Convert.ToInt32(dgvLOCALIDADES.CurrentRow.Cells[0].Value)), "M");
             DialogResult dr = frmLocalidad.ShowDialog();
             if (dr == DialogResult.OK) {
             armarGrilla();
             }
+        }
+
+        private void btnCONSULTAR_Click(object sender, EventArgs e)
+        {
+            if (dgvLOCALIDADES.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar una localidad a consultar");
+                return;
+            }
+            frmLocalidad frmLocalidad = new frmLocalidad(cLOCALIDADES.obtener_localidad(Convert.ToInt32(dgvLOCALIDADES.CurrentRow.Cells[0].Value)), "C");
+            frmLocalidad.ShowDialog();
         }
 
         private void btnSALIR_Click(object sender, EventArgs e)
@@ -63,6 +72,5 @@ namespace VISTA
         {
             armarGrilla();
         }
-
     }
 }

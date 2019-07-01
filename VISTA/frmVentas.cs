@@ -22,10 +22,10 @@ namespace VISTA
             InitializeComponent();
 
             cVENTAS = CONTROLADORA.cVENTAS.obtener_instancia();
-                //ARMAR_GRILLA();
+            armar_grilla();
         }
 
-        public void ARMAR_GRILLA()
+        public void armar_grilla()
         {
             dgvVENTAS.DataSource = null;
             //dgvVENTAS.DataSource = cVENTAS.obtener_ventas(txtCLIENTE.Text);
@@ -34,7 +34,7 @@ namespace VISTA
         private void txtCLIENTE_TextChanged(object sender, EventArgs e)
         {
             if (txtCLIENTE.TextLength > 3)
-                ARMAR_GRILLA();
+                armar_grilla();
         }
 
         private void btnAGREGAR_Click(object sender, EventArgs e)
@@ -42,7 +42,7 @@ namespace VISTA
             frmVenta formVenta = new frmVenta(new MODELO.VENTA(), "A");
             DialogResult dr = formVenta.ShowDialog();
             if (dr == DialogResult.OK)
-                ARMAR_GRILLA();
+                armar_grilla();
         }
 
         private void btnCONSULTAR_Click(object sender, EventArgs e)

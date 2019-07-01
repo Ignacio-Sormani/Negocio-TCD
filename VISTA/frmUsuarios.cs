@@ -45,7 +45,7 @@ namespace VISTA
         {
             if (dgvUSUARIOS.CurrentRow == null)
             {
-                MessageBox.Show("Debe seleccionar un usuario de la lista", "Usuarios - Atencion!");
+                MessageBox.Show("Debe seleccionar un usuario de la lista");
                 return;
             }
             frmUsuario frmUsuario = new frmUsuario(cUSUARIOS.obtener_usuario(Convert.ToInt32(dgvUSUARIOS.CurrentRow.Cells[0].Value)), "C");
@@ -56,7 +56,7 @@ namespace VISTA
         {
             if (dgvUSUARIOS.CurrentRow == null)
             {
-                MessageBox.Show("Debe seleccionar un usuario de la lista", "Usuarios - Atencion!");
+                MessageBox.Show("Debe seleccionar un usuario de la lista");
                 return;
             }
             frmUsuario frmUsuario = new frmUsuario(cUSUARIOS.obtener_usuario(Convert.ToInt32(dgvUSUARIOS.CurrentRow.Cells[0].Value)), "M");
@@ -69,7 +69,7 @@ namespace VISTA
         {
             if (dgvUSUARIOS.CurrentRow == null)
             {
-                MessageBox.Show("Debe seleccionar un usuario de la lista", "Usuarios - Atencion!");
+                MessageBox.Show("Debe seleccionar un usuario de la lista");
                 return;
             }
             MODELO.USUARIO oUsuario = cUSUARIOS.obtener_usuario(Convert.ToInt32(dgvUSUARIOS.CurrentRow.Cells[0].Value));
