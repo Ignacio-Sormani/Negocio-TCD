@@ -61,7 +61,15 @@ namespace VISTA
 
         private void btnCONSULTAR_Click(object sender, EventArgs e)
         {
+            if (dgvPRODUCTOS.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar un producto");
+                return;
+            }
 
+            MODELO.PRODUCTO oProducto = cPRODUCTOS.obtener_producto(Convert.ToInt32(dgvPRODUCTOS.CurrentRow.Cells[0].Value));
+            frmProducto frmProducto = new frmProducto(oProducto, "C");
+            frmProducto.ShowDialog();
         }
 
         private void btnSELECCIONAR_Click(object sender, EventArgs e)

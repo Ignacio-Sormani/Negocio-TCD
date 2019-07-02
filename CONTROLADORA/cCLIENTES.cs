@@ -39,11 +39,12 @@ namespace CONTROLADORA
             return oNegocio.CLIENTES.Find(codigo);
         }
 
-        public System.Collections.IEnumerable obtener_clientes(Int32 numero, Int32 dni, string nombre)
+        public System.Collections.IEnumerable obtener_clientes(string valor = "") //, Int32 numero = 0, Int32 dni = 0 SE PUEDE SACAR EL PARAMETRO OPCIONAL TAMBIEN
         {
-            var clientes = from cliente in oNegocio.CLIENTES.ToList()
-                           where cliente.codigoCliente.ToString().Contains(numero.ToString()) || cliente.dni.ToString().Contains(dni.ToString()) || cliente.nombreApellido.ToLower().Contains(nombre.ToLower())
-                           select new { DNI = cliente.dni, Nombre = cliente.nombreApellido, Direccion = (cliente.direccion+", "+cliente.localidad), Telefono = cliente.telefono, Mail = cliente.mail};
+            var clientes = from cliente in oNegocio.CLIENTES.Include("localidad").ToList()
+                           //where cliente.codigoCliente.ToString().Contains(numero.ToString()) || cliente.dni.ToString().Contains(dni.ToString()) || cliente.nombreApellido.ToLower().Contains(nombre.ToLower()) CAMBIOS ACA
+                           where cliente.codigoCliente.ToString().Contains(valor) || cliente.dni.ToString().Contains(valor) || cliente.nombreApellido.ToLower().Contains(valor.ToLower())
+                           select new {Codigo = cliente.codigoCliente, DNI = cliente.dni, Nombre = cliente.nombreApellido, Direccion = (cliente.direccion+", "+cliente.localidad), Telefono = cliente.telefono, Mail = cliente.mail};
             return clientes.ToList();
         }
     }

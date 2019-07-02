@@ -46,6 +46,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtCANTOPERATIVA = new System.Windows.Forms.TextBox();
             this.btnCANCELAR = new System.Windows.Forms.Button();
+            this.txtMARCA = new System.Windows.Forms.TextBox();
+            this.txtCATEGORIA = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // ckbACTIVO
@@ -149,9 +151,9 @@
             // 
             // btnMARCA
             // 
-            this.btnMARCA.Location = new System.Drawing.Point(188, 104);
+            this.btnMARCA.Location = new System.Drawing.Point(339, 96);
             this.btnMARCA.Name = "btnMARCA";
-            this.btnMARCA.Size = new System.Drawing.Size(257, 32);
+            this.btnMARCA.Size = new System.Drawing.Size(106, 49);
             this.btnMARCA.TabIndex = 43;
             this.btnMARCA.Text = "Seleccionar Marca";
             this.btnMARCA.UseVisualStyleBackColor = true;
@@ -168,9 +170,9 @@
             // 
             // btnCATEGORIA
             // 
-            this.btnCATEGORIA.Location = new System.Drawing.Point(188, 148);
+            this.btnCATEGORIA.Location = new System.Drawing.Point(339, 146);
             this.btnCATEGORIA.Name = "btnCATEGORIA";
-            this.btnCATEGORIA.Size = new System.Drawing.Size(257, 32);
+            this.btnCATEGORIA.Size = new System.Drawing.Size(106, 50);
             this.btnCATEGORIA.TabIndex = 45;
             this.btnCATEGORIA.Text = "Seleccionar Categoria";
             this.btnCATEGORIA.UseVisualStyleBackColor = true;
@@ -213,11 +215,27 @@
             this.btnCANCELAR.UseVisualStyleBackColor = true;
             this.btnCANCELAR.Click += new System.EventHandler(this.btnCANCELAR_Click);
             // 
+            // txtMARCA
+            // 
+            this.txtMARCA.Location = new System.Drawing.Point(188, 109);
+            this.txtMARCA.Name = "txtMARCA";
+            this.txtMARCA.Size = new System.Drawing.Size(145, 22);
+            this.txtMARCA.TabIndex = 50;
+            // 
+            // txtCATEGORIA
+            // 
+            this.txtCATEGORIA.Location = new System.Drawing.Point(188, 160);
+            this.txtCATEGORIA.Name = "txtCATEGORIA";
+            this.txtCATEGORIA.Size = new System.Drawing.Size(145, 22);
+            this.txtCATEGORIA.TabIndex = 51;
+            // 
             // frmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(480, 661);
+            this.Controls.Add(this.txtCATEGORIA);
+            this.Controls.Add(this.txtMARCA);
             this.Controls.Add(this.btnCANCELAR);
             this.Controls.Add(this.txtCANTOPERATIVA);
             this.Controls.Add(this.label3);
@@ -239,6 +257,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmProducto";
             this.Text = "frmProducto";
+            this.Load += new System.EventHandler(this.frmProducto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,5 +283,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCANTOPERATIVA;
         private System.Windows.Forms.Button btnCANCELAR;
+        private System.Windows.Forms.TextBox txtMARCA;
+        private System.Windows.Forms.TextBox txtCATEGORIA;
     }
 }

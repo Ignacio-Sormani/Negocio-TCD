@@ -21,6 +21,8 @@ namespace VISTA
             accion = miAccion;
             oProducto = miProducto;
             cProductos = CONTROLADORA.cPRODUCTOS.obtener_instancia();
+            txtMARCA.Enabled = false;
+            txtCATEGORIA.Enabled = false;
         }
         
 
@@ -29,6 +31,23 @@ namespace VISTA
         private void btnGUARDAR_Click(object sender, EventArgs e)
         {
             //VALIDACIONES
+            
+            if (string.IsNullOrWhiteSpace(txtDESCRIPCION.Text)) {
+                MessageBox.Show("El valor de la descripcion es incorrecto");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtMARCA.Text))
+            {
+                MessageBox.Show("Debe seleccionar una marca");
+                return;
+            }
+            if (string.IsNullOrEmpty(txtMARCA.Text))
+            {
+                MessageBox.Show("Debe seleccionar una categoria");
+                return;
+            }
+
             decimal costo;
             if (!Decimal.TryParse(txtCOSTO.Text, out costo)) {
                 MessageBox.Show("El valor del costo es incorrecto");
@@ -40,7 +59,6 @@ namespace VISTA
                 MessageBox.Show("El valor del precio es incorrecto");
                 return;
             }
-
             int cant_minima;
             if (!int.TryParse(txtCANTMINIMA.Text, out cant_minima))
             {
@@ -55,6 +73,8 @@ namespace VISTA
                 return;
             }
 
+           
+            //SETEAR PROPIEDADES
             
             oProducto.descripcion = txtDESCRIPCION.Text;
             //marcas y categorias guardados desde los botones
@@ -80,17 +100,66 @@ namespace VISTA
         {
             frmMarcas frmMarcas = new frmMarcas(oProducto);
             frmMarcas.ShowDialog();
+            if (oProducto.marca != null)
+            {
+                txtMARCA.Text = oProducto.marca.ToString();
+            }
         }
 
         private void btnCATEGORIA_Click(object sender, EventArgs e)
         {
             frmCategorias frmCategorias = new frmCategorias(oProducto);
             frmCategorias.ShowDialog();
+            if (oProducto.categoria != null)
+            {
+                txtCATEGORIA.Text = oProducto.categoria.ToString();
+            }
         }
 
         private void btnCANCELAR_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
+        }
+
+        private void frmProducto_Load(object sender, EventArgs e)
+        {
+            if (accion == "M")
+            {
+                completarCampos();
+                btnMARCA.Text = "Modificar Marca";
+                btnCATEGORIA.Text = "Modificar Categoria";
+            }
+            if (accion == "C")
+            {
+                completarCampos();
+                deshabilitarCampos();
+                btnCANCELAR.Text = "Cerrar";
+                btnGUARDAR.Visible = false;
+            }
+        }
+        //FUNCIONES EXTRAS
+        public void completarCampos() {
+            txtDESCRIPCION.Text = oProducto.descripcion;
+            txtMARCA.Text = oProducto.marca.ToString();
+            txtCATEGORIA.Text = oProducto.categoria.ToString();
+            txtCOSTO.Text = oProducto.costo.ToString();
+            txtPRECIO.Text = oProducto.precio.ToString();
+            txtCANTMINIMA.Text = oProducto.cantidadMinima.ToString();
+            txtCANTOPERATIVA.Text = oProducto.cantidadOperativa.ToString();
+            ckbACTIVO.Checked = oProducto.estadoActivo;
+        }
+
+        public void deshabilitarCampos() {
+            txtDESCRIPCION.Enabled = false;
+            txtMARCA.Enabled = false;
+            txtCATEGORIA.Enabled = false;
+            txtCOSTO.Enabled = false;
+            txtPRECIO.Enabled = false;
+            txtCANTMINIMA.Enabled = false;
+            txtCANTOPERATIVA.Enabled = false;
+            ckbACTIVO.Enabled = false;
+            btnCATEGORIA.Enabled = false;
+            btnMARCA.Enabled = false;
         }
     }
 }

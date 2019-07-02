@@ -11,5 +11,10 @@ namespace MODELO
         public Int32 codigoLocalidad { get; set; }
         public Int32 codigoPostal { get; set; }
         public string localidad { get; set; }
+
+        public override string ToString()
+        {
+            return this.localidad;
+        }
     }
 }

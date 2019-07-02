@@ -93,6 +93,7 @@ namespace VISTA
                 MessageBox.Show("Debe seleccionar una marca de la lista");
                 return;
             }
+ 
             oProducto.marca = cMARCAS.obtener_marca(Convert.ToInt32(dgvMARCAS.CurrentRow.Cells[0].Value));
             this.Close();
         }

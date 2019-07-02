@@ -23,6 +23,17 @@ namespace VISTA
             InitializeComponent();
             cLOCALIDADES = CONTROLADORA.cLOCALIDADES.obtener_instancia();
             armarGrilla();
+            btnSELECCIONAR.Visible = false;
+        }
+
+        MODELO.CLIENTE oCliente;
+        public frmLocalidades(MODELO.CLIENTE miCliente)
+        {
+            InitializeComponent();
+            oCliente = miCliente;
+            cLOCALIDADES = CONTROLADORA.cLOCALIDADES.obtener_instancia();
+            armarGrilla();
+            btnSELECCIONAR.Visible = true;
         }
 
         public void armarGrilla()
@@ -72,5 +83,19 @@ namespace VISTA
         {
             armarGrilla();
         }
+
+        private void btnSELECCIONAR_Click(object sender, EventArgs e)
+        {
+            if (dgvLOCALIDADES.CurrentRow == null) {
+                MessageBox.Show("Debe seleccionar una localidad de la lista");
+                return;
+            }
+
+            oCliente.localidad = cLOCALIDADES.obtener_localidad(Convert.ToInt32(dgvLOCALIDADES.CurrentRow.Cells[0].Value));
+            this.Close();
+            
+        }
+
+
     }
 }
