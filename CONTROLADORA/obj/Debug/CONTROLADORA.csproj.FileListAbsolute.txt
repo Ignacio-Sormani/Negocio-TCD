@@ -75,3 +75,4 @@ C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\CONTROLADORA\obj\
 C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\CONTROLADORA\obj\Debug\CONTROLADORA.dll
 C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\CONTROLADORA\obj\Debug\CONTROLADORA.pdb
 C:\Users\Usuario\Desktop\Negocio-TCD\CONTROLADORA\obj\Debug\CONTROLADORA.csproj.ResolveComReference.cache
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\CONTROLADORA\obj\Debug\CONTROLADORA.csproj.ResolveComReference.cache

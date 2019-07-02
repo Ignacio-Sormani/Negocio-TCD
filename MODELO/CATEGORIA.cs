@@ -10,5 +10,10 @@ namespace MODELO
     {
         public Int32 codigoCategoria { get; set; }
         public string categoria { get; set; }
+
+        public override string ToString()
+        {
+            return this.categoria;
+        }
     }
 }

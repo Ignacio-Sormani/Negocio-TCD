@@ -24,21 +24,21 @@ namespace MODELO
         public string estado { get; set; }
         public bool estadoActivo { get; set; }
         public virtual ICollection<ITEM> items { get; set; }
-        public string asignar_estado(bool p)
+        public void asignar_estado(bool p)
         {
             if (p == true)
             {
                 if (cantidadActual == 0)
-                    return "Sin Stock";
+                    estado = "Sin Stock";
                 else if (cantidadActual < cantidadMinima)
-                    return "Stock Faltante";
+                    estado = "Stock Faltante";
                 else if (cantidadActual < cantidadOperativa)
-                    return "Stock Minimo";
+                    estado = "Stock Minimo";
                 else
-                    return "Hay Stock";
+                    estado = "Hay Stock";
             }
             else
-                return "En pedido";
+                estado = "En pedido";
         }
         public override string ToString()
         {

@@ -10,5 +10,10 @@ namespace MODELO
     {
         public Int32 codigoMarca { get; set; }
         public string marca { get; set; }
+
+        public override string ToString()
+        {
+            return this.marca;
+        }
     }
 }

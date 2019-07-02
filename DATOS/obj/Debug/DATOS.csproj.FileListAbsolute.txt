@@ -68,10 +68,13 @@ C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\obj\Debug\D
 C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\obj\Debug\DATOS.csproj.CoreCompileInputs.cache
 C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\obj\Debug\DATOS.dll
 C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\obj\Debug\DATOS.pdb
-C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations.NegocioTCD.resources
 C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\obj\Debug\DATOS.csproj.GenerateResource.Cache
 C:\Users\Usuario\Desktop\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations._1.resources
 C:\Users\Usuario\Desktop\Negocio-TCD\DATOS\obj\Debug\DATOS.csproj.GenerateResource.Cache
 C:\Users\Usuario\Desktop\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations._2.resources
 C:\Users\Usuario\Desktop\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations._3.resources
 C:\Users\Usuario\Desktop\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations._4.resources
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations._1.resources
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations._2.resources
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations._3.resources
+C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations._4.resources

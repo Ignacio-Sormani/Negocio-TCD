@@ -27,6 +27,19 @@ namespace VISTA
             armar_grilla();
         }
 
+        MODELO.PRODUCTO oProducto;
+        public frmCategorias(MODELO.PRODUCTO miProducto)
+        {
+            InitializeComponent();
+
+            oProducto = miProducto;
+            cCATEGORIAS = CONTROLADORA.cCATEGORIAS.obtener_instancia();
+            btnSELECCIONAR.Visible = true;
+            armar_grilla();
+        }
+
+
+
         private void armar_grilla()
         {
             dgvCATEGORIAS.DataSource = null;
@@ -73,6 +86,17 @@ namespace VISTA
             }
             frmCategoria frmCategoria = new frmCategoria(cCATEGORIAS.obtener_categoria(Convert.ToInt32(dgvCATEGORIAS.CurrentRow.Cells[0].Value)), "C");
             frmCategoria.ShowDialog();
+        }
+
+        private void btnSELECCIONAR_Click(object sender, EventArgs e)
+        {
+            if (dgvCATEGORIAS.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar una categoria de la lista");
+                return;
+            }
+            oProducto.categoria = cCATEGORIAS.obtener_categoria(Convert.ToInt32(dgvCATEGORIAS.CurrentRow.Cells[0].Value));
+            this.Close();
         }
     }
 }

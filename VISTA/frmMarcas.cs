@@ -27,6 +27,16 @@ namespace VISTA
             armar_grilla();
         }
 
+        MODELO.PRODUCTO oProducto;
+        public frmMarcas(MODELO.PRODUCTO miProducto) {
+            InitializeComponent();
+   
+            oProducto = miProducto;
+            cMARCAS = CONTROLADORA.cMARCAS.obtener_instancia();
+            btnSELECCIONAR.Visible = true;
+            armar_grilla();
+        }
+
 
         private void armar_grilla()
         {
@@ -76,5 +86,15 @@ namespace VISTA
             frmMarca.ShowDialog();
         }
 
+        private void btnSELECCIONAR_Click(object sender, EventArgs e)
+        {
+            if (dgvMARCAS.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar una marca de la lista");
+                return;
+            }
+            oProducto.marca = cMARCAS.obtener_marca(Convert.ToInt32(dgvMARCAS.CurrentRow.Cells[0].Value));
+            this.Close();
+        }
     }
 }

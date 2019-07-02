@@ -38,11 +38,30 @@ namespace CONTROLADORA
             return oNegocio.PRODUCTOS.Find(codigo);
         }
 
-        public System.Collections.IEnumerable obtener_productos() //terminar metodo
+        public System.Collections.IEnumerable obtener_productos(string descripcionProducto) //terminar metodo
         {
-            var productos = from producto in oNegocio.PRODUCTOS.ToList()
-                             select producto;
+            var productos = from producto in oNegocio.PRODUCTOS.Include("marca").Include("categoria").ToList()
+                            where producto.descripcion.ToLower().Contains(descripcionProducto.ToLower())
+                            select new
+                            {
+                                codigo = producto.codigoProducto,
+                                descripcion = producto.descripcion,
+                                marca = producto.marca,
+                                categoria = producto.categoria,
+                                costo = producto.costo,
+                                precio = producto.precio,
+                                cantidadActual = producto.cantidadActual,
+                                cantidadMinima = producto.cantidadMinima,
+                                cantidadOperativa = producto.cantidadOperativa,
+                                estado = producto.estado,
+                                estadoActivo = producto.estadoActivo
+
+                            };
             return productos.ToList();
         }
+
+        
+
+
     }
 }
