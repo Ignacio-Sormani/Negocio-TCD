@@ -37,6 +37,7 @@
             this.btnMODIFICAR = new System.Windows.Forms.Button();
             this.btnAGREGAR = new System.Windows.Forms.Button();
             this.dgvCATEGORIAS = new System.Windows.Forms.DataGridView();
+            this.btnTODAS = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCATEGORIAS)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +55,7 @@
             // lblCATEGORIA
             // 
             this.lblCATEGORIA.AutoSize = true;
-            this.lblCATEGORIA.Location = new System.Drawing.Point(87, 20);
+            this.lblCATEGORIA.Location = new System.Drawing.Point(21, 20);
             this.lblCATEGORIA.Name = "lblCATEGORIA";
             this.lblCATEGORIA.Size = new System.Drawing.Size(73, 17);
             this.lblCATEGORIA.TabIndex = 23;
@@ -73,10 +74,10 @@
             // 
             // btnBUSCAR
             // 
-            this.btnBUSCAR.Location = new System.Drawing.Point(396, 20);
+            this.btnBUSCAR.Location = new System.Drawing.Point(311, 16);
             this.btnBUSCAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBUSCAR.Name = "btnBUSCAR";
-            this.btnBUSCAR.Size = new System.Drawing.Size(173, 25);
+            this.btnBUSCAR.Size = new System.Drawing.Size(128, 25);
             this.btnBUSCAR.TabIndex = 21;
             this.btnBUSCAR.Text = "Buscar";
             this.btnBUSCAR.UseVisualStyleBackColor = true;
@@ -95,10 +96,10 @@
             // 
             // txtBUSCAR
             // 
-            this.txtBUSCAR.Location = new System.Drawing.Point(165, 20);
+            this.txtBUSCAR.Location = new System.Drawing.Point(100, 17);
             this.txtBUSCAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBUSCAR.Name = "txtBUSCAR";
-            this.txtBUSCAR.Size = new System.Drawing.Size(223, 22);
+            this.txtBUSCAR.Size = new System.Drawing.Size(205, 22);
             this.txtBUSCAR.TabIndex = 20;
             // 
             // btnMODIFICAR
@@ -133,11 +134,23 @@
             this.dgvCATEGORIAS.Size = new System.Drawing.Size(552, 342);
             this.dgvCATEGORIAS.TabIndex = 16;
             // 
+            // btnTODAS
+            // 
+            this.btnTODAS.Location = new System.Drawing.Point(441, 16);
+            this.btnTODAS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTODAS.Name = "btnTODAS";
+            this.btnTODAS.Size = new System.Drawing.Size(128, 25);
+            this.btnTODAS.TabIndex = 25;
+            this.btnTODAS.Text = "Ver todas";
+            this.btnTODAS.UseVisualStyleBackColor = true;
+            this.btnTODAS.Click += new System.EventHandler(this.btnTODAS_Click);
+            // 
             // frmCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 545);
+            this.Controls.Add(this.btnTODAS);
             this.Controls.Add(this.btnSELECCIONAR);
             this.Controls.Add(this.lblCATEGORIA);
             this.Controls.Add(this.btnCONSULTAR);
@@ -147,7 +160,7 @@
             this.Controls.Add(this.btnMODIFICAR);
             this.Controls.Add(this.btnAGREGAR);
             this.Controls.Add(this.dgvCATEGORIAS);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCategorias";
             this.Text = "frmCategorias";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCATEGORIAS)).EndInit();
@@ -167,5 +180,6 @@
         private System.Windows.Forms.Button btnMODIFICAR;
         private System.Windows.Forms.Button btnAGREGAR;
         private System.Windows.Forms.DataGridView dgvCATEGORIAS;
+        private System.Windows.Forms.Button btnTODAS;
     }
 }

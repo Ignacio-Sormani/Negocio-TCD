@@ -37,15 +37,16 @@
             this.btnCONSULTAR = new System.Windows.Forms.Button();
             this.lblMARCA = new System.Windows.Forms.Label();
             this.btnSELECCIONAR = new System.Windows.Forms.Button();
+            this.btnTODAS = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMARCAS)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBUSCAR
             // 
-            this.btnBUSCAR.Location = new System.Drawing.Point(391, 18);
+            this.btnBUSCAR.Location = new System.Drawing.Point(305, 14);
             this.btnBUSCAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBUSCAR.Name = "btnBUSCAR";
-            this.btnBUSCAR.Size = new System.Drawing.Size(173, 25);
+            this.btnBUSCAR.Size = new System.Drawing.Size(128, 25);
             this.btnBUSCAR.TabIndex = 12;
             this.btnBUSCAR.Text = "Buscar";
             this.btnBUSCAR.UseVisualStyleBackColor = true;
@@ -64,7 +65,7 @@
             // 
             // txtBUSCAR
             // 
-            this.txtBUSCAR.Location = new System.Drawing.Point(160, 18);
+            this.txtBUSCAR.Location = new System.Drawing.Point(75, 15);
             this.txtBUSCAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBUSCAR.Name = "txtBUSCAR";
             this.txtBUSCAR.Size = new System.Drawing.Size(223, 22);
@@ -116,7 +117,7 @@
             // lblMARCA
             // 
             this.lblMARCA.AutoSize = true;
-            this.lblMARCA.Location = new System.Drawing.Point(81, 18);
+            this.lblMARCA.Location = new System.Drawing.Point(18, 18);
             this.lblMARCA.Name = "lblMARCA";
             this.lblMARCA.Size = new System.Drawing.Size(51, 17);
             this.lblMARCA.TabIndex = 14;
@@ -133,11 +134,23 @@
             this.btnSELECCIONAR.UseVisualStyleBackColor = true;
             this.btnSELECCIONAR.Click += new System.EventHandler(this.btnSELECCIONAR_Click);
             // 
+            // btnTODAS
+            // 
+            this.btnTODAS.Location = new System.Drawing.Point(436, 15);
+            this.btnTODAS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTODAS.Name = "btnTODAS";
+            this.btnTODAS.Size = new System.Drawing.Size(128, 25);
+            this.btnTODAS.TabIndex = 16;
+            this.btnTODAS.Text = "Ver todas";
+            this.btnTODAS.UseVisualStyleBackColor = true;
+            this.btnTODAS.Click += new System.EventHandler(this.btnTODAS_Click);
+            // 
             // frmMarcas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 545);
+            this.Controls.Add(this.btnTODAS);
             this.Controls.Add(this.btnSELECCIONAR);
             this.Controls.Add(this.lblMARCA);
             this.Controls.Add(this.btnCONSULTAR);
@@ -167,5 +180,6 @@
         private System.Windows.Forms.Button btnCONSULTAR;
         private System.Windows.Forms.Label lblMARCA;
         private System.Windows.Forms.Button btnSELECCIONAR;
+        private System.Windows.Forms.Button btnTODAS;
     }
 }

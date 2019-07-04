@@ -21,8 +21,6 @@ namespace VISTA
             accion = miAccion;
             oProducto = miProducto;
             cProductos = CONTROLADORA.cPRODUCTOS.obtener_instancia();
-            txtMARCA.Enabled = false;
-            txtCATEGORIA.Enabled = false;
         }
         
 
@@ -37,12 +35,12 @@ namespace VISTA
                 return;
             }
 
-            if (string.IsNullOrEmpty(txtMARCA.Text))
+            if (string.IsNullOrEmpty(lblMARCA.Text))
             {
                 MessageBox.Show("Debe seleccionar una marca");
                 return;
             }
-            if (string.IsNullOrEmpty(txtMARCA.Text))
+            if (string.IsNullOrEmpty(lblMARCA.Text))
             {
                 MessageBox.Show("Debe seleccionar una categoria");
                 return;
@@ -102,7 +100,7 @@ namespace VISTA
             frmMarcas.ShowDialog();
             if (oProducto.marca != null)
             {
-                txtMARCA.Text = oProducto.marca.ToString();
+                lblMARCA.Text = oProducto.marca.ToString();
             }
         }
 
@@ -112,7 +110,7 @@ namespace VISTA
             frmCategorias.ShowDialog();
             if (oProducto.categoria != null)
             {
-                txtCATEGORIA.Text = oProducto.categoria.ToString();
+                lblCATEGORIA.Text = oProducto.categoria.ToString();
             }
         }
 
@@ -140,8 +138,8 @@ namespace VISTA
         //FUNCIONES EXTRAS
         public void completarCampos() {
             txtDESCRIPCION.Text = oProducto.descripcion;
-            txtMARCA.Text = oProducto.marca.ToString();
-            txtCATEGORIA.Text = oProducto.categoria.ToString();
+            lblMARCA.Text = oProducto.marca.ToString();
+            lblCATEGORIA.Text = oProducto.categoria.ToString();
             txtCOSTO.Text = oProducto.costo.ToString();
             txtPRECIO.Text = oProducto.precio.ToString();
             txtCANTMINIMA.Text = oProducto.cantidadMinima.ToString();
@@ -151,8 +149,8 @@ namespace VISTA
 
         public void deshabilitarCampos() {
             txtDESCRIPCION.Enabled = false;
-            txtMARCA.Enabled = false;
-            txtCATEGORIA.Enabled = false;
+            lblMARCA.Enabled = false;
+            lblCATEGORIA.Enabled = false;
             txtCOSTO.Enabled = false;
             txtPRECIO.Enabled = false;
             txtCANTMINIMA.Enabled = false;
@@ -160,6 +158,11 @@ namespace VISTA
             ckbACTIVO.Enabled = false;
             btnCATEGORIA.Enabled = false;
             btnMARCA.Enabled = false;
+        }
+
+        private void lblCATEGORIA_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

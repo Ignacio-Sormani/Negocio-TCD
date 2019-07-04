@@ -25,15 +25,39 @@ namespace VISTA
             armarGrilla();
             btnSELECCIONAR.Visible = false;
         }
-
+        //CONSTRUCTOR PARA ENLAZAR DAOS CON EL CLIENTE
         MODELO.CLIENTE oCliente;
+        bool localidadAlCliente = false;
+        int selectRowIndex = -1;
         public frmLocalidades(MODELO.CLIENTE miCliente)
         {
             InitializeComponent();
+            localidadAlCliente = true;
             oCliente = miCliente;
             cLOCALIDADES = CONTROLADORA.cLOCALIDADES.obtener_instancia();
             armarGrilla();
             btnSELECCIONAR.Visible = true;
+
+            //test seleccionar sigue en el load del formulario
+            if (oCliente.localidad != null)
+            {
+                var selectedRow = dgvLOCALIDADES.Rows.Cast<DataGridViewRow>().FirstOrDefault(x => Convert.ToInt32(x.Cells[0].Value) == 6);
+                selectRowIndex = selectedRow.Index;
+            }
+        }
+
+        //CONSTRUCTOR PARA ENLAZAR DATOS CON LOS PROVEEDORES
+        MODELO.PROVEEDOR oProveedor;
+        bool localidadAlProveedor = false;
+        public frmLocalidades(MODELO.PROVEEDOR miProveedor)
+        {
+            InitializeComponent();
+            localidadAlProveedor = true;
+            oProveedor = miProveedor;
+            cLOCALIDADES = CONTROLADORA.cLOCALIDADES.obtener_instancia();
+            armarGrilla();
+            btnSELECCIONAR.Visible = true;
+            
         }
 
         public void armarGrilla()
@@ -91,11 +115,32 @@ namespace VISTA
                 return;
             }
 
-            oCliente.localidad = cLOCALIDADES.obtener_localidad(Convert.ToInt32(dgvLOCALIDADES.CurrentRow.Cells[0].Value));
+            //agregar localidad al cliente?
+            if (localidadAlCliente) {
+                oCliente.localidad = cLOCALIDADES.obtener_localidad(Convert.ToInt32(dgvLOCALIDADES.CurrentRow.Cells[0].Value));
+            }
+
+            //agregar localidad al proveedor?
+            if (localidadAlProveedor)
+            {
+                oProveedor.localidad = cLOCALIDADES.obtener_localidad(Convert.ToInt32(dgvLOCALIDADES.CurrentRow.Cells[0].Value));
+            }
+
             this.Close();
             
         }
 
+        private void frmLocalidades_Load(object sender, EventArgs e)
+        {
 
+            //test de selecionar localidad clientes
+            if (selectRowIndex != -1)
+            {
+                dgvLOCALIDADES.ClearSelection();
+                dgvLOCALIDADES.Rows[selectRowIndex].Selected = true;
+            }
+            
+
+        }
     }
 }

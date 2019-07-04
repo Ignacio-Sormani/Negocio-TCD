@@ -46,8 +46,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtCANTOPERATIVA = new System.Windows.Forms.TextBox();
             this.btnCANCELAR = new System.Windows.Forms.Button();
-            this.txtMARCA = new System.Windows.Forms.TextBox();
-            this.txtCATEGORIA = new System.Windows.Forms.TextBox();
+            this.lblMARCA = new System.Windows.Forms.Label();
+            this.lblCATEGORIA = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ckbACTIVO
@@ -84,7 +84,7 @@
             this.txtPRECIO.Location = new System.Drawing.Point(188, 255);
             this.txtPRECIO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPRECIO.Name = "txtPRECIO";
-            this.txtPRECIO.Size = new System.Drawing.Size(257, 22);
+            this.txtPRECIO.Size = new System.Drawing.Size(277, 22);
             this.txtPRECIO.TabIndex = 39;
             // 
             // lblMAIL
@@ -101,7 +101,7 @@
             this.txtCOSTO.Location = new System.Drawing.Point(188, 206);
             this.txtCOSTO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCOSTO.Name = "txtCOSTO";
-            this.txtCOSTO.Size = new System.Drawing.Size(257, 22);
+            this.txtCOSTO.Size = new System.Drawing.Size(277, 22);
             this.txtCOSTO.TabIndex = 37;
             // 
             // lblNOMBRE
@@ -118,7 +118,7 @@
             this.txtCANTMINIMA.Location = new System.Drawing.Point(188, 312);
             this.txtCANTMINIMA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCANTMINIMA.Name = "txtCANTMINIMA";
-            this.txtCANTMINIMA.Size = new System.Drawing.Size(257, 22);
+            this.txtCANTMINIMA.Size = new System.Drawing.Size(277, 22);
             this.txtCANTMINIMA.TabIndex = 35;
             // 
             // btnGUARDAR
@@ -146,12 +146,12 @@
             this.txtDESCRIPCION.Location = new System.Drawing.Point(188, 63);
             this.txtDESCRIPCION.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDESCRIPCION.Name = "txtDESCRIPCION";
-            this.txtDESCRIPCION.Size = new System.Drawing.Size(257, 22);
+            this.txtDESCRIPCION.Size = new System.Drawing.Size(277, 22);
             this.txtDESCRIPCION.TabIndex = 32;
             // 
             // btnMARCA
             // 
-            this.btnMARCA.Location = new System.Drawing.Point(339, 96);
+            this.btnMARCA.Location = new System.Drawing.Point(359, 96);
             this.btnMARCA.Name = "btnMARCA";
             this.btnMARCA.Size = new System.Drawing.Size(106, 49);
             this.btnMARCA.TabIndex = 43;
@@ -170,7 +170,7 @@
             // 
             // btnCATEGORIA
             // 
-            this.btnCATEGORIA.Location = new System.Drawing.Point(339, 146);
+            this.btnCATEGORIA.Location = new System.Drawing.Point(359, 146);
             this.btnCATEGORIA.Name = "btnCATEGORIA";
             this.btnCATEGORIA.Size = new System.Drawing.Size(106, 50);
             this.btnCATEGORIA.TabIndex = 45;
@@ -201,7 +201,7 @@
             this.txtCANTOPERATIVA.Location = new System.Drawing.Point(188, 369);
             this.txtCANTOPERATIVA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCANTOPERATIVA.Name = "txtCANTOPERATIVA";
-            this.txtCANTOPERATIVA.Size = new System.Drawing.Size(257, 22);
+            this.txtCANTOPERATIVA.Size = new System.Drawing.Size(277, 22);
             this.txtCANTOPERATIVA.TabIndex = 48;
             // 
             // btnCANCELAR
@@ -215,27 +215,30 @@
             this.btnCANCELAR.UseVisualStyleBackColor = true;
             this.btnCANCELAR.Click += new System.EventHandler(this.btnCANCELAR_Click);
             // 
-            // txtMARCA
+            // lblMARCA
             // 
-            this.txtMARCA.Location = new System.Drawing.Point(188, 109);
-            this.txtMARCA.Name = "txtMARCA";
-            this.txtMARCA.Size = new System.Drawing.Size(145, 22);
-            this.txtMARCA.TabIndex = 50;
+            this.lblMARCA.AutoSize = true;
+            this.lblMARCA.Location = new System.Drawing.Point(185, 112);
+            this.lblMARCA.Name = "lblMARCA";
+            this.lblMARCA.Size = new System.Drawing.Size(0, 17);
+            this.lblMARCA.TabIndex = 50;
             // 
-            // txtCATEGORIA
+            // lblCATEGORIA
             // 
-            this.txtCATEGORIA.Location = new System.Drawing.Point(188, 160);
-            this.txtCATEGORIA.Name = "txtCATEGORIA";
-            this.txtCATEGORIA.Size = new System.Drawing.Size(145, 22);
-            this.txtCATEGORIA.TabIndex = 51;
+            this.lblCATEGORIA.AutoSize = true;
+            this.lblCATEGORIA.Location = new System.Drawing.Point(185, 163);
+            this.lblCATEGORIA.Name = "lblCATEGORIA";
+            this.lblCATEGORIA.Size = new System.Drawing.Size(0, 17);
+            this.lblCATEGORIA.TabIndex = 51;
+            this.lblCATEGORIA.Click += new System.EventHandler(this.lblCATEGORIA_Click);
             // 
             // frmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(480, 661);
-            this.Controls.Add(this.txtCATEGORIA);
-            this.Controls.Add(this.txtMARCA);
+            this.Controls.Add(this.lblCATEGORIA);
+            this.Controls.Add(this.lblMARCA);
             this.Controls.Add(this.btnCANCELAR);
             this.Controls.Add(this.txtCANTOPERATIVA);
             this.Controls.Add(this.label3);
@@ -283,7 +286,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCANTOPERATIVA;
         private System.Windows.Forms.Button btnCANCELAR;
-        private System.Windows.Forms.TextBox txtMARCA;
-        private System.Windows.Forms.TextBox txtCATEGORIA;
+        private System.Windows.Forms.Label lblMARCA;
+        private System.Windows.Forms.Label lblCATEGORIA;
     }
 }

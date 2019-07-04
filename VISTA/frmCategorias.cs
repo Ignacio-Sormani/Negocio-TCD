@@ -98,5 +98,11 @@ namespace VISTA
             oProducto.categoria = cCATEGORIAS.obtener_categoria(Convert.ToInt32(dgvCATEGORIAS.CurrentRow.Cells[0].Value));
             this.Close();
         }
+
+        private void btnTODAS_Click(object sender, EventArgs e)
+        {
+            txtBUSCAR.Text = "";
+            armar_grilla();
+        }
     }
 }

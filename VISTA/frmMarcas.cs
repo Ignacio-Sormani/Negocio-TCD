@@ -97,5 +97,11 @@ namespace VISTA
             oProducto.marca = cMARCAS.obtener_marca(Convert.ToInt32(dgvMARCAS.CurrentRow.Cells[0].Value));
             this.Close();
         }
+
+        private void btnTODAS_Click(object sender, EventArgs e)
+        {
+            txtBUSCAR.Text = "";
+            armar_grilla();
+        }
     }
 }

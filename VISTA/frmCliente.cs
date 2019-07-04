@@ -21,7 +21,6 @@ namespace VISTA
             cCLIENTE = CONTROLADORA.cCLIENTES.obtener_instancia();
             oCliente = miCliente;
             accion = miAccion;
-            txtLOCALIDAD.Enabled = false;
         }
 
         private void btnGUARDAR_Click(object sender, EventArgs e)
@@ -44,7 +43,7 @@ namespace VISTA
                 MessageBox.Show("El valor de la direccion es incorrecto");
                 return;
             }
-            if (string.IsNullOrEmpty(txtLOCALIDAD.Text))
+            if (string.IsNullOrEmpty(lblLOCALIDAD.Text))
             {
                 MessageBox.Show("Debe seleccionar una localidad");
                 return;
@@ -88,17 +87,17 @@ namespace VISTA
             txtNOMBREAPELLIDO.Text = oCliente.nombreApellido;
             dtpNACIMIENTO.Value = oCliente.fechaNacimiento;
             txtDIRECCION.Text = oCliente.direccion;
-            txtLOCALIDAD.Text = oCliente.localidad.ToString();
+            lblLOCALIDAD.Text = oCliente.localidad.ToString();
             txtTELEFONO.Text = oCliente.telefono.ToString();
             txtEMAIL.Text = oCliente.mail;
         }
 
         public void deshabilitarCampos() {
+            lblLOCALIDAD.Enabled = false;
             txtDNI.Enabled = false;
             txtNOMBREAPELLIDO.Enabled = false;
             dtpNACIMIENTO.Enabled = false;
             txtDIRECCION.Enabled = false;
-            txtLOCALIDAD.Enabled = false;
             txtTELEFONO.Enabled = false;
             txtEMAIL.Enabled = false;
             btnLOCALIDAD.Enabled = false;
@@ -125,7 +124,7 @@ namespace VISTA
             frmLocalidades frmLocalidades = new frmLocalidades(oCliente);
             frmLocalidades.ShowDialog();
             if (oCliente.localidad != null) {
-            txtLOCALIDAD.Text = oCliente.localidad.ToString();
+                lblLOCALIDAD.Text = oCliente.localidad.ToString();
             }
         }
     }

@@ -37,6 +37,7 @@
             this.btnMODIFICAR = new System.Windows.Forms.Button();
             this.btnAGREGAR = new System.Windows.Forms.Button();
             this.dgvLOCALIDADES = new System.Windows.Forms.DataGridView();
+            this.txtTest = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLOCALIDADES)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,11 +134,19 @@
             this.dgvLOCALIDADES.Size = new System.Drawing.Size(552, 342);
             this.dgvLOCALIDADES.TabIndex = 16;
             // 
+            // txtTest
+            // 
+            this.txtTest.Location = new System.Drawing.Point(17, 503);
+            this.txtTest.Name = "txtTest";
+            this.txtTest.Size = new System.Drawing.Size(100, 22);
+            this.txtTest.TabIndex = 25;
+            // 
             // frmLocalidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 545);
+            this.Controls.Add(this.txtTest);
             this.Controls.Add(this.btnSELECCIONAR);
             this.Controls.Add(this.lblLOCALIDAD);
             this.Controls.Add(this.btnCONSULTAR);
@@ -150,6 +159,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmLocalidades";
             this.Text = "Localidades ";
+            this.Load += new System.EventHandler(this.frmLocalidades_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLOCALIDADES)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -167,5 +177,6 @@
         private System.Windows.Forms.Button btnMODIFICAR;
         private System.Windows.Forms.Button btnAGREGAR;
         private System.Windows.Forms.DataGridView dgvLOCALIDADES;
+        private System.Windows.Forms.TextBox txtTest;
     }
 }

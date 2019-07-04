@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtLOCALIDAD = new System.Windows.Forms.TextBox();
             this.btnCANCELAR = new System.Windows.Forms.Button();
             this.txtEMAIL = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,14 +44,8 @@
             this.lblUSUARIO = new System.Windows.Forms.Label();
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.dtpNACIMIENTO = new System.Windows.Forms.DateTimePicker();
+            this.lblLOCALIDAD = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // txtLOCALIDAD
-            // 
-            this.txtLOCALIDAD.Location = new System.Drawing.Point(192, 252);
-            this.txtLOCALIDAD.Name = "txtLOCALIDAD";
-            this.txtLOCALIDAD.Size = new System.Drawing.Size(145, 22);
-            this.txtLOCALIDAD.TabIndex = 70;
             // 
             // btnCANCELAR
             // 
@@ -70,7 +63,7 @@
             this.txtEMAIL.Location = new System.Drawing.Point(192, 368);
             this.txtEMAIL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEMAIL.Name = "txtEMAIL";
-            this.txtEMAIL.Size = new System.Drawing.Size(257, 22);
+            this.txtEMAIL.Size = new System.Drawing.Size(276, 22);
             this.txtEMAIL.TabIndex = 68;
             // 
             // label3
@@ -102,9 +95,9 @@
             // 
             // btnLOCALIDAD
             // 
-            this.btnLOCALIDAD.Location = new System.Drawing.Point(343, 236);
+            this.btnLOCALIDAD.Location = new System.Drawing.Point(360, 236);
             this.btnLOCALIDAD.Name = "btnLOCALIDAD";
-            this.btnLOCALIDAD.Size = new System.Drawing.Size(106, 49);
+            this.btnLOCALIDAD.Size = new System.Drawing.Size(108, 49);
             this.btnLOCALIDAD.TabIndex = 63;
             this.btnLOCALIDAD.Text = "Seleccionar Localidad";
             this.btnLOCALIDAD.UseVisualStyleBackColor = true;
@@ -124,7 +117,7 @@
             this.txtNOMBREAPELLIDO.Location = new System.Drawing.Point(192, 106);
             this.txtNOMBREAPELLIDO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNOMBREAPELLIDO.Name = "txtNOMBREAPELLIDO";
-            this.txtNOMBREAPELLIDO.Size = new System.Drawing.Size(257, 22);
+            this.txtNOMBREAPELLIDO.Size = new System.Drawing.Size(276, 22);
             this.txtNOMBREAPELLIDO.TabIndex = 59;
             // 
             // lblMAIL
@@ -141,7 +134,7 @@
             this.txtTELEFONO.Location = new System.Drawing.Point(192, 311);
             this.txtTELEFONO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTELEFONO.Name = "txtTELEFONO";
-            this.txtTELEFONO.Size = new System.Drawing.Size(257, 22);
+            this.txtTELEFONO.Size = new System.Drawing.Size(276, 22);
             this.txtTELEFONO.TabIndex = 57;
             // 
             // lblNOMBRE
@@ -158,7 +151,7 @@
             this.txtDIRECCION.Location = new System.Drawing.Point(192, 200);
             this.txtDIRECCION.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDIRECCION.Name = "txtDIRECCION";
-            this.txtDIRECCION.Size = new System.Drawing.Size(257, 22);
+            this.txtDIRECCION.Size = new System.Drawing.Size(276, 22);
             this.txtDIRECCION.TabIndex = 55;
             // 
             // btnGUARDAR
@@ -186,23 +179,31 @@
             this.txtDNI.Location = new System.Drawing.Point(192, 60);
             this.txtDNI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(257, 22);
+            this.txtDNI.Size = new System.Drawing.Size(276, 22);
             this.txtDNI.TabIndex = 52;
             // 
             // dtpNACIMIENTO
             // 
             this.dtpNACIMIENTO.Location = new System.Drawing.Point(192, 155);
             this.dtpNACIMIENTO.Name = "dtpNACIMIENTO";
-            this.dtpNACIMIENTO.Size = new System.Drawing.Size(257, 22);
+            this.dtpNACIMIENTO.Size = new System.Drawing.Size(276, 22);
             this.dtpNACIMIENTO.TabIndex = 72;
+            // 
+            // lblLOCALIDAD
+            // 
+            this.lblLOCALIDAD.AutoSize = true;
+            this.lblLOCALIDAD.Location = new System.Drawing.Point(189, 252);
+            this.lblLOCALIDAD.Name = "lblLOCALIDAD";
+            this.lblLOCALIDAD.Size = new System.Drawing.Size(0, 17);
+            this.lblLOCALIDAD.TabIndex = 73;
             // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(480, 661);
+            this.Controls.Add(this.lblLOCALIDAD);
             this.Controls.Add(this.dtpNACIMIENTO);
-            this.Controls.Add(this.txtLOCALIDAD);
             this.Controls.Add(this.btnCANCELAR);
             this.Controls.Add(this.txtEMAIL);
             this.Controls.Add(this.label3);
@@ -218,7 +219,7 @@
             this.Controls.Add(this.btnGUARDAR);
             this.Controls.Add(this.lblUSUARIO);
             this.Controls.Add(this.txtDNI);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCliente";
             this.Text = "frmCliente";
             this.Load += new System.EventHandler(this.frmCliente_Load);
@@ -228,7 +229,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtLOCALIDAD;
         private System.Windows.Forms.Button btnCANCELAR;
         private System.Windows.Forms.TextBox txtEMAIL;
         private System.Windows.Forms.Label label3;
@@ -245,5 +245,6 @@
         private System.Windows.Forms.Label lblUSUARIO;
         private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.DateTimePicker dtpNACIMIENTO;
+        private System.Windows.Forms.Label lblLOCALIDAD;
     }
 }
