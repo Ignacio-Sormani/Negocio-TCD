@@ -58,7 +58,7 @@ namespace VISTA
                             TreeNode tnA = new TreeNode();
                             tnA.Text = oAccion.descripcion;
                             tnA.Tag = oAccion;
-                            if (oGrupo.acciones.Count(acc => (acc.modulo == oAccion.modulo) && (acc.descripcionFormulario == oAccion.descripcion) && (acc.control == oAccion.control)) > 0)
+                            if (oGrupo.acciones.Count(acc => (acc.modulo == oAccion.modulo) && /*(acc.descripcionFormulario == oAccion.descripcion) && */(acc.control == oAccion.control)) > 0)
                                 tnA.Checked = true;
                             else
                                 tnA.Checked = false;

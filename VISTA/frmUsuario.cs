@@ -43,16 +43,16 @@ namespace VISTA
                 for (int i = 0; i < clbGRUPOS.Items.Count; i++)
                 {
                     MODELO.GRUPO oGrupo = (MODELO.GRUPO)clbGRUPOS.Items[i];
-                    foreach (MODELO.GRUPO miGrupo in oUsuario.grupos)
+                    foreach (MODELO.GRUPO miGrupo in oUsuario.grupos.ToList())
                     {
                         if (miGrupo.codigoGrupo == oGrupo.codigoGrupo)
                         {
                             clbGRUPOS.SetItemChecked(i, true);
                         }
                     }
-                }
-                bGrupo = true;
+                }                
             }
+            bGrupo = true;
 
             if (ACCION == "C")
             {
@@ -66,14 +66,14 @@ namespace VISTA
             }
         }
 
-        private void btnCANCELAR_Click(object sender, EventArgs e)
+        private void btnGUARDAR_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtUSUARIO.Text))
             {
                 MessageBox.Show("Debe ingresar un nombre de usuario correcto");
                 return;
             }
-            if (!cUSUARIOS.verificar_usuario_existente(txtUSUARIO.Text)) //verificar este doble if
+            if (!cUSUARIOS.verificar_usuario_existente(txtUSUARIO.Text))
             {
                 if (!(ACCION == "M" && oUsuario.nombreDeUsuario == txtUSUARIO.Text))
                 {
@@ -86,17 +86,16 @@ namespace VISTA
                 MessageBox.Show("Debe ingresar un nombre y apellido correcto", "Usuario - Atencion!");
                 return;
             }
-            if (string.IsNullOrEmpty(txtMAIL.Text) || CONTROLADORA.FUNCIONES.validar_mail(txtMAIL.Text))
+            if (string.IsNullOrEmpty(txtMAIL.Text) || !CONTROLADORA.FUNCIONES.validar_mail(txtMAIL.Text))
             {
                 MessageBox.Show("Debe ingresar un mail correcto");
                 return;
             }
-            if (string.IsNullOrEmpty(txtCLAVE.Text) || txtCLAVE.TextLength < 6 || txtCLAVE.TextLength > 10)
+            if (ACCION == "A" && (string.IsNullOrEmpty(txtCLAVE.Text) || txtCLAVE.TextLength < 6 || txtCLAVE.TextLength > 10))
             {
                 MessageBox.Show("Debe ingresar una contraseña de entre 6 y 10 caracteres");
                 return;
             }
-
             oUsuario.nombreDeUsuario = txtUSUARIO.Text;
             oUsuario.nombreApellido = txtNOMBRE.Text;
             oUsuario.mail = txtMAIL.Text;            
@@ -114,7 +113,7 @@ namespace VISTA
             this.DialogResult = DialogResult.OK;
         }
 
-        private void btnGUARDAR_Click(object sender, EventArgs e)
+        private void btnCANCELAR_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
         }

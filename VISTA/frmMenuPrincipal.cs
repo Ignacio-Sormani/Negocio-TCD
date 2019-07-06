@@ -16,12 +16,46 @@ namespace VISTA
         MODELO.ACCESO oAcceso;
         CONTROLADORA.cACCESOS cACCESOS;
         CONTROLADORA.cUSUARIOS cUSUARIOS;
+        CONTROLADORA.cACCIONES cACCIONES;
+        CONTROLADORA.cGRUPOS cGRUPOS;
         public frmMenuPrincipal()
         {
             InitializeComponent();
             cACCESOS = CONTROLADORA.cACCESOS.obtener_instancia();
             cUSUARIOS = CONTROLADORA.cUSUARIOS.obtener_instancia();
-            //cACCESOS.VERIFICA_PERMISOS_ADMINISTRADOR();
+            cACCIONES = CONTROLADORA.cACCIONES.obtener_instancia();
+            cGRUPOS = CONTROLADORA.cGRUPOS.obtener_instancia();
+            cACCIONES.verificar_acciones();
+
+            string mensaje = "";
+            if (cACCIONES.verificar_grupos() == 0)
+            {                
+                MODELO.GRUPO oGrupo = new MODELO.GRUPO();
+                oGrupo.nombre = "Administrador del Sistema";
+                oGrupo.estadoActivo = true;
+                cGRUPOS.agregar_grupo(oGrupo);
+                mensaje += "Se creo el grupo Administrador del Sistema, ya que no existia.";
+            }
+            if (cACCIONES.verificar_usuarios() == 0)
+            {
+                MODELO.USUARIO oUsuario = new MODELO.USUARIO();
+                oUsuario.nombreDeUsuario = "Superusuario";
+                oUsuario.nombreApellido = "Superusuario Inicial";
+                oUsuario.estadoActivo = true;
+                oUsuario.clave = CONTROLADORA.FUNCIONES.encriptar_clave("admin");
+                oUsuario.conectado = false;
+                oUsuario.mail = "superusuario@admin.com";
+                oUsuario.grupos.Add(cUSUARIOS.obtener_grupo_admin());
+                cUSUARIOS.agregar_usuario(oUsuario);
+                mensaje += "\n\nSe agrego un Superusuario con grupo Administrador del Sistema ya que no existia ningun usuario.";
+                mensaje += "\nPara ingresar al sistema complete con los siguientes datos.";
+                mensaje += "\nNombre de Usuario: Superusuario";
+                mensaje += "\nContraseña: admin";
+            }
+            if (mensaje != "")
+            {
+                MessageBox.Show(mensaje,"NUEVO USUARIO Y/O GRUPO");
+            }           
         }
 
         private void frmMenuPrincipal_Load(object sender, EventArgs e)
@@ -42,10 +76,49 @@ namespace VISTA
                 cUSUARIOS.modificar_usuario(oUsuario);
                 oAcceso = new MODELO.ACCESO();
                 oAcceso.fechaLogin = System.DateTime.Now;
+                oAcceso.fechaLogout = System.DateTime.Now;
                 oAcceso.usuario = oUsuario;
                 cACCESOS.agregar_acceso(oAcceso);
 
-                //habilitar los botones del menu obteniendo las acciones
+
+                generarArchivosDeDatosToolStripMenuItem.Enabled = oUsuario.validar_acciones("generarArchivosDeDatosToolStripMenuItem", "frmMenuPrincipal");
+                gestionarBackupsToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarBackupsToolStripMenuItem", "frmMenuPrincipal");
+                gestionarCategoriasToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarCategoriasToolStripMenuItem", "frmMenuPrincipal");
+                gestionarClientesToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarClientesToolStripMenuItem", "frmMenuPrincipal");
+                gestionarGruposToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarGruposToolStripMenuItem", "frmMenuPrincipal");
+                gestionarLocalidadesToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarLocalidadesToolStripMenuItem", "frmMenuPrincipal");
+                gestionarMarcasToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarMarcasToolStripMenuItem", "frmMenuPrincipal");
+                gestionarOrdenesDeCompraToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarOrdenesDeCompraToolStripMenuItem", "frmMenuPrincipal");
+                gestionarProductosToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarProductosToolStripMenuItem", "frmMenuPrincipal");
+                gestionarProveedoresToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarProveedoresToolStripMenuItem", "frmMenuPrincipal");
+                gestionarRemitosDeComprasToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarRemitosDeComprasToolStripMenuItem", "frmMenuPrincipal");
+                gestionarReportesToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarReportesToolStripMenuItem", "frmMenuPrincipal");
+                gestionarUsuariosToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarUsuariosToolStripMenuItem", "frmMenuPrincipal");
+                gestionarVentasToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarVentasToolStripMenuItem", "frmMenuPrincipal");
+                if (gestionarCategoriasToolStripMenuItem.Enabled == false && gestionarLocalidadesToolStripMenuItem.Enabled == false && gestionarMarcasToolStripMenuItem.Enabled == false && gestionarProductosToolStripMenuItem.Enabled == false )
+                {
+                    gestionesToolStripMenuItem.Enabled = false;
+                }
+                if (gestionarProveedoresToolStripMenuItem.Enabled == false && gestionarOrdenesDeCompraToolStripMenuItem.Enabled == false)
+                {
+                    comprasToolStripMenuItem.Enabled = false;
+                }
+                if (gestionarRemitosDeComprasToolStripMenuItem.Enabled == false)
+                {
+                    inventarioToolStripMenuItem.Enabled = false;
+                }
+                if (gestionarClientesToolStripMenuItem.Enabled == false && gestionarVentasToolStripMenuItem.Enabled == false)
+                {
+                    ventasToolStripMenuItem.Enabled = false;
+                }
+                if (generarArchivosDeDatosToolStripMenuItem.Enabled == false && gestionarReportesToolStripMenuItem.Enabled == false)
+                {
+                    gerenciaToolStripMenuItem.Enabled = false;
+                }
+                if (gestionarBackupsToolStripMenuItem.Enabled == false && gestionarGruposToolStripMenuItem.Enabled == false && gestionarUsuariosToolStripMenuItem.Enabled == false)
+                {
+                    seguridadToolStripMenuItem.Enabled = false;
+                }
             }
             else
             {
@@ -77,7 +150,7 @@ namespace VISTA
         {
             if (cUSUARIOS.cantidad_usuarios_conectados() == 1)
             {
-                CONTROLADORA.FUNCIONES.generar_backup();
+                //CONTROLADORA.FUNCIONES.generar_backup(); falta arreglar el metodo
             }
             oAcceso.fechaLogout = System.DateTime.Now;
             cACCESOS.modificar_acceso(oAcceso);
@@ -92,7 +165,7 @@ namespace VISTA
             lblNOMBREAPELLIDO.Text = "Nombre y Apellido: " + oUsuario.nombreApellido;
             lblMAIL.Text = "Mail: " + oUsuario.mail;
             lblGRUPOS.Text = "Grupos: \n";
-            foreach (MODELO.GRUPO oGrupo in oUsuario.grupos) // ver si funciona ousuario.grupos o hay que hacer un metodo en controladora
+            foreach (MODELO.GRUPO oGrupo in oUsuario.grupos)
             {
                 if (oGrupo.estadoActivo)
                 {

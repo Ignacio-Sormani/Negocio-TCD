@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace VISTA
 {
-    [MODELO.formulario(nombre = "frmRemitos", descripcion = "Gestionar Remitos", modulo = "Inventario")]
+    [MODELO.formulario(nombre = "frmRemitos", gestion = "gestionarRemitosDeCompras", descripcion = "Gestionar Remitos", modulo = "Inventario")]
     [MODELO.accion(control = "btnAGREGAR", descripcion = "Agregar Remito", formulario = "frmRemitos", modulo = "Inventario")]
     [MODELO.accion(control = "btnCONSULTAR", descripcion = "Consultar Remito", formulario = "frmRemitos", modulo = "Inventario")]
     public partial class frmRemitos : Form

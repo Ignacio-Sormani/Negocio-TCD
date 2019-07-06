@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace VISTA
 {
-    [MODELO.formulario(nombre = "frmCategorias", descripcion = "Gestionar Categorias", modulo = "Gestiones")]
+    [MODELO.formulario(nombre = "frmCategorias", gestion = "gestionarCategorias", descripcion = "Gestionar Categorias", modulo = "Gestiones")]
     [MODELO.accion(control = "btnAGREGAR", descripcion = "Agregar Categoria", formulario = "frmCategorias", modulo = "Gestiones")]
     [MODELO.accion(control = "btnCONSULTAR", descripcion = "Consultar Categoria", formulario = "frmCategorias", modulo = "Gestiones")]
     [MODELO.accion(control = "btnMODIFICAR", descripcion = "Modificar Categoria", formulario = "frmCategorias", modulo = "Gestiones")]

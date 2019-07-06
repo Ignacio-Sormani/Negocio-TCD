@@ -24,6 +24,7 @@ namespace MODELO
         }
         public string nombre { get; set; }
         public string descripcion { get; set; }
+        public string gestion { get; set; }
         public string modulo { get; set; }
         public List<accion> acciones { get; set; }
 

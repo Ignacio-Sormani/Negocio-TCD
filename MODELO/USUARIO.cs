@@ -28,5 +28,24 @@ namespace MODELO
         {
             return nombreDeUsuario;
         }
+
+        public bool validar_acciones(string control, string form)
+        {
+            if (this.grupos.Count(u => u.nombre == "Administrador del Sistema") > 0)
+            {
+                return true;
+            }
+            else
+            {
+                foreach (MODELO.GRUPO oGrupo in this.grupos)
+                {
+                    if (oGrupo.acciones.Count(acc => acc.control == control && acc.nombreFormulario == form) > 0)
+                    {
+                        return true;
+                    }                    
+                }
+            }
+            return false;
+        }
     }
 }

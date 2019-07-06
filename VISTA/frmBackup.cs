@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace VISTA
 {
-    [MODELO.formulario(nombre = "frmBackup", descripcion = "Gestionar Backup", modulo = "Seguridad")]
+    [MODELO.formulario(nombre = "frmBackup", gestion = "gestionarBackups", descripcion = "Gestionar Backup", modulo = "Seguridad")]
     [MODELO.accion(control = "btnGENERARBACKUP", descripcion = "Generar Backup", formulario = "frmBackup", modulo = "Seguridad")]
     [MODELO.accion(control = "btnRECUPERARBACKUP", descripcion = "Recuperar Backup", formulario = "frmBackup", modulo = "Seguridad")]
 

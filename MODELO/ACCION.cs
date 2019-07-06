@@ -16,7 +16,6 @@ namespace MODELO
         public string descripcionAccion { get; set; }
         public string control { get; set; }
         public string nombreFormulario { get; set; }
-        public string descripcionFormulario { get; set; }
         public string modulo { get; set; }
         public virtual ICollection<GRUPO> grupos { get; set; }
 

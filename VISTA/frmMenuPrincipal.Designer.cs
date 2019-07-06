@@ -30,8 +30,10 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.gestionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionarMarcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionarCategoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionarLocalidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionarProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionarOrdenesDeCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,16 +50,14 @@
             this.gestionarGruposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionarBackupsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panDATOSUSUARIO = new System.Windows.Forms.Panel();
-            this.lblUSUARIO = new System.Windows.Forms.Label();
-            this.lblNOMBREAPELLIDO = new System.Windows.Forms.Label();
-            this.lblMAIL = new System.Windows.Forms.Label();
-            this.lblGRUPOS = new System.Windows.Forms.Label();
-            this.btnMIPERFIL = new System.Windows.Forms.Button();
-            this.btnCAMBIARCLAVE = new System.Windows.Forms.Button();
-            this.btnLOGOUT = new System.Windows.Forms.Button();
             this.lblDATOSUSUARIO = new System.Windows.Forms.Label();
-            this.gestionarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestionarLocalidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnLOGOUT = new System.Windows.Forms.Button();
+            this.btnCAMBIARCLAVE = new System.Windows.Forms.Button();
+            this.btnMIPERFIL = new System.Windows.Forms.Button();
+            this.lblGRUPOS = new System.Windows.Forms.Label();
+            this.lblMAIL = new System.Windows.Forms.Label();
+            this.lblNOMBREAPELLIDO = new System.Windows.Forms.Label();
+            this.lblUSUARIO = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panDATOSUSUARIO.SuspendLayout();
             this.SuspendLayout();
@@ -88,6 +88,13 @@
             this.gestionesToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.gestionesToolStripMenuItem.Text = "Gestiones";
             // 
+            // gestionarProductosToolStripMenuItem
+            // 
+            this.gestionarProductosToolStripMenuItem.Name = "gestionarProductosToolStripMenuItem";
+            this.gestionarProductosToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.gestionarProductosToolStripMenuItem.Text = "Gestionar Productos";
+            this.gestionarProductosToolStripMenuItem.Click += new System.EventHandler(this.gestionarProductosToolStripMenuItem_Click);
+            // 
             // gestionarMarcasToolStripMenuItem
             // 
             this.gestionarMarcasToolStripMenuItem.Name = "gestionarMarcasToolStripMenuItem";
@@ -102,6 +109,13 @@
             this.gestionarCategoriasToolStripMenuItem.Text = "Gestionar Categorias";
             this.gestionarCategoriasToolStripMenuItem.Click += new System.EventHandler(this.gestionarCategoriasToolStripMenuItem_Click);
             // 
+            // gestionarLocalidadesToolStripMenuItem
+            // 
+            this.gestionarLocalidadesToolStripMenuItem.Name = "gestionarLocalidadesToolStripMenuItem";
+            this.gestionarLocalidadesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.gestionarLocalidadesToolStripMenuItem.Text = "Gestionar Localidades";
+            this.gestionarLocalidadesToolStripMenuItem.Click += new System.EventHandler(this.gestionarLocalidadesToolStripMenuItem_Click);
+            // 
             // comprasToolStripMenuItem
             // 
             this.comprasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -114,15 +128,15 @@
             // gestionarProveedoresToolStripMenuItem
             // 
             this.gestionarProveedoresToolStripMenuItem.Name = "gestionarProveedoresToolStripMenuItem";
-            this.gestionarProveedoresToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.gestionarProveedoresToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
             this.gestionarProveedoresToolStripMenuItem.Text = "Gestionar Proveedores";
             this.gestionarProveedoresToolStripMenuItem.Click += new System.EventHandler(this.gestionarProveedoresToolStripMenuItem_Click);
             // 
             // gestionarOrdenesDeCompraToolStripMenuItem
             // 
             this.gestionarOrdenesDeCompraToolStripMenuItem.Name = "gestionarOrdenesDeCompraToolStripMenuItem";
-            this.gestionarOrdenesDeCompraToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
-            this.gestionarOrdenesDeCompraToolStripMenuItem.Text = "Gestionar Ordenes de Compra";
+            this.gestionarOrdenesDeCompraToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
+            this.gestionarOrdenesDeCompraToolStripMenuItem.Text = "Gestionar Ordenes de Compras";
             this.gestionarOrdenesDeCompraToolStripMenuItem.Click += new System.EventHandler(this.gestionarOrdenesDeCompraToolStripMenuItem_Click);
             // 
             // inventarioToolStripMenuItem
@@ -232,61 +246,15 @@
             this.panDATOSUSUARIO.Size = new System.Drawing.Size(320, 480);
             this.panDATOSUSUARIO.TabIndex = 1;
             // 
-            // lblUSUARIO
+            // lblDATOSUSUARIO
             // 
-            this.lblUSUARIO.AutoSize = true;
-            this.lblUSUARIO.Location = new System.Drawing.Point(20, 60);
-            this.lblUSUARIO.Name = "lblUSUARIO";
-            this.lblUSUARIO.Size = new System.Drawing.Size(101, 13);
-            this.lblUSUARIO.TabIndex = 0;
-            this.lblUSUARIO.Text = "Nombre de Usuario:";
-            // 
-            // lblNOMBREAPELLIDO
-            // 
-            this.lblNOMBREAPELLIDO.AutoSize = true;
-            this.lblNOMBREAPELLIDO.Location = new System.Drawing.Point(20, 100);
-            this.lblNOMBREAPELLIDO.Name = "lblNOMBREAPELLIDO";
-            this.lblNOMBREAPELLIDO.Size = new System.Drawing.Size(95, 13);
-            this.lblNOMBREAPELLIDO.TabIndex = 1;
-            this.lblNOMBREAPELLIDO.Text = "Nombre y Apellido:";
-            // 
-            // lblMAIL
-            // 
-            this.lblMAIL.AutoSize = true;
-            this.lblMAIL.Location = new System.Drawing.Point(20, 140);
-            this.lblMAIL.Name = "lblMAIL";
-            this.lblMAIL.Size = new System.Drawing.Size(29, 13);
-            this.lblMAIL.TabIndex = 2;
-            this.lblMAIL.Text = "Mail:";
-            // 
-            // lblGRUPOS
-            // 
-            this.lblGRUPOS.AutoSize = true;
-            this.lblGRUPOS.Location = new System.Drawing.Point(20, 180);
-            this.lblGRUPOS.Name = "lblGRUPOS";
-            this.lblGRUPOS.Size = new System.Drawing.Size(44, 13);
-            this.lblGRUPOS.TabIndex = 3;
-            this.lblGRUPOS.Text = "Grupos:";
-            // 
-            // btnMIPERFIL
-            // 
-            this.btnMIPERFIL.Location = new System.Drawing.Point(20, 400);
-            this.btnMIPERFIL.Name = "btnMIPERFIL";
-            this.btnMIPERFIL.Size = new System.Drawing.Size(75, 60);
-            this.btnMIPERFIL.TabIndex = 4;
-            this.btnMIPERFIL.Text = "MI PERFIL";
-            this.btnMIPERFIL.UseVisualStyleBackColor = true;
-            this.btnMIPERFIL.Click += new System.EventHandler(this.btnMIPERFIL_Click);
-            // 
-            // btnCAMBIARCLAVE
-            // 
-            this.btnCAMBIARCLAVE.Location = new System.Drawing.Point(120, 400);
-            this.btnCAMBIARCLAVE.Name = "btnCAMBIARCLAVE";
-            this.btnCAMBIARCLAVE.Size = new System.Drawing.Size(75, 60);
-            this.btnCAMBIARCLAVE.TabIndex = 5;
-            this.btnCAMBIARCLAVE.Text = "CAMBIAR CLAVE";
-            this.btnCAMBIARCLAVE.UseVisualStyleBackColor = true;
-            this.btnCAMBIARCLAVE.Click += new System.EventHandler(this.btnCAMBIARCLAVE_Click);
+            this.lblDATOSUSUARIO.AutoSize = true;
+            this.lblDATOSUSUARIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDATOSUSUARIO.Location = new System.Drawing.Point(20, 20);
+            this.lblDATOSUSUARIO.Name = "lblDATOSUSUARIO";
+            this.lblDATOSUSUARIO.Size = new System.Drawing.Size(261, 29);
+            this.lblDATOSUSUARIO.TabIndex = 7;
+            this.lblDATOSUSUARIO.Text = "DATOS DEL USUARIO";
             // 
             // btnLOGOUT
             // 
@@ -298,29 +266,61 @@
             this.btnLOGOUT.UseVisualStyleBackColor = true;
             this.btnLOGOUT.Click += new System.EventHandler(this.btnLOGOUT_Click);
             // 
-            // lblDATOSUSUARIO
+            // btnCAMBIARCLAVE
             // 
-            this.lblDATOSUSUARIO.AutoSize = true;
-            this.lblDATOSUSUARIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDATOSUSUARIO.Location = new System.Drawing.Point(20, 20);
-            this.lblDATOSUSUARIO.Name = "lblDATOSUSUARIO";
-            this.lblDATOSUSUARIO.Size = new System.Drawing.Size(261, 29);
-            this.lblDATOSUSUARIO.TabIndex = 7;
-            this.lblDATOSUSUARIO.Text = "DATOS DEL USUARIO";
+            this.btnCAMBIARCLAVE.Location = new System.Drawing.Point(120, 400);
+            this.btnCAMBIARCLAVE.Name = "btnCAMBIARCLAVE";
+            this.btnCAMBIARCLAVE.Size = new System.Drawing.Size(75, 60);
+            this.btnCAMBIARCLAVE.TabIndex = 5;
+            this.btnCAMBIARCLAVE.Text = "CAMBIAR CLAVE";
+            this.btnCAMBIARCLAVE.UseVisualStyleBackColor = true;
+            this.btnCAMBIARCLAVE.Click += new System.EventHandler(this.btnCAMBIARCLAVE_Click);
             // 
-            // gestionarProductosToolStripMenuItem
+            // btnMIPERFIL
             // 
-            this.gestionarProductosToolStripMenuItem.Name = "gestionarProductosToolStripMenuItem";
-            this.gestionarProductosToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.gestionarProductosToolStripMenuItem.Text = "Gestionar Productos";
-            this.gestionarProductosToolStripMenuItem.Click += new System.EventHandler(this.gestionarProductosToolStripMenuItem_Click);
+            this.btnMIPERFIL.Location = new System.Drawing.Point(20, 400);
+            this.btnMIPERFIL.Name = "btnMIPERFIL";
+            this.btnMIPERFIL.Size = new System.Drawing.Size(75, 60);
+            this.btnMIPERFIL.TabIndex = 4;
+            this.btnMIPERFIL.Text = "MI PERFIL";
+            this.btnMIPERFIL.UseVisualStyleBackColor = true;
+            this.btnMIPERFIL.Click += new System.EventHandler(this.btnMIPERFIL_Click);
             // 
-            // gestionarLocalidadesToolStripMenuItem
+            // lblGRUPOS
             // 
-            this.gestionarLocalidadesToolStripMenuItem.Name = "gestionarLocalidadesToolStripMenuItem";
-            this.gestionarLocalidadesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.gestionarLocalidadesToolStripMenuItem.Text = "Gestionar Localidades";
-            this.gestionarLocalidadesToolStripMenuItem.Click += new System.EventHandler(this.gestionarLocalidadesToolStripMenuItem_Click);
+            this.lblGRUPOS.AutoSize = true;
+            this.lblGRUPOS.Location = new System.Drawing.Point(20, 180);
+            this.lblGRUPOS.Name = "lblGRUPOS";
+            this.lblGRUPOS.Size = new System.Drawing.Size(44, 13);
+            this.lblGRUPOS.TabIndex = 3;
+            this.lblGRUPOS.Text = "Grupos:";
+            // 
+            // lblMAIL
+            // 
+            this.lblMAIL.AutoSize = true;
+            this.lblMAIL.Location = new System.Drawing.Point(20, 140);
+            this.lblMAIL.Name = "lblMAIL";
+            this.lblMAIL.Size = new System.Drawing.Size(29, 13);
+            this.lblMAIL.TabIndex = 2;
+            this.lblMAIL.Text = "Mail:";
+            // 
+            // lblNOMBREAPELLIDO
+            // 
+            this.lblNOMBREAPELLIDO.AutoSize = true;
+            this.lblNOMBREAPELLIDO.Location = new System.Drawing.Point(20, 100);
+            this.lblNOMBREAPELLIDO.Name = "lblNOMBREAPELLIDO";
+            this.lblNOMBREAPELLIDO.Size = new System.Drawing.Size(95, 13);
+            this.lblNOMBREAPELLIDO.TabIndex = 1;
+            this.lblNOMBREAPELLIDO.Text = "Nombre y Apellido:";
+            // 
+            // lblUSUARIO
+            // 
+            this.lblUSUARIO.AutoSize = true;
+            this.lblUSUARIO.Location = new System.Drawing.Point(20, 60);
+            this.lblUSUARIO.Name = "lblUSUARIO";
+            this.lblUSUARIO.Size = new System.Drawing.Size(101, 13);
+            this.lblUSUARIO.TabIndex = 0;
+            this.lblUSUARIO.Text = "Nombre de Usuario:";
             // 
             // frmMenuPrincipal
             // 

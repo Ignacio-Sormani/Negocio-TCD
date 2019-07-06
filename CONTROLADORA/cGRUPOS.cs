@@ -57,7 +57,7 @@ namespace CONTROLADORA
 
         public List<MODELO.formulario> obtener_acciones()
         {
-            return CONTROLADORA.cACCIONES.obtener_acciones();
+            return CONTROLADORA.cACCIONES.listar_acciones();
         }
 
         public bool verificar_grupo_existente(string nombreGrupo) //verificar esta funcion

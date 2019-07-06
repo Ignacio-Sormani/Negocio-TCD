@@ -43,13 +43,20 @@ namespace CONTROLADORA
         {
             var usuarios = from usuario in oNegocio.USUARIOS.Include("grupos").ToList()
                            where usuario.nombreDeUsuario.ToLower().Contains(nombre.ToLower())
-                           select usuario;
+                           select new
+                           {
+                               Codigo = usuario.codigoUsuario,
+                               Usuario = usuario.nombreDeUsuario,
+                               Nombre = usuario.nombreApellido,
+                               Mail = usuario.mail,
+                               Activo = (usuario.estadoActivo ? "Activo" : "Inactivo")
+                           };
             return usuarios.ToList();
         }
 
         public MODELO.USUARIO obtener_usuario_nombre(string usuario)
         {
-            return oNegocio.USUARIOS.FirstOrDefault(u => u.nombreDeUsuario.ToLower() == usuario.ToLower());
+            return oNegocio.USUARIOS.Include("grupos").FirstOrDefault(u => u.nombreDeUsuario.ToLower() == usuario.ToLower());
         }
 
         public MODELO.USUARIO obtener_usuario_mail(string mail)
@@ -60,6 +67,11 @@ namespace CONTROLADORA
         public Int32 cantidad_usuarios_conectados()
         {
             return oNegocio.USUARIOS.Count(_ => _.conectado == true);
+        }
+
+        public MODELO.GRUPO obtener_grupo_admin()
+        {
+            return oNegocio.GRUPOS.FirstOrDefault(g => g.nombre == "Administrador del Sistema");
         }
 
         public System.Collections.IEnumerable obtener_grupos()

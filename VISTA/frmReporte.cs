@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace VISTA
 {
-    [MODELO.formulario(nombre = "frmReporte", descripcion = "Gestionar Reportes", modulo = "Gerencia")]
+    [MODELO.formulario(nombre = "frmReporte", gestion = "gestionarReportes", descripcion = "Gestionar Reportes", modulo = "Gerencia")]
     [MODELO.accion(control = "btnGENERARREPORTE", descripcion = "Generar Reporte", formulario = "frmReporte", modulo = "Gerencia")]
     public partial class frmReporte : Form
     {

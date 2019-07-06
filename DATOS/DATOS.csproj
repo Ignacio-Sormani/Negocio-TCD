@@ -65,13 +65,22 @@
     <Compile Include="Migrations\201907012032262_4.Designer.cs">
       <DependentUpon>201907012032262_4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907052341364_5.cs" />
+    <Compile Include="Migrations\201907052341364_5.Designer.cs">
+      <DependentUpon>201907052341364_5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907052355221_6.cs" />
+    <Compile Include="Migrations\201907052355221_6.Designer.cs">
+      <DependentUpon>201907052355221_6.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NEGOCIO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
-      <SubType>Designer</SubType>
+      <SubType>
+      </SubType>
     </None>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
@@ -94,6 +103,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907012032262_4.resx">
       <DependentUpon>201907012032262_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907052341364_5.resx">
+      <DependentUpon>201907052341364_5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907052355221_6.resx">
+      <DependentUpon>201907052355221_6.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
