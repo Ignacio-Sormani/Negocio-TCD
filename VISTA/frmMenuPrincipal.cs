@@ -138,7 +138,7 @@ namespace VISTA
 
         private void btnCAMBIARCLAVE_Click(object sender, EventArgs e)
         {
-            frmCambiarContraseña formCambiarContraseña = new frmCambiarContraseña();
+            frmCambiarContraseña formCambiarContraseña = new frmCambiarContraseña(oUsuario);
             DialogResult dr = formCambiarContraseña.ShowDialog();
             if (dr == DialogResult.OK)
             {

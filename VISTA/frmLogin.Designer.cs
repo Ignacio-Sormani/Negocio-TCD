@@ -71,6 +71,7 @@
             // 
             this.txtCONTRASEÑA.Location = new System.Drawing.Point(140, 120);
             this.txtCONTRASEÑA.Name = "txtCONTRASEÑA";
+            this.txtCONTRASEÑA.PasswordChar = '*';
             this.txtCONTRASEÑA.Size = new System.Drawing.Size(180, 20);
             this.txtCONTRASEÑA.TabIndex = 4;
             // 
@@ -94,6 +95,8 @@
             this.lblRESETEARCONTRASEÑA.TabIndex = 5;
             this.lblRESETEARCONTRASEÑA.Text = "Olvide mi contraseña";
             this.lblRESETEARCONTRASEÑA.Click += new System.EventHandler(this.lblRESETEARCONTRASEÑA_Click);
+            this.lblRESETEARCONTRASEÑA.MouseEnter += new System.EventHandler(this.lblRESETEARCONTRASEÑA_MouseEnter);
+            this.lblRESETEARCONTRASEÑA.MouseLeave += new System.EventHandler(this.lblRESETEARCONTRASEÑA_MouseLeave);
             // 
             // btnLOGIN
             // 
@@ -122,6 +125,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 261);
+            this.ControlBox = false;
             this.Controls.Add(this.btnCERRAR);
             this.Controls.Add(this.btnLOGIN);
             this.Controls.Add(this.lblRESETEARCONTRASEÑA);

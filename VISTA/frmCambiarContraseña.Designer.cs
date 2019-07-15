@@ -31,12 +31,12 @@
             this.btnVOLVER = new System.Windows.Forms.Button();
             this.btnCAMBIARCONTRASEÑA = new System.Windows.Forms.Button();
             this.txtCONTRANUEVA2 = new System.Windows.Forms.TextBox();
-            this.lblCONTRAVIEJA = new System.Windows.Forms.Label();
             this.txtCONTRANUEVA1 = new System.Windows.Forms.TextBox();
             this.lblCONTRANUEVA1 = new System.Windows.Forms.Label();
             this.lblCAMBIARCONTRA = new System.Windows.Forms.Label();
-            this.txtCONTRAVIEJA = new System.Windows.Forms.TextBox();
             this.lblCONTRANUEVA2 = new System.Windows.Forms.Label();
+            this.txtCONTRAVIEJA = new System.Windows.Forms.TextBox();
+            this.lblCONTRAVIEJA = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnVOLVER
@@ -63,23 +63,14 @@
             // 
             // txtCONTRANUEVA2
             // 
-            this.txtCONTRANUEVA2.Location = new System.Drawing.Point(180, 100);
+            this.txtCONTRANUEVA2.Location = new System.Drawing.Point(180, 140);
             this.txtCONTRANUEVA2.Name = "txtCONTRANUEVA2";
             this.txtCONTRANUEVA2.Size = new System.Drawing.Size(160, 20);
             this.txtCONTRANUEVA2.TabIndex = 15;
             // 
-            // lblCONTRAVIEJA
-            // 
-            this.lblCONTRAVIEJA.AutoSize = true;
-            this.lblCONTRAVIEJA.Location = new System.Drawing.Point(40, 140);
-            this.lblCONTRAVIEJA.Name = "lblCONTRAVIEJA";
-            this.lblCONTRAVIEJA.Size = new System.Drawing.Size(102, 13);
-            this.lblCONTRAVIEJA.TabIndex = 14;
-            this.lblCONTRAVIEJA.Text = "Contraseña antigua:";
-            // 
             // txtCONTRANUEVA1
             // 
-            this.txtCONTRANUEVA1.Location = new System.Drawing.Point(180, 60);
+            this.txtCONTRANUEVA1.Location = new System.Drawing.Point(180, 100);
             this.txtCONTRANUEVA1.Name = "txtCONTRANUEVA1";
             this.txtCONTRANUEVA1.Size = new System.Drawing.Size(160, 20);
             this.txtCONTRANUEVA1.TabIndex = 13;
@@ -87,7 +78,7 @@
             // lblCONTRANUEVA1
             // 
             this.lblCONTRANUEVA1.AutoSize = true;
-            this.lblCONTRANUEVA1.Location = new System.Drawing.Point(40, 60);
+            this.lblCONTRANUEVA1.Location = new System.Drawing.Point(40, 100);
             this.lblCONTRANUEVA1.Name = "lblCONTRANUEVA1";
             this.lblCONTRANUEVA1.Size = new System.Drawing.Size(98, 13);
             this.lblCONTRANUEVA1.TabIndex = 12;
@@ -106,21 +97,30 @@
             this.lblCAMBIARCONTRA.TabIndex = 11;
             this.lblCAMBIARCONTRA.Text = "CAMBIAR CONTRASEÑA";
             // 
-            // txtCONTRAVIEJA
-            // 
-            this.txtCONTRAVIEJA.Location = new System.Drawing.Point(180, 140);
-            this.txtCONTRAVIEJA.Name = "txtCONTRAVIEJA";
-            this.txtCONTRAVIEJA.Size = new System.Drawing.Size(160, 20);
-            this.txtCONTRAVIEJA.TabIndex = 20;
-            // 
             // lblCONTRANUEVA2
             // 
             this.lblCONTRANUEVA2.AutoSize = true;
-            this.lblCONTRANUEVA2.Location = new System.Drawing.Point(40, 100);
+            this.lblCONTRANUEVA2.Location = new System.Drawing.Point(40, 140);
             this.lblCONTRANUEVA2.Name = "lblCONTRANUEVA2";
             this.lblCONTRANUEVA2.Size = new System.Drawing.Size(133, 13);
             this.lblCONTRANUEVA2.TabIndex = 19;
             this.lblCONTRANUEVA2.Text = "Repetir nueva contraseña:";
+            // 
+            // txtCONTRAVIEJA
+            // 
+            this.txtCONTRAVIEJA.Location = new System.Drawing.Point(180, 60);
+            this.txtCONTRAVIEJA.Name = "txtCONTRAVIEJA";
+            this.txtCONTRAVIEJA.Size = new System.Drawing.Size(160, 20);
+            this.txtCONTRAVIEJA.TabIndex = 22;
+            // 
+            // lblCONTRAVIEJA
+            // 
+            this.lblCONTRAVIEJA.AutoSize = true;
+            this.lblCONTRAVIEJA.Location = new System.Drawing.Point(40, 60);
+            this.lblCONTRAVIEJA.Name = "lblCONTRAVIEJA";
+            this.lblCONTRAVIEJA.Size = new System.Drawing.Size(102, 13);
+            this.lblCONTRAVIEJA.TabIndex = 21;
+            this.lblCONTRAVIEJA.Text = "Contraseña antigua:";
             // 
             // frmCambiarContraseña
             // 
@@ -128,11 +128,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 261);
             this.Controls.Add(this.txtCONTRAVIEJA);
+            this.Controls.Add(this.lblCONTRAVIEJA);
             this.Controls.Add(this.lblCONTRANUEVA2);
             this.Controls.Add(this.btnVOLVER);
             this.Controls.Add(this.btnCAMBIARCONTRASEÑA);
             this.Controls.Add(this.txtCONTRANUEVA2);
-            this.Controls.Add(this.lblCONTRAVIEJA);
             this.Controls.Add(this.txtCONTRANUEVA1);
             this.Controls.Add(this.lblCONTRANUEVA1);
             this.Controls.Add(this.lblCAMBIARCONTRA);
@@ -148,11 +148,11 @@
         private System.Windows.Forms.Button btnVOLVER;
         private System.Windows.Forms.Button btnCAMBIARCONTRASEÑA;
         private System.Windows.Forms.TextBox txtCONTRANUEVA2;
-        private System.Windows.Forms.Label lblCONTRAVIEJA;
         private System.Windows.Forms.TextBox txtCONTRANUEVA1;
         private System.Windows.Forms.Label lblCONTRANUEVA1;
         private System.Windows.Forms.Label lblCAMBIARCONTRA;
-        private System.Windows.Forms.TextBox txtCONTRAVIEJA;
         private System.Windows.Forms.Label lblCONTRANUEVA2;
+        private System.Windows.Forms.TextBox txtCONTRAVIEJA;
+        private System.Windows.Forms.Label lblCONTRAVIEJA;
     }
 }

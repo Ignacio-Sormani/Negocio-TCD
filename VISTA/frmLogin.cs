@@ -65,5 +65,15 @@ namespace VISTA
             frmResetearContraseña frmResetearContraseña = new frmResetearContraseña();
             frmResetearContraseña.ShowDialog();
         }
+
+        private void lblRESETEARCONTRASEÑA_MouseEnter(object sender, EventArgs e)
+        {
+            lblRESETEARCONTRASEÑA.ForeColor = Color.Red;
+        }
+
+        private void lblRESETEARCONTRASEÑA_MouseLeave(object sender, EventArgs e)
+        {
+            lblRESETEARCONTRASEÑA.ForeColor = SystemColors.ControlText;
+        }
     }
 }
