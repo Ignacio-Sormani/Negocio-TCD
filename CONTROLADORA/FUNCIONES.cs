@@ -49,16 +49,14 @@ namespace CONTROLADORA
 
         public static bool enviar_mail(string asunto, string mensaje, string destinatario)
         {
-            System.Net.Mail.MailMessage mmsg = new System.Net.Mail.MailMessage();
-            mmsg.To.Add(destinatario);
-            mmsg.Subject = asunto;
-            mmsg.SubjectEncoding = System.Text.Encoding.UTF8; //Para los servidores
-
-            mmsg.Body = mensaje;
-            mmsg.BodyEncoding = System.Text.Encoding.UTF8;
-            mmsg.IsBodyHtml = true;
-
-            mmsg.From = new System.Net.Mail.MailAddress("empresaelchulo@gmail.com");
+            System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
+            msg.To.Add(destinatario);
+            msg.Subject = asunto;
+            msg.SubjectEncoding = System.Text.Encoding.UTF8;
+            msg.Body = mensaje;
+            msg.BodyEncoding = System.Text.Encoding.UTF8;
+            msg.IsBodyHtml = true;
+            msg.From = new System.Net.Mail.MailAddress("empresaelchulo@gmail.com");
             System.Net.Mail.SmtpClient cliente = new System.Net.Mail.SmtpClient();
             cliente.Credentials = new System.Net.NetworkCredential("empresaelchulo@gmail.com", "ottolini12345");
 
@@ -68,7 +66,7 @@ namespace CONTROLADORA
 
             try
             {
-                cliente.Send(mmsg);
+                cliente.Send(msg);
                 return true;
             }
             catch (Exception)
@@ -98,27 +96,27 @@ namespace CONTROLADORA
         }
 
 
-        public static void generar_backup()
+        public static void generar_backup(string directorio, string servername)
         {
-            DateTime d = DateTime.Now;
-            string dd = d.Day + "-" + d.Month;
+            DateTime dia = DateTime.Now;
+            string id = dia.Day + "-" + dia.Month;
 
-            string servername = "DESKTOP-Q6GB95M";
-            string dbname = "[DATOS.Negocio]";
-            string aaa = @"Data Source=" + servername + "; Initial Catalog= " + dbname + "; Integrated Security=true; MultipleActiveResultSets=True;";
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-Q6GB95M;initial catalog=DATOS.Negocio;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;");
+            string dbname = "DATOS.Negocio";
+            string connectionString = @"Data Source=" + servername + "; Initial Catalog= DATOS.Negocio; Integrated Security=true; MultipleActiveResultSets=True;";
+            SqlConnection connection = new SqlConnection(connectionString);
             try
             {
-                con.Open();
-                string str = "USE " + dbname + ";";
-                string str1 = "BACKUP DATABASE " + dbname + " TO DISK = 'Escritorio\\Backup_Sistemas\\" + "Negocio-" + dd + ".Bak' WITH FORMAT,MEDIANAME = 'Z_SQLserverBackups',NAME = 'full backup of " + "DATOS.Negocio'";
-                SqlCommand cmd1 = new SqlCommand(str, con);
-                SqlCommand cmd2 = new SqlCommand(str1, con);
+                connection.Open();
+
+                string str1 = "USE [" + dbname + "];";
+                string str2 = "BACKUP DATABASE [" + dbname + "] TO DISK = '" + directorio + "\\Negocio-" + id + ".Bak' WITH FORMAT,MEDIANAME = 'Z_SQLserverBackups',NAME = 'full backup of " + "DATOS.Negocio'";
+                SqlCommand cmd1 = new SqlCommand(str1, connection);
+                SqlCommand cmd2 = new SqlCommand(str2, connection);
 
                 cmd1.ExecuteNonQuery();
                 cmd2.ExecuteNonQuery();
 
-                con.Close();
+                connection.Close();
             }
             catch (Exception ex)
             {
@@ -126,33 +124,32 @@ namespace CONTROLADORA
             }
             finally
             {
-                con.Close();
+                connection.Close();
             }
         }
 
-        public static string recuperar_backup(string directorio)
+        public static string recuperar_backup(string directorio, string servername)
         {
-            string servername = "DESKTOP-Q6GB95M";
-            string dbname = "[DATOS.Negocio]";
-            string aaa = @"Data Source=" + servername + "; Initial Catalog= " + dbname + "; Integrated Security=true; MultipleActiveResultSets=True;";
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-Q6GB95M;initial catalog=DATOS.Negocio;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;");
+            string dbname = "DATOS.Negocio";
+            string connectionString = @"Data Source=" + servername + "; Initial Catalog=" + dbname + "; Integrated Security=true; MultipleActiveResultSets=True;";
+            SqlConnection connection = new SqlConnection(connectionString);
             try
             {
-                con.Open();
+                connection.Open();
 
-                string str = "USE master; ";
-                string str1 = "ALTER DATABASE " + dbname + " SET SINGLE_USER WITH ROLLBACK IMMEDIATE;";
-                string str2 = "RESTORE DATABASE " + dbname + " FROM DISK = '" + directorio + "' WITH REPLACE ";
+                string str1 = "USE master; ";
+                string str2 = "ALTER DATABASE [" + dbname + "] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;";
+                string str3 = "RESTORE DATABASE [" + dbname + "] FROM DISK = '" + directorio + "' WITH REPLACE ";
 
-                SqlCommand cmd1 = new SqlCommand(str, con);
-                SqlCommand cmd2 = new SqlCommand(str1, con);
-                SqlCommand cmd3 = new SqlCommand(str2, con);
+                SqlCommand cmd1 = new SqlCommand(str1, connection);
+                SqlCommand cmd2 = new SqlCommand(str2, connection);
+                SqlCommand cmd3 = new SqlCommand(str3, connection);
 
                 cmd1.ExecuteNonQuery();
                 cmd2.ExecuteNonQuery();
                 cmd3.ExecuteNonQuery();
 
-                con.Close();
+                connection.Close();
             }
             catch (Exception ex)
             {
@@ -160,7 +157,7 @@ namespace CONTROLADORA
             }
             finally
             {
-                con.Close();
+                connection.Close();
             }
             return directorio;
         }
