@@ -83,7 +83,7 @@ namespace VISTA
             }
             if (string.IsNullOrEmpty(txtNOMBRE.Text))
             {
-                MessageBox.Show("Debe ingresar un nombre y apellido correcto", "Usuario - Atencion!");
+                MessageBox.Show("Debe ingresar un nombre y apellido correcto");
                 return;
             }
             if (string.IsNullOrEmpty(txtMAIL.Text) || !CONTROLADORA.FUNCIONES.validar_mail(txtMAIL.Text))

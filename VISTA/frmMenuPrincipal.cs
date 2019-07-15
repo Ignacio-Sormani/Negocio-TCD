@@ -128,7 +128,7 @@ namespace VISTA
 
         private void btnMIPERFIL_Click(object sender, EventArgs e)
         {
-            frmMiPerfil formMiPerfil = new frmMiPerfil();
+            frmMiPerfil formMiPerfil = new frmMiPerfil(oUsuario);
             DialogResult dr = formMiPerfil.ShowDialog();
             if (dr == DialogResult.OK)
             {

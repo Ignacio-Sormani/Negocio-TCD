@@ -103,15 +103,15 @@ namespace CONTROLADORA
             DateTime d = DateTime.Now;
             string dd = d.Day + "-" + d.Month;
 
-            string servername = "(LocalDb)\\MSSQLLocalDB";
+            string servername = "DESKTOP-Q6GB95M";
             string dbname = "[DATOS.Negocio]";
             string aaa = @"Data Source=" + servername + "; Initial Catalog= " + dbname + "; Integrated Security=true; MultipleActiveResultSets=True;";
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDb)\MSSQLLocalDB;initial catalog=DATOS.Negocio;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;");
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-Q6GB95M;initial catalog=DATOS.Negocio;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;");
             try
             {
                 con.Open();
                 string str = "USE " + dbname + ";";
-                string str1 = "BACKUP DATABASE " + dbname + " TO DISK = 'C:\\Backup_Sistemas\\'" + "Negocio" + "-" + dd + ".Bak' WITH FORMMAT,MEDIANAME = 'Z_SQLserverBackups',NAME = 'full backup of " + "DATOS.Negocio";
+                string str1 = "BACKUP DATABASE " + dbname + " TO DISK = 'Escritorio\\Backup_Sistemas\\" + "Negocio-" + dd + ".Bak' WITH FORMAT,MEDIANAME = 'Z_SQLserverBackups',NAME = 'full backup of " + "DATOS.Negocio'";
                 SqlCommand cmd1 = new SqlCommand(str, con);
                 SqlCommand cmd2 = new SqlCommand(str1, con);
 
@@ -132,10 +132,10 @@ namespace CONTROLADORA
 
         public static string recuperar_backup(string directorio)
         {
-            string servername = "(LocalDb)\\MSSQLLocalDB";
+            string servername = "DESKTOP-Q6GB95M";
             string dbname = "[DATOS.Negocio]";
             string aaa = @"Data Source=" + servername + "; Initial Catalog= " + dbname + "; Integrated Security=true; MultipleActiveResultSets=True;";
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDb)\MSSQLLocalDB;initial catalog=DATOS.Negocio;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;");
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-Q6GB95M;initial catalog=DATOS.Negocio;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;");
             try
             {
                 con.Open();
