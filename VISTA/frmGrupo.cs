@@ -33,15 +33,17 @@ namespace VISTA
             clbUSUARIOS.DataSource = cGRUPOS.obtener_usuarios();
 
             bAccion = false;
+
+            List<MODELO.ACCION> acciones = cGRUPOS.obtener_acciones();
+            //faltar armar el treeview
+
+            /*
             List<MODELO.formulario> forms = cGRUPOS.obtener_acciones();
             var modulos = (from formulario in forms
                            select new { DESCRIPCION = formulario.modulo })
                           .Distinct();
             foreach (var oModulo in modulos)
             {
-                TreeNode tnM = new TreeNode();
-                tnM.Text = oModulo.DESCRIPCION;
-                tnM.Tag = null;
                 var formularios = from formulario in forms
                                   where formulario.modulo == oModulo.DESCRIPCION
                                   select formulario;
@@ -52,13 +54,12 @@ namespace VISTA
                         TreeNode tnf = new TreeNode();
                         tnf.Text = oForm.descripcion;
                         tnf.Tag = null;
-                        tnM.Nodes.Add(tnf);
                         foreach (MODELO.accion oAccion in oForm.acciones)
                         {
                             TreeNode tnA = new TreeNode();
                             tnA.Text = oAccion.descripcion;
                             tnA.Tag = oAccion;
-                            if (oGrupo.acciones.Count(acc => (acc.modulo == oAccion.modulo) && /*(acc.descripcionFormulario == oAccion.descripcion) && */(acc.control == oAccion.control)) > 0)
+                            if (oGrupo.acciones.Count(acc => (acc.modulo == oAccion.modulo) && (acc.descripcionFormulario == oAccion.descripcion) && (acc.control == oAccion.control)) > 0)
                                 tnA.Checked = true;
                             else
                                 tnA.Checked = false;
@@ -66,13 +67,12 @@ namespace VISTA
                             tnf.Nodes.Add(tnA);
                             HasCheckedChildNodes(tnf);
                         }
+                        tvACCIONES.Nodes.Add(tnf);
                     }
                 }
-                tvACCIONES.Nodes.Add(tnM);
-            }
+            }*/
             bAccion = true;
             
-
             if (ACCION != "A")
             {
                 txtGRUPO.Text = oGrupo.nombre;
@@ -80,13 +80,10 @@ namespace VISTA
                 bUsuario = false;
                 for (int i = 0; i < clbUSUARIOS.Items.Count; i++)
                 {
-                    MODELO.GRUPO oGrupo = (MODELO.GRUPO)clbUSUARIOS.Items[i];
-                    foreach (MODELO.ACCION miAccion in oGrupo.acciones)
+                    MODELO.USUARIO oUsuario = (MODELO.USUARIO)clbUSUARIOS.Items[i];
+                    if (oGrupo.usuarios.Contains(oUsuario))
                     {
-                        if (miAccion.codigoAccion == miAccion.codigoAccion)
-                        {
-                            clbUSUARIOS.SetItemChecked(i, true);
-                        }
+                        clbUSUARIOS.SetItemChecked(i, true);
                     }
                 }
                 bUsuario = true;

@@ -55,9 +55,9 @@ namespace CONTROLADORA
             return usuarios.ToList();
         }
 
-        public List<MODELO.formulario> obtener_acciones()
+        public List<MODELO.ACCION> obtener_acciones()
         {
-            return CONTROLADORA.cACCIONES.listar_acciones();
+            return oNegocio.ACCIONES.ToList();
         }
 
         public bool verificar_grupo_existente(string nombreGrupo) //verificar esta funcion

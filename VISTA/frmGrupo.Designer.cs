@@ -131,6 +131,7 @@
             // 
             // tvACCIONES
             // 
+            this.tvACCIONES.CheckBoxes = true;
             this.tvACCIONES.Location = new System.Drawing.Point(20, 260);
             this.tvACCIONES.Name = "tvACCIONES";
             this.tvACCIONES.Size = new System.Drawing.Size(320, 140);
