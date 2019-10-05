@@ -17,7 +17,6 @@ namespace VISTA
     public partial class frmLocalidades : Form
     {
         CONTROLADORA.cLOCALIDADES cLOCALIDADES;
-        //agregar MODELO.USUARIO oUSUARIO en el parametro y boton seleccionar para el CU-buscar
         public frmLocalidades(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
@@ -31,7 +30,6 @@ namespace VISTA
         //CONSTRUCTOR PARA ENLAZAR DATOS CON EL CLIENTE
         MODELO.CLIENTE oCliente;
         bool localidadAlCliente = false;
-        int selectRowIndex = -1;
         public frmLocalidades(MODELO.CLIENTE miCliente)
         {
             InitializeComponent();
@@ -40,13 +38,6 @@ namespace VISTA
             cLOCALIDADES = CONTROLADORA.cLOCALIDADES.obtener_instancia();
             armarGrilla();
             btnSELECCIONAR.Visible = true;
-
-            //test seleccionar sigue en el load del formulario
-            if (oCliente.localidad != null)
-            {
-                var selectedRow = dgvLOCALIDADES.Rows.Cast<DataGridViewRow>().FirstOrDefault(x => Convert.ToInt32(x.Cells[0].Value) == 6);
-                selectRowIndex = selectedRow.Index;
-            }
         }
 
         //CONSTRUCTOR PARA ENLAZAR DATOS CON LOS PROVEEDORES
@@ -131,19 +122,6 @@ namespace VISTA
 
             this.Close();
             
-        }
-
-        private void frmLocalidades_Load(object sender, EventArgs e)
-        {
-
-            //test de selecionar localidad clientes
-            if (selectRowIndex != -1)
-            {
-                dgvLOCALIDADES.ClearSelection();
-                dgvLOCALIDADES.Rows[selectRowIndex].Selected = true;
-            }
-            
-
         }
     }
 }

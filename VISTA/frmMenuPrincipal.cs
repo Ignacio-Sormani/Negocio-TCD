@@ -88,7 +88,7 @@ namespace VISTA
                 gestionarGruposToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarGruposToolStripMenuItem", "frmGrupos");
                 gestionarLocalidadesToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarLocalidadesToolStripMenuItem", "frmLocalidades");
                 gestionarMarcasToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarMarcasToolStripMenuItem", "frmMarcas");
-                gestionarOrdenesDeComprasToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarOrdenesDeComprasToolStripMenuItem", "frmOrdenesDeCompra");//NO FUNCIONA
+                gestionarOrdenesDeComprasToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarOrdenesDeComprasToolStripMenuItem", "frmOrdenesDeCompra");
                 gestionarProductosToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarProductosToolStripMenuItem", "frmProductos");
                 gestionarProveedoresToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarProveedoresToolStripMenuItem", "frmProveedores");
                 gestionarRemitosDeComprasToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarRemitosDeComprasToolStripMenuItem", "frmRemitos");

@@ -37,16 +37,15 @@
             this.btnMODIFICAR = new System.Windows.Forms.Button();
             this.btnAGREGAR = new System.Windows.Forms.Button();
             this.dgvLOCALIDADES = new System.Windows.Forms.DataGridView();
-            this.txtTest = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLOCALIDADES)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSELECCIONAR
             // 
-            this.btnSELECCIONAR.Location = new System.Drawing.Point(311, 442);
-            this.btnSELECCIONAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSELECCIONAR.Location = new System.Drawing.Point(233, 359);
+            this.btnSELECCIONAR.Margin = new System.Windows.Forms.Padding(2);
             this.btnSELECCIONAR.Name = "btnSELECCIONAR";
-            this.btnSELECCIONAR.Size = new System.Drawing.Size(259, 43);
+            this.btnSELECCIONAR.Size = new System.Drawing.Size(194, 35);
             this.btnSELECCIONAR.TabIndex = 24;
             this.btnSELECCIONAR.Text = "Seleccionar";
             this.btnSELECCIONAR.UseVisualStyleBackColor = true;
@@ -55,18 +54,19 @@
             // lblLOCALIDAD
             // 
             this.lblLOCALIDAD.AutoSize = true;
-            this.lblLOCALIDAD.Location = new System.Drawing.Point(87, 11);
+            this.lblLOCALIDAD.Location = new System.Drawing.Point(65, 9);
+            this.lblLOCALIDAD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLOCALIDAD.Name = "lblLOCALIDAD";
-            this.lblLOCALIDAD.Size = new System.Drawing.Size(73, 17);
+            this.lblLOCALIDAD.Size = new System.Drawing.Size(56, 13);
             this.lblLOCALIDAD.TabIndex = 23;
             this.lblLOCALIDAD.Text = "Localidad:";
             // 
             // btnCONSULTAR
             // 
-            this.btnCONSULTAR.Location = new System.Drawing.Point(311, 393);
-            this.btnCONSULTAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCONSULTAR.Location = new System.Drawing.Point(233, 319);
+            this.btnCONSULTAR.Margin = new System.Windows.Forms.Padding(2);
             this.btnCONSULTAR.Name = "btnCONSULTAR";
-            this.btnCONSULTAR.Size = new System.Drawing.Size(259, 43);
+            this.btnCONSULTAR.Size = new System.Drawing.Size(194, 35);
             this.btnCONSULTAR.TabIndex = 22;
             this.btnCONSULTAR.Text = "Consultar";
             this.btnCONSULTAR.UseVisualStyleBackColor = true;
@@ -74,10 +74,10 @@
             // 
             // btnBUSCAR
             // 
-            this.btnBUSCAR.Location = new System.Drawing.Point(396, 11);
-            this.btnBUSCAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBUSCAR.Location = new System.Drawing.Point(297, 9);
+            this.btnBUSCAR.Margin = new System.Windows.Forms.Padding(2);
             this.btnBUSCAR.Name = "btnBUSCAR";
-            this.btnBUSCAR.Size = new System.Drawing.Size(173, 25);
+            this.btnBUSCAR.Size = new System.Drawing.Size(130, 20);
             this.btnBUSCAR.TabIndex = 21;
             this.btnBUSCAR.Text = "Buscar";
             this.btnBUSCAR.UseVisualStyleBackColor = true;
@@ -85,10 +85,10 @@
             // 
             // btnSALIR
             // 
-            this.btnSALIR.Location = new System.Drawing.Point(311, 491);
-            this.btnSALIR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSALIR.Location = new System.Drawing.Point(233, 399);
+            this.btnSALIR.Margin = new System.Windows.Forms.Padding(2);
             this.btnSALIR.Name = "btnSALIR";
-            this.btnSALIR.Size = new System.Drawing.Size(259, 43);
+            this.btnSALIR.Size = new System.Drawing.Size(194, 35);
             this.btnSALIR.TabIndex = 19;
             this.btnSALIR.Text = "Salir";
             this.btnSALIR.UseVisualStyleBackColor = true;
@@ -96,18 +96,18 @@
             // 
             // txtBUSCAR
             // 
-            this.txtBUSCAR.Location = new System.Drawing.Point(165, 11);
-            this.txtBUSCAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBUSCAR.Location = new System.Drawing.Point(124, 9);
+            this.txtBUSCAR.Margin = new System.Windows.Forms.Padding(2);
             this.txtBUSCAR.Name = "txtBUSCAR";
-            this.txtBUSCAR.Size = new System.Drawing.Size(223, 22);
+            this.txtBUSCAR.Size = new System.Drawing.Size(168, 20);
             this.txtBUSCAR.TabIndex = 20;
             // 
             // btnMODIFICAR
             // 
-            this.btnMODIFICAR.Location = new System.Drawing.Point(17, 442);
-            this.btnMODIFICAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMODIFICAR.Location = new System.Drawing.Point(13, 359);
+            this.btnMODIFICAR.Margin = new System.Windows.Forms.Padding(2);
             this.btnMODIFICAR.Name = "btnMODIFICAR";
-            this.btnMODIFICAR.Size = new System.Drawing.Size(259, 43);
+            this.btnMODIFICAR.Size = new System.Drawing.Size(194, 35);
             this.btnMODIFICAR.TabIndex = 18;
             this.btnMODIFICAR.Text = "Modificar";
             this.btnMODIFICAR.UseVisualStyleBackColor = true;
@@ -115,10 +115,10 @@
             // 
             // btnAGREGAR
             // 
-            this.btnAGREGAR.Location = new System.Drawing.Point(17, 393);
-            this.btnAGREGAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAGREGAR.Location = new System.Drawing.Point(13, 319);
+            this.btnAGREGAR.Margin = new System.Windows.Forms.Padding(2);
             this.btnAGREGAR.Name = "btnAGREGAR";
-            this.btnAGREGAR.Size = new System.Drawing.Size(259, 43);
+            this.btnAGREGAR.Size = new System.Drawing.Size(194, 35);
             this.btnAGREGAR.TabIndex = 17;
             this.btnAGREGAR.Text = "Agregar";
             this.btnAGREGAR.UseVisualStyleBackColor = true;
@@ -127,26 +127,18 @@
             // dgvLOCALIDADES
             // 
             this.dgvLOCALIDADES.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLOCALIDADES.Location = new System.Drawing.Point(17, 44);
-            this.dgvLOCALIDADES.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvLOCALIDADES.Location = new System.Drawing.Point(13, 36);
+            this.dgvLOCALIDADES.Margin = new System.Windows.Forms.Padding(2);
             this.dgvLOCALIDADES.Name = "dgvLOCALIDADES";
             this.dgvLOCALIDADES.RowTemplate.Height = 24;
-            this.dgvLOCALIDADES.Size = new System.Drawing.Size(552, 342);
+            this.dgvLOCALIDADES.Size = new System.Drawing.Size(414, 278);
             this.dgvLOCALIDADES.TabIndex = 16;
-            // 
-            // txtTest
-            // 
-            this.txtTest.Location = new System.Drawing.Point(17, 503);
-            this.txtTest.Name = "txtTest";
-            this.txtTest.Size = new System.Drawing.Size(100, 22);
-            this.txtTest.TabIndex = 25;
             // 
             // frmLocalidades
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 545);
-            this.Controls.Add(this.txtTest);
+            this.ClientSize = new System.Drawing.Size(440, 443);
             this.Controls.Add(this.btnSELECCIONAR);
             this.Controls.Add(this.lblLOCALIDAD);
             this.Controls.Add(this.btnCONSULTAR);
@@ -156,10 +148,9 @@
             this.Controls.Add(this.btnMODIFICAR);
             this.Controls.Add(this.btnAGREGAR);
             this.Controls.Add(this.dgvLOCALIDADES);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmLocalidades";
             this.Text = "Localidades ";
-            this.Load += new System.EventHandler(this.frmLocalidades_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLOCALIDADES)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -177,6 +168,5 @@
         private System.Windows.Forms.Button btnMODIFICAR;
         private System.Windows.Forms.Button btnAGREGAR;
         private System.Windows.Forms.DataGridView dgvLOCALIDADES;
-        private System.Windows.Forms.TextBox txtTest;
     }
 }
