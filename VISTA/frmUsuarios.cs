@@ -19,11 +19,16 @@ namespace VISTA
     {
         CONTROLADORA.cUSUARIOS cUSUARIOS;
         //agregar MODELO.USUARIO oUSUARIO en el parametro y boton seleccionar para el CU-buscar
-        public frmUsuarios()
+        public frmUsuarios(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
 
             cUSUARIOS = CONTROLADORA.cUSUARIOS.obtener_instancia();
+            btnAGREGAR.Enabled = oUsuario.validar_acciones("btnAGREGAR", "frmUsuarios");
+            btnCONSULTAR.Enabled = oUsuario.validar_acciones("btnCONSULTAR", "frmUsuarios");
+            btnMODIFICAR.Enabled = oUsuario.validar_acciones("btnMODIFICAR", "frmUsuarios");
+            btnCAMBIARESTADO.Enabled = oUsuario.validar_acciones("btnCAMBIARESTADO", "frmUsuarios");
+
             armar_grilla();
         }
 

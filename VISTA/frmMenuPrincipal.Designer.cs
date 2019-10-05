@@ -36,7 +36,7 @@
             this.gestionarLocalidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionarProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestionarOrdenesDeCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionarOrdenesDeComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionarRemitosDeComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -120,7 +120,7 @@
             // 
             this.comprasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionarProveedoresToolStripMenuItem,
-            this.gestionarOrdenesDeCompraToolStripMenuItem});
+            this.gestionarOrdenesDeComprasToolStripMenuItem});
             this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
             this.comprasToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.comprasToolStripMenuItem.Text = "Compras";
@@ -132,12 +132,12 @@
             this.gestionarProveedoresToolStripMenuItem.Text = "Gestionar Proveedores";
             this.gestionarProveedoresToolStripMenuItem.Click += new System.EventHandler(this.gestionarProveedoresToolStripMenuItem_Click);
             // 
-            // gestionarOrdenesDeCompraToolStripMenuItem
+            // gestionarOrdenesDeComprasToolStripMenuItem
             // 
-            this.gestionarOrdenesDeCompraToolStripMenuItem.Name = "gestionarOrdenesDeCompraToolStripMenuItem";
-            this.gestionarOrdenesDeCompraToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
-            this.gestionarOrdenesDeCompraToolStripMenuItem.Text = "Gestionar Ordenes de Compras";
-            this.gestionarOrdenesDeCompraToolStripMenuItem.Click += new System.EventHandler(this.gestionarOrdenesDeCompraToolStripMenuItem_Click);
+            this.gestionarOrdenesDeComprasToolStripMenuItem.Name = "gestionarOrdenesDeComprasToolStripMenuItem";
+            this.gestionarOrdenesDeComprasToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
+            this.gestionarOrdenesDeComprasToolStripMenuItem.Text = "Gestionar Ordenes de Compras";
+            this.gestionarOrdenesDeComprasToolStripMenuItem.Click += new System.EventHandler(this.gestionarOrdenesDeCompraToolStripMenuItem_Click);
             // 
             // inventarioToolStripMenuItem
             // 
@@ -351,7 +351,7 @@
         private System.Windows.Forms.ToolStripMenuItem gestionarCategoriasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionarProveedoresToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gestionarOrdenesDeCompraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestionarOrdenesDeComprasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inventarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionarRemitosDeComprasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;

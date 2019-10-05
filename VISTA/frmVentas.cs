@@ -17,11 +17,14 @@ namespace VISTA
     public partial class frmVentas : Form
     {
         CONTROLADORA.cVENTAS cVENTAS;
-        public frmVentas()
+        public frmVentas(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
 
             cVENTAS = CONTROLADORA.cVENTAS.obtener_instancia();
+            btnAGREGAR.Enabled = oUsuario.validar_acciones("btnAGREGAR", "frmVentas");
+            btnCONSULTAR.Enabled = oUsuario.validar_acciones("btnCONSULTAR", "frmVentas");
+            btnDARDEBAJA.Enabled = oUsuario.validar_acciones("btnDARDEBAJA", "frmVentas");
             armar_grilla();
         }
 

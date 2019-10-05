@@ -14,9 +14,11 @@ namespace VISTA
     [MODELO.accion(control = "btnGENERARARCHIVO", descripcion = "Generar Archivo de Datos", formulario = "frmArchivoDeDatos", modulo = "Gerencia")]
     public partial class frmArchivoDeDatos : Form
     {
-        public frmArchivoDeDatos()
+        public frmArchivoDeDatos(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
+
+            btnGENERARARCHIVO.Enabled = oUsuario.validar_acciones("btnGENERARARCHIVO", "frmArchivoDeDatos");
         }
     }
 }

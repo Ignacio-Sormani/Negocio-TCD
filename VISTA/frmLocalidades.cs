@@ -18,14 +18,17 @@ namespace VISTA
     {
         CONTROLADORA.cLOCALIDADES cLOCALIDADES;
         //agregar MODELO.USUARIO oUSUARIO en el parametro y boton seleccionar para el CU-buscar
-        public frmLocalidades()
+        public frmLocalidades(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
             cLOCALIDADES = CONTROLADORA.cLOCALIDADES.obtener_instancia();
-            armarGrilla();
             btnSELECCIONAR.Visible = false;
+            btnAGREGAR.Enabled = oUsuario.validar_acciones("btnAGREGAR", "frmLocalidades");
+            btnCONSULTAR.Enabled = oUsuario.validar_acciones("btnCONSULTAR", "frmLocalidades");
+            btnMODIFICAR.Enabled = oUsuario.validar_acciones("btnMODIFICAR", "frmLocalidades");
+            armarGrilla();
         }
-        //CONSTRUCTOR PARA ENLAZAR DAOS CON EL CLIENTE
+        //CONSTRUCTOR PARA ENLAZAR DATOS CON EL CLIENTE
         MODELO.CLIENTE oCliente;
         bool localidadAlCliente = false;
         int selectRowIndex = -1;

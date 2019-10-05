@@ -19,11 +19,14 @@ namespace VISTA
     {
         CONTROLADORA.cGRUPOS cGRUPOS;
         //agregar MODELO.USUARIO oUSUARIO en el parametro y boton seleccionar para el CU-buscar
-        public frmGrupos()
+        public frmGrupos(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
 
             cGRUPOS = CONTROLADORA.cGRUPOS.obtener_instancia();
+            btnAGREGAR.Enabled = oUsuario.validar_acciones("btnAGREGAR", "frmGrupos");
+            btnCONSULTAR.Enabled = oUsuario.validar_acciones("btnCONSULTAR", "frmGrupos");
+            btnMODIFICAR.Enabled = oUsuario.validar_acciones("btnMODIFICAR", "frmGrupos");
             armar_grilla();
         }
 

@@ -26,6 +26,7 @@ namespace VISTA
             cACCIONES = CONTROLADORA.cACCIONES.obtener_instancia();
             cGRUPOS = CONTROLADORA.cGRUPOS.obtener_instancia();
             cACCIONES.verificar_acciones();
+            cGRUPOS.obtener_grupos("");
 
             string mensaje = "";
             if (cACCIONES.verificar_grupos() == 0)
@@ -79,45 +80,68 @@ namespace VISTA
                 oAcceso.fechaLogout = System.DateTime.Now;
                 oAcceso.usuario = oUsuario;
                 cACCESOS.agregar_acceso(oAcceso);
-
-
-                generarArchivosDeDatosToolStripMenuItem.Enabled = oUsuario.validar_acciones("generarArchivosDeDatosToolStripMenuItem", "frmMenuPrincipal");
-                gestionarBackupsToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarBackupsToolStripMenuItem", "frmMenuPrincipal");
-                gestionarCategoriasToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarCategoriasToolStripMenuItem", "frmMenuPrincipal");
-                gestionarClientesToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarClientesToolStripMenuItem", "frmMenuPrincipal");
-                gestionarGruposToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarGruposToolStripMenuItem", "frmMenuPrincipal");
-                gestionarLocalidadesToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarLocalidadesToolStripMenuItem", "frmMenuPrincipal");
-                gestionarMarcasToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarMarcasToolStripMenuItem", "frmMenuPrincipal");
-                gestionarOrdenesDeCompraToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarOrdenesDeCompraToolStripMenuItem", "frmMenuPrincipal");
-                gestionarProductosToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarProductosToolStripMenuItem", "frmMenuPrincipal");
-                gestionarProveedoresToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarProveedoresToolStripMenuItem", "frmMenuPrincipal");
-                gestionarRemitosDeComprasToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarRemitosDeComprasToolStripMenuItem", "frmMenuPrincipal");
-                gestionarReportesToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarReportesToolStripMenuItem", "frmMenuPrincipal");
-                gestionarUsuariosToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarUsuariosToolStripMenuItem", "frmMenuPrincipal");
-                gestionarVentasToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarVentasToolStripMenuItem", "frmMenuPrincipal");
+                
+                generarArchivosDeDatosToolStripMenuItem.Enabled = oUsuario.validar_acciones("generarArchivosDeDatosToolStripMenuItem", "frmArchivoDeDatos");
+                gestionarBackupsToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarBackupsToolStripMenuItem", "frmBackup");
+                gestionarCategoriasToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarCategoriasToolStripMenuItem", "frmCategorias");
+                gestionarClientesToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarClientesToolStripMenuItem", "frmClientes");
+                gestionarGruposToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarGruposToolStripMenuItem", "frmGrupos");
+                gestionarLocalidadesToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarLocalidadesToolStripMenuItem", "frmLocalidades");
+                gestionarMarcasToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarMarcasToolStripMenuItem", "frmMarcas");
+                gestionarOrdenesDeComprasToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarOrdenesDeComprasToolStripMenuItem", "frmOrdenesDeCompra");//NO FUNCIONA
+                gestionarProductosToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarProductosToolStripMenuItem", "frmProductos");
+                gestionarProveedoresToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarProveedoresToolStripMenuItem", "frmProveedores");
+                gestionarRemitosDeComprasToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarRemitosDeComprasToolStripMenuItem", "frmRemitos");
+                gestionarReportesToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarReportesToolStripMenuItem", "frmReporte");
+                gestionarUsuariosToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarUsuariosToolStripMenuItem", "frmUsuarios");
+                gestionarVentasToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarVentasToolStripMenuItem", "frmVentas");
                 if (gestionarCategoriasToolStripMenuItem.Enabled == false && gestionarLocalidadesToolStripMenuItem.Enabled == false && gestionarMarcasToolStripMenuItem.Enabled == false && gestionarProductosToolStripMenuItem.Enabled == false )
                 {
                     gestionesToolStripMenuItem.Enabled = false;
                 }
-                if (gestionarProveedoresToolStripMenuItem.Enabled == false && gestionarOrdenesDeCompraToolStripMenuItem.Enabled == false)
+                else
+                {
+                    gestionesToolStripMenuItem.Enabled = true;
+                }
+                if (gestionarProveedoresToolStripMenuItem.Enabled == false && gestionarOrdenesDeComprasToolStripMenuItem.Enabled == false)
                 {
                     comprasToolStripMenuItem.Enabled = false;
+                }
+                else
+                {
+                    comprasToolStripMenuItem.Enabled = true;
                 }
                 if (gestionarRemitosDeComprasToolStripMenuItem.Enabled == false)
                 {
                     inventarioToolStripMenuItem.Enabled = false;
                 }
+                else
+                {
+                    inventarioToolStripMenuItem.Enabled = true;
+                }
                 if (gestionarClientesToolStripMenuItem.Enabled == false && gestionarVentasToolStripMenuItem.Enabled == false)
                 {
                     ventasToolStripMenuItem.Enabled = false;
+                }
+                else
+                {
+                    ventasToolStripMenuItem.Enabled = true;
                 }
                 if (generarArchivosDeDatosToolStripMenuItem.Enabled == false && gestionarReportesToolStripMenuItem.Enabled == false)
                 {
                     gerenciaToolStripMenuItem.Enabled = false;
                 }
+                else
+                {
+                    gerenciaToolStripMenuItem.Enabled = true;
+                }
                 if (gestionarBackupsToolStripMenuItem.Enabled == false && gestionarGruposToolStripMenuItem.Enabled == false && gestionarUsuariosToolStripMenuItem.Enabled == false)
                 {
                     seguridadToolStripMenuItem.Enabled = false;
+                }
+                else
+                {
+                    seguridadToolStripMenuItem.Enabled = true;
                 }
             }
             else
@@ -176,85 +200,85 @@ namespace VISTA
 
         private void gestionarProductosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmProductos frmProductos = new frmProductos();
+            frmProductos frmProductos = new frmProductos(oUsuario);
             frmProductos.ShowDialog();
         }
 
         private void gestionarMarcasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmMarcas frmMarcas = new frmMarcas();
+            frmMarcas frmMarcas = new frmMarcas(oUsuario);
             frmMarcas.ShowDialog();
         }
 
         private void gestionarCategoriasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCategorias frmCategorias = new frmCategorias();
+            frmCategorias frmCategorias = new frmCategorias(oUsuario);
             frmCategorias.ShowDialog();
         }
 
         private void gestionarLocalidadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmLocalidades frmLocalidades = new frmLocalidades();
+            frmLocalidades frmLocalidades = new frmLocalidades(oUsuario);
             frmLocalidades.ShowDialog();
         }
 
         private void gestionarProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmProveedores frmProveedores = new frmProveedores();
+            frmProveedores frmProveedores = new frmProveedores(oUsuario);
             frmProveedores.ShowDialog();
         }
 
         private void gestionarOrdenesDeCompraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmOrdenesDeCompra frmOrdenesDeCompra = new frmOrdenesDeCompra();
+            frmOrdenesDeCompra frmOrdenesDeCompra = new frmOrdenesDeCompra(oUsuario);
             frmOrdenesDeCompra.ShowDialog();
         }
 
         private void gestionarRemitosDeComprasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmRemitos frmRemitos = new frmRemitos();
+            frmRemitos frmRemitos = new frmRemitos(oUsuario);
             frmRemitos.ShowDialog();
         }
 
         private void gestionarClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmClientes frmClientes = new frmClientes();
+            frmClientes frmClientes = new frmClientes(oUsuario);
             frmClientes.ShowDialog();
         }
 
         private void gestionarVentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmVentas frmVentas = new frmVentas();
+            frmVentas frmVentas = new frmVentas(oUsuario);
             frmVentas.ShowDialog();
         }
 
         private void gestionarReportesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmReporte frmReporte = new frmReporte();
+            frmReporte frmReporte = new frmReporte(oUsuario);
             frmReporte.ShowDialog();
         }
 
         private void generarArchivosDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmArchivoDeDatos frmArchivoDeDatos = new frmArchivoDeDatos();
+            frmArchivoDeDatos frmArchivoDeDatos = new frmArchivoDeDatos(oUsuario);
             frmArchivoDeDatos.ShowDialog();
         }
 
         private void gestionarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmUsuarios frmUsuarios = new frmUsuarios();
+            frmUsuarios frmUsuarios = new frmUsuarios(oUsuario);
             frmUsuarios.ShowDialog();
         }
 
         private void gestionarGruposToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmGrupos frmGrupos = new frmGrupos();
+            frmGrupos frmGrupos = new frmGrupos(oUsuario);
             frmGrupos.ShowDialog();
         }
 
         private void gestionarBackupsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmBackup frmBackup = new frmBackup();
+            frmBackup frmBackup = new frmBackup(oUsuario);
             frmBackup.ShowDialog();
         }
 

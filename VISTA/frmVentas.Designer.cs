@@ -39,6 +39,7 @@
             this.dtpFECHA = new System.Windows.Forms.DateTimePicker();
             this.txtFACTURA = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnDARDEBAJA = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVENTAS)).BeginInit();
             this.SuspendLayout();
             // 
@@ -144,11 +145,22 @@
             this.label3.TabIndex = 17;
             this.label3.Text = "Numero Factura:";
             // 
+            // btnDARDEBAJA
+            // 
+            this.btnDARDEBAJA.BackColor = System.Drawing.Color.DarkGray;
+            this.btnDARDEBAJA.Location = new System.Drawing.Point(727, 251);
+            this.btnDARDEBAJA.Name = "btnDARDEBAJA";
+            this.btnDARDEBAJA.Size = new System.Drawing.Size(269, 44);
+            this.btnDARDEBAJA.TabIndex = 19;
+            this.btnDARDEBAJA.Text = "DAR DE BAJA";
+            this.btnDARDEBAJA.UseVisualStyleBackColor = false;
+            // 
             // frmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.btnDARDEBAJA);
             this.Controls.Add(this.txtFACTURA);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dtpFECHA);
@@ -181,5 +193,6 @@
         private System.Windows.Forms.DateTimePicker dtpFECHA;
         private System.Windows.Forms.TextBox txtFACTURA;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnDARDEBAJA;
     }
 }

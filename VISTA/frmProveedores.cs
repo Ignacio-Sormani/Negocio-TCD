@@ -17,12 +17,16 @@ namespace VISTA
     public partial class frmProveedores : Form
     {
         CONTROLADORA.cPROVEEDORES cPROVEEDORES;
-        public frmProveedores()
+        public frmProveedores(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
             cPROVEEDORES = CONTROLADORA.cPROVEEDORES.obtener_instancia();
-            armarGrilla();
             btnSELECCIONAR.Visible = false;
+            btnAGREGAR.Enabled = oUsuario.validar_acciones("btnAGREGAR", "frmProveedores");
+            btnCONSULTAR.Enabled = oUsuario.validar_acciones("btnCONSULTAR", "frmProveedores");
+            btnMODIFICAR.Enabled = oUsuario.validar_acciones("btnMODIFICAR", "frmProveedores");
+
+            armarGrilla();
         }
 
         public void armarGrilla() {

@@ -14,9 +14,11 @@ namespace VISTA
     [MODELO.accion(control = "btnGENERARREPORTE", descripcion = "Generar Reporte", formulario = "frmReporte", modulo = "Gerencia")]
     public partial class frmReporte : Form
     {
-        public frmReporte()
+        public frmReporte(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
+
+            btnGENERARREPORTE.Enabled = oUsuario.validar_acciones("btnGENERARREPORTE", "frmReporte");
         }
         /*
         var cobranza = from row in dgvEconomia.Rows.Cast<DataGridViewRow>()

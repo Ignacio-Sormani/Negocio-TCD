@@ -32,6 +32,7 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btnGENERARREPORTE = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,11 +54,21 @@
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
+            // btnGENERARREPORTE
+            // 
+            this.btnGENERARREPORTE.Location = new System.Drawing.Point(671, 233);
+            this.btnGENERARREPORTE.Name = "btnGENERARREPORTE";
+            this.btnGENERARREPORTE.Size = new System.Drawing.Size(75, 23);
+            this.btnGENERARREPORTE.TabIndex = 1;
+            this.btnGENERARREPORTE.Text = "button1";
+            this.btnGENERARREPORTE.UseVisualStyleBackColor = true;
+            // 
             // frmReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(789, 463);
+            this.Controls.Add(this.btnGENERARREPORTE);
             this.Controls.Add(this.chart1);
             this.Name = "frmReporte";
             this.Text = "frmReporte";
@@ -69,5 +80,6 @@
         #endregion
 
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Button btnGENERARREPORTE;
     }
 }

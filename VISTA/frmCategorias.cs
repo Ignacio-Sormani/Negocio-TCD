@@ -18,12 +18,15 @@ namespace VISTA
     {
         CONTROLADORA.cCATEGORIAS cCATEGORIAS;
         //agregar MODELO.USUARIO oUSUARIO en el parametro y boton seleccionar para el CU-buscar
-        public frmCategorias()
+        public frmCategorias(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
 
             cCATEGORIAS = CONTROLADORA.cCATEGORIAS.obtener_instancia();
             btnSELECCIONAR.Visible = false;
+            btnAGREGAR.Enabled = oUsuario.validar_acciones("btnAGREGAR", "frmCategorias");
+            btnCONSULTAR.Enabled = oUsuario.validar_acciones("btnCONSULTAR", "frmCategorias");
+            btnMODIFICAR.Enabled = oUsuario.validar_acciones("btnMODIFICAR", "frmCategorias");
             armar_grilla();
         }
 

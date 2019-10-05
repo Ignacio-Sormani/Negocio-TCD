@@ -15,9 +15,11 @@ namespace VISTA
     [MODELO.accion(control = "btnCONSULTAR", descripcion = "Consultar Remito", formulario = "frmRemitos", modulo = "Inventario")]
     public partial class frmRemitos : Form
     {
-        public frmRemitos()
+        public frmRemitos(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
+            btnAGREGAR.Enabled = oUsuario.validar_acciones("btnAGREGAR", "frmRemitos");
+            btnCONSULTAR.Enabled = oUsuario.validar_acciones("btnCONSULTAR", "frmRemitos");
         }
     }
 }
