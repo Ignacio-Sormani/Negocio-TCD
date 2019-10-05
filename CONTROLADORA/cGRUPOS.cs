@@ -42,16 +42,16 @@ namespace CONTROLADORA
         public System.Collections.IEnumerable obtener_grupos(string nombre)
         {
             var grupos = from grupo in oNegocio.GRUPOS.Include("usuarios").Include("acciones").ToList()
-                           where grupo.nombre.ToLower().Contains(nombre.ToLower())
-                           select grupo;
+                         where grupo.nombre.ToLower().Contains(nombre.ToLower())
+                         select grupo;
             return grupos.ToList();
         }
 
         public System.Collections.IEnumerable obtener_usuarios()
         {
             var usuarios = from usuario in oNegocio.USUARIOS.ToList()
-                         where usuario.estadoActivo == true
-                         select usuario;
+                           where usuario.estadoActivo == true && usuario.nombreDeUsuario != "Superusuario"
+                           select usuario;
             return usuarios.ToList();
         }
 
@@ -59,6 +59,12 @@ namespace CONTROLADORA
         {
             return oNegocio.ACCIONES.ToList();
         }
+
+        public MODELO.ACCION obtener_accion(string accion) 
+        {
+            return oNegocio.ACCIONES.FirstOrDefault(_ => _.descripcionAccion.Contains(accion));
+        }
+
 
         public bool verificar_grupo_existente(string nombreGrupo) //verificar esta funcion
         {

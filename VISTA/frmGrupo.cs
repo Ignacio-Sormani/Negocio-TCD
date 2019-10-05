@@ -15,8 +15,6 @@ namespace VISTA
         MODELO.GRUPO oGrupo;
         string ACCION;
         CONTROLADORA.cGRUPOS cGRUPOS;
-        bool bUsuario;
-        bool bAccion;
         public frmGrupo(MODELO.GRUPO miGrupo, string miAccion)
         {
             InitializeComponent();
@@ -32,52 +30,44 @@ namespace VISTA
             clbUSUARIOS.DataSource = null;
             clbUSUARIOS.DataSource = cGRUPOS.obtener_usuarios();
 
-            bAccion = false;
-
-            List<MODELO.ACCION> acciones = cGRUPOS.obtener_acciones();
-            //faltar armar el treeview
-
-            /*
-            List<MODELO.formulario> forms = cGRUPOS.obtener_acciones();
-            var modulos = (from formulario in forms
-                           select new { DESCRIPCION = formulario.modulo })
-                          .Distinct();
-            foreach (var oModulo in modulos)
+            List<MODELO.ACCION> acciones = cGRUPOS.obtener_acciones();            
+            var formularios = (from accion in acciones
+                               select new { NombreForm = accion.nombreFormulario })
+                              .Distinct();
+            foreach (var formulario in formularios)
             {
-                var formularios = from formulario in forms
-                                  where formulario.modulo == oModulo.DESCRIPCION
-                                  select formulario;
-                foreach (MODELO.formulario oForm in formularios)
+                TreeNode tnG = new TreeNode();
+                var accionesForm = from accion in acciones
+                                   where accion.nombreFormulario.Contains(formulario.NombreForm)
+                                   select accion;
+                foreach (var accionForm in accionesForm)
                 {
-                    if (oForm.acciones.Count() > 0)
+                    if (accionForm.descripcionAccion.Contains("Gestionar"))
                     {
-                        TreeNode tnf = new TreeNode();
-                        tnf.Text = oForm.descripcion;
-                        tnf.Tag = null;
-                        foreach (MODELO.accion oAccion in oForm.acciones)
-                        {
-                            TreeNode tnA = new TreeNode();
-                            tnA.Text = oAccion.descripcion;
-                            tnA.Tag = oAccion;
-                            if (oGrupo.acciones.Count(acc => (acc.modulo == oAccion.modulo) && (acc.descripcionFormulario == oAccion.descripcion) && (acc.control == oAccion.control)) > 0)
-                                tnA.Checked = true;
-                            else
-                                tnA.Checked = false;
-
-                            tnf.Nodes.Add(tnA);
-                            HasCheckedChildNodes(tnf);
-                        }
-                        tvACCIONES.Nodes.Add(tnf);
+                        tnG.Text = accionForm.descripcionAccion;
+                        if (oGrupo.acciones.Count(acc => (acc.descripcionAccion == tnG.Text)) > 0)
+                            tnG.Checked = true;
+                        else
+                            tnG.Checked = false;
+                    }
+                    else
+                    {
+                        TreeNode tnA = new TreeNode();
+                        tnA.Text = accionForm.descripcionAccion;
+                        tnG.Nodes.Add(tnA);
+                        if (oGrupo.acciones.Count(acc => (acc.descripcionAccion == tnA.Text)) > 0)
+                            tnA.Checked = true;
+                        else
+                            tnA.Checked = false;
                     }
                 }
-            }*/
-            bAccion = true;
-            
+                tvACCIONES.Nodes.Add(tnG);
+            }
+
             if (ACCION != "A")
             {
                 txtGRUPO.Text = oGrupo.nombre;
                 ckbACTIVO.Checked = oGrupo.estadoActivo;
-                bUsuario = false;
                 for (int i = 0; i < clbUSUARIOS.Items.Count; i++)
                 {
                     MODELO.USUARIO oUsuario = (MODELO.USUARIO)clbUSUARIOS.Items[i];
@@ -86,22 +76,21 @@ namespace VISTA
                         clbUSUARIOS.SetItemChecked(i, true);
                     }
                 }
-                bUsuario = true;
             }
 
-            if (ACCION == "C")
+            if (ACCION == "C" || oGrupo.nombre == "Administrador del Sistema")
             {
                 txtGRUPO.Enabled = false;
                 ckbACTIVO.Enabled = false;
                 btnCANCELAR.Text = "Cerrar";
                 btnGUARDAR.Visible = false;
+                clbUSUARIOS.Enabled = false;
+                tvACCIONES.Enabled = false;
             }
         }
 
         private void clbUSUARIOS_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            if (bUsuario == false) return;
-
             MODELO.USUARIO oUsuario = (MODELO.USUARIO)clbUSUARIOS.SelectedItem;
             if (e.NewValue == CheckState.Checked)
             {
@@ -148,87 +137,16 @@ namespace VISTA
 
         private void tvACCIONES_AfterCheck(object sender, TreeViewEventArgs e)
         {
-            if (bAccion == false) return;
-
             TreeNode seleccion = e.Node;
-
-            if (seleccion.Nodes.Count > 0)
+            MODELO.ACCION oAccion= cGRUPOS.obtener_accion(seleccion.Text);
+            if (seleccion.Checked)
             {
-                checkChildNodes(seleccion, seleccion.Checked);
+                oGrupo.acciones.Add(oAccion);
             }
             else
             {
-                if (seleccion.Tag != null)
-                {
-                    MODELO.ACCION miACCION;
-                    if (seleccion.Checked)
-                    {
-                        miACCION = ((MODELO.ACCION)seleccion.Tag);
-                        oGrupo.acciones.Add(miACCION);
-                    }
-                    else
-                    {
-                        miACCION = oGrupo.acciones.FirstOrDefault(acc => (acc.control == ((MODELO.accion)seleccion.Tag).control) && (acc.nombreFormulario == ((MODELO.accion)seleccion.Tag).formulario));
-                        oGrupo.acciones.Remove(miACCION);
-                    }
-                }
+                oGrupo.acciones.Remove(oAccion);
             }
-            bAccion = false;
-            if (seleccion.Parent != null)
-            {
-                HasCheckedChildNodes(seleccion.Parent);
-            }
-            bAccion = true;
-        }
-
-        private void checkChildNodes(TreeNode node, bool nodeChecked)
-        {
-            bAccion = false;
-            foreach (TreeNode tnS in node.Nodes)
-            {
-                if (tnS.Nodes.Count > 0)
-                {
-                    tnS.Checked = nodeChecked;
-                    checkChildNodes(tnS, nodeChecked);
-                }
-                else
-                {
-                    if (tnS.Tag != null)
-                    {
-                        MODELO.ACCION miACCION;
-                        tnS.Checked = nodeChecked;
-                        if (tnS.Checked)
-                        {
-                            miACCION = ((MODELO.ACCION)tnS.Tag);
-                            oGrupo.acciones.Add(miACCION);
-                        }
-                        else
-                        {
-                            miACCION = oGrupo.acciones.FirstOrDefault(acc => (acc.control == ((MODELO.accion)tnS.Tag).control) && (acc.nombreFormulario == ((MODELO.accion)tnS.Tag).formulario));
-                            oGrupo.acciones.Remove(miACCION);
-                        }
-                    }
-                }
-            }
-            bAccion = true;
-        }
-
-        private void HasCheckedChildNodes(TreeNode node)
-        {
-            bAccion = false;
-            bool marca = true;
-            if (node.Nodes.Count > 0)
-            {
-                foreach (TreeNode childNode in node.Nodes)
-                {
-                    if (!childNode.Checked)
-                        marca = false;
-                }
-                node.Checked = marca;
-                if (node.Parent != null)
-                    HasCheckedChildNodes(node.Parent);
-            }
-            bAccion = true;
         }
     }
 }
