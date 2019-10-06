@@ -25,7 +25,6 @@ namespace VISTA
 
         private void btnGUARDAR_Click(object sender, EventArgs e)
         {
-            //VALIDACIONES cuit, razon social, telefono, localidad, mail
             int cuit;
             if (!int.TryParse(txtCUIT.Text, out cuit))
             {
@@ -58,11 +57,9 @@ namespace VISTA
                 MessageBox.Show("El valor del email es incorrecto");
                 return;
             }
-            //SETEAR PROPIEDADES
             oProveedor.cuit = cuit;
             oProveedor.razonSocial = txtRAZON_SOCIAL.Text;
             oProveedor.direccion = txtDIRECCION.Text;
-            //localidad se guarda desde el boton seleccionar
             oProveedor.telefono = telefono;
             oProveedor.mail = txtEMAIL.Text;
 

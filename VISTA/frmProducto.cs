@@ -22,14 +22,9 @@ namespace VISTA
             oProducto = miProducto;
             cProductos = CONTROLADORA.cPRODUCTOS.obtener_instancia();
         }
-        
-
-        
 
         private void btnGUARDAR_Click(object sender, EventArgs e)
-        {
-            //VALIDACIONES
-            
+        {            
             if (string.IsNullOrWhiteSpace(txtDESCRIPCION.Text)) {
                 MessageBox.Show("El valor de la descripcion es incorrecto");
                 return;
@@ -70,12 +65,8 @@ namespace VISTA
                 MessageBox.Show("El valor de la cantidad operativa es incorrecto");
                 return;
             }
-
-           
-            //SETEAR PROPIEDADES
             
             oProducto.descripcion = txtDESCRIPCION.Text;
-            //marcas y categorias guardados desde los botones
             oProducto.costo = costo;
             oProducto.precio = precio;
             oProducto.cantidadMinima = cant_minima;
@@ -135,7 +126,7 @@ namespace VISTA
                 btnGUARDAR.Visible = false;
             }
         }
-        //FUNCIONES EXTRAS
+
         public void completarCampos() {
             txtDESCRIPCION.Text = oProducto.descripcion;
             lblMARCA.Text = oProducto.marca.ToString();

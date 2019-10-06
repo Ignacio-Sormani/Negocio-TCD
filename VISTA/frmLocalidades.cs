@@ -27,7 +27,7 @@ namespace VISTA
             btnMODIFICAR.Enabled = oUsuario.validar_acciones("btnMODIFICAR", "frmLocalidades");
             armarGrilla();
         }
-        //CONSTRUCTOR PARA ENLAZAR DATOS CON EL CLIENTE
+
         MODELO.CLIENTE oCliente;
         bool localidadAlCliente = false;
         public frmLocalidades(MODELO.CLIENTE miCliente)
@@ -40,7 +40,7 @@ namespace VISTA
             btnSELECCIONAR.Visible = true;
         }
 
-        //CONSTRUCTOR PARA ENLAZAR DATOS CON LOS PROVEEDORES
+
         MODELO.PROVEEDOR oProveedor;
         bool localidadAlProveedor = false;
         public frmLocalidades(MODELO.PROVEEDOR miProveedor)
@@ -109,19 +109,16 @@ namespace VISTA
                 return;
             }
 
-            //agregar localidad al cliente?
             if (localidadAlCliente) {
                 oCliente.localidad = cLOCALIDADES.obtener_localidad(Convert.ToInt32(dgvLOCALIDADES.CurrentRow.Cells[0].Value));
             }
 
-            //agregar localidad al proveedor?
             if (localidadAlProveedor)
             {
                 oProveedor.localidad = cLOCALIDADES.obtener_localidad(Convert.ToInt32(dgvLOCALIDADES.CurrentRow.Cells[0].Value));
             }
 
-            this.Close();
-            
+            this.Close();            
         }
     }
 }

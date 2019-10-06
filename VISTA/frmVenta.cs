@@ -21,42 +21,68 @@ namespace VISTA
 
             cVENTAS = CONTROLADORA.cVENTAS.obtener_instancia();
             oVENTA = miVENTA;
-            ACCION = miACCION;
+            ACCION = miACCION;            
+        }
 
-            
+        private void frmVenta_Load(object sender, EventArgs e)
+        {
+            pPRODUCTO.Enabled = false;
             if (ACCION == "C")
             {
-                
+                dtpFECHA.Value = oVENTA.fecha;
                 dtpFECHA.Enabled = false;
+                txtCLIENTE.Text = oVENTA.cliente.ToString();
                 txtCLIENTE.Enabled = false;
-                txtTOTAL.Text = oVENTA.total.ToString();
-                btnAGREGAR.Visible = false;
-                btnAGREGARPRODUCTO.Visible = false;
+                txtTOTALPRODUCTOS.Text = oVENTA.total.ToString();
+                txtTOTALPRODUCTOS.Enabled = false;
+                txtTOTALPAGOS.Text = calcular_total_pagos().ToString();
+                txtTOTALPAGOS.Enabled = false;
+                armar_grilla_productos();
+                armar_grilla_pagos();
+                btnCANCELAR.Text = "Cerrar";
+                btnGUARDAR.Visible = false;
+                btnAGREGARPAGO.Visible = false;
+                btnMODIFICARPAGO.Visible = false;
+                btnELIMINARPAGO.Visible = false;
+                btnBUSCARPRODUCTO.Visible = false;
+                btnCONFIRMARPRODUCTO.Visible = false;
                 btnELIMINARPRODUCTO.Visible = false;
-                panAGREGAR.Visible = false;
+                btnMODIFICARPRODUCTO.Visible = false;
             }
             else
-            {
-                panAGREGAR.Enabled = false;
+            {                
                 dtpFECHA.Value = System.DateTime.Now;
             }
         }
 
-        private void btnAGREGAR_Click(object sender, EventArgs e)
+        public void armar_grilla_productos()
         {
-
+            dgvPRODUCTOS.DataSource = null;
+            dgvPRODUCTOS.DataSource = oVENTA.itemsv; //confirmar esto
         }
-        /* agregar el system.Drawing 
-        printdocument y printpreviewdialog (en el previewdialog ponerle en las propiedades el nombre del printdocument)
-         en printdocument, agrega el evento printpage y ponerle adentro  e.Graphics.DrawImage(bmp, 0, 0);
-         en el boton imprimir:
-                            Graphics g = this.CreateGraphics();
-                bmp = new Bitmap(this.Size.Width, this.Size.Height, g);
-                Graphics mg = Graphics.FromImage(bmp);
-                mg.CopyFromScreen(this.Location.X, this.Location.Y, 30, 50, this.Size);
-                CargarCliente();
+        public void armar_grilla_pagos()
+        {
+            dgvPAGOS.DataSource = null;
+            dgvPAGOS.DataSource = oVENTA.pagos; //confirmar esto
+        }
 
-                printPreviewDialog1.ShowDialog();
-         crear una variable Bitmap bmp;*/
+        public decimal calcular_total_productos()//confirmar esto
+        {
+            decimal total = 0;
+            foreach (MODELO.ITEMV producto in oVENTA.itemsv)
+            {
+                total += producto.subtotal;
+            }
+            return 0;
+        }
+        public decimal calcular_total_pagos()//confirmar esto
+        {
+            decimal total = 0;
+            foreach (MODELO.PAGO pago in oVENTA.pagos)
+            {
+                total += pago.total;
+            }
+            return 0;
+        }        
     }
 }

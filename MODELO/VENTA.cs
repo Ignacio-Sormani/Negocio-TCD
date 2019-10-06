@@ -17,6 +17,7 @@ namespace MODELO
         public DateTime fecha { get; set; }
         public CLIENTE cliente { get; set; }
         public Int32 total { get; set; }
+        public bool estado { get; set; }
         public virtual ICollection<ITEMV> itemsv { get; set; }
         public virtual ICollection<PAGO> pagos { get; set; }
 

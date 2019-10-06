@@ -25,7 +25,6 @@ namespace VISTA
 
         private void btnGUARDAR_Click(object sender, EventArgs e)
         {
-            //VALIDACIONES
             int dni;
             if (!int.TryParse(txtDNI.Text, out dni)) {
                 MessageBox.Show("El valor del dni es incorrecto");
@@ -59,13 +58,10 @@ namespace VISTA
                 MessageBox.Show("El valor del email es incorrecto");
                 return;
             }
-
-            //SETEAR PROPIEDADES
             oCliente.dni = dni;
             oCliente.nombreApellido = txtNOMBREAPELLIDO.Text;
             oCliente.fechaNacimiento = dtpNACIMIENTO.Value;
             oCliente.direccion = txtDIRECCION.Text;
-            //la localidad se guarda desde el boton seleccionar
             oCliente.telefono = telefono;
             oCliente.mail = txtTELEFONO.Text;
 

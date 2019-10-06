@@ -27,32 +27,31 @@ namespace CONTROLADORA
             oNegocio.SaveChanges();
         }
 
+        public void modificar_venta(MODELO.VENTA oVENTA)
+        {
+            oNegocio.Entry(oVENTA).State = System.Data.Entity.EntityState.Modified;
+            oNegocio.SaveChanges();
+        }
         public MODELO.VENTA obtener_venta(Int32 codigo)
         {
             return oNegocio.VENTAS.Find(codigo);
         }
+
+        public System.Collections.IEnumerable obtener_ventas_todas()
+        {
+            var ventas = from venta in oNegocio.VENTAS.ToList()
+                         select venta;
+            return ventas.ToList();
+        }
         
-        public System.Collections.IEnumerable obtener_ventas() //falta agregar filtros
+
+        public System.Collections.IEnumerable obtener_ventas() //falta agregar params
         {
             var ventas = from venta in oNegocio.VENTAS.ToList()
                           select venta;
             return ventas.ToList();
         }
-
-        /*public Int32 obtener_nro() // obtener el siguiente numero de factura
-        {
-            Int32 nro = 1;
-            foreach (var venta in oNegocio.VENTAS)
-            {
-                if (venta.nroFactura > nro)
-                {
-                    nro = venta.nroFactura;
-                }
-            }
-            return (nro + 1);
-        }
-        
-       
+        /*
         public string verificar_stock(MODELO.VENTA oMovimiento)
         {
             string msj = string.Empty;

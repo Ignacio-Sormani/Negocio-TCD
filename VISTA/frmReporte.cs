@@ -37,5 +37,18 @@ namespace VISTA
             series.Points.Clear();
         }
         */ // para limpiar el grafico
+
+        /* agregar el system.Drawing 
+        printdocument y printpreviewdialog (en el previewdialog ponerle en las propiedades el nombre del printdocument)
+         en printdocument, agrega el evento printpage y ponerle adentro  e.Graphics.DrawImage(bmp, 0, 0);
+         en el boton imprimir:
+                            Graphics g = this.CreateGraphics();
+                bmp = new Bitmap(this.Size.Width, this.Size.Height, g);
+                Graphics mg = Graphics.FromImage(bmp);
+                mg.CopyFromScreen(this.Location.X, this.Location.Y, 30, 50, this.Size);
+                CargarCliente();
+
+                printPreviewDialog1.ShowDialog();
+         crear una variable Bitmap bmp;*/
     }
 }

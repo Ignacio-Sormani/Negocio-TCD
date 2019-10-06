@@ -80,3 +80,4 @@ C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\obj\Debug\D
 C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations._4.resources
 C:\Users\Usuario\Desktop\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations._5.resources
 C:\Users\Usuario\Desktop\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations._6.resources
+C:\Users\Usuario\Desktop\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations.negocio0610.resources

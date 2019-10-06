@@ -20,7 +20,7 @@ namespace MODELO
         public virtual PROVEEDOR proveedor { get; set; }
         public virtual ICollection<ITEMOC> itemsoc { get; set; }
         public virtual ICollection<REMITODECOMPRA> remitosCompra { get; set; }
-        public string estado { get; set; }
+        public bool estado { get; set; }
 
         public override string ToString()
         {

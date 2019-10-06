@@ -29,7 +29,8 @@ namespace VISTA
             armarGrilla();
         }
 
-        public void armarGrilla() {
+        public void armarGrilla()
+        {
             dgvCLIENTES.DataSource = null;
             dgvCLIENTES.DataSource = cCLIENTES.obtener_clientes(txtBUSCAR.Text);
         }

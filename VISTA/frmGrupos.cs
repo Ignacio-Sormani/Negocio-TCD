@@ -18,7 +18,6 @@ namespace VISTA
     public partial class frmGrupos : Form
     {
         CONTROLADORA.cGRUPOS cGRUPOS;
-        //agregar MODELO.USUARIO oUSUARIO en el parametro y boton seleccionar para el CU-buscar
         public frmGrupos(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();

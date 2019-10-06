@@ -17,7 +17,6 @@ namespace VISTA
     public partial class frmMarcas : Form
     {
         CONTROLADORA.cMARCAS cMARCAS;
-        //agregar MODELO.USUARIO oUSUARIO en el parametro y boton seleccionar para el CU-buscar
         public frmMarcas(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();

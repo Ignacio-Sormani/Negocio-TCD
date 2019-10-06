@@ -18,7 +18,6 @@ namespace VISTA
     public partial class frmUsuarios : Form
     {
         CONTROLADORA.cUSUARIOS cUSUARIOS;
-        //agregar MODELO.USUARIO oUSUARIO en el parametro y boton seleccionar para el CU-buscar
         public frmUsuarios(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
