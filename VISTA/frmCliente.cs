@@ -63,7 +63,7 @@ namespace VISTA
             oCliente.fechaNacimiento = dtpNACIMIENTO.Value;
             oCliente.direccion = txtDIRECCION.Text;
             oCliente.telefono = telefono;
-            oCliente.mail = txtTELEFONO.Text;
+            oCliente.mail = txtEMAIL.Text;
 
             if (accion == "A") {
                 cCLIENTE.agregar_cliente(oCliente);

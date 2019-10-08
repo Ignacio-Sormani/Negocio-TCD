@@ -67,7 +67,7 @@ namespace VISTA
                 return;
             }
             MODELO.VENTA oVENTA = cVENTAS.obtener_venta(Convert.ToInt32(dgvVENTAS.CurrentRow.Cells[0].Value));
-            frmVenta2 formVenta = new frmVenta2(oVENTA, "C");
+            frmVenta formVenta = new frmVenta(oVENTA, "C");
             formVenta.ShowDialog();
 
         }

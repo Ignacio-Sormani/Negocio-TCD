@@ -296,6 +296,9 @@
     <EmbeddedResource Include="frmOrdenesDeCompra.resx">
       <DependentUpon>frmOrdenesDeCompra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPago.resx">
+      <DependentUpon>frmPago.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmProducto.resx">
       <DependentUpon>frmProducto.cs</DependentUpon>
     </EmbeddedResource>

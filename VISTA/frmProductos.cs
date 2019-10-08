@@ -17,6 +17,8 @@ namespace VISTA
     public partial class frmProductos : Form
     {
         CONTROLADORA.cPRODUCTOS cPRODUCTOS;
+        public MODELO.PRODUCTO productoActual { get { return oProducto; } }
+        MODELO.PRODUCTO oProducto;
         public frmProductos(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
@@ -25,6 +27,15 @@ namespace VISTA
             btnAGREGAR.Enabled = oUsuario.validar_acciones("btnAGREGAR", "frmProductos");
             btnCONSULTAR.Enabled = oUsuario.validar_acciones("btnCONSULTAR", "frmProductos");
             btnMODIFICAR.Enabled = oUsuario.validar_acciones("btnMODIFICAR", "frmProductos");
+
+            armarGrilla();
+        }
+
+        public frmProductos()
+        {
+            InitializeComponent();
+            cPRODUCTOS = CONTROLADORA.cPRODUCTOS.obtener_instancia();
+            btnSELECCIONAR.Visible = true;
 
             armarGrilla();
         }
@@ -56,7 +67,7 @@ namespace VISTA
                 return;
             }
 
-            MODELO.PRODUCTO oProducto = cPRODUCTOS.obtener_producto(Convert.ToInt32(dgvPRODUCTOS.CurrentRow.Cells[0].Value));
+            oProducto = cPRODUCTOS.obtener_producto(Convert.ToInt32(dgvPRODUCTOS.CurrentRow.Cells[0].Value));
             frmProducto frmProducto = new frmProducto(oProducto, "M");
             DialogResult dr = frmProducto.ShowDialog();
             if (dr == DialogResult.OK) {
@@ -72,14 +83,20 @@ namespace VISTA
                 return;
             }
 
-            MODELO.PRODUCTO oProducto = cPRODUCTOS.obtener_producto(Convert.ToInt32(dgvPRODUCTOS.CurrentRow.Cells[0].Value));
+            oProducto = cPRODUCTOS.obtener_producto(Convert.ToInt32(dgvPRODUCTOS.CurrentRow.Cells[0].Value));
             frmProducto frmProducto = new frmProducto(oProducto, "C");
             frmProducto.ShowDialog();
         }
 
         private void btnSELECCIONAR_Click(object sender, EventArgs e)
         {
-            
+            if (dgvPRODUCTOS.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar un producto");
+                return;
+            }
+            oProducto = cPRODUCTOS.obtener_producto(Convert.ToInt32(dgvPRODUCTOS.CurrentRow.Cells[0].Value));
+            this.Close();
         }
 
         private void btnBUSCAR_Click(object sender, EventArgs e)

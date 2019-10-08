@@ -21,7 +21,7 @@ namespace VISTA
 
 
 
-
+        /*
         public bool validar_estado(MODELO.ORDENDECOMPRA oORDEN)
         {
             bool a = true;
@@ -33,6 +33,6 @@ namespace VISTA
                 }
             }
             return a;
-        }
+        }*/
     }
 }

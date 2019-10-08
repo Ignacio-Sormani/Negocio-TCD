@@ -21,7 +21,6 @@ namespace MODELO
     public class ITEMV : ITEM
     {
         public decimal precioUnitarioVenta { get; set; }
-        public virtual VENTA venta { get; set; }
 
         public decimal subtotal { get; set; }
         public void calcularSubtotal()
@@ -31,15 +30,12 @@ namespace MODELO
     }
 
     public class ITEMOC : ITEM
-    {
-        public virtual ORDENDECOMPRA ordenCompra { get; set; }
-        
+    {        
     }
 
     public class ITEMRC : ITEM
     {
         public decimal precioUnitarioCompra { get; set; }
-        public virtual REMITODECOMPRA remitoCompra { get; set; }
         public decimal subtotal { get; set; }
         public void calcularSubtotal()
         {

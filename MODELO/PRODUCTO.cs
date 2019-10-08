@@ -8,10 +8,6 @@ namespace MODELO
 {
     public class PRODUCTO
     {
-        public PRODUCTO()
-        {
-            items = new HashSet<ITEM>();
-        }
         public Int32 codigoProducto { get; set; }
         public string descripcion { get; set; }
         public MARCA marca { get; set; }
@@ -23,7 +19,6 @@ namespace MODELO
         public Int32 cantidadOperativa { get; set; }
         public string estado { get; set; }
         public bool estadoActivo { get; set; }
-        public virtual ICollection<ITEM> items { get; set; }
         public void asignar_estado(bool p)
         {
             if (p == true)

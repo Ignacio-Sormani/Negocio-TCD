@@ -21,11 +21,11 @@ namespace CONTROLADORA
         {
             oNegocio = DATOS.NEGOCIO.obtener_instancia();
         }
-
+        /*
         public System.Collections.IEnumerable calcular_items_faltantes(MODELO.ORDENDECOMPRA oORDEN)
-     {
+        {
          var itemsoc = from itemoc in oNegocio.ITEMSOC.Include("producto").ToList()
-                       where itemoc.ordenCompra == oORDEN
+                       //where itemoc.ordenCompra == oORDEN
                        select itemoc;
 
          var remitos = from remito in oNegocio.REMITOSDECOMPRA.Include("ordenCompra").ToList()
@@ -44,7 +44,7 @@ namespace CONTROLADORA
          foreach (MODELO.REMITODECOMPRA remito in remitos.ToList())
          {
              var itemsrc = from itemrc in oNegocio.ITEMSRC.Include("remitoCompra").ToList()
-                           where itemrc.remitoCompra == remito
+                           //where itemrc.remitoCompra == remito
                            select itemrc;
 
              foreach (MODELO.ITEMRC item in itemsrc.ToList())
@@ -56,6 +56,6 @@ namespace CONTROLADORA
              }
          }
          return items_faltantes.ToList();
-     }
+        }*/
     }
 }

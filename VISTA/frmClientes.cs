@@ -17,6 +17,7 @@ namespace VISTA
     public partial class frmClientes : Form
     {
         CONTROLADORA.cCLIENTES cCLIENTES;
+        MODELO.VENTA oVenta;
         public frmClientes(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
@@ -26,6 +27,16 @@ namespace VISTA
             btnAGREGAR.Enabled = oUsuario.validar_acciones("btnAGREGAR", "frmClientes");
             btnCONSULTAR.Enabled = oUsuario.validar_acciones("btnCONSULTAR", "frmClientes");
             btnMODIFICAR.Enabled = oUsuario.validar_acciones("btnMODIFICAR", "frmClientes");
+            armarGrilla();
+        }
+
+        public frmClientes(MODELO.VENTA miVenta)
+        {
+            InitializeComponent();
+
+            oVenta = miVenta;
+            cCLIENTES = CONTROLADORA.cCLIENTES.obtener_instancia();
+            btnSELECCIONAR.Visible = true;
             armarGrilla();
         }
 
@@ -80,7 +91,13 @@ namespace VISTA
 
         private void btnSELECCIONAR_Click(object sender, EventArgs e)
         {
-
+            if (dgvCLIENTES.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar un cliente de la lista");
+                return;
+            }
+            oVenta.cliente = cCLIENTES.obtener_cliente(Convert.ToInt32(dgvCLIENTES.CurrentRow.Cells[0].Value));
+            this.Close();
         }
 
         private void btnSALIR_Click(object sender, EventArgs e)

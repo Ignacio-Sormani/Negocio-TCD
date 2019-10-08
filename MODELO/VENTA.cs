@@ -16,7 +16,8 @@ namespace MODELO
         public Int32 codigoVenta { get; set; }
         public DateTime fecha { get; set; }
         public CLIENTE cliente { get; set; }
-        public Int32 total { get; set; }
+        public decimal precioTotal { get; set; }
+        public decimal pagoTotal { get; set; }
         public bool estado { get; set; }
         public virtual ICollection<ITEMV> itemsv { get; set; }
         public virtual ICollection<PAGO> pagos { get; set; }

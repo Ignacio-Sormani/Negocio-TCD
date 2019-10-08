@@ -12,14 +12,14 @@ namespace MODELO
         public virtual FORMAPAGO formaPago { get; set; }
         public virtual VENTA venta { get; set; }
         public decimal total { get; set; }
+        public decimal totalFinal { get; set; }
         public Int32 cantidadCuotas { get; set; }
         public decimal precioCuota { get; set; }
         
         public void calcular_totales()
         {
-            total = formaPago.calcular_total(venta.total);
-            cantidadCuotas = formaPago.cantidad_cuotas();
-            precioCuota = total / cantidadCuotas;
+            totalFinal = formaPago.calcular_total(total, cantidadCuotas);
+            precioCuota = totalFinal / cantidadCuotas;
         }
 
         public override string ToString()

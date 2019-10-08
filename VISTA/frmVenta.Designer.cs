@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblPRODUCTOS = new System.Windows.Forms.Label();
-            this.txtTOTALDETALLE = new System.Windows.Forms.Label();
+            this.lblTOTALDETALLE = new System.Windows.Forms.Label();
             this.txtTOTALPRODUCTOS = new System.Windows.Forms.TextBox();
             this.dtpFECHA = new System.Windows.Forms.DateTimePicker();
             this.lblFECHA = new System.Windows.Forms.Label();
@@ -40,18 +40,16 @@
             this.btnELIMINARPRODUCTO = new System.Windows.Forms.Button();
             this.nudCANTIDADPRODUCTO = new System.Windows.Forms.NumericUpDown();
             this.lblCANTIDAD = new System.Windows.Forms.Label();
-            this.btnMODIFICARPAGO = new System.Windows.Forms.Button();
             this.btnAGREGARPAGO = new System.Windows.Forms.Button();
             this.lblPAGOS = new System.Windows.Forms.Label();
-            this.txtTOTALPAGOS = new System.Windows.Forms.Label();
-            this.txtTOTALPAGO = new System.Windows.Forms.TextBox();
+            this.lblTOTALPAGOS = new System.Windows.Forms.Label();
+            this.txtTOTALPAGOS = new System.Windows.Forms.TextBox();
             this.dgvPAGOS = new System.Windows.Forms.DataGridView();
             this.lblPRODUCTO = new System.Windows.Forms.Label();
             this.pPRODUCTO = new System.Windows.Forms.Panel();
             this.btnELIMINARPAGO = new System.Windows.Forms.Button();
             this.btnCANCELAR = new System.Windows.Forms.Button();
             this.btnGUARDAR = new System.Windows.Forms.Button();
-            this.btnMODIFICARPRODUCTO = new System.Windows.Forms.Button();
             this.lblCLIENTENOMBRE = new System.Windows.Forms.Label();
             this.btnCLIENTE = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPRODUCTOS)).BeginInit();
@@ -69,14 +67,14 @@
             this.lblPRODUCTOS.TabIndex = 32;
             this.lblPRODUCTOS.Text = "Productos:";
             // 
-            // txtTOTALDETALLE
+            // lblTOTALDETALLE
             // 
-            this.txtTOTALDETALLE.AutoSize = true;
-            this.txtTOTALDETALLE.Location = new System.Drawing.Point(302, 219);
-            this.txtTOTALDETALLE.Name = "txtTOTALDETALLE";
-            this.txtTOTALDETALLE.Size = new System.Drawing.Size(45, 13);
-            this.txtTOTALDETALLE.TabIndex = 31;
-            this.txtTOTALDETALLE.Text = "TOTAL:";
+            this.lblTOTALDETALLE.AutoSize = true;
+            this.lblTOTALDETALLE.Location = new System.Drawing.Point(302, 219);
+            this.lblTOTALDETALLE.Name = "lblTOTALDETALLE";
+            this.lblTOTALDETALLE.Size = new System.Drawing.Size(45, 13);
+            this.lblTOTALDETALLE.TabIndex = 31;
+            this.lblTOTALDETALLE.Text = "TOTAL:";
             // 
             // txtTOTALPRODUCTOS
             // 
@@ -129,6 +127,7 @@
             this.btnBUSCARPRODUCTO.TabIndex = 54;
             this.btnBUSCARPRODUCTO.Text = "Buscar Producto";
             this.btnBUSCARPRODUCTO.UseVisualStyleBackColor = true;
+            this.btnBUSCARPRODUCTO.Click += new System.EventHandler(this.btnBUSCARPRODUCTO_Click);
             // 
             // btnCONFIRMARPRODUCTO
             // 
@@ -139,16 +138,18 @@
             this.btnCONFIRMARPRODUCTO.TabIndex = 55;
             this.btnCONFIRMARPRODUCTO.Text = "Agregar Producto";
             this.btnCONFIRMARPRODUCTO.UseVisualStyleBackColor = true;
+            this.btnCONFIRMARPRODUCTO.Click += new System.EventHandler(this.btnCONFIRMARPRODUCTO_Click);
             // 
             // btnELIMINARPRODUCTO
             // 
-            this.btnELIMINARPRODUCTO.Location = new System.Drawing.Point(132, 216);
+            this.btnELIMINARPRODUCTO.Location = new System.Drawing.Point(11, 216);
             this.btnELIMINARPRODUCTO.Margin = new System.Windows.Forms.Padding(2);
             this.btnELIMINARPRODUCTO.Name = "btnELIMINARPRODUCTO";
             this.btnELIMINARPRODUCTO.Size = new System.Drawing.Size(116, 30);
             this.btnELIMINARPRODUCTO.TabIndex = 56;
             this.btnELIMINARPRODUCTO.Text = "Eliminar Producto";
             this.btnELIMINARPRODUCTO.UseVisualStyleBackColor = true;
+            this.btnELIMINARPRODUCTO.Click += new System.EventHandler(this.btnELIMINARPRODUCTO_Click);
             // 
             // nudCANTIDADPRODUCTO
             // 
@@ -166,16 +167,6 @@
             this.lblCANTIDAD.TabIndex = 57;
             this.lblCANTIDAD.Text = "Cantidad:";
             // 
-            // btnMODIFICARPAGO
-            // 
-            this.btnMODIFICARPAGO.Location = new System.Drawing.Point(331, 419);
-            this.btnMODIFICARPAGO.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMODIFICARPAGO.Name = "btnMODIFICARPAGO";
-            this.btnMODIFICARPAGO.Size = new System.Drawing.Size(116, 30);
-            this.btnMODIFICARPAGO.TabIndex = 63;
-            this.btnMODIFICARPAGO.Text = "Modificar Pago";
-            this.btnMODIFICARPAGO.UseVisualStyleBackColor = true;
-            // 
             // btnAGREGARPAGO
             // 
             this.btnAGREGARPAGO.Location = new System.Drawing.Point(211, 419);
@@ -185,6 +176,7 @@
             this.btnAGREGARPAGO.TabIndex = 62;
             this.btnAGREGARPAGO.Text = "Agregar Pago";
             this.btnAGREGARPAGO.UseVisualStyleBackColor = true;
+            this.btnAGREGARPAGO.Click += new System.EventHandler(this.btnAGREGARPAGO_Click);
             // 
             // lblPAGOS
             // 
@@ -195,21 +187,21 @@
             this.lblPAGOS.TabIndex = 61;
             this.lblPAGOS.Text = "Pagos:";
             // 
+            // lblTOTALPAGOS
+            // 
+            this.lblTOTALPAGOS.AutoSize = true;
+            this.lblTOTALPAGOS.Location = new System.Drawing.Point(608, 423);
+            this.lblTOTALPAGOS.Name = "lblTOTALPAGOS";
+            this.lblTOTALPAGOS.Size = new System.Drawing.Size(45, 13);
+            this.lblTOTALPAGOS.TabIndex = 60;
+            this.lblTOTALPAGOS.Text = "TOTAL:";
+            // 
             // txtTOTALPAGOS
             // 
-            this.txtTOTALPAGOS.AutoSize = true;
-            this.txtTOTALPAGOS.Location = new System.Drawing.Point(608, 423);
+            this.txtTOTALPAGOS.Location = new System.Drawing.Point(672, 420);
             this.txtTOTALPAGOS.Name = "txtTOTALPAGOS";
-            this.txtTOTALPAGOS.Size = new System.Drawing.Size(45, 13);
-            this.txtTOTALPAGOS.TabIndex = 60;
-            this.txtTOTALPAGOS.Text = "TOTAL:";
-            // 
-            // txtTOTALPAGO
-            // 
-            this.txtTOTALPAGO.Location = new System.Drawing.Point(672, 420);
-            this.txtTOTALPAGO.Name = "txtTOTALPAGO";
-            this.txtTOTALPAGO.Size = new System.Drawing.Size(100, 20);
-            this.txtTOTALPAGO.TabIndex = 59;
+            this.txtTOTALPAGOS.Size = new System.Drawing.Size(100, 20);
+            this.txtTOTALPAGOS.TabIndex = 59;
             // 
             // dgvPAGOS
             // 
@@ -244,13 +236,14 @@
             // 
             // btnELIMINARPAGO
             // 
-            this.btnELIMINARPAGO.Location = new System.Drawing.Point(451, 419);
+            this.btnELIMINARPAGO.Location = new System.Drawing.Point(331, 419);
             this.btnELIMINARPAGO.Margin = new System.Windows.Forms.Padding(2);
             this.btnELIMINARPAGO.Name = "btnELIMINARPAGO";
             this.btnELIMINARPAGO.Size = new System.Drawing.Size(116, 30);
             this.btnELIMINARPAGO.TabIndex = 66;
             this.btnELIMINARPAGO.Text = "Eliminar Pago";
             this.btnELIMINARPAGO.UseVisualStyleBackColor = true;
+            this.btnELIMINARPAGO.Click += new System.EventHandler(this.btnELIMINARPAGO_Click);
             // 
             // btnCANCELAR
             // 
@@ -261,6 +254,7 @@
             this.btnCANCELAR.TabIndex = 68;
             this.btnCANCELAR.Text = "Cancelar";
             this.btnCANCELAR.UseVisualStyleBackColor = true;
+            this.btnCANCELAR.Click += new System.EventHandler(this.btnCANCELAR_Click);
             // 
             // btnGUARDAR
             // 
@@ -271,16 +265,7 @@
             this.btnGUARDAR.TabIndex = 67;
             this.btnGUARDAR.Text = "Guardar";
             this.btnGUARDAR.UseVisualStyleBackColor = true;
-            // 
-            // btnMODIFICARPRODUCTO
-            // 
-            this.btnMODIFICARPRODUCTO.Location = new System.Drawing.Point(12, 216);
-            this.btnMODIFICARPRODUCTO.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMODIFICARPRODUCTO.Name = "btnMODIFICARPRODUCTO";
-            this.btnMODIFICARPRODUCTO.Size = new System.Drawing.Size(116, 30);
-            this.btnMODIFICARPRODUCTO.TabIndex = 69;
-            this.btnMODIFICARPRODUCTO.Text = "Modificar Producto";
-            this.btnMODIFICARPRODUCTO.UseVisualStyleBackColor = true;
+            this.btnGUARDAR.Click += new System.EventHandler(this.btnGUARDAR_Click);
             // 
             // lblCLIENTENOMBRE
             // 
@@ -300,6 +285,7 @@
             this.btnCLIENTE.TabIndex = 74;
             this.btnCLIENTE.Text = "Seleccionar Cliente";
             this.btnCLIENTE.UseVisualStyleBackColor = true;
+            this.btnCLIENTE.Click += new System.EventHandler(this.btnCLIENTE_Click);
             // 
             // frmVenta
             // 
@@ -308,21 +294,19 @@
             this.ClientSize = new System.Drawing.Size(784, 534);
             this.Controls.Add(this.lblCLIENTENOMBRE);
             this.Controls.Add(this.btnCLIENTE);
-            this.Controls.Add(this.btnMODIFICARPRODUCTO);
             this.Controls.Add(this.btnCANCELAR);
             this.Controls.Add(this.btnGUARDAR);
             this.Controls.Add(this.btnELIMINARPAGO);
             this.Controls.Add(this.pPRODUCTO);
-            this.Controls.Add(this.btnMODIFICARPAGO);
             this.Controls.Add(this.btnAGREGARPAGO);
             this.Controls.Add(this.lblPAGOS);
+            this.Controls.Add(this.lblTOTALPAGOS);
             this.Controls.Add(this.txtTOTALPAGOS);
-            this.Controls.Add(this.txtTOTALPAGO);
             this.Controls.Add(this.dgvPAGOS);
             this.Controls.Add(this.btnELIMINARPRODUCTO);
             this.Controls.Add(this.btnBUSCARPRODUCTO);
             this.Controls.Add(this.lblPRODUCTOS);
-            this.Controls.Add(this.txtTOTALDETALLE);
+            this.Controls.Add(this.lblTOTALDETALLE);
             this.Controls.Add(this.txtTOTALPRODUCTOS);
             this.Controls.Add(this.dtpFECHA);
             this.Controls.Add(this.lblFECHA);
@@ -344,7 +328,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblPRODUCTOS;
-        private System.Windows.Forms.Label txtTOTALDETALLE;
+        private System.Windows.Forms.Label lblTOTALDETALLE;
         private System.Windows.Forms.TextBox txtTOTALPRODUCTOS;
         private System.Windows.Forms.DateTimePicker dtpFECHA;
         private System.Windows.Forms.Label lblFECHA;
@@ -355,18 +339,16 @@
         private System.Windows.Forms.Button btnELIMINARPRODUCTO;
         private System.Windows.Forms.NumericUpDown nudCANTIDADPRODUCTO;
         private System.Windows.Forms.Label lblCANTIDAD;
-        private System.Windows.Forms.Button btnMODIFICARPAGO;
         private System.Windows.Forms.Button btnAGREGARPAGO;
         private System.Windows.Forms.Label lblPAGOS;
-        private System.Windows.Forms.Label txtTOTALPAGOS;
-        private System.Windows.Forms.TextBox txtTOTALPAGO;
+        private System.Windows.Forms.Label lblTOTALPAGOS;
+        private System.Windows.Forms.TextBox txtTOTALPAGOS;
         private System.Windows.Forms.DataGridView dgvPAGOS;
         private System.Windows.Forms.Label lblPRODUCTO;
         private System.Windows.Forms.Panel pPRODUCTO;
         private System.Windows.Forms.Button btnELIMINARPAGO;
         private System.Windows.Forms.Button btnCANCELAR;
         private System.Windows.Forms.Button btnGUARDAR;
-        private System.Windows.Forms.Button btnMODIFICARPRODUCTO;
         private System.Windows.Forms.Label lblCLIENTENOMBRE;
         private System.Windows.Forms.Button btnCLIENTE;
     }

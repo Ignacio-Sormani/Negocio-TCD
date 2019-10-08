@@ -174,4 +174,4 @@ C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\VISTA\obj\Debug\V
 C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\VISTA\obj\Debug\VISTA.frmRemitos.resources
 C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\VISTA\obj\Debug\VISTA.frmUsuario.resources
 C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\VISTA\obj\Debug\VISTA.frmUsuarios.resources
-C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmVenta2.resources
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmPago.resources

@@ -21,5 +21,16 @@ namespace CONTROLADORA
         {
             oNegocio = DATOS.NEGOCIO.obtener_instancia();
         }
+        public void agregar_pago(MODELO.PAGO oPago)
+        {
+            oNegocio.PAGOS.Add(oPago);
+            oNegocio.SaveChanges();
+        }
+
+        public void eliminar_pago(MODELO.PAGO oPago)
+        {
+            oNegocio.PAGOS.Remove(oPago);
+            oNegocio.SaveChanges();
+        }
     }
 }

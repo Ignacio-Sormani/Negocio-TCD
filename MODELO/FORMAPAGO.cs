@@ -10,24 +10,47 @@ namespace MODELO
     {
         public Int32 codigoFormaPago { get; set; }
         public PAGO pago { get; set; }
-        public abstract decimal calcular_total(decimal total);
-        public abstract Int32 cantidad_cuotas();
+        public abstract decimal calcular_total(decimal total, Int32 cantidad);
 
         public override string ToString()
         {
             return this.GetType().ToString();
         }
-    }//faltan agregar las otras formas de pago, y ver que datos guardo para cada forma de pago (por ejemplo datos de la tarjeta)
+    }
 
     public class EFECTIVO : FORMAPAGO
     {
-        public override decimal calcular_total(decimal total)
+        public override decimal calcular_total(decimal total, Int32 cantidad)
         {
             return (total * (decimal)0.85);
         }
-        public override Int32 cantidad_cuotas()
+    }
+
+    public class DEBITO : FORMAPAGO
+    {
+        public override decimal calcular_total(decimal total, Int32 cantidad)
         {
-            return 1;
+            return total;
+        }
+    }
+
+    public class CREDITO : FORMAPAGO
+    {
+        public override decimal calcular_total(decimal total, Int32 cantidad)
+        {
+            switch (cantidad)
+            {
+                case 1:
+                    return total;
+                case 3:
+                    return (total * (decimal)1.05);
+                case 6:
+                    return (total * (decimal)1.15);
+                case 12:
+                    return (total * (decimal)1.30);
+                default:
+                    return (total * (decimal)5);
+            }
         }
     }
 }

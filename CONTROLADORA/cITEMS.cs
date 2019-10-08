@@ -20,5 +20,11 @@ namespace CONTROLADORA
         {
             oNegocio = DATOS.NEGOCIO.obtener_instancia();
         }
+
+        public void agregar_item(MODELO.ITEMV oItem)
+        {
+            oNegocio.ITEMSV.Add(oItem);
+            oNegocio.SaveChanges();
+        }
     }
 }
