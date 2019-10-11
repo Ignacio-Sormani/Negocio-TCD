@@ -34,7 +34,7 @@ namespace CONTROLADORA
         }
         public MODELO.VENTA obtener_venta(Int32 codigo)
         {
-            return oNegocio.VENTAS.Find(codigo);
+            return oNegocio.VENTAS.Include("cliente").Include("pagos").Include("itemsv").FirstOrDefault(v => v.codigoVenta == codigo);
         }
 
         public System.Collections.IEnumerable obtener_ventas_todas()
@@ -45,10 +45,11 @@ namespace CONTROLADORA
         }
         
 
-        public System.Collections.IEnumerable obtener_ventas() //falta agregar params
+        public System.Collections.IEnumerable obtener_ventas(string cliente)
         {
-            var ventas = from venta in oNegocio.VENTAS.ToList()
-                          select venta;
+            var ventas = from venta in oNegocio.VENTAS.Include("cliente").ToList()
+                         where venta.cliente.nombreApellido.ToLower().Contains(cliente.ToLower())
+                         select venta;
             return ventas.ToList();
         }
         /*

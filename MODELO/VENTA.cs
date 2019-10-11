@@ -18,7 +18,6 @@ namespace MODELO
         public CLIENTE cliente { get; set; }
         public decimal precioTotal { get; set; }
         public decimal pagoTotal { get; set; }
-        public bool estado { get; set; }
         public virtual ICollection<ITEMV> itemsv { get; set; }
         public virtual ICollection<PAGO> pagos { get; set; }
 

@@ -31,8 +31,6 @@
             this.lblPRODUCTOS = new System.Windows.Forms.Label();
             this.lblTOTALDETALLE = new System.Windows.Forms.Label();
             this.txtTOTALPRODUCTOS = new System.Windows.Forms.TextBox();
-            this.dtpFECHA = new System.Windows.Forms.DateTimePicker();
-            this.lblFECHA = new System.Windows.Forms.Label();
             this.lblCLIENTE = new System.Windows.Forms.Label();
             this.dgvPRODUCTOS = new System.Windows.Forms.DataGridView();
             this.btnBUSCARPRODUCTO = new System.Windows.Forms.Button();
@@ -52,6 +50,8 @@
             this.btnGUARDAR = new System.Windows.Forms.Button();
             this.lblCLIENTENOMBRE = new System.Windows.Forms.Label();
             this.btnCLIENTE = new System.Windows.Forms.Button();
+            this.lblFECHA = new System.Windows.Forms.Label();
+            this.dtpFECHA = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPRODUCTOS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCANTIDADPRODUCTO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPAGOS)).BeginInit();
@@ -82,22 +82,6 @@
             this.txtTOTALPRODUCTOS.Name = "txtTOTALPRODUCTOS";
             this.txtTOTALPRODUCTOS.Size = new System.Drawing.Size(100, 20);
             this.txtTOTALPRODUCTOS.TabIndex = 30;
-            // 
-            // dtpFECHA
-            // 
-            this.dtpFECHA.Location = new System.Drawing.Point(175, 9);
-            this.dtpFECHA.Name = "dtpFECHA";
-            this.dtpFECHA.Size = new System.Drawing.Size(272, 20);
-            this.dtpFECHA.TabIndex = 29;
-            // 
-            // lblFECHA
-            // 
-            this.lblFECHA.AutoSize = true;
-            this.lblFECHA.Location = new System.Drawing.Point(57, 9);
-            this.lblFECHA.Name = "lblFECHA";
-            this.lblFECHA.Size = new System.Drawing.Size(40, 13);
-            this.lblFECHA.TabIndex = 28;
-            this.lblFECHA.Text = "Fecha:";
             // 
             // lblCLIENTE
             // 
@@ -154,9 +138,19 @@
             // nudCANTIDADPRODUCTO
             // 
             this.nudCANTIDADPRODUCTO.Location = new System.Drawing.Point(69, 62);
+            this.nudCANTIDADPRODUCTO.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudCANTIDADPRODUCTO.Name = "nudCANTIDADPRODUCTO";
             this.nudCANTIDADPRODUCTO.Size = new System.Drawing.Size(70, 20);
             this.nudCANTIDADPRODUCTO.TabIndex = 58;
+            this.nudCANTIDADPRODUCTO.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // lblCANTIDAD
             // 
@@ -287,6 +281,23 @@
             this.btnCLIENTE.UseVisualStyleBackColor = true;
             this.btnCLIENTE.Click += new System.EventHandler(this.btnCLIENTE_Click);
             // 
+            // lblFECHA
+            // 
+            this.lblFECHA.AutoSize = true;
+            this.lblFECHA.Location = new System.Drawing.Point(57, 9);
+            this.lblFECHA.Name = "lblFECHA";
+            this.lblFECHA.Size = new System.Drawing.Size(40, 13);
+            this.lblFECHA.TabIndex = 28;
+            this.lblFECHA.Text = "Fecha:";
+            // 
+            // dtpFECHA
+            // 
+            this.dtpFECHA.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFECHA.Location = new System.Drawing.Point(175, 9);
+            this.dtpFECHA.Name = "dtpFECHA";
+            this.dtpFECHA.Size = new System.Drawing.Size(272, 20);
+            this.dtpFECHA.TabIndex = 29;
+            // 
             // frmVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -330,8 +341,6 @@
         private System.Windows.Forms.Label lblPRODUCTOS;
         private System.Windows.Forms.Label lblTOTALDETALLE;
         private System.Windows.Forms.TextBox txtTOTALPRODUCTOS;
-        private System.Windows.Forms.DateTimePicker dtpFECHA;
-        private System.Windows.Forms.Label lblFECHA;
         private System.Windows.Forms.Label lblCLIENTE;
         private System.Windows.Forms.DataGridView dgvPRODUCTOS;
         private System.Windows.Forms.Button btnBUSCARPRODUCTO;
@@ -351,5 +360,7 @@
         private System.Windows.Forms.Button btnGUARDAR;
         private System.Windows.Forms.Label lblCLIENTENOMBRE;
         private System.Windows.Forms.Button btnCLIENTE;
+        private System.Windows.Forms.Label lblFECHA;
+        private System.Windows.Forms.DateTimePicker dtpFECHA;
     }
 }

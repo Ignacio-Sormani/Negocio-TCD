@@ -59,9 +59,5 @@ namespace CONTROLADORA
                             };
             return productos.ToList();
         }
-
-        
-
-
     }
 }

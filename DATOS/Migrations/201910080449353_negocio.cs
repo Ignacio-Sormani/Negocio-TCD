@@ -3,7 +3,7 @@ namespace DATOS.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class _1 : DbMigration
+    public partial class negocio : DbMigration
     {
         public override void Up()
         {
@@ -14,7 +14,7 @@ namespace DATOS.Migrations
                         codigoAcceso = c.Int(nullable: false, identity: true),
                         fechaLogin = c.DateTime(nullable: false),
                         fechaLogout = c.DateTime(nullable: false),
-                        usuario_codigoUsuario = c.Int(),
+                        usuario_codigoUsuario = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.codigoAcceso)
                 .ForeignKey("dbo.USUARIO", t => t.usuario_codigoUsuario)
@@ -29,7 +29,7 @@ namespace DATOS.Migrations
                         nombreApellido = c.String(),
                         clave = c.String(),
                         mail = c.String(),
-                        estado = c.String(),
+                        estadoActivo = c.Boolean(nullable: false),
                         conectado = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.codigoUsuario);
@@ -40,7 +40,7 @@ namespace DATOS.Migrations
                     {
                         codigoGrupo = c.Int(nullable: false, identity: true),
                         nombre = c.String(),
-                        estado = c.Boolean(nullable: false),
+                        estadoActivo = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.codigoGrupo);
             
@@ -52,7 +52,6 @@ namespace DATOS.Migrations
                         descripcionAccion = c.String(),
                         control = c.String(),
                         nombreFormulario = c.String(),
-                        descripcionFormulario = c.String(),
                         modulo = c.String(),
                     })
                 .PrimaryKey(t => t.codigoAccion);
@@ -99,7 +98,9 @@ namespace DATOS.Migrations
                     {
                         codigoVenta = c.Int(nullable: false, identity: true),
                         fecha = c.DateTime(nullable: false),
-                        total = c.Int(nullable: false),
+                        precioTotal = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        pagoTotal = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        estado = c.Boolean(nullable: false),
                         cliente_codigoCliente = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.codigoVenta)
@@ -110,27 +111,25 @@ namespace DATOS.Migrations
                 "dbo.ITEM",
                 c => new
                     {
-                        codigoItem = c.String(nullable: false, maxLength: 128),
+                        codigoItem = c.Int(nullable: false, identity: true),
                         cantidad = c.Int(nullable: false),
                         precioUnitarioVenta = c.Decimal(precision: 18, scale: 2),
-                        subtotal = c.Decimal(precision: 18, scale: 2),
                         precioUnitarioCompra = c.Decimal(precision: 18, scale: 2),
-                        subtotal1 = c.Decimal(precision: 18, scale: 2),
-                        Discriminator = c.String(nullable: false, maxLength: 128),
-                        producto_codigoProducto = c.Int(nullable: false),
+                        Discriminator = c.String(nullable: true, maxLength: 128),
+                        venta_codigoVenta = c.Int(),
                         ordenCompra_codigoOrdenCompra = c.Int(),
                         remitoCompra_codigoRemitoCompra = c.Int(),
-                        venta_codigoVenta = c.Int(),
+                        producto_codigoProducto = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.codigoItem)
-                .ForeignKey("dbo.PRODUCTO", t => t.producto_codigoProducto)
+                .ForeignKey("dbo.VENTA", t => t.venta_codigoVenta)
                 .ForeignKey("dbo.ORDENDECOMPRA", t => t.ordenCompra_codigoOrdenCompra)
                 .ForeignKey("dbo.REMITODECOMPRA", t => t.remitoCompra_codigoRemitoCompra)
-                .ForeignKey("dbo.VENTA", t => t.venta_codigoVenta)
-                .Index(t => t.producto_codigoProducto)
+                .ForeignKey("dbo.PRODUCTO", t => t.producto_codigoProducto)
+                .Index(t => t.venta_codigoVenta)
                 .Index(t => t.ordenCompra_codigoOrdenCompra)
                 .Index(t => t.remitoCompra_codigoRemitoCompra)
-                .Index(t => t.venta_codigoVenta);
+                .Index(t => t.producto_codigoProducto);
             
             CreateTable(
                 "dbo.PRODUCTO",
@@ -144,7 +143,7 @@ namespace DATOS.Migrations
                         cantidadMinima = c.Int(nullable: false),
                         cantidadOperativa = c.Int(nullable: false),
                         estado = c.String(),
-                        Activo = c.Boolean(nullable: false),
+                        estadoActivo = c.Boolean(nullable: false),
                         categoria_codigoCategoria = c.Int(nullable: false),
                         marca_codigoMarca = c.Int(nullable: false),
                     })
@@ -155,13 +154,48 @@ namespace DATOS.Migrations
                 .Index(t => t.marca_codigoMarca);
             
             CreateTable(
+                "dbo.MARCA",
+                c => new
+                    {
+                        codigoMarca = c.Int(nullable: false, identity: true),
+                        marca = c.String(),
+                    })
+                .PrimaryKey(t => t.codigoMarca);
+            
+            CreateTable(
+                "dbo.PAGO",
+                c => new
+                    {
+                        codigoPago = c.Int(nullable: false),
+                        total = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        totalFinal = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        cantidadCuotas = c.Int(nullable: false),
+                        precioCuota = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        venta_codigoVenta = c.Int(),
+                    })
+                .PrimaryKey(t => t.codigoPago)
+                .ForeignKey("dbo.FORMAPAGO", t => t.codigoPago)
+                .ForeignKey("dbo.VENTA", t => t.venta_codigoVenta)
+                .Index(t => t.codigoPago)
+                .Index(t => t.venta_codigoVenta);
+            
+            CreateTable(
+                "dbo.FORMAPAGO",
+                c => new
+                    {
+                        codigoFormaPago = c.Int(nullable: false, identity: true),
+                        Discriminator = c.String(nullable: false, maxLength: 128),
+                    })
+                .PrimaryKey(t => t.codigoFormaPago);
+            
+            CreateTable(
                 "dbo.ORDENDECOMPRA",
                 c => new
                     {
                         codigoOrdenCompra = c.Int(nullable: false, identity: true),
                         fechaPedido = c.DateTime(nullable: false),
                         fechaEntrega = c.DateTime(nullable: false),
-                        estado = c.String(),
+                        estado = c.Boolean(nullable: false),
                         proveedor_codigoProveedor = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.codigoOrdenCompra)
@@ -202,39 +236,6 @@ namespace DATOS.Migrations
                 .Index(t => t.ordenCompra_codigoOrdenCompra);
             
             CreateTable(
-                "dbo.MARCA",
-                c => new
-                    {
-                        codigoMarca = c.Int(nullable: false, identity: true),
-                        marca = c.String(),
-                    })
-                .PrimaryKey(t => t.codigoMarca);
-            
-            CreateTable(
-                "dbo.PAGO",
-                c => new
-                    {
-                        codigoPago = c.Int(nullable: false),
-                        total = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        cantidadCuotas = c.Int(nullable: false),
-                        precioCuota = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        venta_codigoVenta = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => t.codigoPago)
-                .ForeignKey("dbo.FORMAPAGO", t => t.codigoPago)
-                .ForeignKey("dbo.VENTA", t => t.venta_codigoVenta)
-                .Index(t => t.codigoPago)
-                .Index(t => t.venta_codigoVenta);
-            
-            CreateTable(
-                "dbo.FORMAPAGO",
-                c => new
-                    {
-                        codigoFormaPago = c.Int(nullable: false, identity: true),
-                    })
-                .PrimaryKey(t => t.codigoFormaPago);
-            
-            CreateTable(
                 "dbo.GRUPO_ACCION",
                 c => new
                     {
@@ -264,52 +265,52 @@ namespace DATOS.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.PAGO", "venta_codigoVenta", "dbo.VENTA");
-            DropForeignKey("dbo.PAGO", "codigoPago", "dbo.FORMAPAGO");
-            DropForeignKey("dbo.ITEM", "venta_codigoVenta", "dbo.VENTA");
-            DropForeignKey("dbo.PRODUCTO", "marca_codigoMarca", "dbo.MARCA");
+            DropForeignKey("dbo.ITEM", "producto_codigoProducto", "dbo.PRODUCTO");
             DropForeignKey("dbo.REMITODECOMPRA", "ordenCompra_codigoOrdenCompra", "dbo.ORDENDECOMPRA");
             DropForeignKey("dbo.REMITODECOMPRA", "proveedor_codigoProveedor", "dbo.PROVEEDOR");
             DropForeignKey("dbo.ITEM", "remitoCompra_codigoRemitoCompra", "dbo.REMITODECOMPRA");
             DropForeignKey("dbo.ORDENDECOMPRA", "proveedor_codigoProveedor", "dbo.PROVEEDOR");
             DropForeignKey("dbo.PROVEEDOR", "localidad_codigoLocalidad", "dbo.LOCALIDAD");
             DropForeignKey("dbo.ITEM", "ordenCompra_codigoOrdenCompra", "dbo.ORDENDECOMPRA");
-            DropForeignKey("dbo.ITEM", "producto_codigoProducto", "dbo.PRODUCTO");
+            DropForeignKey("dbo.PAGO", "venta_codigoVenta", "dbo.VENTA");
+            DropForeignKey("dbo.PAGO", "codigoPago", "dbo.FORMAPAGO");
+            DropForeignKey("dbo.ITEM", "venta_codigoVenta", "dbo.VENTA");
+            DropForeignKey("dbo.PRODUCTO", "marca_codigoMarca", "dbo.MARCA");
             DropForeignKey("dbo.PRODUCTO", "categoria_codigoCategoria", "dbo.CATEGORIA");
             DropForeignKey("dbo.VENTA", "cliente_codigoCliente", "dbo.CLIENTE");
             DropForeignKey("dbo.CLIENTE", "localidad_codigoLocalidad", "dbo.LOCALIDAD");
+            DropForeignKey("dbo.ACCESO", "usuario_codigoUsuario", "dbo.USUARIO");
             DropForeignKey("dbo.USUARIO_GRUPO", "codigoGrupo", "dbo.GRUPO");
             DropForeignKey("dbo.USUARIO_GRUPO", "codigoUsuario", "dbo.USUARIO");
             DropForeignKey("dbo.GRUPO_ACCION", "codigoAccion", "dbo.ACCION");
             DropForeignKey("dbo.GRUPO_ACCION", "codigoGrupo", "dbo.GRUPO");
-            DropForeignKey("dbo.ACCESO", "usuario_codigoUsuario", "dbo.USUARIO");
             DropIndex("dbo.USUARIO_GRUPO", new[] { "codigoGrupo" });
             DropIndex("dbo.USUARIO_GRUPO", new[] { "codigoUsuario" });
             DropIndex("dbo.GRUPO_ACCION", new[] { "codigoAccion" });
             DropIndex("dbo.GRUPO_ACCION", new[] { "codigoGrupo" });
-            DropIndex("dbo.PAGO", new[] { "venta_codigoVenta" });
-            DropIndex("dbo.PAGO", new[] { "codigoPago" });
             DropIndex("dbo.REMITODECOMPRA", new[] { "ordenCompra_codigoOrdenCompra" });
             DropIndex("dbo.REMITODECOMPRA", new[] { "proveedor_codigoProveedor" });
             DropIndex("dbo.PROVEEDOR", new[] { "localidad_codigoLocalidad" });
             DropIndex("dbo.ORDENDECOMPRA", new[] { "proveedor_codigoProveedor" });
+            DropIndex("dbo.PAGO", new[] { "venta_codigoVenta" });
+            DropIndex("dbo.PAGO", new[] { "codigoPago" });
             DropIndex("dbo.PRODUCTO", new[] { "marca_codigoMarca" });
             DropIndex("dbo.PRODUCTO", new[] { "categoria_codigoCategoria" });
-            DropIndex("dbo.ITEM", new[] { "venta_codigoVenta" });
+            DropIndex("dbo.ITEM", new[] { "producto_codigoProducto" });
             DropIndex("dbo.ITEM", new[] { "remitoCompra_codigoRemitoCompra" });
             DropIndex("dbo.ITEM", new[] { "ordenCompra_codigoOrdenCompra" });
-            DropIndex("dbo.ITEM", new[] { "producto_codigoProducto" });
+            DropIndex("dbo.ITEM", new[] { "venta_codigoVenta" });
             DropIndex("dbo.VENTA", new[] { "cliente_codigoCliente" });
             DropIndex("dbo.CLIENTE", new[] { "localidad_codigoLocalidad" });
             DropIndex("dbo.ACCESO", new[] { "usuario_codigoUsuario" });
             DropTable("dbo.USUARIO_GRUPO");
             DropTable("dbo.GRUPO_ACCION");
-            DropTable("dbo.FORMAPAGO");
-            DropTable("dbo.PAGO");
-            DropTable("dbo.MARCA");
             DropTable("dbo.REMITODECOMPRA");
             DropTable("dbo.PROVEEDOR");
             DropTable("dbo.ORDENDECOMPRA");
+            DropTable("dbo.FORMAPAGO");
+            DropTable("dbo.PAGO");
+            DropTable("dbo.MARCA");
             DropTable("dbo.PRODUCTO");
             DropTable("dbo.ITEM");
             DropTable("dbo.VENTA");

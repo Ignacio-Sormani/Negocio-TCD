@@ -28,32 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnDARDEBAJA = new System.Windows.Forms.Button();
             this.btnCONSULTAR = new System.Windows.Forms.Button();
             this.btnSALIR = new System.Windows.Forms.Button();
             this.btnAGREGAR = new System.Windows.Forms.Button();
             this.dgvVENTAS = new System.Windows.Forms.DataGridView();
             this.btnTODAS = new System.Windows.Forms.Button();
             this.btnBUSCAR = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtFACTURA = new System.Windows.Forms.TextBox();
-            this.dtpFECHA = new System.Windows.Forms.DateTimePicker();
+            this.lblCLIENTE = new System.Windows.Forms.Label();
             this.txtCLIENTE = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVENTAS)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnDARDEBAJA
-            // 
-            this.btnDARDEBAJA.Location = new System.Drawing.Point(479, 377);
-            this.btnDARDEBAJA.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDARDEBAJA.Name = "btnDARDEBAJA";
-            this.btnDARDEBAJA.Size = new System.Drawing.Size(194, 35);
-            this.btnDARDEBAJA.TabIndex = 60;
-            this.btnDARDEBAJA.Text = "Dar de Baja";
-            this.btnDARDEBAJA.UseVisualStyleBackColor = true;
-            this.btnDARDEBAJA.Click += new System.EventHandler(this.btnDARDEBAJA_Click);
             // 
             // btnCONSULTAR
             // 
@@ -68,7 +52,7 @@
             // 
             // btnSALIR
             // 
-            this.btnSALIR.Location = new System.Drawing.Point(479, 428);
+            this.btnSALIR.Location = new System.Drawing.Point(479, 377);
             this.btnSALIR.Margin = new System.Windows.Forms.Padding(2);
             this.btnSALIR.Name = "btnSALIR";
             this.btnSALIR.Size = new System.Drawing.Size(194, 35);
@@ -91,7 +75,7 @@
             // dgvVENTAS
             // 
             this.dgvVENTAS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVENTAS.Location = new System.Drawing.Point(11, 95);
+            this.dgvVENTAS.Location = new System.Drawing.Point(11, 80);
             this.dgvVENTAS.Margin = new System.Windows.Forms.Padding(2);
             this.dgvVENTAS.Name = "dgvVENTAS";
             this.dgvVENTAS.RowTemplate.Height = 24;
@@ -100,7 +84,7 @@
             // 
             // btnTODAS
             // 
-            this.btnTODAS.Location = new System.Drawing.Point(577, 55);
+            this.btnTODAS.Location = new System.Drawing.Point(577, 39);
             this.btnTODAS.Margin = new System.Windows.Forms.Padding(2);
             this.btnTODAS.Name = "btnTODAS";
             this.btnTODAS.Size = new System.Drawing.Size(96, 20);
@@ -120,50 +104,18 @@
             this.btnBUSCAR.UseVisualStyleBackColor = true;
             this.btnBUSCAR.Click += new System.EventHandler(this.btnBUSCAR_Click);
             // 
-            // label3
+            // lblCLIENTE
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 10);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 13);
-            this.label3.TabIndex = 70;
-            this.label3.Text = "Numero Factura:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
-            this.label2.TabIndex = 69;
-            this.label2.Text = "Fecha:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 13);
-            this.label1.TabIndex = 68;
-            this.label1.Text = "Numero Cliente:";
-            // 
-            // txtFACTURA
-            // 
-            this.txtFACTURA.Location = new System.Drawing.Point(120, 7);
-            this.txtFACTURA.Name = "txtFACTURA";
-            this.txtFACTURA.Size = new System.Drawing.Size(200, 20);
-            this.txtFACTURA.TabIndex = 73;
-            // 
-            // dtpFECHA
-            // 
-            this.dtpFECHA.Location = new System.Drawing.Point(120, 58);
-            this.dtpFECHA.Name = "dtpFECHA";
-            this.dtpFECHA.Size = new System.Drawing.Size(200, 20);
-            this.dtpFECHA.TabIndex = 72;
+            this.lblCLIENTE.AutoSize = true;
+            this.lblCLIENTE.Location = new System.Drawing.Point(44, 18);
+            this.lblCLIENTE.Name = "lblCLIENTE";
+            this.lblCLIENTE.Size = new System.Drawing.Size(82, 13);
+            this.lblCLIENTE.TabIndex = 68;
+            this.lblCLIENTE.Text = "Nombre Cliente:";
             // 
             // txtCLIENTE
             // 
-            this.txtCLIENTE.Location = new System.Drawing.Point(120, 31);
+            this.txtCLIENTE.Location = new System.Drawing.Point(152, 15);
             this.txtCLIENTE.Name = "txtCLIENTE";
             this.txtCLIENTE.Size = new System.Drawing.Size(200, 20);
             this.txtCLIENTE.TabIndex = 71;
@@ -172,16 +124,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 474);
-            this.Controls.Add(this.txtFACTURA);
-            this.Controls.Add(this.dtpFECHA);
+            this.ClientSize = new System.Drawing.Size(684, 429);
             this.Controls.Add(this.txtCLIENTE);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblCLIENTE);
             this.Controls.Add(this.btnTODAS);
             this.Controls.Add(this.btnBUSCAR);
-            this.Controls.Add(this.btnDARDEBAJA);
             this.Controls.Add(this.btnCONSULTAR);
             this.Controls.Add(this.btnSALIR);
             this.Controls.Add(this.btnAGREGAR);
@@ -195,19 +142,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnDARDEBAJA;
         private System.Windows.Forms.Button btnCONSULTAR;
         private System.Windows.Forms.Button btnSALIR;
         private System.Windows.Forms.Button btnAGREGAR;
         private System.Windows.Forms.DataGridView dgvVENTAS;
         private System.Windows.Forms.Button btnTODAS;
         private System.Windows.Forms.Button btnBUSCAR;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtFACTURA;
-        private System.Windows.Forms.DateTimePicker dtpFECHA;
+        private System.Windows.Forms.Label lblCLIENTE;
         private System.Windows.Forms.TextBox txtCLIENTE;
     }
 }

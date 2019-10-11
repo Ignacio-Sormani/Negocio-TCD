@@ -21,9 +21,15 @@ namespace CONTROLADORA
             oNegocio = DATOS.NEGOCIO.obtener_instancia();
         }
 
-        public void agregar_item(MODELO.ITEMV oItem)
+        public void agregar_item_venta(MODELO.ITEMV oItem)
         {
             oNegocio.ITEMSV.Add(oItem);
+            oNegocio.SaveChanges();
+        }
+
+        public void modificar_item_venta(MODELO.ITEMV oItem)
+        {
+            oNegocio.Entry(oItem).State = System.Data.Entity.EntityState.Modified;
             oNegocio.SaveChanges();
         }
     }

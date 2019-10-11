@@ -8,7 +8,7 @@ namespace MODELO
 {
     public abstract class ITEM
     {
-        public string codigoItem { get; set; }
+        public Int32 codigoItem { get; set; }
         public virtual PRODUCTO producto { get; set; }
         public Int32 cantidad { get; set; }
 
@@ -20,26 +20,20 @@ namespace MODELO
 
     public class ITEMV : ITEM
     {
+        public virtual VENTA venta { get; set; }
         public decimal precioUnitarioVenta { get; set; }
-
-        public decimal subtotal { get; set; }
-        public void calcularSubtotal()
-        {
-            subtotal = precioUnitarioVenta * cantidad;
-        }
+        public decimal subtotal { get { return precioUnitarioVenta * cantidad; } }
     }
 
     public class ITEMOC : ITEM
-    {        
+    {
+        public virtual ORDENDECOMPRA ordenCompra { get; set; }
     }
 
     public class ITEMRC : ITEM
     {
+        public virtual REMITODECOMPRA remitoCompra { get; set; }
         public decimal precioUnitarioCompra { get; set; }
-        public decimal subtotal { get; set; }
-        public void calcularSubtotal()
-        {
-            subtotal = precioUnitarioCompra * cantidad;
-        }
+        public decimal subtotal { get { return precioUnitarioCompra * cantidad; } }
     }
 }

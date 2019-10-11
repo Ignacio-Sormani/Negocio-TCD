@@ -97,23 +97,27 @@
                 .WithRequired(rc => rc.ordenCompra);
 
             modelBuilder.Entity<MODELO.ORDENDECOMPRA>()
-                .HasMany(oc => oc.itemsoc);
+                .HasMany(oc => oc.itemsoc)
+                .WithOptional(iv => iv.ordenCompra);
 
             modelBuilder.Entity<MODELO.ITEM>()
                 .HasRequired(i => i.producto);
 
             modelBuilder.Entity<MODELO.REMITODECOMPRA>()
-                .HasMany(rc => rc.itemsrc);
+                .HasMany(rc => rc.itemsrc)
+                .WithOptional(iv => iv.remitoCompra);
 
             modelBuilder.Entity<MODELO.VENTA>()
                 .HasRequired(v => v.cliente)
                 .WithMany(c => c.ventas);
 
             modelBuilder.Entity<MODELO.VENTA>()
-                .HasMany(v => v.itemsv);
+                .HasMany(v => v.itemsv)
+                .WithOptional(iv => iv.venta);
 
             modelBuilder.Entity<MODELO.VENTA>()
-                .HasMany(v => v.pagos);
+                .HasMany(v => v.pagos)
+                .WithOptional(p => p.venta);
 
             modelBuilder.Entity<MODELO.PAGO>()
                 .HasRequired(p => p.formaPago);

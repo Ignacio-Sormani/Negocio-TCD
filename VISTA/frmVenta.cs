@@ -17,6 +17,7 @@ namespace VISTA
         CONTROLADORA.cITEMS cITEMS;
         MODELO.VENTA oVENTA;
         MODELO.PAGO oPago;
+        MODELO.PRODUCTO oProducto;
         MODELO.ITEMV oITEM;
         string ACCION;
         public frmVenta(MODELO.VENTA miVENTA, string miACCION)
@@ -34,13 +35,18 @@ namespace VISTA
         {
             pPRODUCTO.Enabled = false;
             txtTOTALPAGOS.Enabled = false;
-            txtTOTALPRODUCTOS.Enabled = false;
+            txtTOTALPRODUCTOS.Enabled = false;            
+            dtpFECHA.Format = DateTimePickerFormat.Custom;
+            dtpFECHA.CustomFormat = "MM/dd/yyyy hh:mm:ss";
             if (ACCION == "C")
             {
+                pPRODUCTO.Visible = false;
+                dtpFECHA.Enabled = false;
                 dtpFECHA.Value = oVENTA.fecha;
                 dtpFECHA.Enabled = false;
                 lblCLIENTENOMBRE.Text = oVENTA.cliente.ToString();
                 lblCLIENTENOMBRE.Enabled = false;
+                btnCLIENTE.Visible = false;
                 txtTOTALPRODUCTOS.Text = oVENTA.precioTotal.ToString();
                 lblTOTALPAGOS.Text = calcular_total_pagos().ToString();
                 armar_grilla_productos();
@@ -56,6 +62,8 @@ namespace VISTA
             else
             {                
                 dtpFECHA.Value = System.DateTime.Now;
+                dtpFECHA.Visible = false;
+                lblFECHA.Visible = false;
             }
         }
 
@@ -101,14 +109,14 @@ namespace VISTA
 
         private void btnBUSCARPRODUCTO_Click(object sender, EventArgs e)
         {
-            oITEM = new MODELO.ITEMV();
             frmProductos frmProductos = new frmProductos();
             frmProductos.ShowDialog();
             if (frmProductos.productoActual != null)
             {
-                oITEM.producto = frmProductos.productoActual;
-                lblPRODUCTO.Text = oITEM.producto.ToString();
-                pPRODUCTO.Enabled = true;                
+                oProducto = frmProductos.productoActual;
+                lblPRODUCTO.Text = oProducto.ToString();
+                pPRODUCTO.Enabled = true;
+                nudCANTIDADPRODUCTO.Value = 1;
             }
             else
             {
@@ -124,13 +132,28 @@ namespace VISTA
                 MessageBox.Show("La cantidad debe ser mayor a 0");
                 return;
             }
-            oITEM.cantidad = (Int32)nudCANTIDADPRODUCTO.Value;
-            oITEM.precioUnitarioVenta = oITEM.producto.precio;
-            oITEM.calcularSubtotal();
-            cITEMS.agregar_item(oITEM);
-            oVENTA.itemsv.Add(oITEM);
+            bool b = false;
+            foreach (var item in oVENTA.itemsv.ToList())
+            {
+                if (item.producto == oProducto)
+                {
+                    b = true;
+                    item.cantidad += (Int32)nudCANTIDADPRODUCTO.Value;
+                    cITEMS.modificar_item_venta(item);
+                }
+            }
+            if (!b)
+            {
+                oITEM = new MODELO.ITEMV();
+                oITEM.producto = oProducto;
+                oITEM.cantidad = (Int32)nudCANTIDADPRODUCTO.Value;
+                oITEM.precioUnitarioVenta = oITEM.producto.precio;
+                oVENTA.itemsv.Add(oITEM);
+                cITEMS.agregar_item_venta(oITEM);
+            }
             armar_grilla_productos();
             txtTOTALPRODUCTOS.Text = calcular_total_productos().ToString();
+            pPRODUCTO.Enabled = false;
         }
 
         private void btnELIMINARPRODUCTO_Click(object sender, EventArgs e)
@@ -171,15 +194,36 @@ namespace VISTA
 
         private void btnGUARDAR_Click(object sender, EventArgs e)
         {
-            oVENTA.fecha = dtpFECHA.Value;
+            if (oVENTA.cliente == null)
+            {
+                MessageBox.Show("Debe seleccionar un cliente");
+                return;
+            }
+            if (oVENTA.itemsv.Count < 0)
+            {
+                MessageBox.Show("Debe ingresar al menos un producto");
+                return;
+            }
+            if (oVENTA.pagos.Count < 0)
+            {
+                MessageBox.Show("Debe ingresar al menos un pago");
+                return;
+            }            
+            oVENTA.fecha = System.DateTime.Now;
+            oVENTA.precioTotal = decimal.Parse(txtTOTALPRODUCTOS.Text);
+            oVENTA.pagoTotal = decimal.Parse(txtTOTALPAGOS.Text);
+            if (oVENTA.precioTotal != oVENTA.pagoTotal)
+            {
+                MessageBox.Show("Debe ingresar un pago igual al total");
+                return;
+            }
             cVENTAS.agregar_venta(oVENTA);
+            //falta disminuir el stock
         }
 
         private void btnCANCELAR_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
         }
-
-        
     }
 }
