@@ -43,8 +43,8 @@ namespace VISTA
 
         private void btnAGREGAR_Click(object sender, EventArgs e)
         {
-            frmVenta formVenta = new frmVenta(new MODELO.VENTA(), "A");
-            DialogResult dr = formVenta.ShowDialog();
+            frmVenta frmVenta = new frmVenta(new MODELO.VENTA(), "A");
+            DialogResult dr = frmVenta.ShowDialog();
             if (dr == DialogResult.OK)
                 armar_grilla("");
         }
@@ -57,8 +57,8 @@ namespace VISTA
                 return;
             }
             MODELO.VENTA oVENTA = cVENTAS.obtener_venta(Convert.ToInt32(dgvVENTAS.CurrentRow.Cells[0].Value));
-            frmVenta formVenta = new frmVenta(oVENTA, "C");
-            formVenta.ShowDialog();
+            frmVenta frmVenta = new frmVenta(oVENTA, "C");
+            frmVenta.ShowDialog();
         }
 
         private void btnSALIR_Click(object sender, EventArgs e)

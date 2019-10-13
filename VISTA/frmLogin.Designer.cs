@@ -56,9 +56,9 @@
             this.lblUSUARIO.AutoSize = true;
             this.lblUSUARIO.Location = new System.Drawing.Point(40, 80);
             this.lblUSUARIO.Name = "lblUSUARIO";
-            this.lblUSUARIO.Size = new System.Drawing.Size(76, 13);
+            this.lblUSUARIO.Size = new System.Drawing.Size(46, 13);
             this.lblUSUARIO.TabIndex = 1;
-            this.lblUSUARIO.Text = "Usuario o mail:";
+            this.lblUSUARIO.Text = "Usuario:";
             // 
             // txtUSUARIO
             // 

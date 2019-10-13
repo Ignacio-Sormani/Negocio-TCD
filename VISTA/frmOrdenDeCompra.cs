@@ -12,9 +12,16 @@ namespace VISTA
 {
     public partial class frmOrdenDeCompra : Form
     {
-        public frmOrdenDeCompra()
+        CONTROLADORA.cORDENESDECOMPRA cORDENES;
+        MODELO.ORDENDECOMPRA oORDEN;
+        string ACCION;
+        public frmOrdenDeCompra(MODELO.ORDENDECOMPRA miORDEN, string miACCION)
         {
             InitializeComponent();
+
+            cORDENES = CONTROLADORA.cORDENESDECOMPRA.obtener_instancia();
+            oORDEN = miORDEN;
+            ACCION = miACCION;
         }
     }
 }

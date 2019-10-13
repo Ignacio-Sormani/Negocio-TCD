@@ -36,15 +36,7 @@ namespace CONTROLADORA
         {
             return oNegocio.VENTAS.Include("cliente").Include("pagos").Include("itemsv").FirstOrDefault(v => v.codigoVenta == codigo);
         }
-
-        public System.Collections.IEnumerable obtener_ventas_todas()
-        {
-            var ventas = from venta in oNegocio.VENTAS.ToList()
-                         select venta;
-            return ventas.ToList();
-        }
         
-
         public System.Collections.IEnumerable obtener_ventas(string cliente)
         {
             var ventas = from venta in oNegocio.VENTAS.Include("cliente").ToList()

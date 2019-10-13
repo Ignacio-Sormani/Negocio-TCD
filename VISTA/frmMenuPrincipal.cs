@@ -61,6 +61,9 @@ namespace VISTA
 
         private void frmMenuPrincipal_Load(object sender, EventArgs e)
         {
+            FormBorderStyle = FormBorderStyle.Sizable;
+            WindowState = FormWindowState.Maximized;
+            this.Hide();
             armar_login();
             this.Show();
         }
@@ -143,6 +146,7 @@ namespace VISTA
                 {
                     seguridadToolStripMenuItem.Enabled = true;
                 }
+                this.Show();
             }
             else
             {
@@ -180,6 +184,7 @@ namespace VISTA
             cACCESOS.modificar_acceso(oAcceso);
             oUsuario.conectado = false;
             cUSUARIOS.modificar_usuario(oUsuario);
+            this.Hide();
             armar_login();
         }
 

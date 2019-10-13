@@ -56,9 +56,9 @@ namespace CONTROLADORA
             msg.Body = mensaje;
             msg.BodyEncoding = System.Text.Encoding.UTF8;
             msg.IsBodyHtml = true;
-            msg.From = new System.Net.Mail.MailAddress("empresaelchulo@gmail.com");
+            msg.From = new System.Net.Mail.MailAddress("nacho.libreria.2@gmail.com");
             System.Net.Mail.SmtpClient cliente = new System.Net.Mail.SmtpClient();
-            cliente.Credentials = new System.Net.NetworkCredential("empresaelchulo@gmail.com", "ottolini12345");
+            cliente.Credentials = new System.Net.NetworkCredential("nacho.libreria.2@gmail.com", "n1a2c3h4o5");
 
             cliente.Port = 587;
             cliente.EnableSsl = true;
