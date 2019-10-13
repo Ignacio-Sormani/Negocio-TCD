@@ -40,12 +40,6 @@ namespace VISTA
                 MessageBox.Show("Debe seleccionar una categoria");
                 return;
             }
-
-            decimal costo;
-            if (!Decimal.TryParse(txtCOSTO.Text, out costo)) {
-                MessageBox.Show("El valor del costo es incorrecto");
-                return;
-            }
             decimal precio;
             if (!Decimal.TryParse(txtPRECIO.Text, out precio))
             {
@@ -67,7 +61,6 @@ namespace VISTA
             }
             
             oProducto.descripcion = txtDESCRIPCION.Text;
-            oProducto.costo = costo;
             oProducto.precio = precio;
             oProducto.cantidadMinima = cant_minima;
             oProducto.cantidadOperativa = cant_operativa;
@@ -131,7 +124,6 @@ namespace VISTA
             txtDESCRIPCION.Text = oProducto.descripcion;
             lblMARCA.Text = oProducto.marca.ToString();
             lblCATEGORIA.Text = oProducto.categoria.ToString();
-            txtCOSTO.Text = oProducto.costo.ToString();
             txtPRECIO.Text = oProducto.precio.ToString();
             txtCANTMINIMA.Text = oProducto.cantidadMinima.ToString();
             txtCANTOPERATIVA.Text = oProducto.cantidadOperativa.ToString();
@@ -142,7 +134,6 @@ namespace VISTA
             txtDESCRIPCION.Enabled = false;
             lblMARCA.Enabled = false;
             lblCATEGORIA.Enabled = false;
-            txtCOSTO.Enabled = false;
             txtPRECIO.Enabled = false;
             txtCANTMINIMA.Enabled = false;
             txtCANTOPERATIVA.Enabled = false;

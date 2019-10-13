@@ -17,6 +17,7 @@ namespace VISTA
     public partial class frmProveedores : Form
     {
         CONTROLADORA.cPROVEEDORES cPROVEEDORES;
+        MODELO.ORDENDECOMPRA oOrden;
         public frmProveedores(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
@@ -26,6 +27,15 @@ namespace VISTA
             btnCONSULTAR.Enabled = oUsuario.validar_acciones("btnCONSULTAR", "frmProveedores");
             btnMODIFICAR.Enabled = oUsuario.validar_acciones("btnMODIFICAR", "frmProveedores");
 
+            armarGrilla();
+        }
+
+        public frmProveedores(MODELO.ORDENDECOMPRA miOrden)
+        {
+            InitializeComponent();
+
+            cPROVEEDORES = CONTROLADORA.cPROVEEDORES.obtener_instancia();
+            oOrden = miOrden;
             armarGrilla();
         }
 
@@ -80,7 +90,13 @@ namespace VISTA
 
         private void btnSELECCIONAR_Click(object sender, EventArgs e)
         {
-
+            if (dgvPROVEEDORES.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar un proveedor de la lista");
+                return;
+            }
+            oOrden.proveedor = cPROVEEDORES.obtener_proveedor(Convert.ToInt32(dgvPROVEEDORES.CurrentRow.Cells[0].Value));
+            this.Close();
         }
 
         private void btnSALIR_Click(object sender, EventArgs e)

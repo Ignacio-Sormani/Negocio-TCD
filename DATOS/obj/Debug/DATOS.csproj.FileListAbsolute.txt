@@ -76,3 +76,5 @@ C:\Users\nacho\Documents\FACULTAD 2019\FINAL-TC-TD\Negocio-TCD\DATOS\obj\Debug\D
 C:\Users\Usuario\Desktop\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations.negocio.resources
 C:\Users\Usuario\Desktop\Negocio-TCD\DATOS\obj\Debug\DATOS.csproj.GenerateResource.Cache
 C:\Users\Usuario\Desktop\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations.n4.resources
+C:\Users\Usuario\Desktop\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations.n5.resources
+C:\Users\Usuario\Desktop\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations.n6.resources

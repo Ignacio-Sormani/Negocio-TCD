@@ -12,7 +12,6 @@ namespace MODELO
         public string descripcion { get; set; }
         public MARCA marca { get; set; }
         public CATEGORIA categoria { get; set; }
-        public decimal costo { get; set; }
         public decimal precio { get; set; }        
         public Int32 cantidadActual { get; set; }
         public Int32 cantidadMinima { get; set; }

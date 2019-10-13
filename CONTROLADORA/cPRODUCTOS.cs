@@ -48,7 +48,6 @@ namespace CONTROLADORA
                                 descripcion = producto.descripcion,
                                 marca = producto.marca,
                                 categoria = producto.categoria,
-                                costo = producto.costo,
                                 precio = producto.precio,
                                 cantidadActual = producto.cantidadActual,
                                 cantidadMinima = producto.cantidadMinima,

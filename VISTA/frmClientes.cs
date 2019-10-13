@@ -36,7 +36,6 @@ namespace VISTA
 
             oVenta = miVenta;
             cCLIENTES = CONTROLADORA.cCLIENTES.obtener_instancia();
-            btnSELECCIONAR.Visible = true;
             armarGrilla();
         }
 

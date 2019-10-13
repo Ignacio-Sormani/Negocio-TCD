@@ -23,22 +23,23 @@ namespace VISTA
             cVENTAS = CONTROLADORA.cVENTAS.obtener_instancia();
             btnAGREGAR.Enabled = oUsuario.validar_acciones("btnAGREGAR", "frmVentas");
             btnCONSULTAR.Enabled = oUsuario.validar_acciones("btnCONSULTAR", "frmVentas");
-            armar_grilla("");
+            armar_grilla();
         }
-        public void armar_grilla(string cliente)
+        public void armar_grilla()
         {
             dgvVENTAS.DataSource = null;
-            dgvVENTAS.DataSource = cVENTAS.obtener_ventas(cliente);
+            dgvVENTAS.DataSource = cVENTAS.obtener_ventas(txtCLIENTE.Text);
         }
 
         private void btnBUSCAR_Click(object sender, EventArgs e)
         {
-            armar_grilla(txtCLIENTE.Text);
+            armar_grilla();
         }
 
         private void btnTODAS_Click(object sender, EventArgs e)
         {
-            armar_grilla("");
+            txtCLIENTE.Text = "";
+            armar_grilla();
         }
 
         private void btnAGREGAR_Click(object sender, EventArgs e)
@@ -46,7 +47,7 @@ namespace VISTA
             frmVenta frmVenta = new frmVenta(new MODELO.VENTA(), "A");
             DialogResult dr = frmVenta.ShowDialog();
             if (dr == DialogResult.OK)
-                armar_grilla("");
+                armar_grilla();
         }
 
         private void btnCONSULTAR_Click(object sender, EventArgs e)

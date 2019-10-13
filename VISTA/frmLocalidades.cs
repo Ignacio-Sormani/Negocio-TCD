@@ -120,5 +120,11 @@ namespace VISTA
 
             this.Close();            
         }
+
+        private void btnTODOS_Click(object sender, EventArgs e)
+        {
+            txtBUSCAR.Text = "";
+            armarGrilla();
+        }
     }
 }

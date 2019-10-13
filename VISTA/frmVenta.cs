@@ -87,6 +87,7 @@ namespace VISTA
             }
             return total;
         }
+
         public decimal calcular_total_pagos()
         {
             decimal total = 0;
@@ -103,7 +104,7 @@ namespace VISTA
             frmClientes.ShowDialog();
             if (oVENTA.cliente != null)
             {
-                lblCLIENTE.Text = oVENTA.cliente.ToString();
+                lblCLIENTENOMBRE.Text = oVENTA.cliente.ToString();
             }
         }
 
@@ -218,6 +219,7 @@ namespace VISTA
                 return;
             }
             cVENTAS.agregar_venta(oVENTA);
+            this.DialogResult = DialogResult.OK;
             //falta disminuir el stock
         }
 

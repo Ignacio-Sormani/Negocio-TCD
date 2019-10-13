@@ -37,6 +37,7 @@
             this.btnMODIFICAR = new System.Windows.Forms.Button();
             this.btnAGREGAR = new System.Windows.Forms.Button();
             this.dgvLOCALIDADES = new System.Windows.Forms.DataGridView();
+            this.btnTODOS = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLOCALIDADES)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +55,7 @@
             // lblLOCALIDAD
             // 
             this.lblLOCALIDAD.AutoSize = true;
-            this.lblLOCALIDAD.Location = new System.Drawing.Point(65, 9);
+            this.lblLOCALIDAD.Location = new System.Drawing.Point(13, 11);
             this.lblLOCALIDAD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLOCALIDAD.Name = "lblLOCALIDAD";
             this.lblLOCALIDAD.Size = new System.Drawing.Size(56, 13);
@@ -74,10 +75,10 @@
             // 
             // btnBUSCAR
             // 
-            this.btnBUSCAR.Location = new System.Drawing.Point(297, 9);
+            this.btnBUSCAR.Location = new System.Drawing.Point(244, 11);
             this.btnBUSCAR.Margin = new System.Windows.Forms.Padding(2);
             this.btnBUSCAR.Name = "btnBUSCAR";
-            this.btnBUSCAR.Size = new System.Drawing.Size(130, 20);
+            this.btnBUSCAR.Size = new System.Drawing.Size(94, 20);
             this.btnBUSCAR.TabIndex = 21;
             this.btnBUSCAR.Text = "Buscar";
             this.btnBUSCAR.UseVisualStyleBackColor = true;
@@ -96,7 +97,7 @@
             // 
             // txtBUSCAR
             // 
-            this.txtBUSCAR.Location = new System.Drawing.Point(124, 9);
+            this.txtBUSCAR.Location = new System.Drawing.Point(72, 11);
             this.txtBUSCAR.Margin = new System.Windows.Forms.Padding(2);
             this.txtBUSCAR.Name = "txtBUSCAR";
             this.txtBUSCAR.Size = new System.Drawing.Size(168, 20);
@@ -134,11 +135,23 @@
             this.dgvLOCALIDADES.Size = new System.Drawing.Size(414, 278);
             this.dgvLOCALIDADES.TabIndex = 16;
             // 
+            // btnTODOS
+            // 
+            this.btnTODOS.Location = new System.Drawing.Point(342, 11);
+            this.btnTODOS.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTODOS.Name = "btnTODOS";
+            this.btnTODOS.Size = new System.Drawing.Size(85, 21);
+            this.btnTODOS.TabIndex = 35;
+            this.btnTODOS.Text = "Ver todos";
+            this.btnTODOS.UseVisualStyleBackColor = true;
+            this.btnTODOS.Click += new System.EventHandler(this.btnTODOS_Click);
+            // 
             // frmLocalidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(440, 443);
+            this.Controls.Add(this.btnTODOS);
             this.Controls.Add(this.btnSELECCIONAR);
             this.Controls.Add(this.lblLOCALIDAD);
             this.Controls.Add(this.btnCONSULTAR);
@@ -168,5 +181,6 @@
         private System.Windows.Forms.Button btnMODIFICAR;
         private System.Windows.Forms.Button btnAGREGAR;
         private System.Windows.Forms.DataGridView dgvLOCALIDADES;
+        private System.Windows.Forms.Button btnTODOS;
     }
 }

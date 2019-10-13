@@ -91,5 +91,11 @@ namespace VISTA
         {
             armar_grilla();
         }
+
+        private void btnTODAS_Click(object sender, EventArgs e)
+        {
+            txtBUSCAR.Text = "";
+            armar_grilla();
+        }
     }
 }

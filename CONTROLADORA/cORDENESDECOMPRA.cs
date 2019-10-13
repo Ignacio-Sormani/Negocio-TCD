@@ -36,12 +36,12 @@ namespace CONTROLADORA
 
         public MODELO.ORDENDECOMPRA obtener_orden(Int32 codigo)
         {
-            return oNegocio.ORDENESDECOMPRA.Include("proveedor").Include("itemsc").FirstOrDefault(v => v.codigoOrdenCompra == codigo);
+            return oNegocio.ORDENESDECOMPRA.Include("proveedor").Include("itemsoc").FirstOrDefault(v => v.codigoOrdenCompra == codigo);
         }
 
         public System.Collections.IEnumerable obtener_ordenes(string proveedor)
         {
-            var ordenes = from orden in oNegocio.ORDENESDECOMPRA.Include("cliente").ToList()
+            var ordenes = from orden in oNegocio.ORDENESDECOMPRA.Include("proveedor").ToList()
                          where orden.proveedor.razonSocial.ToLower().Contains(proveedor.ToLower())
                          select orden;
             return ordenes.ToList();

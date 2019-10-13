@@ -28,6 +28,8 @@ namespace MODELO
     public class ITEMOC : ITEM
     {
         public virtual ORDENDECOMPRA ordenCompra { get; set; }
+        public decimal precioUnitarioPresupuesto { get; set; }
+        public decimal subtotal { get { return precioUnitarioPresupuesto * cantidad; } }
     }
 
     public class ITEMRC : ITEM

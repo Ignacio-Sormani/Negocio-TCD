@@ -37,13 +37,14 @@
             this.btnAGREGAR = new System.Windows.Forms.Button();
             this.dgvUSUARIOS = new System.Windows.Forms.DataGridView();
             this.btnCAMBIARESTADO = new System.Windows.Forms.Button();
+            this.btnTODAS = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUSUARIOS)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUSUARIO
             // 
             this.lblUSUARIO.AutoSize = true;
-            this.lblUSUARIO.Location = new System.Drawing.Point(65, 10);
+            this.lblUSUARIO.Location = new System.Drawing.Point(14, 11);
             this.lblUSUARIO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUSUARIO.Name = "lblUSUARIO";
             this.lblUSUARIO.Size = new System.Drawing.Size(46, 13);
@@ -63,10 +64,10 @@
             // 
             // btnBUSCAR
             // 
-            this.btnBUSCAR.Location = new System.Drawing.Point(297, 10);
+            this.btnBUSCAR.Location = new System.Drawing.Point(246, 11);
             this.btnBUSCAR.Margin = new System.Windows.Forms.Padding(2);
             this.btnBUSCAR.Name = "btnBUSCAR";
-            this.btnBUSCAR.Size = new System.Drawing.Size(130, 20);
+            this.btnBUSCAR.Size = new System.Drawing.Size(82, 20);
             this.btnBUSCAR.TabIndex = 39;
             this.btnBUSCAR.Text = "Buscar";
             this.btnBUSCAR.UseVisualStyleBackColor = true;
@@ -85,7 +86,7 @@
             // 
             // txtBUSCAR
             // 
-            this.txtBUSCAR.Location = new System.Drawing.Point(124, 10);
+            this.txtBUSCAR.Location = new System.Drawing.Point(73, 11);
             this.txtBUSCAR.Margin = new System.Windows.Forms.Padding(2);
             this.txtBUSCAR.Name = "txtBUSCAR";
             this.txtBUSCAR.Size = new System.Drawing.Size(168, 20);
@@ -134,11 +135,23 @@
             this.btnCAMBIARESTADO.UseVisualStyleBackColor = true;
             this.btnCAMBIARESTADO.Click += new System.EventHandler(this.btnCAMBIARESTADO_Click);
             // 
+            // btnTODAS
+            // 
+            this.btnTODAS.Location = new System.Drawing.Point(331, 11);
+            this.btnTODAS.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTODAS.Name = "btnTODAS";
+            this.btnTODAS.Size = new System.Drawing.Size(96, 20);
+            this.btnTODAS.TabIndex = 65;
+            this.btnTODAS.Text = "Ver todas";
+            this.btnTODAS.UseVisualStyleBackColor = true;
+            this.btnTODAS.Click += new System.EventHandler(this.btnTODAS_Click);
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(440, 445);
+            this.Controls.Add(this.btnTODAS);
             this.Controls.Add(this.btnCAMBIARESTADO);
             this.Controls.Add(this.lblUSUARIO);
             this.Controls.Add(this.btnCONSULTAR);
@@ -166,5 +179,6 @@
         private System.Windows.Forms.Button btnAGREGAR;
         private System.Windows.Forms.DataGridView dgvUSUARIOS;
         private System.Windows.Forms.Button btnCAMBIARESTADO;
+        private System.Windows.Forms.Button btnTODAS;
     }
 }

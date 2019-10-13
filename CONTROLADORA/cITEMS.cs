@@ -32,5 +32,17 @@ namespace CONTROLADORA
             oNegocio.Entry(oItem).State = System.Data.Entity.EntityState.Modified;
             oNegocio.SaveChanges();
         }
+
+        public void agregar_item_orden(MODELO.ITEMOC oItem)
+        {
+            oNegocio.ITEMSOC.Add(oItem);
+            oNegocio.SaveChanges();
+        }
+
+        public void modificar_item_orden(MODELO.ITEMOC oItem)
+        {
+            oNegocio.Entry(oItem).State = System.Data.Entity.EntityState.Modified;
+            oNegocio.SaveChanges();
+        }
     }
 }
