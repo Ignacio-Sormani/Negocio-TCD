@@ -32,8 +32,6 @@
             this.clbGRUPOS = new System.Windows.Forms.CheckedListBox();
             this.ckbACTIVO = new System.Windows.Forms.CheckBox();
             this.lblESTADO = new System.Windows.Forms.Label();
-            this.lblCLAVE = new System.Windows.Forms.Label();
-            this.txtCLAVE = new System.Windows.Forms.TextBox();
             this.lblMAIL = new System.Windows.Forms.Label();
             this.txtMAIL = new System.Windows.Forms.TextBox();
             this.lblNOMBRE = new System.Windows.Forms.Label();
@@ -47,7 +45,7 @@
             // lblGRUPOS
             // 
             this.lblGRUPOS.AutoSize = true;
-            this.lblGRUPOS.Location = new System.Drawing.Point(20, 224);
+            this.lblGRUPOS.Location = new System.Drawing.Point(20, 182);
             this.lblGRUPOS.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGRUPOS.Name = "lblGRUPOS";
             this.lblGRUPOS.Size = new System.Drawing.Size(44, 13);
@@ -57,7 +55,7 @@
             // clbGRUPOS
             // 
             this.clbGRUPOS.FormattingEnabled = true;
-            this.clbGRUPOS.Location = new System.Drawing.Point(20, 244);
+            this.clbGRUPOS.Location = new System.Drawing.Point(20, 202);
             this.clbGRUPOS.Name = "clbGRUPOS";
             this.clbGRUPOS.Size = new System.Drawing.Size(320, 154);
             this.clbGRUPOS.TabIndex = 30;
@@ -66,7 +64,7 @@
             // ckbACTIVO
             // 
             this.ckbACTIVO.AutoSize = true;
-            this.ckbACTIVO.Location = new System.Drawing.Point(140, 184);
+            this.ckbACTIVO.Location = new System.Drawing.Point(140, 142);
             this.ckbACTIVO.Name = "ckbACTIVO";
             this.ckbACTIVO.Size = new System.Drawing.Size(56, 17);
             this.ckbACTIVO.TabIndex = 29;
@@ -76,31 +74,12 @@
             // lblESTADO
             // 
             this.lblESTADO.AutoSize = true;
-            this.lblESTADO.Location = new System.Drawing.Point(20, 184);
+            this.lblESTADO.Location = new System.Drawing.Point(20, 142);
             this.lblESTADO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblESTADO.Name = "lblESTADO";
             this.lblESTADO.Size = new System.Drawing.Size(43, 13);
             this.lblESTADO.TabIndex = 28;
             this.lblESTADO.Text = "Estado:";
-            // 
-            // lblCLAVE
-            // 
-            this.lblCLAVE.AutoSize = true;
-            this.lblCLAVE.Location = new System.Drawing.Point(20, 144);
-            this.lblCLAVE.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCLAVE.Name = "lblCLAVE";
-            this.lblCLAVE.Size = new System.Drawing.Size(37, 13);
-            this.lblCLAVE.TabIndex = 27;
-            this.lblCLAVE.Text = "Clave:";
-            // 
-            // txtCLAVE
-            // 
-            this.txtCLAVE.Location = new System.Drawing.Point(140, 144);
-            this.txtCLAVE.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCLAVE.Name = "txtCLAVE";
-            this.txtCLAVE.PasswordChar = '*';
-            this.txtCLAVE.Size = new System.Drawing.Size(194, 20);
-            this.txtCLAVE.TabIndex = 26;
             // 
             // lblMAIL
             // 
@@ -140,7 +119,7 @@
             // 
             // btnCANCELAR
             // 
-            this.btnCANCELAR.Location = new System.Drawing.Point(80, 478);
+            this.btnCANCELAR.Location = new System.Drawing.Point(80, 436);
             this.btnCANCELAR.Margin = new System.Windows.Forms.Padding(2);
             this.btnCANCELAR.Name = "btnCANCELAR";
             this.btnCANCELAR.Size = new System.Drawing.Size(194, 35);
@@ -151,7 +130,7 @@
             // 
             // btnGUARDAR
             // 
-            this.btnGUARDAR.Location = new System.Drawing.Point(80, 424);
+            this.btnGUARDAR.Location = new System.Drawing.Point(80, 382);
             this.btnGUARDAR.Margin = new System.Windows.Forms.Padding(2);
             this.btnGUARDAR.Name = "btnGUARDAR";
             this.btnGUARDAR.Size = new System.Drawing.Size(194, 35);
@@ -182,13 +161,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(360, 537);
+            this.ClientSize = new System.Drawing.Size(360, 492);
             this.Controls.Add(this.lblGRUPOS);
             this.Controls.Add(this.clbGRUPOS);
             this.Controls.Add(this.ckbACTIVO);
             this.Controls.Add(this.lblESTADO);
-            this.Controls.Add(this.lblCLAVE);
-            this.Controls.Add(this.txtCLAVE);
             this.Controls.Add(this.lblMAIL);
             this.Controls.Add(this.txtMAIL);
             this.Controls.Add(this.lblNOMBRE);
@@ -211,8 +188,6 @@
         private System.Windows.Forms.CheckedListBox clbGRUPOS;
         private System.Windows.Forms.CheckBox ckbACTIVO;
         private System.Windows.Forms.Label lblESTADO;
-        private System.Windows.Forms.Label lblCLAVE;
-        private System.Windows.Forms.TextBox txtCLAVE;
         private System.Windows.Forms.Label lblMAIL;
         private System.Windows.Forms.TextBox txtMAIL;
         private System.Windows.Forms.Label lblNOMBRE;
