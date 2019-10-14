@@ -24,57 +24,43 @@ namespace VISTA
             btnRECUPERARBACKUP.Enabled = oUsuario.validar_acciones("btnRECUPERARBACKUP", "frmBackup");
         }
 
-        private void btnGENERARBACKUP_Click(object sender, EventArgs e)
+        private void btnGENERARBACKUP_Click_1(object sender, EventArgs e)
         {
-            //CONTROLADORA.FUNCIONES.generar_backup();
+            MessageBox.Show(CONTROLADORA.FUNCIONES.generar_backup());
+            if (true)
+            {
+                MessageBox.Show("OK");
+            }
+            else
+            {
+                MessageBox.Show("NOK");
+            }
         }
 
-        private void btnRECUPERARBACKUP_Click(object sender, EventArgs e)
-        {/*
-            OpenFileRestaurarCopia.InitialDirectory = @"C";
-            OpenFileRestaurarCopia.Title = "Busque la copia de seguridad";
-            OpenFileRestaurarCopia.CheckFileExists = true;
-            OpenFileRestaurarCopia.CheckPathExists = true;
-            OpenFileRestaurarCopia.DefaultExt = "BAK";
-            OpenFileRestaurarCopia.Filter = "Text files (*.bak)|*.bak";
-            OpenFileRestaurarCopia.FilterIndex = 2;
-            OpenFileRestaurarCopia.RestoreDirectory = true;
-            OpenFileRestaurarCopia.ReadOnlyChecked = true;
-            OpenFileRestaurarCopia.ShowReadOnly = true;
-
-            DialogResult resultado = OpenFileRestaurarCopia.ShowDialog();
-
-            if (resultado == DialogResult.OK)
+        private void btnRECUPERARBACKUP_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.InitialDirectory = @"C:\\Users\\Usuario\\Desktop\\Backup_Sistemas\\";
+            ofd.Title = "Seleccionar archivo a restaurar";
+            ofd.CheckFileExists = true;
+            ofd.CheckPathExists = true;
+            ofd.DefaultExt = "BAK";
+            ofd.Filter = "Text files (*.bak)|*.bak";
+            ofd.FilterIndex = 2;
+            ofd.RestoreDirectory = true;
+            ofd.ReadOnlyChecked = true;
+            ofd.ShowReadOnly = true;
+            if (ofd.ShowDialog() == DialogResult.OK)
             {
-                DialogResult confirmacion = MessageBox.Show("¿Seguro deseas restaurar la Base de Datos con esta Copia de Seguridad? \n\nIMPORTANTE: Se recomienda realizar una Copia de Seguridad antes de proceder con la Restauración.",
-                    "Restaurar Copia de Seguridad", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-
-                if (confirmacion == DialogResult.OK)
+                if (CONTROLADORA.FUNCIONES.recuperar_backup(ofd.FileName))
                 {
-                    String nombreArchivo = OpenFileRestaurarCopia.FileName;
-                    try
-                    {
-                        String mensaje = cBACKUP.RESTAURAR_COPIA(nombreArchivo);  //cFachadBackup.MetodoRestaurarCopia(nombreArchivo);
-                        if (mensaje == "Y")
-                        {
-                            MessageBox.Show("La Base de Datos se ha restaurado satisfactoriamente", "Restaurar Copia de Seguridad",
-                               MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("La copia de seguridad a sido restaurada con exito", "ATENCION",
-                                MessageBoxButtons.OK, MessageBoxIcon.None);
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, "Restaurar Copia de Seguridad",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-
+                    MessageBox.Show("OK");
                 }
-            }*/
-
+                else
+                {
+                    MessageBox.Show("NOK");
+                }
+            }
         }
 
         private void btnVOLVER_Click(object sender, EventArgs e)
@@ -82,6 +68,5 @@ namespace VISTA
             this.Close();
         }
 
-        
     }
 }

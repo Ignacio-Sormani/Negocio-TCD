@@ -96,20 +96,20 @@ namespace CONTROLADORA
         }
 
 
-        public static void generar_backup(string directorio, string servername)
+        public static string generar_backup()
         {
             DateTime dia = DateTime.Now;
             string id = dia.Day + "-" + dia.Month;
 
             string dbname = "DATOS.Negocio";
-            string connectionString = @"Data Source=" + servername + "; Initial Catalog= DATOS.Negocio; Integrated Security=true; MultipleActiveResultSets=True;";
+            string connectionString = @"Data Source=DESKTOP-Q6GB95M; Initial Catalog=" + dbname + "; Integrated Security=true; MultipleActiveResultSets=True;";
             SqlConnection connection = new SqlConnection(connectionString);
             try
             {
                 connection.Open();
 
                 string str1 = "USE [" + dbname + "];";
-                string str2 = "BACKUP DATABASE [" + dbname + "] TO DISK = '" + directorio + "\\Negocio-" + id + ".Bak' WITH FORMAT,MEDIANAME = 'Z_SQLserverBackups',NAME = 'full backup of " + "DATOS.Negocio'";
+                string str2 = "BACKUP DATABASE [" + dbname + "] TO DISK = 'C:\\Users\\Usuario\\Desktop\\Backup_Sistemas\\Negocio-" + id + ".Bak' WITH FORMAT,MEDIANAME = 'Z_SQLserverBackups',NAME = 'full backup of " + dbname + "'";
                 SqlCommand cmd1 = new SqlCommand(str1, connection);
                 SqlCommand cmd2 = new SqlCommand(str2, connection);
 
@@ -117,21 +117,19 @@ namespace CONTROLADORA
                 cmd2.ExecuteNonQuery();
 
                 connection.Close();
+                return "true";
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al intentar generar el Backup. " + ex.Message, ex);
-            }
-            finally
-            {
                 connection.Close();
+                return ex.Message;
             }
         }
 
-        public static string recuperar_backup(string directorio, string servername)
+        public static bool recuperar_backup(string directorio)
         {
             string dbname = "DATOS.Negocio";
-            string connectionString = @"Data Source=" + servername + "; Initial Catalog=" + dbname + "; Integrated Security=true; MultipleActiveResultSets=True;";
+            string connectionString = @"Data Source=DESKTOP-Q6GB95M; Initial Catalog=" + dbname + "; Integrated Security=true; MultipleActiveResultSets=True;";
             SqlConnection connection = new SqlConnection(connectionString);
             try
             {
@@ -150,16 +148,13 @@ namespace CONTROLADORA
                 cmd3.ExecuteNonQuery();
 
                 connection.Close();
+                return true;
             }
-            catch (Exception ex)
-            {
-                throw new Exception("Error al intentar recuperar el Backup. " + ex.Message, ex);
-            }
-            finally
+            catch (Exception)
             {
                 connection.Close();
+                return false;
             }
-            return directorio;
         }
 
         #endregion
