@@ -31,6 +31,8 @@
             this.lblPROVEEDORNOMBRE = new System.Windows.Forms.Label();
             this.btnPROVEEDOR = new System.Windows.Forms.Button();
             this.pPRODUCTO = new System.Windows.Forms.Panel();
+            this.txtPRECIOUNITARIO = new System.Windows.Forms.TextBox();
+            this.lblPRECIOUNITARIO = new System.Windows.Forms.Label();
             this.btnCONFIRMARPRODUCTO = new System.Windows.Forms.Button();
             this.lblPRODUCTO = new System.Windows.Forms.Label();
             this.lblCANTIDAD = new System.Windows.Forms.Label();
@@ -48,8 +50,6 @@
             this.btnGUARDAR = new System.Windows.Forms.Button();
             this.dtpFECHAPEDIDO = new System.Windows.Forms.DateTimePicker();
             this.lblFECHAPEDIDO = new System.Windows.Forms.Label();
-            this.lblPRECIOUNITARIO = new System.Windows.Forms.Label();
-            this.txtPRECIOUNITARIO = new System.Windows.Forms.TextBox();
             this.pPRODUCTO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCANTIDADPRODUCTO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPRODUCTOS)).BeginInit();
@@ -88,6 +88,22 @@
             this.pPRODUCTO.Name = "pPRODUCTO";
             this.pPRODUCTO.Size = new System.Drawing.Size(279, 136);
             this.pPRODUCTO.TabIndex = 85;
+            // 
+            // txtPRECIOUNITARIO
+            // 
+            this.txtPRECIOUNITARIO.Location = new System.Drawing.Point(94, 100);
+            this.txtPRECIOUNITARIO.Name = "txtPRECIOUNITARIO";
+            this.txtPRECIOUNITARIO.Size = new System.Drawing.Size(100, 20);
+            this.txtPRECIOUNITARIO.TabIndex = 92;
+            // 
+            // lblPRECIOUNITARIO
+            // 
+            this.lblPRECIOUNITARIO.AutoSize = true;
+            this.lblPRECIOUNITARIO.Location = new System.Drawing.Point(11, 103);
+            this.lblPRECIOUNITARIO.Name = "lblPRECIOUNITARIO";
+            this.lblPRECIOUNITARIO.Size = new System.Drawing.Size(77, 13);
+            this.lblPRECIOUNITARIO.TabIndex = 65;
+            this.lblPRECIOUNITARIO.Text = "Precio unitario:";
             // 
             // btnCONFIRMARPRODUCTO
             // 
@@ -257,22 +273,6 @@
             this.lblFECHAPEDIDO.TabIndex = 90;
             this.lblFECHAPEDIDO.Text = "Fecha Pedido:";
             // 
-            // lblPRECIOUNITARIO
-            // 
-            this.lblPRECIOUNITARIO.AutoSize = true;
-            this.lblPRECIOUNITARIO.Location = new System.Drawing.Point(11, 103);
-            this.lblPRECIOUNITARIO.Name = "lblPRECIOUNITARIO";
-            this.lblPRECIOUNITARIO.Size = new System.Drawing.Size(77, 13);
-            this.lblPRECIOUNITARIO.TabIndex = 65;
-            this.lblPRECIOUNITARIO.Text = "Precio unitario:";
-            // 
-            // txtPRECIOUNITARIO
-            // 
-            this.txtPRECIOUNITARIO.Location = new System.Drawing.Point(94, 100);
-            this.txtPRECIOUNITARIO.Name = "txtPRECIOUNITARIO";
-            this.txtPRECIOUNITARIO.Size = new System.Drawing.Size(100, 20);
-            this.txtPRECIOUNITARIO.TabIndex = 92;
-            // 
             // frmOrdenDeCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -295,7 +295,7 @@
             this.Controls.Add(this.lblPROVEEDOR);
             this.Controls.Add(this.dgvPRODUCTOS);
             this.Name = "frmOrdenDeCompra";
-            this.Text = "frmOrdenDePago";
+            this.Text = "frmOrdenDeCompra";
             this.Load += new System.EventHandler(this.frmOrdenDeCompra_Load);
             this.pPRODUCTO.ResumeLayout(false);
             this.pPRODUCTO.PerformLayout();

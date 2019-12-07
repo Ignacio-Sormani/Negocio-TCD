@@ -48,7 +48,7 @@ namespace VISTA
                 lblCLIENTENOMBRE.Enabled = false;
                 btnCLIENTE.Visible = false;
                 txtTOTALPRODUCTOS.Text = oVENTA.precioTotal.ToString();
-                lblTOTALPAGOS.Text = calcular_total_pagos().ToString();
+                lblTOTALPAGOS.Text = oVENTA.pagoTotal.ToString();
                 armar_grilla_productos();
                 armar_grilla_pagos();
                 btnCANCELAR.Text = "Cerrar";
@@ -128,7 +128,7 @@ namespace VISTA
 
         private void btnCONFIRMARPRODUCTO_Click(object sender, EventArgs e)
         {
-            if (nudCANTIDADPRODUCTO.Value <= 0)
+             if (nudCANTIDADPRODUCTO.Value <= 0)
             {
                 MessageBox.Show("La cantidad debe ser mayor a 0");
                 return;

@@ -28,7 +28,7 @@ namespace CONTROLADORA
             oNegocio.SaveChanges();
         }
 
-        public void modificar_venta(MODELO.ORDENDECOMPRA oORDEN)
+        public void modificar_orden(MODELO.ORDENDECOMPRA oORDEN)
         {
             oNegocio.Entry(oORDEN).State = System.Data.Entity.EntityState.Modified;
             oNegocio.SaveChanges();
