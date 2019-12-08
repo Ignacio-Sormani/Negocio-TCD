@@ -36,6 +36,7 @@
             this.btnSALIR = new System.Windows.Forms.Button();
             this.btnAGREGAR = new System.Windows.Forms.Button();
             this.dgvORDENES = new System.Windows.Forms.DataGridView();
+            this.btnSELECCIONAR = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvORDENES)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,10 +80,10 @@
             // 
             // btnCONSULTAR
             // 
-            this.btnCONSULTAR.Location = new System.Drawing.Point(244, 380);
+            this.btnCONSULTAR.Location = new System.Drawing.Point(183, 380);
             this.btnCONSULTAR.Margin = new System.Windows.Forms.Padding(2);
             this.btnCONSULTAR.Name = "btnCONSULTAR";
-            this.btnCONSULTAR.Size = new System.Drawing.Size(194, 35);
+            this.btnCONSULTAR.Size = new System.Drawing.Size(144, 35);
             this.btnCONSULTAR.TabIndex = 75;
             this.btnCONSULTAR.Text = "Consultar";
             this.btnCONSULTAR.UseVisualStyleBackColor = true;
@@ -90,10 +91,10 @@
             // 
             // btnSALIR
             // 
-            this.btnSALIR.Location = new System.Drawing.Point(479, 380);
+            this.btnSALIR.Location = new System.Drawing.Point(529, 380);
             this.btnSALIR.Margin = new System.Windows.Forms.Padding(2);
             this.btnSALIR.Name = "btnSALIR";
-            this.btnSALIR.Size = new System.Drawing.Size(194, 35);
+            this.btnSALIR.Size = new System.Drawing.Size(144, 35);
             this.btnSALIR.TabIndex = 74;
             this.btnSALIR.Text = "Salir";
             this.btnSALIR.UseVisualStyleBackColor = true;
@@ -104,7 +105,7 @@
             this.btnAGREGAR.Location = new System.Drawing.Point(11, 380);
             this.btnAGREGAR.Margin = new System.Windows.Forms.Padding(2);
             this.btnAGREGAR.Name = "btnAGREGAR";
-            this.btnAGREGAR.Size = new System.Drawing.Size(194, 35);
+            this.btnAGREGAR.Size = new System.Drawing.Size(144, 35);
             this.btnAGREGAR.TabIndex = 73;
             this.btnAGREGAR.Text = "Agregar";
             this.btnAGREGAR.UseVisualStyleBackColor = true;
@@ -120,11 +121,23 @@
             this.dgvORDENES.Size = new System.Drawing.Size(662, 278);
             this.dgvORDENES.TabIndex = 72;
             // 
+            // btnSELECCIONAR
+            // 
+            this.btnSELECCIONAR.Location = new System.Drawing.Point(355, 380);
+            this.btnSELECCIONAR.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSELECCIONAR.Name = "btnSELECCIONAR";
+            this.btnSELECCIONAR.Size = new System.Drawing.Size(144, 35);
+            this.btnSELECCIONAR.TabIndex = 80;
+            this.btnSELECCIONAR.Text = "Seleccionar";
+            this.btnSELECCIONAR.UseVisualStyleBackColor = true;
+            this.btnSELECCIONAR.Click += new System.EventHandler(this.btnSELECCIONAR_Click);
+            // 
             // frmOrdenesDeCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 429);
+            this.Controls.Add(this.btnSELECCIONAR);
             this.Controls.Add(this.txtPROVEEDOR);
             this.Controls.Add(this.lblPROVEEDOR);
             this.Controls.Add(this.btnTODAS);
@@ -151,5 +164,6 @@
         private System.Windows.Forms.Button btnSALIR;
         private System.Windows.Forms.Button btnAGREGAR;
         private System.Windows.Forms.DataGridView dgvORDENES;
+        private System.Windows.Forms.Button btnSELECCIONAR;
     }
 }

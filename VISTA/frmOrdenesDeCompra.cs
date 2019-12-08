@@ -16,6 +16,7 @@ namespace VISTA
     public partial class frmOrdenesDeCompra : Form
     {
         CONTROLADORA.cORDENESDECOMPRA cORDENESDECOMPRA;
+        MODELO.REMITODECOMPRA oREMITO;
         public frmOrdenesDeCompra(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
@@ -23,6 +24,17 @@ namespace VISTA
             cORDENESDECOMPRA = CONTROLADORA.cORDENESDECOMPRA.obtener_instancia();
             btnAGREGAR.Enabled = oUsuario.validar_acciones("btnAGREGAR", "frmOrdenesDeCompra");
             btnCONSULTAR.Enabled = oUsuario.validar_acciones("btnCONSULTAR", "frmOrdenesDeCompra");
+            btnSELECCIONAR.Visible = false;
+            armar_grilla();
+        }
+
+        public frmOrdenesDeCompra(MODELO.REMITODECOMPRA miREMITO)
+        {
+            InitializeComponent();
+
+            oREMITO = miREMITO;
+            cORDENESDECOMPRA = CONTROLADORA.cORDENESDECOMPRA.obtener_instancia();
+            btnSELECCIONAR.Visible = true;
             armar_grilla();
         }
 
@@ -65,6 +77,17 @@ namespace VISTA
 
         private void btnSALIR_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void btnSELECCIONAR_Click(object sender, EventArgs e)
+        {
+            if (dgvORDENES.CurrentRow == null)
+            {
+                MessageBox.Show("Debe seleccionar una orden");
+                return;
+            }
+            oREMITO.ordenCompra = cORDENESDECOMPRA.obtener_orden(Convert.ToInt32(dgvORDENES.CurrentRow.Cells[0].Value));
             this.Close();
         }
     }

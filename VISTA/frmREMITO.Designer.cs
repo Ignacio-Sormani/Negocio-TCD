@@ -42,8 +42,6 @@
             this.lblPRODUCTOS = new System.Windows.Forms.Label();
             this.lblTOTALDETALLE = new System.Windows.Forms.Label();
             this.txtTOTALPRODUCTOS = new System.Windows.Forms.TextBox();
-            this.dtpFECHAENTREGA = new System.Windows.Forms.DateTimePicker();
-            this.lblFECHAENTREGA = new System.Windows.Forms.Label();
             this.lblPROVEEDOR = new System.Windows.Forms.Label();
             this.dgvPRODUCTOS = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,6 +50,8 @@
             this.btnMODIFICARPRODUCTO = new System.Windows.Forms.Button();
             this.lblNOMBREPROVEEDOR = new System.Windows.Forms.Label();
             this.lblORDENSELECCIONADA = new System.Windows.Forms.Label();
+            this.lblFECHAENTREGA = new System.Windows.Forms.Label();
+            this.dtpFECHAENTREGA = new System.Windows.Forms.DateTimePicker();
             this.pPRODUCTO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCANTIDADPRODUCTO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPRODUCTOS)).BeginInit();
@@ -66,6 +66,7 @@
             this.btnCANCELAR.TabIndex = 105;
             this.btnCANCELAR.Text = "Cancelar";
             this.btnCANCELAR.UseVisualStyleBackColor = true;
+            this.btnCANCELAR.Click += new System.EventHandler(this.btnCANCELAR_Click);
             // 
             // btnGUARDAR
             // 
@@ -76,6 +77,7 @@
             this.btnGUARDAR.TabIndex = 104;
             this.btnGUARDAR.Text = "Guardar";
             this.btnGUARDAR.UseVisualStyleBackColor = true;
+            this.btnGUARDAR.Click += new System.EventHandler(this.btnGUARDAR_Click);
             // 
             // lblPROVEEDORNOMBRE
             // 
@@ -102,7 +104,7 @@
             // 
             // txtPRECIOUNITARIO
             // 
-            this.txtPRECIOUNITARIO.Location = new System.Drawing.Point(94, 100);
+            this.txtPRECIOUNITARIO.Location = new System.Drawing.Point(94, 94);
             this.txtPRECIOUNITARIO.Name = "txtPRECIOUNITARIO";
             this.txtPRECIOUNITARIO.Size = new System.Drawing.Size(100, 20);
             this.txtPRECIOUNITARIO.TabIndex = 92;
@@ -110,7 +112,7 @@
             // lblPRECIOUNITARIO
             // 
             this.lblPRECIOUNITARIO.AutoSize = true;
-            this.lblPRECIOUNITARIO.Location = new System.Drawing.Point(11, 103);
+            this.lblPRECIOUNITARIO.Location = new System.Drawing.Point(11, 97);
             this.lblPRECIOUNITARIO.Name = "lblPRECIOUNITARIO";
             this.lblPRECIOUNITARIO.Size = new System.Drawing.Size(77, 13);
             this.lblPRECIOUNITARIO.TabIndex = 65;
@@ -118,18 +120,19 @@
             // 
             // btnCONFIRMARPRODUCTO
             // 
-            this.btnCONFIRMARPRODUCTO.Location = new System.Drawing.Point(158, 55);
+            this.btnCONFIRMARPRODUCTO.Location = new System.Drawing.Point(14, 125);
             this.btnCONFIRMARPRODUCTO.Margin = new System.Windows.Forms.Padding(2);
             this.btnCONFIRMARPRODUCTO.Name = "btnCONFIRMARPRODUCTO";
             this.btnCONFIRMARPRODUCTO.Size = new System.Drawing.Size(102, 30);
             this.btnCONFIRMARPRODUCTO.TabIndex = 55;
             this.btnCONFIRMARPRODUCTO.Text = "Confirmar";
             this.btnCONFIRMARPRODUCTO.UseVisualStyleBackColor = true;
+            this.btnCONFIRMARPRODUCTO.Click += new System.EventHandler(this.btnCONFIRMARPRODUCTO_Click);
             // 
             // lblPRODUCTO
             // 
             this.lblPRODUCTO.AutoSize = true;
-            this.lblPRODUCTO.Location = new System.Drawing.Point(11, 23);
+            this.lblPRODUCTO.Location = new System.Drawing.Point(11, 17);
             this.lblPRODUCTO.Name = "lblPRODUCTO";
             this.lblPRODUCTO.Size = new System.Drawing.Size(90, 13);
             this.lblPRODUCTO.TabIndex = 64;
@@ -138,7 +141,7 @@
             // lblCANTIDAD
             // 
             this.lblCANTIDAD.AutoSize = true;
-            this.lblCANTIDAD.Location = new System.Drawing.Point(11, 64);
+            this.lblCANTIDAD.Location = new System.Drawing.Point(11, 58);
             this.lblCANTIDAD.Name = "lblCANTIDAD";
             this.lblCANTIDAD.Size = new System.Drawing.Size(52, 13);
             this.lblCANTIDAD.TabIndex = 57;
@@ -146,7 +149,7 @@
             // 
             // nudCANTIDADPRODUCTO
             // 
-            this.nudCANTIDADPRODUCTO.Location = new System.Drawing.Point(69, 62);
+            this.nudCANTIDADPRODUCTO.Location = new System.Drawing.Point(69, 56);
             this.nudCANTIDADPRODUCTO.Minimum = new decimal(new int[] {
             1,
             0,
@@ -170,6 +173,7 @@
             this.btnELIMINARPRODUCTO.TabIndex = 100;
             this.btnELIMINARPRODUCTO.Text = "Eliminar Producto";
             this.btnELIMINARPRODUCTO.UseVisualStyleBackColor = true;
+            this.btnELIMINARPRODUCTO.Click += new System.EventHandler(this.btnELIMINARPRODUCTO_Click);
             // 
             // lblPRODUCTOS
             // 
@@ -195,23 +199,6 @@
             this.txtTOTALPRODUCTOS.Name = "txtTOTALPRODUCTOS";
             this.txtTOTALPRODUCTOS.Size = new System.Drawing.Size(100, 20);
             this.txtTOTALPRODUCTOS.TabIndex = 96;
-            // 
-            // dtpFECHAENTREGA
-            // 
-            this.dtpFECHAENTREGA.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFECHAENTREGA.Location = new System.Drawing.Point(142, 54);
-            this.dtpFECHAENTREGA.Name = "dtpFECHAENTREGA";
-            this.dtpFECHAENTREGA.Size = new System.Drawing.Size(272, 20);
-            this.dtpFECHAENTREGA.TabIndex = 95;
-            // 
-            // lblFECHAENTREGA
-            // 
-            this.lblFECHAENTREGA.AutoSize = true;
-            this.lblFECHAENTREGA.Location = new System.Drawing.Point(24, 54);
-            this.lblFECHAENTREGA.Name = "lblFECHAENTREGA";
-            this.lblFECHAENTREGA.Size = new System.Drawing.Size(80, 13);
-            this.lblFECHAENTREGA.TabIndex = 94;
-            this.lblFECHAENTREGA.Text = "Fecha Entrega:";
             // 
             // lblPROVEEDOR
             // 
@@ -270,6 +257,7 @@
             this.btnMODIFICARPRODUCTO.TabIndex = 109;
             this.btnMODIFICARPRODUCTO.Text = "Modificar Producto";
             this.btnMODIFICARPRODUCTO.UseVisualStyleBackColor = true;
+            this.btnMODIFICARPRODUCTO.Click += new System.EventHandler(this.btnMODIFICARPRODUCTO_Click);
             // 
             // lblNOMBREPROVEEDOR
             // 
@@ -288,6 +276,23 @@
             this.lblORDENSELECCIONADA.Size = new System.Drawing.Size(36, 13);
             this.lblORDENSELECCIONADA.TabIndex = 112;
             this.lblORDENSELECCIONADA.Text = "Orden";
+            // 
+            // lblFECHAENTREGA
+            // 
+            this.lblFECHAENTREGA.AutoSize = true;
+            this.lblFECHAENTREGA.Location = new System.Drawing.Point(24, 54);
+            this.lblFECHAENTREGA.Name = "lblFECHAENTREGA";
+            this.lblFECHAENTREGA.Size = new System.Drawing.Size(80, 13);
+            this.lblFECHAENTREGA.TabIndex = 94;
+            this.lblFECHAENTREGA.Text = "Fecha Entrega:";
+            // 
+            // dtpFECHAENTREGA
+            // 
+            this.dtpFECHAENTREGA.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFECHAENTREGA.Location = new System.Drawing.Point(142, 54);
+            this.dtpFECHAENTREGA.Name = "dtpFECHAENTREGA";
+            this.dtpFECHAENTREGA.Size = new System.Drawing.Size(272, 20);
+            this.dtpFECHAENTREGA.TabIndex = 95;
             // 
             // frmRemito
             // 
@@ -340,8 +345,6 @@
         private System.Windows.Forms.Label lblPRODUCTOS;
         private System.Windows.Forms.Label lblTOTALDETALLE;
         private System.Windows.Forms.TextBox txtTOTALPRODUCTOS;
-        private System.Windows.Forms.DateTimePicker dtpFECHAENTREGA;
-        private System.Windows.Forms.Label lblFECHAENTREGA;
         private System.Windows.Forms.Label lblPROVEEDOR;
         private System.Windows.Forms.DataGridView dgvPRODUCTOS;
         private System.Windows.Forms.Label label1;
@@ -350,5 +353,7 @@
         private System.Windows.Forms.Button btnMODIFICARPRODUCTO;
         private System.Windows.Forms.Label lblNOMBREPROVEEDOR;
         private System.Windows.Forms.Label lblORDENSELECCIONADA;
+        private System.Windows.Forms.Label lblFECHAENTREGA;
+        private System.Windows.Forms.DateTimePicker dtpFECHAENTREGA;
     }
 }

@@ -36,7 +36,9 @@ namespace CONTROLADORA
 
         public MODELO.ORDENDECOMPRA obtener_orden(Int32 codigo)
         {
-            return oNegocio.ORDENESDECOMPRA.Include("proveedor").Include("itemsoc").FirstOrDefault(v => v.codigoOrdenCompra == codigo);
+            var items = from item in oNegocio.ITEMSOC.Include("producto").ToList()
+                        select item;
+            return oNegocio.ORDENESDECOMPRA.Include("proveedor").Include("itemsoc").FirstOrDefault(v => v.codigoOrdenCompra == codigo);            
         }
 
         public System.Collections.IEnumerable obtener_ordenes(string proveedor)

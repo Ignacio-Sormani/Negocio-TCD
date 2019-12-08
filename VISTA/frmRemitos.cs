@@ -55,7 +55,7 @@ namespace VISTA
         {
             if (dgvREMITOS.CurrentRow == null)
             {
-                MessageBox.Show("Debe seleccionar una venta para consultar.");
+                MessageBox.Show("Debe seleccionar un remito para consultar.");
                 return;
             }
             MODELO.REMITODECOMPRA oREMITO = cREMITOSDECOMPRA.obtener_remito(Convert.ToInt32(dgvREMITOS.CurrentRow.Cells[0].Value));

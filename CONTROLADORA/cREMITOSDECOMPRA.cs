@@ -43,7 +43,7 @@ namespace CONTROLADORA
         {
             Int32 nro;
             var remitos = from remito in oNegocio.REMITOSDECOMPRA.Include("proveedor").Include("ordenCompra").Include("itemsrc").ToList()
-                          where remito.proveedor.razonSocial.ToLower().Contains(proveedor.ToLower()) && Int32.TryParse(numeroOrden, out nro) ? (nro == remito.ordenCompra.codigoOrdenCompra) : false
+                          where remito.proveedor.razonSocial.ToLower().Contains(proveedor.ToLower()) && Int32.TryParse(numeroOrden, out nro) ? (nro == remito.ordenCompra.codigoOrdenCompra) : true
                           select remito;
             return remitos.ToList();
         }

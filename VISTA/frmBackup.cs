@@ -24,19 +24,6 @@ namespace VISTA
             btnRECUPERARBACKUP.Enabled = oUsuario.validar_acciones("btnRECUPERARBACKUP", "frmBackup");
         }
 
-        private void btnGENERARBACKUP_Click_1(object sender, EventArgs e)
-        {
-            MessageBox.Show(CONTROLADORA.FUNCIONES.generar_backup());
-            if (true)
-            {
-                MessageBox.Show("OK");
-            }
-            else
-            {
-                MessageBox.Show("NOK");
-            }
-        }
-
         private void btnRECUPERARBACKUP_Click_1(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();

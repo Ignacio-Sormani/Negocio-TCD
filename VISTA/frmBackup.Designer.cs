@@ -78,7 +78,6 @@
             this.btnGENERARBACKUP.TabIndex = 58;
             this.btnGENERARBACKUP.Text = "Generar backup";
             this.btnGENERARBACKUP.UseVisualStyleBackColor = true;
-            this.btnGENERARBACKUP.Click += new System.EventHandler(this.btnGENERARBACKUP_Click_1);
             // 
             // frmBackup
             // 

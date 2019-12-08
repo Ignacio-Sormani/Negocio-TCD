@@ -48,7 +48,7 @@ namespace VISTA
                 lblCLIENTENOMBRE.Enabled = false;
                 btnCLIENTE.Visible = false;
                 txtTOTALPRODUCTOS.Text = oVENTA.precioTotal.ToString();
-                lblTOTALPAGOS.Text = oVENTA.pagoTotal.ToString();
+                txtTOTALPAGOS.Text = oVENTA.pagoTotal.ToString();
                 armar_grilla_productos();
                 armar_grilla_pagos();
                 btnCANCELAR.Text = "Cerrar";
