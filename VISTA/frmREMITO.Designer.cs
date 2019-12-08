@@ -271,7 +271,7 @@
             // lblORDENSELECCIONADA
             // 
             this.lblORDENSELECCIONADA.AutoSize = true;
-            this.lblORDENSELECCIONADA.Location = new System.Drawing.Point(152, 18);
+            this.lblORDENSELECCIONADA.Location = new System.Drawing.Point(144, 18);
             this.lblORDENSELECCIONADA.Name = "lblORDENSELECCIONADA";
             this.lblORDENSELECCIONADA.Size = new System.Drawing.Size(36, 13);
             this.lblORDENSELECCIONADA.TabIndex = 112;

@@ -49,12 +49,6 @@ namespace CONTROLADORA
         {
             oNegocio.ITEMSRC.Add(oItem);
             oNegocio.SaveChanges();
-        }
-
-        public void modificar_item_remito(MODELO.ITEMRC oItem)
-        {
-            oNegocio.Entry(oItem).State = System.Data.Entity.EntityState.Modified;
-            oNegocio.SaveChanges();
-        }
+        }        
     }
 }

@@ -25,7 +25,7 @@ namespace MODELO
 
         public override string ToString()
         {
-            return "Pedido a " + proveedor.razonSocial + ", hecho el dia" + fechaPedido.ToShortDateString();
+            return "Pedido a " + proveedor.razonSocial + ", hecho el dia " + fechaPedido.ToShortDateString();
         }
     }
 }

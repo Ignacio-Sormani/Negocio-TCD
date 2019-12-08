@@ -47,41 +47,42 @@ namespace CONTROLADORA
                           select remito;
             return remitos.ToList();
         }
-    }
-    /*
-    public System.Collections.IEnumerable calcular_items_faltantes(MODELO.ORDENDECOMPRA oORDEN)
-    {
-     var itemsoc = from itemoc in oNegocio.ITEMSOC.Include("producto").ToList()
-                   //where itemoc.ordenCompra == oORDEN
-                   select itemoc;
 
-     var remitos = from remito in oNegocio.REMITOSDECOMPRA.Include("ordenCompra").ToList()
-                   where remito.ordenCompra == oORDEN
-                   select remito;
+        public System.Collections.IEnumerable calcular_items_faltantes(MODELO.ORDENDECOMPRA oORDEN)
+        {
+            var itemsoc = from itemoc in oNegocio.ITEMSOC.Include("producto").ToList()
+                          where itemoc.ordenCompra == oORDEN
+                          select itemoc;
 
-     List<MODELO.ITEMRC> items_faltantes = new List<MODELO.ITEMRC>();
-     foreach (MODELO.ITEMOC item in itemsoc.ToList())
-     {
-         MODELO.ITEMRC oItem = new MODELO.ITEMRC();
-         oItem.producto = item.producto;
-         oItem.cantidad = item.cantidad;
-         items_faltantes.Add(oItem);
-     }
+            var remitos = from remito in oNegocio.REMITOSDECOMPRA.Include("ordenCompra").ToList()
+                          where remito.ordenCompra == oORDEN
+                          select remito;
 
-     foreach (MODELO.REMITODECOMPRA remito in remitos.ToList())
-     {
-         var itemsrc = from itemrc in oNegocio.ITEMSRC.Include("remitoCompra").ToList()
-                       //where itemrc.remitoCompra == remito
-                       select itemrc;
+            List<MODELO.ITEMRC> items_faltantes = new List<MODELO.ITEMRC>();
+            foreach (MODELO.ITEMOC item in itemsoc.ToList())
+            {
+                MODELO.ITEMRC oItem = new MODELO.ITEMRC();
+                oItem.producto = item.producto;
+                oItem.cantidad = item.cantidad;
+                oItem.precioUnitarioCompra = item.precioUnitarioPresupuesto;
+                items_faltantes.Add(oItem);
+            }
 
-         foreach (MODELO.ITEMRC item in itemsrc.ToList())
-         {
-             MODELO.ITEMRC oItem = items_faltantes.Find(_ => _.producto == item.producto);
-             oItem.cantidad -= item.cantidad;
-             if (oItem.cantidad == 0)
-                 items_faltantes.Remove(oItem);
-         }
-     }
-     return items_faltantes.ToList();
-    }*/
+            foreach (MODELO.REMITODECOMPRA remito in remitos.ToList())
+            {
+                var itemsrc = from itemrc in oNegocio.ITEMSRC.Include("remitoCompra").ToList()
+                              where itemrc.remitoCompra == remito
+                              select itemrc;
+
+                foreach (MODELO.ITEMRC item in itemsrc.ToList())
+                {
+                    MODELO.ITEMRC oItem = items_faltantes.Find(_ => _.producto == item.producto);
+                    oItem.cantidad -= item.cantidad;
+                    if (oItem.cantidad == 0)
+                        items_faltantes.Remove(oItem);
+                }
+            }
+            return items_faltantes.ToList();
+        }
+    }    
 }

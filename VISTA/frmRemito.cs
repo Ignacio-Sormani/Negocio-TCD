@@ -14,6 +14,7 @@ namespace VISTA
     {
         CONTROLADORA.cREMITOSDECOMPRA cREMITOSDECOMPRA;
         CONTROLADORA.cITEMS cITEMS;
+        CONTROLADORA.cORDENESDECOMPRA cORDENESDECOMPRA;
         MODELO.REMITODECOMPRA oREMITO;
         MODELO.ITEMRC oITEM;
         string ACCION;
@@ -23,6 +24,7 @@ namespace VISTA
 
             cREMITOSDECOMPRA = CONTROLADORA.cREMITOSDECOMPRA.obtener_instancia();
             cITEMS = CONTROLADORA.cITEMS.obtener_instancia();
+            cORDENESDECOMPRA = CONTROLADORA.cORDENESDECOMPRA.obtener_instancia();
             oREMITO = miREMITO;
             ACCION = miACCION;
         }
@@ -33,6 +35,7 @@ namespace VISTA
             {
                 cargar_orden();
                 btnCANCELAR.Text = "Cerrar";
+                btnORDEN.Visible = false;
             }
             else
             {
@@ -51,7 +54,7 @@ namespace VISTA
             frmOrdenesDeCompra.ShowDialog();
             if (oREMITO.ordenCompra != null)
             {
-                lblORDEN.Text = oREMITO.ordenCompra.ToString();
+                lblORDENSELECCIONADA.Text = oREMITO.ordenCompra.ToString();
             }
             cargar_orden();
             activar_controles();
@@ -65,19 +68,17 @@ namespace VISTA
             {
                 dtpFECHAENTREGA.Value = oREMITO.fechaRecibida;
                 lblPROVEEDOR.Text = oREMITO.proveedor.ToString();
+                lblORDENSELECCIONADA.Text = oREMITO.ordenCompra.ToString();
             }
             else
             {
                 dtpFECHAENTREGA.Value = System.DateTime.Today;
                 oREMITO.proveedor = oREMITO.ordenCompra.proveedor;
-                lblNOMBREPROVEEDOR.Text = oREMITO.ordenCompra.proveedor.ToString();
-                foreach (MODELO.ITEMOC item in oREMITO.ordenCompra.itemsoc.ToList())
+                lblNOMBREPROVEEDOR.Text = oREMITO.ordenCompra.proveedor.ToString();               
+                foreach (MODELO.ITEMRC item in cREMITOSDECOMPRA.calcular_items_faltantes(oREMITO.ordenCompra))
                 {
                     MODELO.ITEMRC oITEM = new MODELO.ITEMRC();
-                    oITEM.producto = item.producto;
-                    oITEM.precioUnitarioCompra = item.precioUnitarioPresupuesto;
-                    oITEM.cantidad = item.cantidad;
-                    cITEMS.agregar_item_remito(oITEM);
+                    oITEM = item;
                     oREMITO.itemsrc.Add(oITEM);
                 }
             }
@@ -106,7 +107,6 @@ namespace VISTA
         {
             btnELIMINARPRODUCTO.Enabled = false;
             btnMODIFICARPRODUCTO.Enabled = false;
-            txtTOTALPRODUCTOS.Enabled = false;
             dgvPRODUCTOS.Enabled = false;
         }
 
@@ -114,7 +114,6 @@ namespace VISTA
         {
             btnELIMINARPRODUCTO.Enabled = true;
             btnMODIFICARPRODUCTO.Enabled = true;
-            txtTOTALPRODUCTOS.Enabled = true;
             dgvPRODUCTOS.Enabled = true;
         }
 
@@ -160,7 +159,6 @@ namespace VISTA
             }
             oITEM.cantidad = (Int32)nudCANTIDADPRODUCTO.Value;
             oITEM.precioUnitarioCompra = precioUnitario;
-            cITEMS.modificar_item_remito(oITEM);
             armar_grilla_productos();
             calular_total_productos();
         }
@@ -173,8 +171,20 @@ namespace VISTA
                 return;
             }
             oREMITO.fechaEntrega = oREMITO.ordenCompra.fechaEntrega;
-            oREMITO.fechaRecibida = System.DateTime.Today;
+            oREMITO.fechaRecibida = System.DateTime.Today;            
             cREMITOSDECOMPRA.agregar_remito(oREMITO);
+            List<MODELO.ITEMRC> lista = (List<MODELO.ITEMRC>)cREMITOSDECOMPRA.calcular_items_faltantes(oREMITO.ordenCompra);
+            if (lista.Count() == 0)
+            {
+                oREMITO.ordenCompra.estado = "Pedido Entregado";
+            }
+            else
+            {
+                oREMITO.ordenCompra.estado = "Pedido Entregado Incompleto";
+            }
+            cORDENESDECOMPRA.modificar_orden(oREMITO.ordenCompra);
+
+            // falta disminuir stock
             this.DialogResult = DialogResult.OK;
         }
 
@@ -183,19 +193,5 @@ namespace VISTA
         {
             this.Close();
         }
-        
-        /*
-        public bool validar_estado(MODELO.ORDENDECOMPRA oORDEN)
-        {
-            bool a = true;
-            foreach (MODELO.ITEMRC item in cREMITOSDECOMPRA.calcular_items_faltantes(oORDEN))
-            {
-                if (item.cantidad != 0)
-                {
-                    a = false;
-                }
-            }
-            return a;
-        }*/
     }
 }
