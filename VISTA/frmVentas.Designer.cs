@@ -28,34 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVentas));
             this.btnCONSULTAR = new System.Windows.Forms.Button();
             this.btnSALIR = new System.Windows.Forms.Button();
             this.btnAGREGAR = new System.Windows.Forms.Button();
             this.dgvVENTAS = new System.Windows.Forms.DataGridView();
             this.btnTODAS = new System.Windows.Forms.Button();
             this.btnBUSCAR = new System.Windows.Forms.Button();
-            this.lblVENTA = new System.Windows.Forms.Label();
-            this.txtVENTA = new System.Windows.Forms.TextBox();
+            this.lblCLIENTE = new System.Windows.Forms.Label();
+            this.txtCLIENTE = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVENTAS)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCONSULTAR
             // 
-            this.btnCONSULTAR.Location = new System.Drawing.Point(244, 377);
-            this.btnCONSULTAR.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCONSULTAR.Image = ((System.Drawing.Image)(resources.GetObject("btnCONSULTAR.Image")));
+            this.btnCONSULTAR.Location = new System.Drawing.Point(325, 444);
+            this.btnCONSULTAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCONSULTAR.Name = "btnCONSULTAR";
-            this.btnCONSULTAR.Size = new System.Drawing.Size(194, 35);
+            this.btnCONSULTAR.Size = new System.Drawing.Size(259, 63);
             this.btnCONSULTAR.TabIndex = 58;
             this.btnCONSULTAR.Text = "Consultar";
+            this.btnCONSULTAR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCONSULTAR.UseVisualStyleBackColor = true;
             this.btnCONSULTAR.Click += new System.EventHandler(this.btnCONSULTAR_Click);
             // 
             // btnSALIR
             // 
-            this.btnSALIR.Location = new System.Drawing.Point(479, 377);
-            this.btnSALIR.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSALIR.Location = new System.Drawing.Point(639, 464);
+            this.btnSALIR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSALIR.Name = "btnSALIR";
-            this.btnSALIR.Size = new System.Drawing.Size(194, 35);
+            this.btnSALIR.Size = new System.Drawing.Size(259, 43);
             this.btnSALIR.TabIndex = 55;
             this.btnSALIR.Text = "Salir";
             this.btnSALIR.UseVisualStyleBackColor = true;
@@ -63,31 +66,33 @@
             // 
             // btnAGREGAR
             // 
-            this.btnAGREGAR.Location = new System.Drawing.Point(11, 377);
-            this.btnAGREGAR.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAGREGAR.Image = ((System.Drawing.Image)(resources.GetObject("btnAGREGAR.Image")));
+            this.btnAGREGAR.Location = new System.Drawing.Point(15, 444);
+            this.btnAGREGAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAGREGAR.Name = "btnAGREGAR";
-            this.btnAGREGAR.Size = new System.Drawing.Size(194, 35);
+            this.btnAGREGAR.Size = new System.Drawing.Size(259, 63);
             this.btnAGREGAR.TabIndex = 53;
             this.btnAGREGAR.Text = "Agregar";
+            this.btnAGREGAR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnAGREGAR.UseVisualStyleBackColor = true;
             this.btnAGREGAR.Click += new System.EventHandler(this.btnAGREGAR_Click);
             // 
             // dgvVENTAS
             // 
             this.dgvVENTAS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVENTAS.Location = new System.Drawing.Point(11, 80);
-            this.dgvVENTAS.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvVENTAS.Location = new System.Drawing.Point(15, 98);
+            this.dgvVENTAS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvVENTAS.Name = "dgvVENTAS";
             this.dgvVENTAS.RowTemplate.Height = 24;
-            this.dgvVENTAS.Size = new System.Drawing.Size(662, 278);
+            this.dgvVENTAS.Size = new System.Drawing.Size(883, 342);
             this.dgvVENTAS.TabIndex = 52;
             // 
             // btnTODAS
             // 
-            this.btnTODAS.Location = new System.Drawing.Point(577, 39);
-            this.btnTODAS.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTODAS.Location = new System.Drawing.Point(769, 48);
+            this.btnTODAS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTODAS.Name = "btnTODAS";
-            this.btnTODAS.Size = new System.Drawing.Size(96, 20);
+            this.btnTODAS.Size = new System.Drawing.Size(128, 25);
             this.btnTODAS.TabIndex = 64;
             this.btnTODAS.Text = "Ver todas";
             this.btnTODAS.UseVisualStyleBackColor = true;
@@ -95,44 +100,49 @@
             // 
             // btnBUSCAR
             // 
-            this.btnBUSCAR.Location = new System.Drawing.Point(577, 11);
-            this.btnBUSCAR.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBUSCAR.Image = ((System.Drawing.Image)(resources.GetObject("btnBUSCAR.Image")));
+            this.btnBUSCAR.Location = new System.Drawing.Point(769, 14);
+            this.btnBUSCAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBUSCAR.Name = "btnBUSCAR";
-            this.btnBUSCAR.Size = new System.Drawing.Size(96, 20);
+            this.btnBUSCAR.Size = new System.Drawing.Size(128, 25);
             this.btnBUSCAR.TabIndex = 62;
             this.btnBUSCAR.Text = "Buscar";
+            this.btnBUSCAR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBUSCAR.UseVisualStyleBackColor = true;
             this.btnBUSCAR.Click += new System.EventHandler(this.btnBUSCAR_Click);
             // 
-            // lblVENTA
+            // lblCLIENTE
             // 
-            this.lblVENTA.AutoSize = true;
-            this.lblVENTA.Location = new System.Drawing.Point(44, 18);
-            this.lblVENTA.Name = "lblVENTA";
-            this.lblVENTA.Size = new System.Drawing.Size(170, 13);
-            this.lblVENTA.TabIndex = 68;
-            this.lblVENTA.Text = "Nombre cliente o codigo de venta:";
+            this.lblCLIENTE.AutoSize = true;
+            this.lblCLIENTE.Location = new System.Drawing.Point(441, 18);
+            this.lblCLIENTE.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCLIENTE.Name = "lblCLIENTE";
+            this.lblCLIENTE.Size = new System.Drawing.Size(48, 17);
+            this.lblCLIENTE.TabIndex = 68;
+            this.lblCLIENTE.Text = "Filtrar:";
             // 
-            // txtVENTA
+            // txtCLIENTE
             // 
-            this.txtVENTA.Location = new System.Drawing.Point(324, 18);
-            this.txtVENTA.Name = "txtVENTA";
-            this.txtVENTA.Size = new System.Drawing.Size(200, 20);
-            this.txtVENTA.TabIndex = 71;
+            this.txtCLIENTE.Location = new System.Drawing.Point(497, 15);
+            this.txtCLIENTE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCLIENTE.Name = "txtCLIENTE";
+            this.txtCLIENTE.Size = new System.Drawing.Size(265, 22);
+            this.txtCLIENTE.TabIndex = 71;
             // 
             // frmVentas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 429);
-            this.Controls.Add(this.txtVENTA);
-            this.Controls.Add(this.lblVENTA);
+            this.ClientSize = new System.Drawing.Size(912, 528);
+            this.Controls.Add(this.txtCLIENTE);
+            this.Controls.Add(this.lblCLIENTE);
             this.Controls.Add(this.btnTODAS);
             this.Controls.Add(this.btnBUSCAR);
             this.Controls.Add(this.btnCONSULTAR);
             this.Controls.Add(this.btnSALIR);
             this.Controls.Add(this.btnAGREGAR);
             this.Controls.Add(this.dgvVENTAS);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmVentas";
             this.Text = "frmVentas";
             ((System.ComponentModel.ISupportInitialize)(this.dgvVENTAS)).EndInit();
@@ -148,7 +158,7 @@
         private System.Windows.Forms.DataGridView dgvVENTAS;
         private System.Windows.Forms.Button btnTODAS;
         private System.Windows.Forms.Button btnBUSCAR;
-        private System.Windows.Forms.Label lblVENTA;
-        private System.Windows.Forms.TextBox txtVENTA;
+        private System.Windows.Forms.Label lblCLIENTE;
+        private System.Windows.Forms.TextBox txtCLIENTE;
     }
 }

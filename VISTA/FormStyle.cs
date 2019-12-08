@@ -25,13 +25,13 @@ namespace VISTA
         }
         public static void defaultFont(Form _form)
         {
-            _form.Font = new Font("Arial", 9.0F, FontStyle.Bold);
+            _form.Font = new Font("Arial Black", 9.0F, FontStyle.Regular);
         }
         public static void windowStyle(Form _form)
         {
             _form.BackColor = Color.Moccasin;
             _form.ForeColor = Color.Black;
-            _form.Font = new Font("Arial", 10F, FontStyle.Bold);
+            _form.Font = new Font("Arial Black", 10F, FontStyle.Regular);
             _form.StartPosition = FormStartPosition.CenterScreen;
             _form.FormBorderStyle = FormBorderStyle.FixedToolWindow;
             _form.ControlBox = false;

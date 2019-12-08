@@ -192,10 +192,10 @@ namespace VISTA
 
         public void cargar_usuario()
         {
-            lblUSUARIO.Text = "Nombre de Usuario: " + oUsuario.nombreDeUsuario;
-            lblNOMBREAPELLIDO.Text = "Nombre y Apellido: " + oUsuario.nombreApellido;
-            lblMAIL.Text = "Mail: " + oUsuario.mail;
-            lblGRUPOS.Text = "Grupos: \n";
+            lblUSUARIO.Text = oUsuario.nombreDeUsuario;
+            lblNOMBREAPELLIDO.Text = oUsuario.nombreApellido;
+            lblMAIL.Text = oUsuario.mail;
+            lblGRUPOS.Text = "";
             foreach (MODELO.GRUPO oGrupo in oUsuario.grupos)
             {
                 if (oGrupo.estadoActivo)

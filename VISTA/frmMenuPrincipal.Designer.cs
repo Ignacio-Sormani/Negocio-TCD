@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.gestionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,15 +52,22 @@
             this.gestionarBackupsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panDATOSUSUARIO = new System.Windows.Forms.Panel();
             this.lblDATOSUSUARIO = new System.Windows.Forms.Label();
-            this.btnLOGOUT = new System.Windows.Forms.Button();
-            this.btnCAMBIARCLAVE = new System.Windows.Forms.Button();
-            this.btnMIPERFIL = new System.Windows.Forms.Button();
             this.lblGRUPOS = new System.Windows.Forms.Label();
             this.lblMAIL = new System.Windows.Forms.Label();
             this.lblNOMBREAPELLIDO = new System.Windows.Forms.Label();
             this.lblUSUARIO = new System.Windows.Forms.Label();
+            this.btnLOGOUT = new System.Windows.Forms.Button();
+            this.btnCAMBIARCLAVE = new System.Windows.Forms.Button();
+            this.btnMIPERFIL = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panDATOSUSUARIO.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -236,13 +244,18 @@
             // panDATOSUSUARIO
             // 
             this.panDATOSUSUARIO.BackColor = System.Drawing.Color.Linen;
+            this.panDATOSUSUARIO.Controls.Add(this.label);
+            this.panDATOSUSUARIO.Controls.Add(this.label3);
+            this.panDATOSUSUARIO.Controls.Add(this.label2);
+            this.panDATOSUSUARIO.Controls.Add(this.label1);
+            this.panDATOSUSUARIO.Controls.Add(this.pictureBox1);
             this.panDATOSUSUARIO.Controls.Add(this.lblDATOSUSUARIO);
             this.panDATOSUSUARIO.Controls.Add(this.lblGRUPOS);
             this.panDATOSUSUARIO.Controls.Add(this.lblMAIL);
             this.panDATOSUSUARIO.Controls.Add(this.lblNOMBREAPELLIDO);
             this.panDATOSUSUARIO.Controls.Add(this.lblUSUARIO);
             this.panDATOSUSUARIO.Location = new System.Drawing.Point(216, 75);
-            this.panDATOSUSUARIO.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panDATOSUSUARIO.Margin = new System.Windows.Forms.Padding(4);
             this.panDATOSUSUARIO.Name = "panDATOSUSUARIO";
             this.panDATOSUSUARIO.Size = new System.Drawing.Size(815, 591);
             this.panDATOSUSUARIO.TabIndex = 1;
@@ -250,26 +263,73 @@
             // lblDATOSUSUARIO
             // 
             this.lblDATOSUSUARIO.AutoSize = true;
-            this.lblDATOSUSUARIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDATOSUSUARIO.Font = new System.Drawing.Font("Arial Black", 18F);
             this.lblDATOSUSUARIO.Location = new System.Drawing.Point(30, 50);
             this.lblDATOSUSUARIO.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDATOSUSUARIO.Name = "lblDATOSUSUARIO";
-            this.lblDATOSUSUARIO.Size = new System.Drawing.Size(328, 36);
+            this.lblDATOSUSUARIO.Size = new System.Drawing.Size(368, 42);
             this.lblDATOSUSUARIO.TabIndex = 7;
             this.lblDATOSUSUARIO.Text = "DATOS DEL USUARIO";
+            // 
+            // lblGRUPOS
+            // 
+            this.lblGRUPOS.AutoSize = true;
+            this.lblGRUPOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblGRUPOS.Location = new System.Drawing.Point(62, 369);
+            this.lblGRUPOS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGRUPOS.Name = "lblGRUPOS";
+            this.lblGRUPOS.Size = new System.Drawing.Size(17, 25);
+            this.lblGRUPOS.TabIndex = 3;
+            this.lblGRUPOS.Text = ".";
+            // 
+            // lblMAIL
+            // 
+            this.lblMAIL.AutoSize = true;
+            this.lblMAIL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblMAIL.Location = new System.Drawing.Point(335, 254);
+            this.lblMAIL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMAIL.Name = "lblMAIL";
+            this.lblMAIL.Size = new System.Drawing.Size(17, 25);
+            this.lblMAIL.TabIndex = 2;
+            this.lblMAIL.Text = ".";
+            // 
+            // lblNOMBREAPELLIDO
+            // 
+            this.lblNOMBREAPELLIDO.AutoSize = true;
+            this.lblNOMBREAPELLIDO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblNOMBREAPELLIDO.Location = new System.Drawing.Point(470, 181);
+            this.lblNOMBREAPELLIDO.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNOMBREAPELLIDO.Name = "lblNOMBREAPELLIDO";
+            this.lblNOMBREAPELLIDO.Size = new System.Drawing.Size(17, 25);
+            this.lblNOMBREAPELLIDO.TabIndex = 1;
+            this.lblNOMBREAPELLIDO.Text = ".";
+            // 
+            // lblUSUARIO
+            // 
+            this.lblUSUARIO.AutoSize = true;
+            this.lblUSUARIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblUSUARIO.Location = new System.Drawing.Point(479, 114);
+            this.lblUSUARIO.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUSUARIO.Name = "lblUSUARIO";
+            this.lblUSUARIO.Size = new System.Drawing.Size(17, 25);
+            this.lblUSUARIO.TabIndex = 0;
+            this.lblUSUARIO.Text = ".";
             // 
             // btnLOGOUT
             // 
             this.btnLOGOUT.BackColor = System.Drawing.Color.Goldenrod;
             this.btnLOGOUT.FlatAppearance.BorderSize = 0;
             this.btnLOGOUT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLOGOUT.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLOGOUT.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnLOGOUT.Image = ((System.Drawing.Image)(resources.GetObject("btnLOGOUT.Image")));
             this.btnLOGOUT.Location = new System.Drawing.Point(13, 478);
-            this.btnLOGOUT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLOGOUT.Margin = new System.Windows.Forms.Padding(4);
             this.btnLOGOUT.Name = "btnLOGOUT";
             this.btnLOGOUT.Size = new System.Drawing.Size(179, 188);
             this.btnLOGOUT.TabIndex = 6;
             this.btnLOGOUT.Text = "LOG OUT";
+            this.btnLOGOUT.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLOGOUT.UseVisualStyleBackColor = false;
             this.btnLOGOUT.Click += new System.EventHandler(this.btnLOGOUT_Click);
             // 
@@ -278,13 +338,16 @@
             this.btnCAMBIARCLAVE.BackColor = System.Drawing.Color.Goldenrod;
             this.btnCAMBIARCLAVE.FlatAppearance.BorderSize = 0;
             this.btnCAMBIARCLAVE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCAMBIARCLAVE.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCAMBIARCLAVE.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCAMBIARCLAVE.Image = ((System.Drawing.Image)(resources.GetObject("btnCAMBIARCLAVE.Image")));
             this.btnCAMBIARCLAVE.Location = new System.Drawing.Point(13, 279);
-            this.btnCAMBIARCLAVE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCAMBIARCLAVE.Margin = new System.Windows.Forms.Padding(4);
             this.btnCAMBIARCLAVE.Name = "btnCAMBIARCLAVE";
             this.btnCAMBIARCLAVE.Size = new System.Drawing.Size(179, 188);
             this.btnCAMBIARCLAVE.TabIndex = 5;
             this.btnCAMBIARCLAVE.Text = "CAMBIAR CLAVE";
+            this.btnCAMBIARCLAVE.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCAMBIARCLAVE.UseVisualStyleBackColor = false;
             this.btnCAMBIARCLAVE.Click += new System.EventHandler(this.btnCAMBIARCLAVE_Click);
             // 
@@ -293,73 +356,93 @@
             this.btnMIPERFIL.BackColor = System.Drawing.Color.Goldenrod;
             this.btnMIPERFIL.FlatAppearance.BorderSize = 0;
             this.btnMIPERFIL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMIPERFIL.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMIPERFIL.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnMIPERFIL.Image = ((System.Drawing.Image)(resources.GetObject("btnMIPERFIL.Image")));
             this.btnMIPERFIL.Location = new System.Drawing.Point(13, 75);
-            this.btnMIPERFIL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMIPERFIL.Margin = new System.Windows.Forms.Padding(4);
             this.btnMIPERFIL.Name = "btnMIPERFIL";
             this.btnMIPERFIL.Size = new System.Drawing.Size(179, 188);
             this.btnMIPERFIL.TabIndex = 4;
             this.btnMIPERFIL.Text = "MI PERFIL";
+            this.btnMIPERFIL.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnMIPERFIL.UseVisualStyleBackColor = false;
             this.btnMIPERFIL.Click += new System.EventHandler(this.btnMIPERFIL_Click);
             // 
-            // lblGRUPOS
+            // pictureBox1
             // 
-            this.lblGRUPOS.AutoSize = true;
-            this.lblGRUPOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblGRUPOS.Location = new System.Drawing.Point(31, 283);
-            this.lblGRUPOS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblGRUPOS.Name = "lblGRUPOS";
-            this.lblGRUPOS.Size = new System.Drawing.Size(82, 25);
-            this.lblGRUPOS.TabIndex = 3;
-            this.lblGRUPOS.Text = "Grupos:";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(36, 107);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(242, 210);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
-            // lblMAIL
+            // label1
             // 
-            this.lblMAIL.AutoSize = true;
-            this.lblMAIL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblMAIL.Location = new System.Drawing.Point(287, 238);
-            this.lblMAIL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblMAIL.Name = "lblMAIL";
-            this.lblMAIL.Size = new System.Drawing.Size(54, 25);
-            this.lblMAIL.TabIndex = 2;
-            this.lblMAIL.Text = "Mail:";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(284, 114);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(199, 24);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Nombre de Usuario:";
             // 
-            // lblNOMBREAPELLIDO
+            // label2
             // 
-            this.lblNOMBREAPELLIDO.AutoSize = true;
-            this.lblNOMBREAPELLIDO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblNOMBREAPELLIDO.Location = new System.Drawing.Point(287, 179);
-            this.lblNOMBREAPELLIDO.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNOMBREAPELLIDO.Name = "lblNOMBREAPELLIDO";
-            this.lblNOMBREAPELLIDO.Size = new System.Drawing.Size(177, 25);
-            this.lblNOMBREAPELLIDO.TabIndex = 1;
-            this.lblNOMBREAPELLIDO.Text = "Nombre y Apellido:";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(284, 181);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(188, 24);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Nombre y Apellido:";
             // 
-            // lblUSUARIO
+            // label3
             // 
-            this.lblUSUARIO.AutoSize = true;
-            this.lblUSUARIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblUSUARIO.Location = new System.Drawing.Point(287, 118);
-            this.lblUSUARIO.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblUSUARIO.Name = "lblUSUARIO";
-            this.lblUSUARIO.Size = new System.Drawing.Size(186, 25);
-            this.lblUSUARIO.TabIndex = 0;
-            this.lblUSUARIO.Text = "Nombre de Usuario:";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(284, 255);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 24);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Mail:";
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.label.Location = new System.Drawing.Point(34, 345);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(88, 24);
+            this.label.TabIndex = 12;
+            this.label.Text = "Grupos:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial Black", 8F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(765, 670);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(266, 19);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Sistema de Biblioteca © 2019 UAI";
             // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkKhaki;
-            this.ClientSize = new System.Drawing.Size(1283, 679);
+            this.ClientSize = new System.Drawing.Size(1283, 716);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.panDATOSUSUARIO);
             this.Controls.Add(this.btnLOGOUT);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnMIPERFIL);
             this.Controls.Add(this.btnCAMBIARCLAVE);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMenuPrincipal";
             this.Text = "Menu Principal";
             this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
@@ -367,6 +450,7 @@
             this.menuStrip1.PerformLayout();
             this.panDATOSUSUARIO.ResumeLayout(false);
             this.panDATOSUSUARIO.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,6 +488,12 @@
         private System.Windows.Forms.Label lblDATOSUSUARIO;
         private System.Windows.Forms.ToolStripMenuItem gestionarProductosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionarLocalidadesToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
     }
 }
 
