@@ -55,5 +55,9 @@ namespace VISTA
             this.Close();
         }
 
+        private void btnGENERARBACKUP_Click(object sender, EventArgs e)
+        {
+            CONTROLADORA.FUNCIONES.generar_backup();
+        }
     }
 }

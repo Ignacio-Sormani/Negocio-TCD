@@ -20,9 +20,9 @@ namespace VISTA
         public frmRemito(MODELO.REMITODECOMPRA miREMITO, string miACCION)
         {
             InitializeComponent();
+
             cREMITOSDECOMPRA = CONTROLADORA.cREMITOSDECOMPRA.obtener_instancia();
             cITEMS = CONTROLADORA.cITEMS.obtener_instancia();
-
             oREMITO = miREMITO;
             ACCION = miACCION;
         }
@@ -41,6 +41,7 @@ namespace VISTA
             pPRODUCTO.Enabled = false;
             btnGUARDAR.Enabled = false;
             dtpFECHAENTREGA.Enabled = false;
+            txtTOTALPRODUCTOS.Enabled = false;
             desactivar_controles();
         }
 
