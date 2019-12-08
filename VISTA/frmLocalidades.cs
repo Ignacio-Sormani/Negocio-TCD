@@ -20,6 +20,8 @@ namespace VISTA
         public frmLocalidades(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
+
             cLOCALIDADES = CONTROLADORA.cLOCALIDADES.obtener_instancia();
             btnSELECCIONAR.Visible = false;
             btnAGREGAR.Enabled = oUsuario.validar_acciones("btnAGREGAR", "frmLocalidades");

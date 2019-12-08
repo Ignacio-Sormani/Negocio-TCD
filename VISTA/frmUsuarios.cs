@@ -21,6 +21,7 @@ namespace VISTA
         public frmUsuarios(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
 
             cUSUARIOS = CONTROLADORA.cUSUARIOS.obtener_instancia();
             btnAGREGAR.Enabled = oUsuario.validar_acciones("btnAGREGAR", "frmUsuarios");

@@ -21,6 +21,7 @@ namespace VISTA
         public frmRemito(MODELO.REMITODECOMPRA miREMITO, string miACCION)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
 
             cREMITOSDECOMPRA = CONTROLADORA.cREMITOSDECOMPRA.obtener_instancia();
             cITEMS = CONTROLADORA.cITEMS.obtener_instancia();

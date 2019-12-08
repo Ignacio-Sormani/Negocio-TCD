@@ -23,6 +23,7 @@ namespace VISTA
         public frmVenta(MODELO.VENTA miVENTA, string miACCION)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
 
             cVENTAS = CONTROLADORA.cVENTAS.obtener_instancia();
             cPAGOS = CONTROLADORA.cPAGOS.obtener_instancia();

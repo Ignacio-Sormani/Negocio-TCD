@@ -20,6 +20,7 @@ namespace VISTA
         public frmMarcas(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
 
             cMARCAS = CONTROLADORA.cMARCAS.obtener_instancia();
             btnSELECCIONAR.Visible = false;

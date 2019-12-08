@@ -17,6 +17,7 @@ namespace VISTA
         public frmReporte(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
 
             btnGENERARREPORTE.Enabled = oUsuario.validar_acciones("btnGENERARREPORTE", "frmReporte");
         }

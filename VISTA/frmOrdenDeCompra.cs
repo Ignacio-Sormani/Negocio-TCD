@@ -21,6 +21,7 @@ namespace VISTA
         public frmOrdenDeCompra(MODELO.ORDENDECOMPRA miORDEN, string miACCION)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
 
             cORDENES = CONTROLADORA.cORDENESDECOMPRA.obtener_instancia();
             cITEMS = CONTROLADORA.cITEMS.obtener_instancia();

@@ -19,6 +19,7 @@ namespace VISTA
         public frmRemitos(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
 
             cREMITOSDECOMPRA = CONTROLADORA.cREMITOSDECOMPRA.obtener_instancia();
             btnAGREGAR.Enabled = oUsuario.validar_acciones("btnAGREGAR", "frmRemitos");

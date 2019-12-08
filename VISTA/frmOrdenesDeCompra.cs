@@ -20,6 +20,7 @@ namespace VISTA
         public frmOrdenesDeCompra(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
 
             cORDENESDECOMPRA = CONTROLADORA.cORDENESDECOMPRA.obtener_instancia();
             btnAGREGAR.Enabled = oUsuario.validar_acciones("btnAGREGAR", "frmOrdenesDeCompra");

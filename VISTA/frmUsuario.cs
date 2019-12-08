@@ -21,6 +21,7 @@ namespace VISTA
         public frmUsuario(MODELO.USUARIO miUsuario, string miAccion)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
 
             cUSUARIOS = CONTROLADORA.cUSUARIOS.obtener_instancia();
             oUsuario = miUsuario;

@@ -19,6 +19,7 @@ namespace VISTA
         public frmBackup(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
+            FormStyle.windowStyle(this);
 
             btnGENERARBACKUP.Enabled = oUsuario.validar_acciones("btnGENERARBACKUP", "frmBackup");
             btnRECUPERARBACKUP.Enabled = oUsuario.validar_acciones("btnRECUPERARBACKUP", "frmBackup");

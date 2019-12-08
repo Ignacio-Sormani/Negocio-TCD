@@ -19,6 +19,7 @@ namespace VISTA
         public frmVentas(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
 
             cVENTAS = CONTROLADORA.cVENTAS.obtener_instancia();
             btnAGREGAR.Enabled = oUsuario.validar_acciones("btnAGREGAR", "frmVentas");

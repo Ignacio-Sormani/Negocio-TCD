@@ -20,6 +20,7 @@ namespace VISTA
         public frmCategorias(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
 
             cCATEGORIAS = CONTROLADORA.cCATEGORIAS.obtener_instancia();
             btnSELECCIONAR.Visible = false;

@@ -18,6 +18,7 @@ namespace VISTA
         public frmMarca(MODELO.MARCA miMarca, string miAccion)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
 
             cMARCAS = CONTROLADORA.cMARCAS.obtener_instancia();
             oMarca = miMarca;

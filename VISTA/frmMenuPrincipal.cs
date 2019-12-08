@@ -20,7 +20,9 @@ namespace VISTA
         CONTROLADORA.cGRUPOS cGRUPOS;
         public frmMenuPrincipal()
         {
+            FormStyle.defaultWindowStyle(this);
             InitializeComponent();
+
             cACCESOS = CONTROLADORA.cACCESOS.obtener_instancia();
             cUSUARIOS = CONTROLADORA.cUSUARIOS.obtener_instancia();
             cACCIONES = CONTROLADORA.cACCIONES.obtener_instancia();

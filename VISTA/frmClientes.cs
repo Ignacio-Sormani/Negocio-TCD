@@ -21,6 +21,7 @@ namespace VISTA
         public frmClientes(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
 
             cCLIENTES = CONTROLADORA.cCLIENTES.obtener_instancia();            
             btnSELECCIONAR.Visible = false;

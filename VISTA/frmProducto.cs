@@ -18,6 +18,8 @@ namespace VISTA
         public frmProducto(MODELO.PRODUCTO miProducto, string miAccion)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
+
             accion = miAccion;
             oProducto = miProducto;
             cProductos = CONTROLADORA.cPRODUCTOS.obtener_instancia();

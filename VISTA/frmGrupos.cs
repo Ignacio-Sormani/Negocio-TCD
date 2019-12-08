@@ -21,6 +21,7 @@ namespace VISTA
         public frmGrupos(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
 
             cGRUPOS = CONTROLADORA.cGRUPOS.obtener_instancia();
             btnAGREGAR.Enabled = oUsuario.validar_acciones("btnAGREGAR", "frmGrupos");

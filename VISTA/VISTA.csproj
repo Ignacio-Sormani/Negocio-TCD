@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormStyle.cs" />
     <Compile Include="frmArchivoDeDatos.cs">
       <SubType>Form</SubType>
     </Compile>

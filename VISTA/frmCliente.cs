@@ -18,6 +18,8 @@ namespace VISTA
         public frmCliente(MODELO.CLIENTE miCliente, string miAccion)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
+
             cCLIENTE = CONTROLADORA.cCLIENTES.obtener_instancia();
             oCliente = miCliente;
             accion = miAccion;

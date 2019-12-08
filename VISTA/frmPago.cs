@@ -18,7 +18,8 @@ namespace VISTA
         public frmPago(MODELO.PAGO miPago)
         {
             InitializeComponent();
-            
+            FormStyle.defaultWindowStyle(this);
+
             oPago = miPago;
             cPAGOS = CONTROLADORA.cPAGOS.obtener_instancia();
         }

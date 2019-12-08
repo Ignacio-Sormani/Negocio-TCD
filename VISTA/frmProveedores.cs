@@ -21,6 +21,8 @@ namespace VISTA
         public frmProveedores(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
+
             cPROVEEDORES = CONTROLADORA.cPROVEEDORES.obtener_instancia();
             btnSELECCIONAR.Visible = false;
             btnAGREGAR.Enabled = oUsuario.validar_acciones("btnAGREGAR", "frmProveedores");

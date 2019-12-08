@@ -18,6 +18,8 @@ namespace VISTA
         public frmProveedor(MODELO.PROVEEDOR miProveedor, string miAccion)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
+
             cPROVEEDORES = CONTROLADORA.cPROVEEDORES.obtener_instancia();
             oProveedor = miProveedor;
             accion = miAccion;

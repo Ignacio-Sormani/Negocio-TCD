@@ -18,6 +18,7 @@ namespace VISTA
         public frmGrupo(MODELO.GRUPO miGrupo, string miAccion)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
 
             cGRUPOS = CONTROLADORA.cGRUPOS.obtener_instancia();
             oGrupo = miGrupo;

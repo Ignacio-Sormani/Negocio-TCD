@@ -19,6 +19,7 @@ namespace VISTA
         public frmResetearContraseña()
         {
             InitializeComponent();
+            FormStyle.windowStyle(this);
 
             cUSUARIOS = CONTROLADORA.cUSUARIOS.obtener_instancia();
         }

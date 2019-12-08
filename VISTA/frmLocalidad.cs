@@ -18,6 +18,8 @@ namespace VISTA
         public frmLocalidad(MODELO.LOCALIDAD miLocalidad, string miAccion)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
+
 
             cLocalidades = CONTROLADORA.cLOCALIDADES.obtener_instancia();
             oLocalidad = miLocalidad;
@@ -33,7 +35,11 @@ namespace VISTA
             }
             if (Accion == "C")
             {
+                txtLOCALIDAD.Text = oLocalidad.localidad;
+                txtCP.Text = oLocalidad.codigoPostal.ToString();
+
                 txtLOCALIDAD.Enabled = false;
+                txtCP.Enabled = false;
                 btnCANCELAR.Text = "Cerrar";
                 btnGUARDAR.Visible = false;
             }
@@ -52,14 +58,27 @@ namespace VISTA
                 MessageBox.Show("El Codigo Postal debe ser un valor numerico");
                 return;
             }
-            oLocalidad.localidad = txtLOCALIDAD.Text;
-            oLocalidad.codigoPostal = codigoPostal;
+            Boolean validarLocalidadExistente = cLocalidades.verificar_localidad_existente(codigoPostal, txtLOCALIDAD.Text);
             if (Accion == "A")
             {
+                if (validarLocalidadExistente)
+                {
+                    MessageBox.Show("La Localidad y Codigo Postal ya existe");
+                    return;
+                }
+                oLocalidad.localidad = txtLOCALIDAD.Text;
+                oLocalidad.codigoPostal = codigoPostal;
                 cLocalidades.agregar_localidad(oLocalidad);
             }
-            else
+            else if (Accion == "M")
             {
+                if (validarLocalidadExistente)
+                {
+                    MessageBox.Show("La Localidad y Codigo Postal no realizo cambios o ya existe");
+                    return;
+                }
+                oLocalidad.localidad = txtLOCALIDAD.Text;
+                oLocalidad.codigoPostal = codigoPostal;
                 cLocalidades.modificar_localidad(oLocalidad);
             }
             this.DialogResult = DialogResult.OK;
@@ -68,7 +87,7 @@ namespace VISTA
 
         private void btnCANCELAR_Click(object sender, EventArgs e)
         {
-           this.DialogResult = DialogResult.Cancel;
+            this.DialogResult = DialogResult.Cancel;
         }
     }
 }

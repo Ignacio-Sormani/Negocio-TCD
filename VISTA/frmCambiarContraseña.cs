@@ -17,6 +17,7 @@ namespace VISTA
         public frmCambiarContraseña(MODELO.USUARIO miUsuario)
         {
             InitializeComponent();
+            FormStyle.windowStyle(this);
 
             oUsuario = miUsuario;
             cUSUARIOS = CONTROLADORA.cUSUARIOS.obtener_instancia();
