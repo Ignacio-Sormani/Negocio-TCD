@@ -44,7 +44,7 @@ namespace VISTA
             defaultStartPosition(_form);
             defaultFont(_form);
             defaultControlsStyle(_form);
-            _form.FormBorderStyle = FormBorderStyle.Sizable;
+            _form.FormBorderStyle = FormBorderStyle.FixedToolWindow;
             _form.ControlBox = false;
         }
         //CONTROLS DEFAULT STYLE

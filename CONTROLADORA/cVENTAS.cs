@@ -34,6 +34,8 @@ namespace CONTROLADORA
         }
         public MODELO.VENTA obtener_venta(Int32 codigo)
         {
+            oNegocio.ITEMSV.Include("producto").ToList();
+            oNegocio.PAGOS.Include("formaPago").ToList();
             return oNegocio.VENTAS.Include("cliente").Include("pagos").Include("itemsv").FirstOrDefault(v => v.codigoVenta == codigo);
         }
         

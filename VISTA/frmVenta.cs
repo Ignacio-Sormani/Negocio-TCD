@@ -13,10 +13,8 @@ namespace VISTA
     public partial class frmVenta : Form
     {
         CONTROLADORA.cVENTAS cVENTAS;
-        CONTROLADORA.cPAGOS cPAGOS;
         CONTROLADORA.cITEMS cITEMS;
         MODELO.VENTA oVENTA;
-        MODELO.PAGO oPago;
         MODELO.PRODUCTO oProducto;
         MODELO.ITEMV oITEM;
         string ACCION;
@@ -26,7 +24,6 @@ namespace VISTA
             FormStyle.defaultWindowStyle(this);
 
             cVENTAS = CONTROLADORA.cVENTAS.obtener_instancia();
-            cPAGOS = CONTROLADORA.cPAGOS.obtener_instancia();
             cITEMS = CONTROLADORA.cITEMS.obtener_instancia();
             oVENTA = miVENTA;
             ACCION = miACCION;            
@@ -35,7 +32,6 @@ namespace VISTA
         private void frmVenta_Load(object sender, EventArgs e)
         {
             pPRODUCTO.Enabled = false;
-            txtTOTALPAGOS.Enabled = false;
             txtTOTALPRODUCTOS.Enabled = false;            
             dtpFECHA.Format = DateTimePickerFormat.Custom;
             dtpFECHA.CustomFormat = "MM/dd/yyyy hh:mm:ss";
@@ -49,16 +45,13 @@ namespace VISTA
                 lblCLIENTENOMBRE.Enabled = false;
                 btnCLIENTE.Visible = false;
                 txtTOTALPRODUCTOS.Text = oVENTA.precioTotal.ToString();
-                txtTOTALPAGOS.Text = oVENTA.pagoTotal.ToString();
                 armar_grilla_productos();
-                armar_grilla_pagos();
                 btnCANCELAR.Text = "Cerrar";
                 btnGUARDAR.Visible = false;
-                btnAGREGARPAGO.Visible = false;
-                btnELIMINARPAGO.Visible = false;
                 btnBUSCARPRODUCTO.Visible = false;
                 btnCONFIRMARPRODUCTO.Visible = false;
                 btnELIMINARPRODUCTO.Visible = false;
+                btnPAGOS.Text = "Ver pagos";
             }
             else
             {                
@@ -84,11 +77,7 @@ namespace VISTA
             dgvPRODUCTOS.Columns["subtotal"].DisplayIndex = 3;
             dgvPRODUCTOS.Columns["subtotal"].HeaderText = "Subtotal";
         }
-        public void armar_grilla_pagos()
-        {
-            dgvPAGOS.DataSource = null;
-            dgvPAGOS.DataSource = oVENTA.pagos.ToList();
-        }
+        
 
         public decimal calcular_total_productos()
         {
@@ -96,16 +85,6 @@ namespace VISTA
             foreach (MODELO.ITEMV producto in oVENTA.itemsv.ToList())
             {
                 total += producto.subtotal;
-            }
-            return total;
-        }
-
-        public decimal calcular_total_pagos()
-        {
-            decimal total = 0;
-            foreach (MODELO.PAGO pago in oVENTA.pagos.ToList())
-            {
-                total += pago.total;
             }
             return total;
         }
@@ -180,30 +159,6 @@ namespace VISTA
             txtTOTALPRODUCTOS.Text = calcular_total_productos().ToString();
             armar_grilla_productos();
         }
-        
-        private void btnAGREGARPAGO_Click(object sender, EventArgs e)
-        {
-            oPago = new MODELO.PAGO();
-            frmPago frmPago = new frmPago(oPago);
-            if (DialogResult.OK == frmPago.ShowDialog())
-            {
-                oVENTA.pagos.Add(oPago);
-                armar_grilla_pagos();
-                txtTOTALPAGOS.Text = calcular_total_pagos().ToString();
-            }
-        }
-
-        private void btnELIMINARPAGO_Click(object sender, EventArgs e)
-        {
-            if (dgvPAGOS.CurrentRow == null)
-            {
-                MessageBox.Show("Debe seleccionar un pago de la lista");
-                return;
-            }
-            oVENTA.pagos.Remove((MODELO.PAGO)dgvPAGOS.CurrentRow.DataBoundItem);
-            txtTOTALPAGOS.Text = calcular_total_pagos().ToString();
-            armar_grilla_pagos();
-        }
 
         private void btnGUARDAR_Click(object sender, EventArgs e)
         {
@@ -224,7 +179,6 @@ namespace VISTA
             }            
             oVENTA.fecha = System.DateTime.Now;
             oVENTA.precioTotal = decimal.Parse(txtTOTALPRODUCTOS.Text);
-            oVENTA.pagoTotal = decimal.Parse(txtTOTALPAGOS.Text);
             if (oVENTA.precioTotal != oVENTA.pagoTotal)
             {
                 MessageBox.Show("Debe ingresar un pago igual al total");
@@ -238,6 +192,20 @@ namespace VISTA
         private void btnCANCELAR_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
+        }
+
+        private void btnPAGOS_Click(object sender, EventArgs e)
+        {
+            if (ACCION == "A")
+            {
+                frmPagos frmPagos = new frmPagos(oVENTA, "A");
+                frmPagos.ShowDialog();
+            }
+            else
+            {
+                frmPagos frmPagos = new frmPagos(oVENTA, "C");
+                frmPagos.ShowDialog();
+            }
         }
     }
 }
