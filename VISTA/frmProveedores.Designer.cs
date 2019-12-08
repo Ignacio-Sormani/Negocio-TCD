@@ -43,10 +43,10 @@
             // 
             // btnSELECCIONAR
             // 
-            this.btnSELECCIONAR.Location = new System.Drawing.Point(311, 442);
-            this.btnSELECCIONAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSELECCIONAR.Location = new System.Drawing.Point(233, 384);
+            this.btnSELECCIONAR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSELECCIONAR.Name = "btnSELECCIONAR";
-            this.btnSELECCIONAR.Size = new System.Drawing.Size(259, 43);
+            this.btnSELECCIONAR.Size = new System.Drawing.Size(194, 35);
             this.btnSELECCIONAR.TabIndex = 33;
             this.btnSELECCIONAR.Text = "Seleccionar";
             this.btnSELECCIONAR.UseVisualStyleBackColor = true;
@@ -54,19 +54,19 @@
             // 
             // lblPROVEEDOR
             // 
-            this.lblPROVEEDOR.AutoSize = true;
-            this.lblPROVEEDOR.Location = new System.Drawing.Point(19, 11);
+            this.lblPROVEEDOR.Location = new System.Drawing.Point(34, 15);
+            this.lblPROVEEDOR.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPROVEEDOR.Name = "lblPROVEEDOR";
-            this.lblPROVEEDOR.Size = new System.Drawing.Size(78, 17);
+            this.lblPROVEEDOR.Size = new System.Drawing.Size(102, 43);
             this.lblPROVEEDOR.TabIndex = 32;
-            this.lblPROVEEDOR.Text = "Proveedor:";
+            this.lblPROVEEDOR.Text = "Codigo, nombre o cuit del proveedor:";
             // 
             // btnCONSULTAR
             // 
-            this.btnCONSULTAR.Location = new System.Drawing.Point(311, 393);
-            this.btnCONSULTAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCONSULTAR.Location = new System.Drawing.Point(233, 344);
+            this.btnCONSULTAR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCONSULTAR.Name = "btnCONSULTAR";
-            this.btnCONSULTAR.Size = new System.Drawing.Size(259, 43);
+            this.btnCONSULTAR.Size = new System.Drawing.Size(194, 35);
             this.btnCONSULTAR.TabIndex = 31;
             this.btnCONSULTAR.Text = "Consultar";
             this.btnCONSULTAR.UseVisualStyleBackColor = true;
@@ -74,10 +74,10 @@
             // 
             // btnBUSCAR
             // 
-            this.btnBUSCAR.Location = new System.Drawing.Point(326, 10);
-            this.btnBUSCAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBUSCAR.Location = new System.Drawing.Point(344, 38);
+            this.btnBUSCAR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBUSCAR.Name = "btnBUSCAR";
-            this.btnBUSCAR.Size = new System.Drawing.Size(111, 25);
+            this.btnBUSCAR.Size = new System.Drawing.Size(83, 20);
             this.btnBUSCAR.TabIndex = 30;
             this.btnBUSCAR.Text = "Buscar";
             this.btnBUSCAR.UseVisualStyleBackColor = true;
@@ -85,10 +85,10 @@
             // 
             // btnSALIR
             // 
-            this.btnSALIR.Location = new System.Drawing.Point(311, 491);
-            this.btnSALIR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSALIR.Location = new System.Drawing.Point(233, 424);
+            this.btnSALIR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSALIR.Name = "btnSALIR";
-            this.btnSALIR.Size = new System.Drawing.Size(259, 43);
+            this.btnSALIR.Size = new System.Drawing.Size(194, 35);
             this.btnSALIR.TabIndex = 28;
             this.btnSALIR.Text = "Salir";
             this.btnSALIR.UseVisualStyleBackColor = true;
@@ -96,18 +96,18 @@
             // 
             // txtBUSCAR
             // 
-            this.txtBUSCAR.Location = new System.Drawing.Point(97, 11);
-            this.txtBUSCAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBUSCAR.Location = new System.Drawing.Point(156, 15);
+            this.txtBUSCAR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBUSCAR.Name = "txtBUSCAR";
-            this.txtBUSCAR.Size = new System.Drawing.Size(223, 22);
+            this.txtBUSCAR.Size = new System.Drawing.Size(168, 20);
             this.txtBUSCAR.TabIndex = 29;
             // 
             // btnMODIFICAR
             // 
-            this.btnMODIFICAR.Location = new System.Drawing.Point(17, 442);
-            this.btnMODIFICAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMODIFICAR.Location = new System.Drawing.Point(13, 384);
+            this.btnMODIFICAR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMODIFICAR.Name = "btnMODIFICAR";
-            this.btnMODIFICAR.Size = new System.Drawing.Size(259, 43);
+            this.btnMODIFICAR.Size = new System.Drawing.Size(194, 35);
             this.btnMODIFICAR.TabIndex = 27;
             this.btnMODIFICAR.Text = "Modificar";
             this.btnMODIFICAR.UseVisualStyleBackColor = true;
@@ -115,10 +115,10 @@
             // 
             // btnAGREGAR
             // 
-            this.btnAGREGAR.Location = new System.Drawing.Point(17, 393);
-            this.btnAGREGAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAGREGAR.Location = new System.Drawing.Point(13, 344);
+            this.btnAGREGAR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAGREGAR.Name = "btnAGREGAR";
-            this.btnAGREGAR.Size = new System.Drawing.Size(259, 43);
+            this.btnAGREGAR.Size = new System.Drawing.Size(194, 35);
             this.btnAGREGAR.TabIndex = 26;
             this.btnAGREGAR.Text = "Agregar";
             this.btnAGREGAR.UseVisualStyleBackColor = true;
@@ -127,19 +127,19 @@
             // dgvPROVEEDORES
             // 
             this.dgvPROVEEDORES.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPROVEEDORES.Location = new System.Drawing.Point(17, 44);
-            this.dgvPROVEEDORES.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvPROVEEDORES.Location = new System.Drawing.Point(13, 62);
+            this.dgvPROVEEDORES.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvPROVEEDORES.Name = "dgvPROVEEDORES";
             this.dgvPROVEEDORES.RowTemplate.Height = 24;
-            this.dgvPROVEEDORES.Size = new System.Drawing.Size(552, 342);
+            this.dgvPROVEEDORES.Size = new System.Drawing.Size(414, 278);
             this.dgvPROVEEDORES.TabIndex = 25;
             // 
             // btnTODOS
             // 
-            this.btnTODOS.Location = new System.Drawing.Point(458, 10);
-            this.btnTODOS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTODOS.Location = new System.Drawing.Point(344, 11);
+            this.btnTODOS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTODOS.Name = "btnTODOS";
-            this.btnTODOS.Size = new System.Drawing.Size(111, 25);
+            this.btnTODOS.Size = new System.Drawing.Size(83, 20);
             this.btnTODOS.TabIndex = 34;
             this.btnTODOS.Text = "Ver Todos";
             this.btnTODOS.UseVisualStyleBackColor = true;
@@ -147,9 +147,9 @@
             // 
             // frmProveedores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 545);
+            this.ClientSize = new System.Drawing.Size(440, 470);
             this.Controls.Add(this.btnTODOS);
             this.Controls.Add(this.btnSELECCIONAR);
             this.Controls.Add(this.lblPROVEEDOR);
@@ -160,7 +160,6 @@
             this.Controls.Add(this.btnMODIFICAR);
             this.Controls.Add(this.btnAGREGAR);
             this.Controls.Add(this.dgvPROVEEDORES);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmProveedores";
             this.Text = "frmProveedores";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPROVEEDORES)).EndInit();

@@ -67,6 +67,17 @@ namespace VISTA
         {
             dgvPRODUCTOS.DataSource = null;
             dgvPRODUCTOS.DataSource = oORDEN.itemsoc.ToList();
+
+            dgvPRODUCTOS.Columns["ordenCompra"].Visible = false;
+            dgvPRODUCTOS.Columns["codigoItem"].Visible = false;
+            dgvPRODUCTOS.Columns["producto"].DisplayIndex = 0;
+            dgvPRODUCTOS.Columns["producto"].HeaderText = "Producto";
+            dgvPRODUCTOS.Columns["cantidad"].DisplayIndex = 1;
+            dgvPRODUCTOS.Columns["cantidad"].HeaderText = "Cantidad";
+            dgvPRODUCTOS.Columns["precioUnitarioPresupuesto"].DisplayIndex = 2;
+            dgvPRODUCTOS.Columns["precioUnitarioPresupuesto"].HeaderText = "PrecioUnitario";
+            dgvPRODUCTOS.Columns["subtotal"].DisplayIndex = 3;
+            dgvPRODUCTOS.Columns["subtotal"].HeaderText = "Subtotal";
         }
         public decimal calcular_total_productos()
         {

@@ -42,7 +42,7 @@ namespace VISTA
         public void armar_grilla()
         {
             dgvORDENES.DataSource = null;
-            dgvORDENES.DataSource = cORDENESDECOMPRA.obtener_ordenes(txtPROVEEDOR.Text);
+            dgvORDENES.DataSource = cORDENESDECOMPRA.obtener_ordenes(txtORDEN.Text);
         }
 
         private void btnBUSCAR_Click(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace VISTA
 
         private void btnTODAS_Click(object sender, EventArgs e)
         {
-            txtPROVEEDOR.Text = "";
+            txtORDEN.Text = "";
             armar_grilla();
         }
 

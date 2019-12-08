@@ -20,8 +20,6 @@ namespace VISTA
         public frmLocalidades(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
-            FormStyle.defaultWindowStyle(this);
-
             cLOCALIDADES = CONTROLADORA.cLOCALIDADES.obtener_instancia();
             btnSELECCIONAR.Visible = false;
             btnAGREGAR.Enabled = oUsuario.validar_acciones("btnAGREGAR", "frmLocalidades");
@@ -78,9 +76,8 @@ namespace VISTA
             }
             frmLocalidad frmLocalidad = new frmLocalidad(cLOCALIDADES.obtener_localidad(Convert.ToInt32(dgvLOCALIDADES.CurrentRow.Cells[0].Value)), "M");
             DialogResult dr = frmLocalidad.ShowDialog();
-            if (dr == DialogResult.OK) {
-            armarGrilla();
-            }
+            if (dr == DialogResult.OK)
+                armarGrilla();
         }
 
         private void btnCONSULTAR_Click(object sender, EventArgs e)

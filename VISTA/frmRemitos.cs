@@ -29,7 +29,7 @@ namespace VISTA
         public void armar_grilla()
         {
             dgvREMITOS.DataSource = null;
-            dgvREMITOS.DataSource = cREMITOSDECOMPRA.obtener_remitos(txtPROVEEDOR.Text, txtORDEN.Text);
+            dgvREMITOS.DataSource = cREMITOSDECOMPRA.obtener_remitos(txtREMITO.Text);
         }
 
         private void btnBUSCAR_Click(object sender, EventArgs e)
@@ -39,8 +39,7 @@ namespace VISTA
 
         private void btnTODAS_Click(object sender, EventArgs e)
         {
-            txtPROVEEDOR.Text = "";
-            txtORDEN.Text = "";
+            txtREMITO.Text = "";
             armar_grilla();
         }
 

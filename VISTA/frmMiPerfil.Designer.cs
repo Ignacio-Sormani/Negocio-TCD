@@ -42,7 +42,7 @@
             // lblMAIL
             // 
             this.lblMAIL.AutoSize = true;
-            this.lblMAIL.Location = new System.Drawing.Point(20, 180);
+            this.lblMAIL.Location = new System.Drawing.Point(20, 148);
             this.lblMAIL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMAIL.Name = "lblMAIL";
             this.lblMAIL.Size = new System.Drawing.Size(29, 13);
@@ -51,7 +51,7 @@
             // 
             // txtMAIL
             // 
-            this.txtMAIL.Location = new System.Drawing.Point(140, 180);
+            this.txtMAIL.Location = new System.Drawing.Point(140, 148);
             this.txtMAIL.Margin = new System.Windows.Forms.Padding(2);
             this.txtMAIL.Name = "txtMAIL";
             this.txtMAIL.Size = new System.Drawing.Size(194, 20);
@@ -60,7 +60,7 @@
             // lblNOMBRE
             // 
             this.lblNOMBRE.AutoSize = true;
-            this.lblNOMBRE.Location = new System.Drawing.Point(20, 140);
+            this.lblNOMBRE.Location = new System.Drawing.Point(20, 108);
             this.lblNOMBRE.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNOMBRE.Name = "lblNOMBRE";
             this.lblNOMBRE.Size = new System.Drawing.Size(95, 13);
@@ -69,7 +69,7 @@
             // 
             // txtNOMBRE
             // 
-            this.txtNOMBRE.Location = new System.Drawing.Point(140, 140);
+            this.txtNOMBRE.Location = new System.Drawing.Point(140, 108);
             this.txtNOMBRE.Margin = new System.Windows.Forms.Padding(2);
             this.txtNOMBRE.Name = "txtNOMBRE";
             this.txtNOMBRE.Size = new System.Drawing.Size(194, 20);
@@ -77,7 +77,7 @@
             // 
             // btnCANCELAR
             // 
-            this.btnCANCELAR.Location = new System.Drawing.Point(77, 278);
+            this.btnCANCELAR.Location = new System.Drawing.Point(77, 246);
             this.btnCANCELAR.Margin = new System.Windows.Forms.Padding(2);
             this.btnCANCELAR.Name = "btnCANCELAR";
             this.btnCANCELAR.Size = new System.Drawing.Size(194, 35);
@@ -88,7 +88,7 @@
             // 
             // btnGUARDAR
             // 
-            this.btnGUARDAR.Location = new System.Drawing.Point(77, 224);
+            this.btnGUARDAR.Location = new System.Drawing.Point(77, 192);
             this.btnGUARDAR.Margin = new System.Windows.Forms.Padding(2);
             this.btnGUARDAR.Name = "btnGUARDAR";
             this.btnGUARDAR.Size = new System.Drawing.Size(194, 35);
@@ -100,7 +100,7 @@
             // lblUSUARIO
             // 
             this.lblUSUARIO.AutoSize = true;
-            this.lblUSUARIO.Location = new System.Drawing.Point(20, 100);
+            this.lblUSUARIO.Location = new System.Drawing.Point(20, 68);
             this.lblUSUARIO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUSUARIO.Name = "lblUSUARIO";
             this.lblUSUARIO.Size = new System.Drawing.Size(101, 13);
@@ -109,7 +109,7 @@
             // 
             // txtUSUARIO
             // 
-            this.txtUSUARIO.Location = new System.Drawing.Point(140, 100);
+            this.txtUSUARIO.Location = new System.Drawing.Point(140, 68);
             this.txtUSUARIO.Margin = new System.Windows.Forms.Padding(2);
             this.txtUSUARIO.Name = "txtUSUARIO";
             this.txtUSUARIO.Size = new System.Drawing.Size(194, 20);
@@ -132,7 +132,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(360, 352);
+            this.ClientSize = new System.Drawing.Size(360, 311);
             this.Controls.Add(this.lblMISDATOS);
             this.Controls.Add(this.lblMAIL);
             this.Controls.Add(this.txtMAIL);

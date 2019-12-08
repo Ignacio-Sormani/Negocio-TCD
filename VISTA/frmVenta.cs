@@ -72,6 +72,17 @@ namespace VISTA
         {
             dgvPRODUCTOS.DataSource = null;
             dgvPRODUCTOS.DataSource = oVENTA.itemsv.ToList();
+
+            dgvPRODUCTOS.Columns["venta"].Visible = false;
+            dgvPRODUCTOS.Columns["codigoItem"].Visible = false;
+            dgvPRODUCTOS.Columns["producto"].DisplayIndex = 0;
+            dgvPRODUCTOS.Columns["producto"].HeaderText = "Producto";
+            dgvPRODUCTOS.Columns["cantidad"].DisplayIndex = 1;
+            dgvPRODUCTOS.Columns["cantidad"].HeaderText = "Cantidad";
+            dgvPRODUCTOS.Columns["precioUnitarioVenta"].DisplayIndex = 2;
+            dgvPRODUCTOS.Columns["precioUnitarioVenta"].HeaderText = "PrecioUnitario";
+            dgvPRODUCTOS.Columns["subtotal"].DisplayIndex = 3;
+            dgvPRODUCTOS.Columns["subtotal"].HeaderText = "Subtotal";
         }
         public void armar_grilla_pagos()
         {

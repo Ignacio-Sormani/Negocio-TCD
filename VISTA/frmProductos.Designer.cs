@@ -43,10 +43,10 @@
             // 
             // btnSELECCIONAR
             // 
-            this.btnSELECCIONAR.Location = new System.Drawing.Point(311, 442);
-            this.btnSELECCIONAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSELECCIONAR.Location = new System.Drawing.Point(231, 413);
+            this.btnSELECCIONAR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSELECCIONAR.Name = "btnSELECCIONAR";
-            this.btnSELECCIONAR.Size = new System.Drawing.Size(259, 43);
+            this.btnSELECCIONAR.Size = new System.Drawing.Size(194, 35);
             this.btnSELECCIONAR.TabIndex = 33;
             this.btnSELECCIONAR.Text = "Seleccionar";
             this.btnSELECCIONAR.UseVisualStyleBackColor = true;
@@ -54,19 +54,19 @@
             // 
             // lblPRODUCTO
             // 
-            this.lblPRODUCTO.AutoSize = true;
-            this.lblPRODUCTO.Location = new System.Drawing.Point(14, 25);
+            this.lblPRODUCTO.Location = new System.Drawing.Point(26, 20);
+            this.lblPRODUCTO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPRODUCTO.Name = "lblPRODUCTO";
-            this.lblPRODUCTO.Size = new System.Drawing.Size(69, 17);
+            this.lblPRODUCTO.Size = new System.Drawing.Size(101, 52);
             this.lblPRODUCTO.TabIndex = 32;
-            this.lblPRODUCTO.Text = "Producto:";
+            this.lblPRODUCTO.Text = "Codigo , nombre y estado de producto, marca y categoria:";
             // 
             // btnCONSULTAR
             // 
-            this.btnCONSULTAR.Location = new System.Drawing.Point(311, 393);
-            this.btnCONSULTAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCONSULTAR.Location = new System.Drawing.Point(231, 373);
+            this.btnCONSULTAR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCONSULTAR.Name = "btnCONSULTAR";
-            this.btnCONSULTAR.Size = new System.Drawing.Size(259, 43);
+            this.btnCONSULTAR.Size = new System.Drawing.Size(194, 35);
             this.btnCONSULTAR.TabIndex = 31;
             this.btnCONSULTAR.Text = "Consultar";
             this.btnCONSULTAR.UseVisualStyleBackColor = true;
@@ -74,10 +74,10 @@
             // 
             // btnBUSCAR
             // 
-            this.btnBUSCAR.Location = new System.Drawing.Point(396, 11);
-            this.btnBUSCAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBUSCAR.Location = new System.Drawing.Point(329, 20);
+            this.btnBUSCAR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBUSCAR.Name = "btnBUSCAR";
-            this.btnBUSCAR.Size = new System.Drawing.Size(173, 25);
+            this.btnBUSCAR.Size = new System.Drawing.Size(94, 20);
             this.btnBUSCAR.TabIndex = 30;
             this.btnBUSCAR.Text = "Buscar";
             this.btnBUSCAR.UseVisualStyleBackColor = true;
@@ -85,10 +85,10 @@
             // 
             // btnSALIR
             // 
-            this.btnSALIR.Location = new System.Drawing.Point(311, 491);
-            this.btnSALIR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSALIR.Location = new System.Drawing.Point(231, 453);
+            this.btnSALIR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSALIR.Name = "btnSALIR";
-            this.btnSALIR.Size = new System.Drawing.Size(259, 43);
+            this.btnSALIR.Size = new System.Drawing.Size(194, 35);
             this.btnSALIR.TabIndex = 28;
             this.btnSALIR.Text = "Salir";
             this.btnSALIR.UseVisualStyleBackColor = true;
@@ -96,18 +96,18 @@
             // 
             // txtBUSCAR
             // 
-            this.txtBUSCAR.Location = new System.Drawing.Point(89, 25);
-            this.txtBUSCAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBUSCAR.Location = new System.Drawing.Point(168, 37);
+            this.txtBUSCAR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBUSCAR.Name = "txtBUSCAR";
-            this.txtBUSCAR.Size = new System.Drawing.Size(301, 22);
+            this.txtBUSCAR.Size = new System.Drawing.Size(157, 20);
             this.txtBUSCAR.TabIndex = 29;
             // 
             // btnMODIFICAR
             // 
-            this.btnMODIFICAR.Location = new System.Drawing.Point(17, 442);
-            this.btnMODIFICAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMODIFICAR.Location = new System.Drawing.Point(11, 413);
+            this.btnMODIFICAR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMODIFICAR.Name = "btnMODIFICAR";
-            this.btnMODIFICAR.Size = new System.Drawing.Size(259, 43);
+            this.btnMODIFICAR.Size = new System.Drawing.Size(194, 35);
             this.btnMODIFICAR.TabIndex = 27;
             this.btnMODIFICAR.Text = "Modificar";
             this.btnMODIFICAR.UseVisualStyleBackColor = true;
@@ -115,10 +115,10 @@
             // 
             // btnAGREGAR
             // 
-            this.btnAGREGAR.Location = new System.Drawing.Point(17, 393);
-            this.btnAGREGAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAGREGAR.Location = new System.Drawing.Point(11, 373);
+            this.btnAGREGAR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAGREGAR.Name = "btnAGREGAR";
-            this.btnAGREGAR.Size = new System.Drawing.Size(259, 43);
+            this.btnAGREGAR.Size = new System.Drawing.Size(194, 35);
             this.btnAGREGAR.TabIndex = 26;
             this.btnAGREGAR.Text = "Agregar";
             this.btnAGREGAR.UseVisualStyleBackColor = true;
@@ -127,19 +127,19 @@
             // dgvPRODUCTOS
             // 
             this.dgvPRODUCTOS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPRODUCTOS.Location = new System.Drawing.Point(17, 69);
-            this.dgvPRODUCTOS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvPRODUCTOS.Location = new System.Drawing.Point(11, 110);
+            this.dgvPRODUCTOS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvPRODUCTOS.Name = "dgvPRODUCTOS";
             this.dgvPRODUCTOS.RowTemplate.Height = 24;
-            this.dgvPRODUCTOS.Size = new System.Drawing.Size(552, 317);
+            this.dgvPRODUCTOS.Size = new System.Drawing.Size(414, 258);
             this.dgvPRODUCTOS.TabIndex = 25;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(396, 40);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(329, 52);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 25);
+            this.button1.Size = new System.Drawing.Size(96, 20);
             this.button1.TabIndex = 34;
             this.button1.Text = "Ver Todos";
             this.button1.UseVisualStyleBackColor = true;
@@ -147,9 +147,9 @@
             // 
             // frmProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 545);
+            this.ClientSize = new System.Drawing.Size(440, 506);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSELECCIONAR);
             this.Controls.Add(this.lblPRODUCTO);
@@ -160,7 +160,6 @@
             this.Controls.Add(this.btnMODIFICAR);
             this.Controls.Add(this.btnAGREGAR);
             this.Controls.Add(this.dgvPRODUCTOS);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmProductos";
             this.Text = "frmProductos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPRODUCTOS)).EndInit();

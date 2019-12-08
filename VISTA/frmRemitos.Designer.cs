@@ -28,34 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtPROVEEDOR = new System.Windows.Forms.TextBox();
-            this.lblPROVEEDOR = new System.Windows.Forms.Label();
+            this.txtREMITO = new System.Windows.Forms.TextBox();
+            this.lblREMITO = new System.Windows.Forms.Label();
             this.btnTODAS = new System.Windows.Forms.Button();
             this.btnBUSCAR = new System.Windows.Forms.Button();
             this.btnCONSULTAR = new System.Windows.Forms.Button();
             this.btnSALIR = new System.Windows.Forms.Button();
             this.btnAGREGAR = new System.Windows.Forms.Button();
             this.dgvREMITOS = new System.Windows.Forms.DataGridView();
-            this.txtORDEN = new System.Windows.Forms.TextBox();
-            this.lblORDEN = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvREMITOS)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtPROVEEDOR
+            // txtREMITO
             // 
-            this.txtPROVEEDOR.Location = new System.Drawing.Point(195, 18);
-            this.txtPROVEEDOR.Name = "txtPROVEEDOR";
-            this.txtPROVEEDOR.Size = new System.Drawing.Size(200, 20);
-            this.txtPROVEEDOR.TabIndex = 87;
+            this.txtREMITO.Location = new System.Drawing.Point(316, 21);
+            this.txtREMITO.Name = "txtREMITO";
+            this.txtREMITO.Size = new System.Drawing.Size(200, 20);
+            this.txtREMITO.TabIndex = 87;
             // 
-            // lblPROVEEDOR
+            // lblREMITO
             // 
-            this.lblPROVEEDOR.AutoSize = true;
-            this.lblPROVEEDOR.Location = new System.Drawing.Point(44, 21);
-            this.lblPROVEEDOR.Name = "lblPROVEEDOR";
-            this.lblPROVEEDOR.Size = new System.Drawing.Size(99, 13);
-            this.lblPROVEEDOR.TabIndex = 86;
-            this.lblPROVEEDOR.Text = "Nombre Proveedor:";
+            this.lblREMITO.AutoSize = true;
+            this.lblREMITO.Location = new System.Drawing.Point(44, 21);
+            this.lblREMITO.Name = "lblREMITO";
+            this.lblREMITO.Size = new System.Drawing.Size(232, 13);
+            this.lblREMITO.TabIndex = 86;
+            this.lblREMITO.Text = "Codigo de orden, codigo de remito o proveedor:";
             // 
             // btnTODAS
             // 
@@ -122,31 +120,13 @@
             this.dgvREMITOS.Size = new System.Drawing.Size(662, 278);
             this.dgvREMITOS.TabIndex = 80;
             // 
-            // txtORDEN
-            // 
-            this.txtORDEN.Location = new System.Drawing.Point(195, 44);
-            this.txtORDEN.Name = "txtORDEN";
-            this.txtORDEN.Size = new System.Drawing.Size(200, 20);
-            this.txtORDEN.TabIndex = 89;
-            // 
-            // lblORDEN
-            // 
-            this.lblORDEN.AutoSize = true;
-            this.lblORDEN.Location = new System.Drawing.Point(44, 47);
-            this.lblORDEN.Name = "lblORDEN";
-            this.lblORDEN.Size = new System.Drawing.Size(133, 13);
-            this.lblORDEN.TabIndex = 88;
-            this.lblORDEN.Text = "Numero Orden de Compra:";
-            // 
             // frmRemitos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 429);
-            this.Controls.Add(this.txtORDEN);
-            this.Controls.Add(this.lblORDEN);
-            this.Controls.Add(this.txtPROVEEDOR);
-            this.Controls.Add(this.lblPROVEEDOR);
+            this.Controls.Add(this.txtREMITO);
+            this.Controls.Add(this.lblREMITO);
             this.Controls.Add(this.btnTODAS);
             this.Controls.Add(this.btnBUSCAR);
             this.Controls.Add(this.btnCONSULTAR);
@@ -163,15 +143,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtPROVEEDOR;
-        private System.Windows.Forms.Label lblPROVEEDOR;
+        private System.Windows.Forms.TextBox txtREMITO;
+        private System.Windows.Forms.Label lblREMITO;
         private System.Windows.Forms.Button btnTODAS;
         private System.Windows.Forms.Button btnBUSCAR;
         private System.Windows.Forms.Button btnCONSULTAR;
         private System.Windows.Forms.Button btnSALIR;
         private System.Windows.Forms.Button btnAGREGAR;
         private System.Windows.Forms.DataGridView dgvREMITOS;
-        private System.Windows.Forms.TextBox txtORDEN;
-        private System.Windows.Forms.Label lblORDEN;
     }
 }

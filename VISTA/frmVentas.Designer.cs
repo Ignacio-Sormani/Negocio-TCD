@@ -34,8 +34,8 @@
             this.dgvVENTAS = new System.Windows.Forms.DataGridView();
             this.btnTODAS = new System.Windows.Forms.Button();
             this.btnBUSCAR = new System.Windows.Forms.Button();
-            this.lblCLIENTE = new System.Windows.Forms.Label();
-            this.txtCLIENTE = new System.Windows.Forms.TextBox();
+            this.lblVENTA = new System.Windows.Forms.Label();
+            this.txtVENTA = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVENTAS)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,29 +104,29 @@
             this.btnBUSCAR.UseVisualStyleBackColor = true;
             this.btnBUSCAR.Click += new System.EventHandler(this.btnBUSCAR_Click);
             // 
-            // lblCLIENTE
+            // lblVENTA
             // 
-            this.lblCLIENTE.AutoSize = true;
-            this.lblCLIENTE.Location = new System.Drawing.Point(44, 18);
-            this.lblCLIENTE.Name = "lblCLIENTE";
-            this.lblCLIENTE.Size = new System.Drawing.Size(82, 13);
-            this.lblCLIENTE.TabIndex = 68;
-            this.lblCLIENTE.Text = "Nombre Cliente:";
+            this.lblVENTA.AutoSize = true;
+            this.lblVENTA.Location = new System.Drawing.Point(44, 18);
+            this.lblVENTA.Name = "lblVENTA";
+            this.lblVENTA.Size = new System.Drawing.Size(170, 13);
+            this.lblVENTA.TabIndex = 68;
+            this.lblVENTA.Text = "Nombre cliente o codigo de venta:";
             // 
-            // txtCLIENTE
+            // txtVENTA
             // 
-            this.txtCLIENTE.Location = new System.Drawing.Point(152, 15);
-            this.txtCLIENTE.Name = "txtCLIENTE";
-            this.txtCLIENTE.Size = new System.Drawing.Size(200, 20);
-            this.txtCLIENTE.TabIndex = 71;
+            this.txtVENTA.Location = new System.Drawing.Point(324, 18);
+            this.txtVENTA.Name = "txtVENTA";
+            this.txtVENTA.Size = new System.Drawing.Size(200, 20);
+            this.txtVENTA.TabIndex = 71;
             // 
             // frmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 429);
-            this.Controls.Add(this.txtCLIENTE);
-            this.Controls.Add(this.lblCLIENTE);
+            this.Controls.Add(this.txtVENTA);
+            this.Controls.Add(this.lblVENTA);
             this.Controls.Add(this.btnTODAS);
             this.Controls.Add(this.btnBUSCAR);
             this.Controls.Add(this.btnCONSULTAR);
@@ -148,7 +148,7 @@
         private System.Windows.Forms.DataGridView dgvVENTAS;
         private System.Windows.Forms.Button btnTODAS;
         private System.Windows.Forms.Button btnBUSCAR;
-        private System.Windows.Forms.Label lblCLIENTE;
-        private System.Windows.Forms.TextBox txtCLIENTE;
+        private System.Windows.Forms.Label lblVENTA;
+        private System.Windows.Forms.TextBox txtVENTA;
     }
 }

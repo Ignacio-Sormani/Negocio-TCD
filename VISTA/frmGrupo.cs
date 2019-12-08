@@ -85,8 +85,12 @@ namespace VISTA
                 ckbACTIVO.Enabled = false;
                 btnCANCELAR.Text = "Cerrar";
                 btnGUARDAR.Visible = false;
-                clbUSUARIOS.Enabled = false;
                 tvACCIONES.Enabled = false;
+                if (ACCION =="C")
+                {
+
+                    clbUSUARIOS.Enabled = false;
+                }
             }
         }
 

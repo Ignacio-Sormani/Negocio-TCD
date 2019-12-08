@@ -39,17 +39,20 @@ namespace CONTROLADORA
             return oNegocio.USUARIOS.Find(codigo);
         }
 
-        public System.Collections.IEnumerable obtener_usuarios(string nombre)
+        public System.Collections.IEnumerable obtener_usuarios(string valor)
         {
             var usuarios = from usuario in oNegocio.USUARIOS.Include("grupos").ToList()
-                           where usuario.nombreDeUsuario.ToLower().Contains(nombre.ToLower())
+                           where usuario.codigoUsuario.ToString().Contains(valor) || usuario.nombreApellido.ToLower().Contains(valor) || 
+                           usuario.nombreDeUsuario.ToLower().Contains(valor) || usuario.grupos.Count(_ => _.nombre.Contains(valor)) > 0 || 
+                           usuario.estadoActivo.ToString().ToLower().Contains(valor)
                            select new
                            {
                                Codigo = usuario.codigoUsuario,
                                Usuario = usuario.nombreDeUsuario,
-                               Nombre = usuario.nombreApellido,
+                               NombreCompleto = usuario.nombreApellido,
                                Mail = usuario.mail,
-                               Activo = (usuario.estadoActivo ? "Activo" : "Inactivo")
+                               Activo = (usuario.estadoActivo ? "Activo" : "Inactivo"),
+                               Grupos = usuario.grupos.Count()
                            };
             return usuarios.ToList();
         }

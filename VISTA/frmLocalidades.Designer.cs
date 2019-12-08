@@ -58,9 +58,9 @@
             this.lblLOCALIDAD.Location = new System.Drawing.Point(13, 11);
             this.lblLOCALIDAD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLOCALIDAD.Name = "lblLOCALIDAD";
-            this.lblLOCALIDAD.Size = new System.Drawing.Size(56, 13);
+            this.lblLOCALIDAD.Size = new System.Drawing.Size(85, 13);
             this.lblLOCALIDAD.TabIndex = 23;
-            this.lblLOCALIDAD.Text = "Localidad:";
+            this.lblLOCALIDAD.Text = "Localidad o  CP:";
             // 
             // btnCONSULTAR
             // 
@@ -75,10 +75,10 @@
             // 
             // btnBUSCAR
             // 
-            this.btnBUSCAR.Location = new System.Drawing.Point(244, 11);
+            this.btnBUSCAR.Location = new System.Drawing.Point(274, 12);
             this.btnBUSCAR.Margin = new System.Windows.Forms.Padding(2);
             this.btnBUSCAR.Name = "btnBUSCAR";
-            this.btnBUSCAR.Size = new System.Drawing.Size(94, 20);
+            this.btnBUSCAR.Size = new System.Drawing.Size(83, 20);
             this.btnBUSCAR.TabIndex = 21;
             this.btnBUSCAR.Text = "Buscar";
             this.btnBUSCAR.UseVisualStyleBackColor = true;
@@ -97,7 +97,7 @@
             // 
             // txtBUSCAR
             // 
-            this.txtBUSCAR.Location = new System.Drawing.Point(72, 11);
+            this.txtBUSCAR.Location = new System.Drawing.Point(102, 12);
             this.txtBUSCAR.Margin = new System.Windows.Forms.Padding(2);
             this.txtBUSCAR.Name = "txtBUSCAR";
             this.txtBUSCAR.Size = new System.Drawing.Size(168, 20);
@@ -137,10 +137,10 @@
             // 
             // btnTODOS
             // 
-            this.btnTODOS.Location = new System.Drawing.Point(342, 11);
+            this.btnTODOS.Location = new System.Drawing.Point(361, 11);
             this.btnTODOS.Margin = new System.Windows.Forms.Padding(2);
             this.btnTODOS.Name = "btnTODOS";
-            this.btnTODOS.Size = new System.Drawing.Size(85, 21);
+            this.btnTODOS.Size = new System.Drawing.Size(66, 21);
             this.btnTODOS.TabIndex = 35;
             this.btnTODOS.Text = "Ver todos";
             this.btnTODOS.UseVisualStyleBackColor = true;

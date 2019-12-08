@@ -39,12 +39,20 @@ namespace CONTROLADORA
         {
             return oNegocio.PROVEEDORES.Find(codigo);
         }
-        //aca hice el mismo cambio en la forma de buscar que en clientes
-        public System.Collections.IEnumerable obtener_proveedores(string valor="") //Int32 numero, Int32 cuit, string razon
+
+        public System.Collections.IEnumerable obtener_proveedores(string valor)
         {
             var proveedores = from proveedor in oNegocio.PROVEEDORES.Include("localidad").ToList()
                            where proveedor.codigoProveedor.ToString().Contains(valor) || proveedor.cuit.ToString().Contains(valor) || proveedor.razonSocial.ToLower().Contains(valor.ToLower())
-                           select new {Codigo = proveedor.codigoProveedor, CUIT = proveedor.cuit, RazonSocial = proveedor.razonSocial, Direccion = (proveedor.direccion + ", " + proveedor.localidad), Telefono = proveedor.telefono, Mail = proveedor.mail };
+                           select new
+                           {
+                               Codigo = proveedor.codigoProveedor,
+                               CUIT = proveedor.cuit,
+                               RazonSocial = proveedor.razonSocial,
+                               Direccion = (proveedor.direccion + ", " + proveedor.localidad),
+                               Telefono = proveedor.telefono,
+                               Mail = proveedor.mail
+                           };
             return proveedores.ToList();
         }
     }

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtPROVEEDOR = new System.Windows.Forms.TextBox();
-            this.lblPROVEEDOR = new System.Windows.Forms.Label();
+            this.txtORDEN = new System.Windows.Forms.TextBox();
+            this.lblORDEN = new System.Windows.Forms.Label();
             this.btnTODAS = new System.Windows.Forms.Button();
             this.btnBUSCAR = new System.Windows.Forms.Button();
             this.btnCONSULTAR = new System.Windows.Forms.Button();
@@ -40,21 +40,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvORDENES)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtPROVEEDOR
+            // txtORDEN
             // 
-            this.txtPROVEEDOR.Location = new System.Drawing.Point(152, 18);
-            this.txtPROVEEDOR.Name = "txtPROVEEDOR";
-            this.txtPROVEEDOR.Size = new System.Drawing.Size(200, 20);
-            this.txtPROVEEDOR.TabIndex = 79;
+            this.txtORDEN.Location = new System.Drawing.Point(272, 21);
+            this.txtORDEN.Name = "txtORDEN";
+            this.txtORDEN.Size = new System.Drawing.Size(200, 20);
+            this.txtORDEN.TabIndex = 79;
             // 
-            // lblPROVEEDOR
+            // lblORDEN
             // 
-            this.lblPROVEEDOR.AutoSize = true;
-            this.lblPROVEEDOR.Location = new System.Drawing.Point(44, 21);
-            this.lblPROVEEDOR.Name = "lblPROVEEDOR";
-            this.lblPROVEEDOR.Size = new System.Drawing.Size(99, 13);
-            this.lblPROVEEDOR.TabIndex = 78;
-            this.lblPROVEEDOR.Text = "Nombre Proveedor:";
+            this.lblORDEN.Location = new System.Drawing.Point(44, 21);
+            this.lblORDEN.Name = "lblORDEN";
+            this.lblORDEN.Size = new System.Drawing.Size(222, 36);
+            this.lblORDEN.TabIndex = 78;
+            this.lblORDEN.Text = "Codigo de orden de compra,  nombre o codigo de proveedor o estado de la orden:";
             // 
             // btnTODAS
             // 
@@ -138,8 +137,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 429);
             this.Controls.Add(this.btnSELECCIONAR);
-            this.Controls.Add(this.txtPROVEEDOR);
-            this.Controls.Add(this.lblPROVEEDOR);
+            this.Controls.Add(this.txtORDEN);
+            this.Controls.Add(this.lblORDEN);
             this.Controls.Add(this.btnTODAS);
             this.Controls.Add(this.btnBUSCAR);
             this.Controls.Add(this.btnCONSULTAR);
@@ -156,8 +155,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtPROVEEDOR;
-        private System.Windows.Forms.Label lblPROVEEDOR;
+        private System.Windows.Forms.TextBox txtORDEN;
+        private System.Windows.Forms.Label lblORDEN;
         private System.Windows.Forms.Button btnTODAS;
         private System.Windows.Forms.Button btnBUSCAR;
         private System.Windows.Forms.Button btnCONSULTAR;

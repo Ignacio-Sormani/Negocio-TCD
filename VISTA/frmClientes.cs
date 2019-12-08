@@ -110,5 +110,10 @@ namespace VISTA
             txtBUSCAR.Text = "";
             armarGrilla();
         }
+
+        private void frmClientes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

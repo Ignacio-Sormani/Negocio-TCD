@@ -37,14 +37,14 @@
             // 
             // txtMAIL
             // 
-            this.txtMAIL.Location = new System.Drawing.Point(100, 100);
+            this.txtMAIL.Location = new System.Drawing.Point(95, 63);
             this.txtMAIL.Name = "txtMAIL";
             this.txtMAIL.Size = new System.Drawing.Size(240, 20);
             this.txtMAIL.TabIndex = 29;
             // 
             // btnVOLVER
             // 
-            this.btnVOLVER.Location = new System.Drawing.Point(207, 205);
+            this.btnVOLVER.Location = new System.Drawing.Point(206, 109);
             this.btnVOLVER.Margin = new System.Windows.Forms.Padding(2);
             this.btnVOLVER.Name = "btnVOLVER";
             this.btnVOLVER.Size = new System.Drawing.Size(150, 30);
@@ -55,7 +55,7 @@
             // 
             // btnRESETEARCLAVE
             // 
-            this.btnRESETEARCLAVE.Location = new System.Drawing.Point(27, 205);
+            this.btnRESETEARCLAVE.Location = new System.Drawing.Point(26, 109);
             this.btnRESETEARCLAVE.Margin = new System.Windows.Forms.Padding(2);
             this.btnRESETEARCLAVE.Name = "btnRESETEARCLAVE";
             this.btnRESETEARCLAVE.Size = new System.Drawing.Size(150, 30);
@@ -67,7 +67,7 @@
             // lblMAIL
             // 
             this.lblMAIL.AutoSize = true;
-            this.lblMAIL.Location = new System.Drawing.Point(40, 100);
+            this.lblMAIL.Location = new System.Drawing.Point(35, 63);
             this.lblMAIL.Name = "lblMAIL";
             this.lblMAIL.Size = new System.Drawing.Size(29, 13);
             this.lblMAIL.TabIndex = 24;
@@ -90,7 +90,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 261);
+            this.ClientSize = new System.Drawing.Size(384, 165);
             this.Controls.Add(this.txtMAIL);
             this.Controls.Add(this.btnVOLVER);
             this.Controls.Add(this.btnRESETEARCLAVE);

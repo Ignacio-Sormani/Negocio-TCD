@@ -43,17 +43,16 @@
             // 
             // lblUSUARIO
             // 
-            this.lblUSUARIO.AutoSize = true;
-            this.lblUSUARIO.Location = new System.Drawing.Point(14, 11);
+            this.lblUSUARIO.Location = new System.Drawing.Point(27, 15);
             this.lblUSUARIO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUSUARIO.Name = "lblUSUARIO";
-            this.lblUSUARIO.Size = new System.Drawing.Size(46, 13);
+            this.lblUSUARIO.Size = new System.Drawing.Size(115, 40);
             this.lblUSUARIO.TabIndex = 41;
-            this.lblUSUARIO.Text = "Usuario:";
+            this.lblUSUARIO.Text = "Codigo, nombre, y estado del usuario o nombre de grupo:";
             // 
             // btnCONSULTAR
             // 
-            this.btnCONSULTAR.Location = new System.Drawing.Point(233, 320);
+            this.btnCONSULTAR.Location = new System.Drawing.Point(237, 360);
             this.btnCONSULTAR.Margin = new System.Windows.Forms.Padding(2);
             this.btnCONSULTAR.Name = "btnCONSULTAR";
             this.btnCONSULTAR.Size = new System.Drawing.Size(194, 35);
@@ -64,10 +63,10 @@
             // 
             // btnBUSCAR
             // 
-            this.btnBUSCAR.Location = new System.Drawing.Point(246, 11);
+            this.btnBUSCAR.Location = new System.Drawing.Point(331, 35);
             this.btnBUSCAR.Margin = new System.Windows.Forms.Padding(2);
             this.btnBUSCAR.Name = "btnBUSCAR";
-            this.btnBUSCAR.Size = new System.Drawing.Size(82, 20);
+            this.btnBUSCAR.Size = new System.Drawing.Size(96, 20);
             this.btnBUSCAR.TabIndex = 39;
             this.btnBUSCAR.Text = "Buscar";
             this.btnBUSCAR.UseVisualStyleBackColor = true;
@@ -75,7 +74,7 @@
             // 
             // btnSALIR
             // 
-            this.btnSALIR.Location = new System.Drawing.Point(233, 400);
+            this.btnSALIR.Location = new System.Drawing.Point(237, 440);
             this.btnSALIR.Margin = new System.Windows.Forms.Padding(2);
             this.btnSALIR.Name = "btnSALIR";
             this.btnSALIR.Size = new System.Drawing.Size(194, 35);
@@ -86,7 +85,7 @@
             // 
             // txtBUSCAR
             // 
-            this.txtBUSCAR.Location = new System.Drawing.Point(73, 11);
+            this.txtBUSCAR.Location = new System.Drawing.Point(159, 22);
             this.txtBUSCAR.Margin = new System.Windows.Forms.Padding(2);
             this.txtBUSCAR.Name = "txtBUSCAR";
             this.txtBUSCAR.Size = new System.Drawing.Size(168, 20);
@@ -94,7 +93,7 @@
             // 
             // btnMODIFICAR
             // 
-            this.btnMODIFICAR.Location = new System.Drawing.Point(13, 360);
+            this.btnMODIFICAR.Location = new System.Drawing.Point(17, 400);
             this.btnMODIFICAR.Margin = new System.Windows.Forms.Padding(2);
             this.btnMODIFICAR.Name = "btnMODIFICAR";
             this.btnMODIFICAR.Size = new System.Drawing.Size(194, 35);
@@ -105,7 +104,7 @@
             // 
             // btnAGREGAR
             // 
-            this.btnAGREGAR.Location = new System.Drawing.Point(13, 320);
+            this.btnAGREGAR.Location = new System.Drawing.Point(17, 360);
             this.btnAGREGAR.Margin = new System.Windows.Forms.Padding(2);
             this.btnAGREGAR.Name = "btnAGREGAR";
             this.btnAGREGAR.Size = new System.Drawing.Size(194, 35);
@@ -117,7 +116,7 @@
             // dgvUSUARIOS
             // 
             this.dgvUSUARIOS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUSUARIOS.Location = new System.Drawing.Point(13, 37);
+            this.dgvUSUARIOS.Location = new System.Drawing.Point(17, 77);
             this.dgvUSUARIOS.Margin = new System.Windows.Forms.Padding(2);
             this.dgvUSUARIOS.Name = "dgvUSUARIOS";
             this.dgvUSUARIOS.RowTemplate.Height = 24;
@@ -126,7 +125,7 @@
             // 
             // btnCAMBIARESTADO
             // 
-            this.btnCAMBIARESTADO.Location = new System.Drawing.Point(233, 360);
+            this.btnCAMBIARESTADO.Location = new System.Drawing.Point(237, 400);
             this.btnCAMBIARESTADO.Margin = new System.Windows.Forms.Padding(2);
             this.btnCAMBIARESTADO.Name = "btnCAMBIARESTADO";
             this.btnCAMBIARESTADO.Size = new System.Drawing.Size(194, 35);
@@ -150,7 +149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 445);
+            this.ClientSize = new System.Drawing.Size(440, 558);
             this.Controls.Add(this.btnTODAS);
             this.Controls.Add(this.btnCAMBIARESTADO);
             this.Controls.Add(this.lblUSUARIO);

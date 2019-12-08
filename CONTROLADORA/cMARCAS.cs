@@ -38,11 +38,11 @@ namespace CONTROLADORA
             return oNegocio.MARCAS.Find(codigo);
         }
 
-        public System.Collections.IEnumerable obtener_marcas(string nombreMarca)
+        public System.Collections.IEnumerable obtener_marcas(string valor)
         {
             var marcas = from marca in oNegocio.MARCAS.ToList()
-                         where marca.marca.ToLower().Contains(nombreMarca.ToLower()) 
-                         select marca;
+                         where marca.codigoMarca.ToString().Contains(valor) || marca.marca.ToLower().Contains(valor.ToLower())
+                         select new { Codigo = marca.codigoMarca, Marca = marca.marca };
             return marcas.ToList();
         }
 

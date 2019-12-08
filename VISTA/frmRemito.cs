@@ -91,6 +91,17 @@ namespace VISTA
         {
             dgvPRODUCTOS.DataSource = null;
             dgvPRODUCTOS.DataSource = oREMITO.itemsrc.ToList();
+
+            dgvPRODUCTOS.Columns["remitoCompra"].Visible = false;
+            dgvPRODUCTOS.Columns["codigoItem"].Visible = false;
+            dgvPRODUCTOS.Columns["producto"].DisplayIndex = 0;
+            dgvPRODUCTOS.Columns["producto"].HeaderText = "Producto";
+            dgvPRODUCTOS.Columns["cantidad"].DisplayIndex = 1;
+            dgvPRODUCTOS.Columns["cantidad"].HeaderText = "Cantidad";
+            dgvPRODUCTOS.Columns["precioUnitarioCompra"].DisplayIndex = 2;
+            dgvPRODUCTOS.Columns["precioUnitarioCompra"].HeaderText = "PrecioUnitario";
+            dgvPRODUCTOS.Columns["subtotal"].DisplayIndex = 3;
+            dgvPRODUCTOS.Columns["subtotal"].HeaderText = "Subtotal";
         }
 
         public void calular_total_productos()
