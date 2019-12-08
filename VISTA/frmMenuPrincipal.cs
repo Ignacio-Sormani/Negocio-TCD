@@ -180,7 +180,7 @@ namespace VISTA
         {
             if (cUSUARIOS.cantidad_usuarios_conectados() == 1)
             {
-                //CONTROLADORA.FUNCIONES.generar_backup(); falta arreglar el metodo
+                CONTROLADORA.FUNCIONES.generar_backup();
             }
             oAcceso.fechaLogout = System.DateTime.Now;
             cACCESOS.modificar_acceso(oAcceso);

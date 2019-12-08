@@ -40,13 +40,13 @@ namespace VISTA
             ofd.ShowReadOnly = true;
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                if (CONTROLADORA.FUNCIONES.recuperar_backup(ofd.FileName))
+                if (!CONTROLADORA.FUNCIONES.recuperar_backup(ofd.FileName))
                 {
-                    MessageBox.Show("OK");
+                    MessageBox.Show("Se produjo un error y no se pudo recuperar el sistema!");
                 }
                 else
                 {
-                    MessageBox.Show("NOK");
+                    MessageBox.Show("Se recupero exitosamente el sistema!");
                 }
             }
         }
