@@ -289,6 +289,10 @@ namespace VISTA
             frmBackup.ShowDialog();
         }
 
-        
+        private void loginsDelSistemaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAuditoriaLogins frmAuditoriaLogins = new frmAuditoriaLogins();
+            frmAuditoriaLogins.ShowDialog();
+        }
     }
 }

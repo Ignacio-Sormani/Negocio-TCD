@@ -50,6 +50,7 @@
             this.gestionarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionarGruposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionarBackupsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loginsDelSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panDATOSUSUARIO = new System.Windows.Forms.Panel();
             this.label = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -216,7 +217,8 @@
             this.seguridadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionarUsuariosToolStripMenuItem,
             this.gestionarGruposToolStripMenuItem,
-            this.gestionarBackupsToolStripMenuItem});
+            this.gestionarBackupsToolStripMenuItem,
+            this.loginsDelSistemaToolStripMenuItem});
             this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
             this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
             this.seguridadToolStripMenuItem.Text = "Seguridad";
@@ -224,23 +226,30 @@
             // gestionarUsuariosToolStripMenuItem
             // 
             this.gestionarUsuariosToolStripMenuItem.Name = "gestionarUsuariosToolStripMenuItem";
-            this.gestionarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
+            this.gestionarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
             this.gestionarUsuariosToolStripMenuItem.Text = "Gestionar Usuarios";
             this.gestionarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.gestionarUsuariosToolStripMenuItem_Click);
             // 
             // gestionarGruposToolStripMenuItem
             // 
             this.gestionarGruposToolStripMenuItem.Name = "gestionarGruposToolStripMenuItem";
-            this.gestionarGruposToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
+            this.gestionarGruposToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
             this.gestionarGruposToolStripMenuItem.Text = "Gestionar Grupos";
             this.gestionarGruposToolStripMenuItem.Click += new System.EventHandler(this.gestionarGruposToolStripMenuItem_Click);
             // 
             // gestionarBackupsToolStripMenuItem
             // 
             this.gestionarBackupsToolStripMenuItem.Name = "gestionarBackupsToolStripMenuItem";
-            this.gestionarBackupsToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
+            this.gestionarBackupsToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
             this.gestionarBackupsToolStripMenuItem.Text = "Gestionar Backups";
             this.gestionarBackupsToolStripMenuItem.Click += new System.EventHandler(this.gestionarBackupsToolStripMenuItem_Click);
+            // 
+            // loginsDelSistemaToolStripMenuItem
+            // 
+            this.loginsDelSistemaToolStripMenuItem.Name = "loginsDelSistemaToolStripMenuItem";
+            this.loginsDelSistemaToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
+            this.loginsDelSistemaToolStripMenuItem.Text = "Logins del Sistema";
+            this.loginsDelSistemaToolStripMenuItem.Click += new System.EventHandler(this.loginsDelSistemaToolStripMenuItem_Click);
             // 
             // panDATOSUSUARIO
             // 
@@ -495,6 +504,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ToolStripMenuItem loginsDelSistemaToolStripMenuItem;
     }
 }
 

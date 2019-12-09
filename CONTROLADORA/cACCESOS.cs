@@ -33,5 +33,18 @@ namespace CONTROLADORA
             oNegocio.SaveChanges();
         }
 
+        public System.Collections.IEnumerable obtener_accesos(string valor)
+        {
+            var accesos = from acceso in oNegocio.ACCESOS.Include("usuario").ToList()
+                          where acceso.usuario.ToString().Contains(valor)
+                          select new
+                          {
+                              Usuario = acceso.usuario,
+                              FechaLogin = acceso.fechaLogin,
+                              FechaLogout = acceso.fechaLogout
+                          };
+            return accesos.ToList();
+        }
+
     }
 }
