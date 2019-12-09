@@ -231,3 +231,4 @@ C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\VISTA\obj\Debug\VIS
 C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmPagos.resources
 C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\VISTA\obj\Debug\VISTA.frmPagos.resources
 C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\VISTA\obj\Debug\VISTA.frmAuditoriaLogins.resources
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmAuditoriaLogin.resources

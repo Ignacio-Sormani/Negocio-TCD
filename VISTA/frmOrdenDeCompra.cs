@@ -34,9 +34,9 @@ namespace VISTA
             pPRODUCTO.Enabled = false;
             txtTOTALPRODUCTOS.Enabled = false;
             dtpFECHAPEDIDO.Format = DateTimePickerFormat.Custom;
-            dtpFECHAPEDIDO.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+            dtpFECHAPEDIDO.CustomFormat = "MM/dd/yyyy";
             dtpFECHAENTREGA.Format = DateTimePickerFormat.Custom;
-            dtpFECHAENTREGA.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+            dtpFECHAENTREGA.CustomFormat = "MM/dd/yyyy";
             if (ACCION == "C")
             {
                 pPRODUCTO.Visible = false;

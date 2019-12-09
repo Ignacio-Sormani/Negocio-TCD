@@ -42,17 +42,17 @@ namespace VISTA
             if (cACCIONES.verificar_usuarios() == 0)
             {
                 MODELO.USUARIO oUsuario = new MODELO.USUARIO();
-                oUsuario.nombreDeUsuario = "Superusuario";
-                oUsuario.nombreApellido = "Superusuario Inicial";
+                oUsuario.nombreDeUsuario = "admin";
+                oUsuario.nombreApellido = "Administrador Inicial";
                 oUsuario.estadoActivo = true;
                 oUsuario.clave = CONTROLADORA.FUNCIONES.encriptar_clave("admin");
                 oUsuario.conectado = false;
-                oUsuario.mail = "superusuario@admin.com";
+                oUsuario.mail = "admin@admin.com";
                 oUsuario.grupos.Add(cUSUARIOS.obtener_grupo_admin());
                 cUSUARIOS.agregar_usuario(oUsuario);
-                mensaje += "\n\nSe agrego un Superusuario con grupo Administrador del Sistema ya que no existia ningun usuario.";
+                mensaje += "\n\nSe agrego un Admin con grupo Administrador del Sistema ya que no existia ningun usuario.";
                 mensaje += "\nPara ingresar al sistema complete con los siguientes datos.";
-                mensaje += "\nNombre de Usuario: Superusuario";
+                mensaje += "\nNombre de Usuario: admin";
                 mensaje += "\nContraseña: admin";
             }
             if (mensaje != "")
@@ -100,6 +100,7 @@ namespace VISTA
                 gestionarReportesToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarReportesToolStripMenuItem", "frmReporte");
                 gestionarUsuariosToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarUsuariosToolStripMenuItem", "frmUsuarios");
                 gestionarVentasToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarVentasToolStripMenuItem", "frmVentas");
+                verLoginsToolStripMenuItem.Enabled = oUsuario.validar_acciones("verLoginsToolStripMenuItem", "frmAuditoriaLogin");
                 if (gestionarCategoriasToolStripMenuItem.Enabled == false && gestionarLocalidadesToolStripMenuItem.Enabled == false && gestionarMarcasToolStripMenuItem.Enabled == false && gestionarProductosToolStripMenuItem.Enabled == false )
                 {
                     gestionesToolStripMenuItem.Enabled = false;
@@ -132,15 +133,16 @@ namespace VISTA
                 {
                     ventasToolStripMenuItem.Enabled = true;
                 }
-                if (generarArchivosDeDatosToolStripMenuItem.Enabled == false && gestionarReportesToolStripMenuItem.Enabled == false)
-                {
+                //if (generarArchivosDeDatosToolStripMenuItem.Enabled == false && gestionarReportesToolStripMenuItem.Enabled == false)
+                //{
                     gerenciaToolStripMenuItem.Enabled = false;
-                }
-                else
-                {
-                    gerenciaToolStripMenuItem.Enabled = true;
-                }
-                if (gestionarBackupsToolStripMenuItem.Enabled == false && gestionarGruposToolStripMenuItem.Enabled == false && gestionarUsuariosToolStripMenuItem.Enabled == false)
+                //}
+                //else
+                //{
+                //    gerenciaToolStripMenuItem.Enabled = true;
+                //}
+                if (gestionarBackupsToolStripMenuItem.Enabled == false && gestionarGruposToolStripMenuItem.Enabled == false && 
+                    gestionarUsuariosToolStripMenuItem.Enabled == false && verLoginsToolStripMenuItem.Enabled == false)
                 {
                     seguridadToolStripMenuItem.Enabled = false;
                 }
@@ -291,7 +293,7 @@ namespace VISTA
 
         private void loginsDelSistemaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAuditoriaLogins frmAuditoriaLogins = new frmAuditoriaLogins();
+            frmAuditoriaLogin frmAuditoriaLogins = new frmAuditoriaLogin();
             frmAuditoriaLogins.ShowDialog();
         }
     }

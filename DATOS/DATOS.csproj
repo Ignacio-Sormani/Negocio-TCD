@@ -49,21 +49,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201910080449353_negocio.cs" />
-    <Compile Include="Migrations\201910080449353_negocio.Designer.cs">
-      <DependentUpon>201910080449353_negocio.cs</DependentUpon>
+    <Compile Include="Migrations\201912090425016_negocio1.cs" />
+    <Compile Include="Migrations\201912090425016_negocio1.Designer.cs">
+      <DependentUpon>201912090425016_negocio1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201910111421036_n4.cs" />
-    <Compile Include="Migrations\201910111421036_n4.Designer.cs">
-      <DependentUpon>201910111421036_n4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910132105158_n5.cs" />
-    <Compile Include="Migrations\201910132105158_n5.Designer.cs">
-      <DependentUpon>201910132105158_n5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910132142009_n6.cs" />
-    <Compile Include="Migrations\201910132142009_n6.Designer.cs">
-      <DependentUpon>201910132142009_n6.cs</DependentUpon>
+    <Compile Include="Migrations\201912090541024_Negocio2.cs" />
+    <Compile Include="Migrations\201912090541024_Negocio2.Designer.cs">
+      <DependentUpon>201912090541024_Negocio2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NEGOCIO.cs" />
@@ -84,17 +76,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201910080449353_negocio.resx">
-      <DependentUpon>201910080449353_negocio.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201912090425016_negocio1.resx">
+      <DependentUpon>201912090425016_negocio1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910111421036_n4.resx">
-      <DependentUpon>201910111421036_n4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910132105158_n5.resx">
-      <DependentUpon>201910132105158_n5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910132142009_n6.resx">
-      <DependentUpon>201910132142009_n6.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201912090541024_Negocio2.resx">
+      <DependentUpon>201912090541024_Negocio2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

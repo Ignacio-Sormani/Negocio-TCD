@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace VISTA
 {
-    public partial class frmAuditoriaLogins : Form
-    {
-        [MODELO.formulario(nombre = "frmCategorias", gestion = "gestionarCategorias", descripcion = "Gestionar Categorias", modulo = "Gestiones")]
+    [MODELO.formulario(nombre = "frmAuditoriaLogin", gestion = "verLogins", descripcion = "Ver Logins", modulo = "Seguridad")]
+    public partial class frmAuditoriaLogin : Form
+    {        
         CONTROLADORA.cACCESOS cACCESOS;
-        public frmAuditoriaLogins()
+        public frmAuditoriaLogin()
         {
             InitializeComponent();
             FormStyle.defaultControlsStyle(this);

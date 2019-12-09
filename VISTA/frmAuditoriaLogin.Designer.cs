@@ -1,6 +1,6 @@
 ﻿namespace VISTA
 {
-    partial class frmAuditoriaLogins
+    partial class frmAuditoriaLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAuditoriaLogins));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAuditoriaLogin));
             this.button1 = new System.Windows.Forms.Button();
             this.lblPRODUCTO = new System.Windows.Forms.Label();
             this.btnBUSCAR = new System.Windows.Forms.Button();

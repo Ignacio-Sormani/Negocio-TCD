@@ -27,8 +27,8 @@ namespace VISTA
 
         private void btnGUARDAR_Click(object sender, EventArgs e)
         {
-            int cuit;
-            if (!int.TryParse(txtCUIT.Text, out cuit))
+            Int64 cuit;
+            if (!Int64.TryParse(txtCUIT.Text, out cuit))
             {
                 MessageBox.Show("El valor CUIT es incorrecto");
                 return;
@@ -48,8 +48,8 @@ namespace VISTA
                 MessageBox.Show("Debe seleccionar una localidad");
                 return;
             }
-            int telefono;
-            if (!int.TryParse(txtTELEFONO.Text, out telefono))
+            Int64 telefono;
+            if (!Int64.TryParse(txtTELEFONO.Text, out telefono))
             {
                 MessageBox.Show("El valor del telefono es incorrecto");
                 return;
