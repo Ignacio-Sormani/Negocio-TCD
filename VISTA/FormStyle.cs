@@ -25,13 +25,13 @@ namespace VISTA
         }
         public static void defaultFont(Form _form)
         {
-            _form.Font = new Font("Arial Black", 9.0F, FontStyle.Regular);
+            _form.Font = new Font("Arial", 9.0F, FontStyle.Regular);
         }
         public static void windowStyle(Form _form)
         {
             _form.BackColor = Color.Moccasin;
             _form.ForeColor = Color.Black;
-            _form.Font = new Font("Arial Black", 10F, FontStyle.Regular);
+            _form.Font = new Font("Arial", 10F, FontStyle.Regular);
             _form.StartPosition = FormStartPosition.CenterScreen;
             _form.FormBorderStyle = FormBorderStyle.FixedToolWindow;
             _form.ControlBox = false;
@@ -56,10 +56,11 @@ namespace VISTA
                 if (control.GetType() == typeof(Button))
                 {
                     var a = (Button)control;
+                    a.Font = new Font("Arial", 9.0F, FontStyle.Bold);
                     a.BackColor = Color.Goldenrod;
                     a.ForeColor = Color.White;
                     a.FlatStyle = FlatStyle.Flat;
-                    a.FlatAppearance.BorderColor = Color.Blue;
+                    a.FlatAppearance.BorderColor = Color.DarkOliveGreen;
                     a.FlatAppearance.MouseOverBackColor = Color.DarkGoldenrod;
                     a.FlatAppearance.BorderSize = 0;
                 }
@@ -68,6 +69,7 @@ namespace VISTA
                 {
                     var a = (DataGridView)control;
                     a.BackgroundColor = Color.Gainsboro;
+                    a.Font = new Font("Arial", 10.0F, FontStyle.Regular);
                 }
                 //label
                 if (control.GetType() == typeof(Label))
@@ -80,6 +82,13 @@ namespace VISTA
                 {
                     var a = (TextBox)control;
                     a.ForeColor = Color.Brown;
+                    a.Font = new Font("Arial", 10.0F, FontStyle.Bold);
+                }
+                if (control.GetType() == typeof(ToolStrip))
+                {
+                    var a = (ToolStrip)control;
+                    a.BackColor = Color.DarkOliveGreen;
+                    a.Font = new Font("Arial", 10.0F, FontStyle.Bold);
                 }
             }
         }
@@ -95,7 +104,7 @@ namespace VISTA
                     a.ForeColor = Color.White;
                     a.BackColor = Color.Orange;
                     a.FlatStyle = FlatStyle.Flat;
-                    a.FlatAppearance.BorderColor = Color.Brown;
+                    a.FlatAppearance.BorderColor = Color.DarkOliveGreen;
                     a.FlatAppearance.MouseOverBackColor = Color.DarkOrange;
                     a.FlatAppearance.BorderSize = 0;
                 }

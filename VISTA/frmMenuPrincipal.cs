@@ -64,7 +64,7 @@ namespace VISTA
         private void frmMenuPrincipal_Load(object sender, EventArgs e)
         {
             FormBorderStyle = FormBorderStyle.Sizable;
-            WindowState = FormWindowState.Maximized;
+            WindowState = FormWindowState.Normal;
             this.Hide();
             armar_login();
             this.Show();

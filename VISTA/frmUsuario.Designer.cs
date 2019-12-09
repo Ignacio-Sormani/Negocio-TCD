@@ -45,28 +45,29 @@
             // lblGRUPOS
             // 
             this.lblGRUPOS.AutoSize = true;
-            this.lblGRUPOS.Location = new System.Drawing.Point(20, 182);
-            this.lblGRUPOS.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGRUPOS.Location = new System.Drawing.Point(27, 224);
             this.lblGRUPOS.Name = "lblGRUPOS";
-            this.lblGRUPOS.Size = new System.Drawing.Size(44, 13);
+            this.lblGRUPOS.Size = new System.Drawing.Size(59, 17);
             this.lblGRUPOS.TabIndex = 31;
             this.lblGRUPOS.Text = "Grupos:";
             // 
             // clbGRUPOS
             // 
             this.clbGRUPOS.FormattingEnabled = true;
-            this.clbGRUPOS.Location = new System.Drawing.Point(20, 202);
+            this.clbGRUPOS.Location = new System.Drawing.Point(27, 249);
+            this.clbGRUPOS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.clbGRUPOS.Name = "clbGRUPOS";
-            this.clbGRUPOS.Size = new System.Drawing.Size(320, 154);
+            this.clbGRUPOS.Size = new System.Drawing.Size(425, 174);
             this.clbGRUPOS.TabIndex = 30;
             this.clbGRUPOS.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbGRUPOS_ItemCheck);
             // 
             // ckbACTIVO
             // 
             this.ckbACTIVO.AutoSize = true;
-            this.ckbACTIVO.Location = new System.Drawing.Point(140, 142);
+            this.ckbACTIVO.Location = new System.Drawing.Point(187, 175);
+            this.ckbACTIVO.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ckbACTIVO.Name = "ckbACTIVO";
-            this.ckbACTIVO.Size = new System.Drawing.Size(56, 17);
+            this.ckbACTIVO.Size = new System.Drawing.Size(68, 21);
             this.ckbACTIVO.TabIndex = 29;
             this.ckbACTIVO.Text = "Activo";
             this.ckbACTIVO.UseVisualStyleBackColor = true;
@@ -74,55 +75,52 @@
             // lblESTADO
             // 
             this.lblESTADO.AutoSize = true;
-            this.lblESTADO.Location = new System.Drawing.Point(20, 142);
-            this.lblESTADO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblESTADO.Location = new System.Drawing.Point(27, 175);
             this.lblESTADO.Name = "lblESTADO";
-            this.lblESTADO.Size = new System.Drawing.Size(43, 13);
+            this.lblESTADO.Size = new System.Drawing.Size(56, 17);
             this.lblESTADO.TabIndex = 28;
             this.lblESTADO.Text = "Estado:";
             // 
             // lblMAIL
             // 
             this.lblMAIL.AutoSize = true;
-            this.lblMAIL.Location = new System.Drawing.Point(20, 104);
-            this.lblMAIL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMAIL.Location = new System.Drawing.Point(27, 128);
             this.lblMAIL.Name = "lblMAIL";
-            this.lblMAIL.Size = new System.Drawing.Size(29, 13);
+            this.lblMAIL.Size = new System.Drawing.Size(37, 17);
             this.lblMAIL.TabIndex = 25;
             this.lblMAIL.Text = "Mail:";
             // 
             // txtMAIL
             // 
-            this.txtMAIL.Location = new System.Drawing.Point(140, 104);
-            this.txtMAIL.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMAIL.Location = new System.Drawing.Point(187, 128);
+            this.txtMAIL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMAIL.Name = "txtMAIL";
-            this.txtMAIL.Size = new System.Drawing.Size(194, 20);
+            this.txtMAIL.Size = new System.Drawing.Size(257, 22);
             this.txtMAIL.TabIndex = 24;
             // 
             // lblNOMBRE
             // 
             this.lblNOMBRE.AutoSize = true;
-            this.lblNOMBRE.Location = new System.Drawing.Point(20, 64);
-            this.lblNOMBRE.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNOMBRE.Location = new System.Drawing.Point(27, 79);
             this.lblNOMBRE.Name = "lblNOMBRE";
-            this.lblNOMBRE.Size = new System.Drawing.Size(95, 13);
+            this.lblNOMBRE.Size = new System.Drawing.Size(127, 17);
             this.lblNOMBRE.TabIndex = 23;
             this.lblNOMBRE.Text = "Nombre y Apellido:";
             // 
             // txtNOMBRE
             // 
-            this.txtNOMBRE.Location = new System.Drawing.Point(140, 64);
-            this.txtNOMBRE.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNOMBRE.Location = new System.Drawing.Point(187, 79);
+            this.txtNOMBRE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNOMBRE.Name = "txtNOMBRE";
-            this.txtNOMBRE.Size = new System.Drawing.Size(194, 20);
+            this.txtNOMBRE.Size = new System.Drawing.Size(257, 22);
             this.txtNOMBRE.TabIndex = 22;
             // 
             // btnCANCELAR
             // 
-            this.btnCANCELAR.Location = new System.Drawing.Point(80, 436);
-            this.btnCANCELAR.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCANCELAR.Location = new System.Drawing.Point(30, 534);
+            this.btnCANCELAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCANCELAR.Name = "btnCANCELAR";
-            this.btnCANCELAR.Size = new System.Drawing.Size(194, 35);
+            this.btnCANCELAR.Size = new System.Drawing.Size(422, 43);
             this.btnCANCELAR.TabIndex = 21;
             this.btnCANCELAR.Text = "Cancelar";
             this.btnCANCELAR.UseVisualStyleBackColor = true;
@@ -130,10 +128,10 @@
             // 
             // btnGUARDAR
             // 
-            this.btnGUARDAR.Location = new System.Drawing.Point(80, 382);
-            this.btnGUARDAR.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGUARDAR.Location = new System.Drawing.Point(30, 444);
+            this.btnGUARDAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGUARDAR.Name = "btnGUARDAR";
-            this.btnGUARDAR.Size = new System.Drawing.Size(194, 35);
+            this.btnGUARDAR.Size = new System.Drawing.Size(422, 79);
             this.btnGUARDAR.TabIndex = 20;
             this.btnGUARDAR.Text = "Guardar";
             this.btnGUARDAR.UseVisualStyleBackColor = true;
@@ -142,26 +140,25 @@
             // lblUSUARIO
             // 
             this.lblUSUARIO.AutoSize = true;
-            this.lblUSUARIO.Location = new System.Drawing.Point(20, 24);
-            this.lblUSUARIO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUSUARIO.Location = new System.Drawing.Point(27, 30);
             this.lblUSUARIO.Name = "lblUSUARIO";
-            this.lblUSUARIO.Size = new System.Drawing.Size(101, 13);
+            this.lblUSUARIO.Size = new System.Drawing.Size(135, 17);
             this.lblUSUARIO.TabIndex = 19;
             this.lblUSUARIO.Text = "Nombre de Usuario:";
             // 
             // txtUSUARIO
             // 
-            this.txtUSUARIO.Location = new System.Drawing.Point(140, 24);
-            this.txtUSUARIO.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUSUARIO.Location = new System.Drawing.Point(187, 30);
+            this.txtUSUARIO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUSUARIO.Name = "txtUSUARIO";
-            this.txtUSUARIO.Size = new System.Drawing.Size(194, 20);
+            this.txtUSUARIO.Size = new System.Drawing.Size(257, 22);
             this.txtUSUARIO.TabIndex = 18;
             // 
             // frmUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(360, 492);
+            this.ClientSize = new System.Drawing.Size(480, 606);
             this.Controls.Add(this.lblGRUPOS);
             this.Controls.Add(this.clbGRUPOS);
             this.Controls.Add(this.ckbACTIVO);
@@ -174,8 +171,9 @@
             this.Controls.Add(this.btnGUARDAR);
             this.Controls.Add(this.lblUSUARIO);
             this.Controls.Add(this.txtUSUARIO);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmUsuario";
-            this.Text = "frmUsuario";
+            this.Text = "Sistema de Libreria - USUARIO";
             this.Load += new System.EventHandler(this.frmUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

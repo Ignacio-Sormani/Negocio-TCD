@@ -33,7 +33,8 @@ namespace VISTA
         MODELO.PRODUCTO oProducto;
         public frmMarcas(MODELO.PRODUCTO miProducto) {
             InitializeComponent();
-   
+            FormStyle.defaultWindowStyle(this);
+
             oProducto = miProducto;
             cMARCAS = CONTROLADORA.cMARCAS.obtener_instancia();
             btnSELECCIONAR.Visible = true;

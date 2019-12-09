@@ -36,10 +36,10 @@
             // 
             // btnCANCELAR
             // 
-            this.btnCANCELAR.Location = new System.Drawing.Point(80, 134);
-            this.btnCANCELAR.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCANCELAR.Location = new System.Drawing.Point(30, 162);
+            this.btnCANCELAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCANCELAR.Name = "btnCANCELAR";
-            this.btnCANCELAR.Size = new System.Drawing.Size(194, 35);
+            this.btnCANCELAR.Size = new System.Drawing.Size(414, 43);
             this.btnCANCELAR.TabIndex = 3;
             this.btnCANCELAR.Text = "Cancelar";
             this.btnCANCELAR.UseVisualStyleBackColor = true;
@@ -47,10 +47,10 @@
             // 
             // btnGUARDAR
             // 
-            this.btnGUARDAR.Location = new System.Drawing.Point(80, 80);
-            this.btnGUARDAR.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGUARDAR.Location = new System.Drawing.Point(30, 72);
+            this.btnGUARDAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGUARDAR.Name = "btnGUARDAR";
-            this.btnGUARDAR.Size = new System.Drawing.Size(194, 35);
+            this.btnGUARDAR.Size = new System.Drawing.Size(414, 73);
             this.btnGUARDAR.TabIndex = 2;
             this.btnGUARDAR.Text = "Guardar";
             this.btnGUARDAR.UseVisualStyleBackColor = true;
@@ -59,33 +59,32 @@
             // lblMARCA
             // 
             this.lblMARCA.AutoSize = true;
-            this.lblMARCA.Location = new System.Drawing.Point(20, 20);
-            this.lblMARCA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMARCA.Location = new System.Drawing.Point(27, 25);
             this.lblMARCA.Name = "lblMARCA";
-            this.lblMARCA.Size = new System.Drawing.Size(95, 13);
+            this.lblMARCA.Size = new System.Drawing.Size(125, 17);
             this.lblMARCA.TabIndex = 37;
             this.lblMARCA.Text = "Nombre de Marca:";
             // 
             // txtMARCA
             // 
-            this.txtMARCA.Location = new System.Drawing.Point(140, 20);
-            this.txtMARCA.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMARCA.Location = new System.Drawing.Point(187, 25);
+            this.txtMARCA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMARCA.Name = "txtMARCA";
-            this.txtMARCA.Size = new System.Drawing.Size(194, 20);
+            this.txtMARCA.Size = new System.Drawing.Size(257, 22);
             this.txtMARCA.TabIndex = 36;
             // 
             // frmMarca
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(360, 202);
+            this.ClientSize = new System.Drawing.Size(480, 249);
             this.Controls.Add(this.lblMARCA);
             this.Controls.Add(this.txtMARCA);
             this.Controls.Add(this.btnCANCELAR);
             this.Controls.Add(this.btnGUARDAR);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmMarca";
-            this.Text = "frmMarca";
+            this.Text = "Sistema de Libreria - MARCA";
             this.Load += new System.EventHandler(this.frmMarca_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

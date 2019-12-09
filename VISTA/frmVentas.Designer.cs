@@ -43,7 +43,7 @@
             // btnCONSULTAR
             // 
             this.btnCONSULTAR.Image = ((System.Drawing.Image)(resources.GetObject("btnCONSULTAR.Image")));
-            this.btnCONSULTAR.Location = new System.Drawing.Point(325, 444);
+            this.btnCONSULTAR.Location = new System.Drawing.Point(325, 455);
             this.btnCONSULTAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCONSULTAR.Name = "btnCONSULTAR";
             this.btnCONSULTAR.Size = new System.Drawing.Size(259, 63);
@@ -55,7 +55,7 @@
             // 
             // btnSALIR
             // 
-            this.btnSALIR.Location = new System.Drawing.Point(639, 464);
+            this.btnSALIR.Location = new System.Drawing.Point(639, 552);
             this.btnSALIR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSALIR.Name = "btnSALIR";
             this.btnSALIR.Size = new System.Drawing.Size(259, 43);
@@ -67,7 +67,7 @@
             // btnAGREGAR
             // 
             this.btnAGREGAR.Image = ((System.Drawing.Image)(resources.GetObject("btnAGREGAR.Image")));
-            this.btnAGREGAR.Location = new System.Drawing.Point(15, 444);
+            this.btnAGREGAR.Location = new System.Drawing.Point(15, 455);
             this.btnAGREGAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAGREGAR.Name = "btnAGREGAR";
             this.btnAGREGAR.Size = new System.Drawing.Size(259, 63);
@@ -89,7 +89,7 @@
             // 
             // btnTODAS
             // 
-            this.btnTODAS.Location = new System.Drawing.Point(769, 48);
+            this.btnTODAS.Location = new System.Drawing.Point(769, 62);
             this.btnTODAS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTODAS.Name = "btnTODAS";
             this.btnTODAS.Size = new System.Drawing.Size(128, 25);
@@ -101,7 +101,7 @@
             // btnBUSCAR
             // 
             this.btnBUSCAR.Image = ((System.Drawing.Image)(resources.GetObject("btnBUSCAR.Image")));
-            this.btnBUSCAR.Location = new System.Drawing.Point(769, 14);
+            this.btnBUSCAR.Location = new System.Drawing.Point(769, 28);
             this.btnBUSCAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBUSCAR.Name = "btnBUSCAR";
             this.btnBUSCAR.Size = new System.Drawing.Size(128, 25);
@@ -114,7 +114,7 @@
             // lblCLIENTE
             // 
             this.lblCLIENTE.AutoSize = true;
-            this.lblCLIENTE.Location = new System.Drawing.Point(441, 18);
+            this.lblCLIENTE.Location = new System.Drawing.Point(441, 32);
             this.lblCLIENTE.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCLIENTE.Name = "lblCLIENTE";
             this.lblCLIENTE.Size = new System.Drawing.Size(48, 17);
@@ -123,8 +123,8 @@
             // 
             // txtCLIENTE
             // 
-            this.txtCLIENTE.Location = new System.Drawing.Point(497, 15);
-            this.txtCLIENTE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCLIENTE.Location = new System.Drawing.Point(497, 29);
+            this.txtCLIENTE.Margin = new System.Windows.Forms.Padding(4);
             this.txtCLIENTE.Name = "txtCLIENTE";
             this.txtCLIENTE.Size = new System.Drawing.Size(265, 22);
             this.txtCLIENTE.TabIndex = 71;
@@ -133,7 +133,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(912, 528);
+            this.ClientSize = new System.Drawing.Size(912, 606);
             this.Controls.Add(this.txtCLIENTE);
             this.Controls.Add(this.lblCLIENTE);
             this.Controls.Add(this.btnTODAS);
@@ -142,9 +142,9 @@
             this.Controls.Add(this.btnSALIR);
             this.Controls.Add(this.btnAGREGAR);
             this.Controls.Add(this.dgvVENTAS);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmVentas";
-            this.Text = "frmVentas";
+            this.Text = "Sistema de Libreria - VENTAS";
             ((System.ComponentModel.ISupportInitialize)(this.dgvVENTAS)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

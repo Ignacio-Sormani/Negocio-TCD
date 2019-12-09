@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOrdenDeCompra));
             this.lblPROVEEDORNOMBRE = new System.Windows.Forms.Label();
             this.btnPROVEEDOR = new System.Windows.Forms.Button();
             this.pPRODUCTO = new System.Windows.Forms.Panel();
@@ -58,18 +59,17 @@
             // lblPROVEEDORNOMBRE
             // 
             this.lblPROVEEDORNOMBRE.AutoSize = true;
-            this.lblPROVEEDORNOMBRE.Location = new System.Drawing.Point(172, 79);
-            this.lblPROVEEDORNOMBRE.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPROVEEDORNOMBRE.Location = new System.Drawing.Point(229, 97);
             this.lblPROVEEDORNOMBRE.Name = "lblPROVEEDORNOMBRE";
-            this.lblPROVEEDORNOMBRE.Size = new System.Drawing.Size(0, 13);
+            this.lblPROVEEDORNOMBRE.Size = new System.Drawing.Size(0, 17);
             this.lblPROVEEDORNOMBRE.TabIndex = 87;
             // 
             // btnPROVEEDOR
             // 
-            this.btnPROVEEDOR.Location = new System.Drawing.Point(305, 72);
-            this.btnPROVEEDOR.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPROVEEDOR.Location = new System.Drawing.Point(407, 89);
+            this.btnPROVEEDOR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPROVEEDOR.Name = "btnPROVEEDOR";
-            this.btnPROVEEDOR.Size = new System.Drawing.Size(142, 27);
+            this.btnPROVEEDOR.Size = new System.Drawing.Size(189, 33);
             this.btnPROVEEDOR.TabIndex = 86;
             this.btnPROVEEDOR.Text = "Seleccionar Proveedor";
             this.btnPROVEEDOR.UseVisualStyleBackColor = true;
@@ -84,33 +84,36 @@
             this.pPRODUCTO.Controls.Add(this.lblPRODUCTO);
             this.pPRODUCTO.Controls.Add(this.lblCANTIDAD);
             this.pPRODUCTO.Controls.Add(this.nudCANTIDADPRODUCTO);
-            this.pPRODUCTO.Location = new System.Drawing.Point(493, 160);
+            this.pPRODUCTO.Location = new System.Drawing.Point(657, 197);
+            this.pPRODUCTO.Margin = new System.Windows.Forms.Padding(4);
             this.pPRODUCTO.Name = "pPRODUCTO";
-            this.pPRODUCTO.Size = new System.Drawing.Size(279, 136);
+            this.pPRODUCTO.Size = new System.Drawing.Size(372, 167);
             this.pPRODUCTO.TabIndex = 85;
             // 
             // txtPRECIOUNITARIO
             // 
-            this.txtPRECIOUNITARIO.Location = new System.Drawing.Point(94, 100);
+            this.txtPRECIOUNITARIO.Location = new System.Drawing.Point(125, 123);
+            this.txtPRECIOUNITARIO.Margin = new System.Windows.Forms.Padding(4);
             this.txtPRECIOUNITARIO.Name = "txtPRECIOUNITARIO";
-            this.txtPRECIOUNITARIO.Size = new System.Drawing.Size(100, 20);
+            this.txtPRECIOUNITARIO.Size = new System.Drawing.Size(132, 22);
             this.txtPRECIOUNITARIO.TabIndex = 92;
             // 
             // lblPRECIOUNITARIO
             // 
             this.lblPRECIOUNITARIO.AutoSize = true;
-            this.lblPRECIOUNITARIO.Location = new System.Drawing.Point(11, 103);
+            this.lblPRECIOUNITARIO.Location = new System.Drawing.Point(15, 127);
+            this.lblPRECIOUNITARIO.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPRECIOUNITARIO.Name = "lblPRECIOUNITARIO";
-            this.lblPRECIOUNITARIO.Size = new System.Drawing.Size(77, 13);
+            this.lblPRECIOUNITARIO.Size = new System.Drawing.Size(103, 17);
             this.lblPRECIOUNITARIO.TabIndex = 65;
             this.lblPRECIOUNITARIO.Text = "Precio unitario:";
             // 
             // btnCONFIRMARPRODUCTO
             // 
-            this.btnCONFIRMARPRODUCTO.Location = new System.Drawing.Point(158, 55);
-            this.btnCONFIRMARPRODUCTO.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCONFIRMARPRODUCTO.Location = new System.Drawing.Point(211, 68);
+            this.btnCONFIRMARPRODUCTO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCONFIRMARPRODUCTO.Name = "btnCONFIRMARPRODUCTO";
-            this.btnCONFIRMARPRODUCTO.Size = new System.Drawing.Size(102, 30);
+            this.btnCONFIRMARPRODUCTO.Size = new System.Drawing.Size(136, 37);
             this.btnCONFIRMARPRODUCTO.TabIndex = 55;
             this.btnCONFIRMARPRODUCTO.Text = "Agregar Producto";
             this.btnCONFIRMARPRODUCTO.UseVisualStyleBackColor = true;
@@ -119,31 +122,34 @@
             // lblPRODUCTO
             // 
             this.lblPRODUCTO.AutoSize = true;
-            this.lblPRODUCTO.Location = new System.Drawing.Point(11, 23);
+            this.lblPRODUCTO.Location = new System.Drawing.Point(15, 28);
+            this.lblPRODUCTO.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPRODUCTO.Name = "lblPRODUCTO";
-            this.lblPRODUCTO.Size = new System.Drawing.Size(90, 13);
+            this.lblPRODUCTO.Size = new System.Drawing.Size(119, 17);
             this.lblPRODUCTO.TabIndex = 64;
             this.lblPRODUCTO.Text = "Nombre Producto";
             // 
             // lblCANTIDAD
             // 
             this.lblCANTIDAD.AutoSize = true;
-            this.lblCANTIDAD.Location = new System.Drawing.Point(11, 64);
+            this.lblCANTIDAD.Location = new System.Drawing.Point(15, 79);
+            this.lblCANTIDAD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCANTIDAD.Name = "lblCANTIDAD";
-            this.lblCANTIDAD.Size = new System.Drawing.Size(52, 13);
+            this.lblCANTIDAD.Size = new System.Drawing.Size(68, 17);
             this.lblCANTIDAD.TabIndex = 57;
             this.lblCANTIDAD.Text = "Cantidad:";
             // 
             // nudCANTIDADPRODUCTO
             // 
-            this.nudCANTIDADPRODUCTO.Location = new System.Drawing.Point(69, 62);
+            this.nudCANTIDADPRODUCTO.Location = new System.Drawing.Point(92, 76);
+            this.nudCANTIDADPRODUCTO.Margin = new System.Windows.Forms.Padding(4);
             this.nudCANTIDADPRODUCTO.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.nudCANTIDADPRODUCTO.Name = "nudCANTIDADPRODUCTO";
-            this.nudCANTIDADPRODUCTO.Size = new System.Drawing.Size(70, 20);
+            this.nudCANTIDADPRODUCTO.Size = new System.Drawing.Size(93, 22);
             this.nudCANTIDADPRODUCTO.TabIndex = 58;
             this.nudCANTIDADPRODUCTO.Value = new decimal(new int[] {
             1,
@@ -153,74 +159,86 @@
             // 
             // btnELIMINARPRODUCTO
             // 
-            this.btnELIMINARPRODUCTO.Location = new System.Drawing.Point(11, 301);
-            this.btnELIMINARPRODUCTO.Margin = new System.Windows.Forms.Padding(2);
+            this.btnELIMINARPRODUCTO.Image = ((System.Drawing.Image)(resources.GetObject("btnELIMINARPRODUCTO.Image")));
+            this.btnELIMINARPRODUCTO.Location = new System.Drawing.Point(15, 451);
+            this.btnELIMINARPRODUCTO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnELIMINARPRODUCTO.Name = "btnELIMINARPRODUCTO";
-            this.btnELIMINARPRODUCTO.Size = new System.Drawing.Size(116, 30);
+            this.btnELIMINARPRODUCTO.Size = new System.Drawing.Size(173, 55);
             this.btnELIMINARPRODUCTO.TabIndex = 84;
             this.btnELIMINARPRODUCTO.Text = "Eliminar Producto";
+            this.btnELIMINARPRODUCTO.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnELIMINARPRODUCTO.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnELIMINARPRODUCTO.UseVisualStyleBackColor = true;
             this.btnELIMINARPRODUCTO.Click += new System.EventHandler(this.btnELIMINARPRODUCTO_Click);
             // 
             // btnBUSCARPRODUCTO
             // 
-            this.btnBUSCARPRODUCTO.Location = new System.Drawing.Point(493, 125);
-            this.btnBUSCARPRODUCTO.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBUSCARPRODUCTO.Image = ((System.Drawing.Image)(resources.GetObject("btnBUSCARPRODUCTO.Image")));
+            this.btnBUSCARPRODUCTO.Location = new System.Drawing.Point(657, 154);
+            this.btnBUSCARPRODUCTO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBUSCARPRODUCTO.Name = "btnBUSCARPRODUCTO";
-            this.btnBUSCARPRODUCTO.Size = new System.Drawing.Size(279, 30);
+            this.btnBUSCARPRODUCTO.Size = new System.Drawing.Size(372, 37);
             this.btnBUSCARPRODUCTO.TabIndex = 83;
             this.btnBUSCARPRODUCTO.Text = "Buscar Producto";
+            this.btnBUSCARPRODUCTO.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBUSCARPRODUCTO.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBUSCARPRODUCTO.UseVisualStyleBackColor = true;
             this.btnBUSCARPRODUCTO.Click += new System.EventHandler(this.btnBUSCARPRODUCTO_Click);
             // 
             // lblPRODUCTOS
             // 
             this.lblPRODUCTOS.AutoSize = true;
-            this.lblPRODUCTOS.Location = new System.Drawing.Point(12, 109);
+            this.lblPRODUCTOS.Location = new System.Drawing.Point(16, 134);
+            this.lblPRODUCTOS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPRODUCTOS.Name = "lblPRODUCTOS";
-            this.lblPRODUCTOS.Size = new System.Drawing.Size(58, 13);
+            this.lblPRODUCTOS.Size = new System.Drawing.Size(76, 17);
             this.lblPRODUCTOS.TabIndex = 82;
             this.lblPRODUCTOS.Text = "Productos:";
             // 
             // lblTOTALDETALLE
             // 
             this.lblTOTALDETALLE.AutoSize = true;
-            this.lblTOTALDETALLE.Location = new System.Drawing.Point(302, 304);
+            this.lblTOTALDETALLE.Location = new System.Drawing.Point(404, 461);
+            this.lblTOTALDETALLE.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTOTALDETALLE.Name = "lblTOTALDETALLE";
-            this.lblTOTALDETALLE.Size = new System.Drawing.Size(45, 13);
+            this.lblTOTALDETALLE.Size = new System.Drawing.Size(58, 17);
             this.lblTOTALDETALLE.TabIndex = 81;
             this.lblTOTALDETALLE.Text = "TOTAL:";
             // 
             // txtTOTALPRODUCTOS
             // 
-            this.txtTOTALPRODUCTOS.Location = new System.Drawing.Point(366, 301);
+            this.txtTOTALPRODUCTOS.Location = new System.Drawing.Point(489, 457);
+            this.txtTOTALPRODUCTOS.Margin = new System.Windows.Forms.Padding(4);
             this.txtTOTALPRODUCTOS.Name = "txtTOTALPRODUCTOS";
-            this.txtTOTALPRODUCTOS.Size = new System.Drawing.Size(100, 20);
+            this.txtTOTALPRODUCTOS.Size = new System.Drawing.Size(132, 22);
             this.txtTOTALPRODUCTOS.TabIndex = 80;
             // 
             // dtpFECHAENTREGA
             // 
             this.dtpFECHAENTREGA.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFECHAENTREGA.Location = new System.Drawing.Point(175, 47);
+            this.dtpFECHAENTREGA.Location = new System.Drawing.Point(233, 58);
+            this.dtpFECHAENTREGA.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFECHAENTREGA.Name = "dtpFECHAENTREGA";
-            this.dtpFECHAENTREGA.Size = new System.Drawing.Size(272, 20);
+            this.dtpFECHAENTREGA.Size = new System.Drawing.Size(361, 22);
             this.dtpFECHAENTREGA.TabIndex = 79;
             // 
             // lblFECHAENTREGA
             // 
             this.lblFECHAENTREGA.AutoSize = true;
-            this.lblFECHAENTREGA.Location = new System.Drawing.Point(57, 47);
+            this.lblFECHAENTREGA.Location = new System.Drawing.Point(76, 58);
+            this.lblFECHAENTREGA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFECHAENTREGA.Name = "lblFECHAENTREGA";
-            this.lblFECHAENTREGA.Size = new System.Drawing.Size(80, 13);
+            this.lblFECHAENTREGA.Size = new System.Drawing.Size(105, 17);
             this.lblFECHAENTREGA.TabIndex = 78;
             this.lblFECHAENTREGA.Text = "Fecha Entrega:";
             // 
             // lblPROVEEDOR
             // 
             this.lblPROVEEDOR.AutoSize = true;
-            this.lblPROVEEDOR.Location = new System.Drawing.Point(57, 79);
+            this.lblPROVEEDOR.Location = new System.Drawing.Point(76, 97);
+            this.lblPROVEEDOR.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPROVEEDOR.Name = "lblPROVEEDOR";
-            this.lblPROVEEDOR.Size = new System.Drawing.Size(59, 13);
+            this.lblPROVEEDOR.Size = new System.Drawing.Size(78, 17);
             this.lblPROVEEDOR.TabIndex = 77;
             this.lblPROVEEDOR.Text = "Proveedor:";
             // 
@@ -229,17 +247,18 @@
             this.dgvPRODUCTOS.BackgroundColor = System.Drawing.SystemColors.ButtonShadow;
             this.dgvPRODUCTOS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPRODUCTOS.GridColor = System.Drawing.Color.CadetBlue;
-            this.dgvPRODUCTOS.Location = new System.Drawing.Point(12, 125);
+            this.dgvPRODUCTOS.Location = new System.Drawing.Point(16, 154);
+            this.dgvPRODUCTOS.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPRODUCTOS.Name = "dgvPRODUCTOS";
-            this.dgvPRODUCTOS.Size = new System.Drawing.Size(454, 171);
+            this.dgvPRODUCTOS.Size = new System.Drawing.Size(605, 289);
             this.dgvPRODUCTOS.TabIndex = 76;
             // 
             // btnCANCELAR
             // 
-            this.btnCANCELAR.Location = new System.Drawing.Point(438, 353);
-            this.btnCANCELAR.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCANCELAR.Location = new System.Drawing.Point(774, 581);
+            this.btnCANCELAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCANCELAR.Name = "btnCANCELAR";
-            this.btnCANCELAR.Size = new System.Drawing.Size(194, 35);
+            this.btnCANCELAR.Size = new System.Drawing.Size(259, 43);
             this.btnCANCELAR.TabIndex = 89;
             this.btnCANCELAR.Text = "Cancelar";
             this.btnCANCELAR.UseVisualStyleBackColor = true;
@@ -247,10 +266,10 @@
             // 
             // btnGUARDAR
             // 
-            this.btnGUARDAR.Location = new System.Drawing.Point(131, 353);
-            this.btnGUARDAR.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGUARDAR.Location = new System.Drawing.Point(774, 514);
+            this.btnGUARDAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGUARDAR.Name = "btnGUARDAR";
-            this.btnGUARDAR.Size = new System.Drawing.Size(194, 35);
+            this.btnGUARDAR.Size = new System.Drawing.Size(259, 63);
             this.btnGUARDAR.TabIndex = 88;
             this.btnGUARDAR.Text = "Guardar";
             this.btnGUARDAR.UseVisualStyleBackColor = true;
@@ -259,25 +278,27 @@
             // dtpFECHAPEDIDO
             // 
             this.dtpFECHAPEDIDO.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFECHAPEDIDO.Location = new System.Drawing.Point(175, 21);
+            this.dtpFECHAPEDIDO.Location = new System.Drawing.Point(233, 26);
+            this.dtpFECHAPEDIDO.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFECHAPEDIDO.Name = "dtpFECHAPEDIDO";
-            this.dtpFECHAPEDIDO.Size = new System.Drawing.Size(272, 20);
+            this.dtpFECHAPEDIDO.Size = new System.Drawing.Size(361, 22);
             this.dtpFECHAPEDIDO.TabIndex = 91;
             // 
             // lblFECHAPEDIDO
             // 
             this.lblFECHAPEDIDO.AutoSize = true;
-            this.lblFECHAPEDIDO.Location = new System.Drawing.Point(57, 21);
+            this.lblFECHAPEDIDO.Location = new System.Drawing.Point(76, 26);
+            this.lblFECHAPEDIDO.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFECHAPEDIDO.Name = "lblFECHAPEDIDO";
-            this.lblFECHAPEDIDO.Size = new System.Drawing.Size(76, 13);
+            this.lblFECHAPEDIDO.Size = new System.Drawing.Size(99, 17);
             this.lblFECHAPEDIDO.TabIndex = 90;
             this.lblFECHAPEDIDO.Text = "Fecha Pedido:";
             // 
             // frmOrdenDeCompra
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 406);
+            this.ClientSize = new System.Drawing.Size(1045, 635);
             this.Controls.Add(this.dtpFECHAPEDIDO);
             this.Controls.Add(this.lblFECHAPEDIDO);
             this.Controls.Add(this.btnCANCELAR);
@@ -294,8 +315,9 @@
             this.Controls.Add(this.lblFECHAENTREGA);
             this.Controls.Add(this.lblPROVEEDOR);
             this.Controls.Add(this.dgvPRODUCTOS);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmOrdenDeCompra";
-            this.Text = "frmOrdenDeCompra";
+            this.Text = "Sistema de Libreria - ORDEN DE COMPRA";
             this.Load += new System.EventHandler(this.frmOrdenDeCompra_Load);
             this.pPRODUCTO.ResumeLayout(false);
             this.pPRODUCTO.PerformLayout();

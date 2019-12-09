@@ -102,14 +102,14 @@ namespace CONTROLADORA
             string id = dia.Day + "-" + dia.Month;
 
             string dbname = "DATOS.Negocio";
-            string connectionString = @"Data Source=DESKTOP-Q6GB95M; Initial Catalog=" + dbname + "; Integrated Security=true; MultipleActiveResultSets=True;";
+            string connectionString = @"Data Source=DESKTOP-PUG5ECE; Initial Catalog=" + dbname + "; Integrated Security=true; MultipleActiveResultSets=True;";
             SqlConnection connection = new SqlConnection(connectionString);
             try
             {
                 connection.Open();
 
                 string str1 = "USE [" + dbname + "];";
-                string str2 = "BACKUP DATABASE [" + dbname + "] TO DISK = 'C:\\Users\\Usuario\\Desktop\\Backup_Sistemas\\Negocio-" + id + ".Bak' WITH FORMAT,MEDIANAME = 'Z_SQLserverBackups',NAME = 'full backup of " + dbname + "'";
+                string str2 = "BACKUP DATABASE [" + dbname + "] TO DISK = 'C:\\Users\\nacho\\Desktop\\Backup_Sistemas\\Negocio-" + id + ".Bak' WITH FORMAT,MEDIANAME = 'Z_SQLserverBackups',NAME = 'full backup of " + dbname + "'";
                 SqlCommand cmd1 = new SqlCommand(str1, connection);
                 SqlCommand cmd2 = new SqlCommand(str2, connection);
 
@@ -129,7 +129,7 @@ namespace CONTROLADORA
         public static bool recuperar_backup(string directorio)
         {
             string dbname = "DATOS.Negocio";
-            string connectionString = @"Data Source=DESKTOP-Q6GB95M; Initial Catalog=" + dbname + "; Integrated Security=true; MultipleActiveResultSets=True;";
+            string connectionString = @"Data Source=DESKTOP-PUG5ECE; Initial Catalog=" + dbname + "; Integrated Security=true; MultipleActiveResultSets=True;";
             SqlConnection connection = new SqlConnection(connectionString);
             try
             {

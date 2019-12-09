@@ -36,6 +36,7 @@ namespace VISTA
         public frmProductos()
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
             cPRODUCTOS = CONTROLADORA.cPRODUCTOS.obtener_instancia();
             btnSELECCIONAR.Visible = true;
 

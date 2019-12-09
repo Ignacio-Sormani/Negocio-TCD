@@ -34,6 +34,7 @@ namespace VISTA
         public frmClientes(MODELO.VENTA miVenta)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
 
             oVenta = miVenta;
             cCLIENTES = CONTROLADORA.cCLIENTES.obtener_instancia();

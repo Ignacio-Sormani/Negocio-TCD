@@ -51,6 +51,11 @@
             this.gestionarGruposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionarBackupsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panDATOSUSUARIO = new System.Windows.Forms.Panel();
+            this.label = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblDATOSUSUARIO = new System.Windows.Forms.Label();
             this.lblGRUPOS = new System.Windows.Forms.Label();
             this.lblMAIL = new System.Windows.Forms.Label();
@@ -59,11 +64,6 @@
             this.btnLOGOUT = new System.Windows.Forms.Button();
             this.btnCAMBIARCLAVE = new System.Windows.Forms.Button();
             this.btnMIPERFIL = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panDATOSUSUARIO.SuspendLayout();
@@ -72,6 +72,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Goldenrod;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionesToolStripMenuItem,
@@ -83,7 +84,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1283, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1145, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -254,11 +255,61 @@
             this.panDATOSUSUARIO.Controls.Add(this.lblMAIL);
             this.panDATOSUSUARIO.Controls.Add(this.lblNOMBREAPELLIDO);
             this.panDATOSUSUARIO.Controls.Add(this.lblUSUARIO);
-            this.panDATOSUSUARIO.Location = new System.Drawing.Point(216, 75);
+            this.panDATOSUSUARIO.Location = new System.Drawing.Point(259, 75);
             this.panDATOSUSUARIO.Margin = new System.Windows.Forms.Padding(4);
             this.panDATOSUSUARIO.Name = "panDATOSUSUARIO";
             this.panDATOSUSUARIO.Size = new System.Drawing.Size(815, 591);
             this.panDATOSUSUARIO.TabIndex = 1;
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.label.Location = new System.Drawing.Point(33, 368);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(88, 24);
+            this.label.TabIndex = 12;
+            this.label.Text = "Grupos:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(384, 296);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 24);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Mail:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(380, 204);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(188, 24);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Nombre y Apellido:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(380, 108);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(199, 24);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Nombre de Usuario:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(74, 106);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(269, 239);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // lblDATOSUSUARIO
             // 
@@ -275,7 +326,7 @@
             // 
             this.lblGRUPOS.AutoSize = true;
             this.lblGRUPOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblGRUPOS.Location = new System.Drawing.Point(62, 369);
+            this.lblGRUPOS.Location = new System.Drawing.Point(61, 392);
             this.lblGRUPOS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGRUPOS.Name = "lblGRUPOS";
             this.lblGRUPOS.Size = new System.Drawing.Size(17, 25);
@@ -286,7 +337,7 @@
             // 
             this.lblMAIL.AutoSize = true;
             this.lblMAIL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblMAIL.Location = new System.Drawing.Point(335, 254);
+            this.lblMAIL.Location = new System.Drawing.Point(385, 320);
             this.lblMAIL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMAIL.Name = "lblMAIL";
             this.lblMAIL.Size = new System.Drawing.Size(17, 25);
@@ -297,7 +348,7 @@
             // 
             this.lblNOMBREAPELLIDO.AutoSize = true;
             this.lblNOMBREAPELLIDO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblNOMBREAPELLIDO.Location = new System.Drawing.Point(470, 181);
+            this.lblNOMBREAPELLIDO.Location = new System.Drawing.Point(381, 227);
             this.lblNOMBREAPELLIDO.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNOMBREAPELLIDO.Name = "lblNOMBREAPELLIDO";
             this.lblNOMBREAPELLIDO.Size = new System.Drawing.Size(17, 25);
@@ -308,7 +359,7 @@
             // 
             this.lblUSUARIO.AutoSize = true;
             this.lblUSUARIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblUSUARIO.Location = new System.Drawing.Point(479, 114);
+            this.lblUSUARIO.Location = new System.Drawing.Point(381, 132);
             this.lblUSUARIO.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUSUARIO.Name = "lblUSUARIO";
             this.lblUSUARIO.Size = new System.Drawing.Size(17, 25);
@@ -323,7 +374,7 @@
             this.btnLOGOUT.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLOGOUT.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLOGOUT.Image = ((System.Drawing.Image)(resources.GetObject("btnLOGOUT.Image")));
-            this.btnLOGOUT.Location = new System.Drawing.Point(13, 478);
+            this.btnLOGOUT.Location = new System.Drawing.Point(56, 478);
             this.btnLOGOUT.Margin = new System.Windows.Forms.Padding(4);
             this.btnLOGOUT.Name = "btnLOGOUT";
             this.btnLOGOUT.Size = new System.Drawing.Size(179, 188);
@@ -341,7 +392,7 @@
             this.btnCAMBIARCLAVE.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCAMBIARCLAVE.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCAMBIARCLAVE.Image = ((System.Drawing.Image)(resources.GetObject("btnCAMBIARCLAVE.Image")));
-            this.btnCAMBIARCLAVE.Location = new System.Drawing.Point(13, 279);
+            this.btnCAMBIARCLAVE.Location = new System.Drawing.Point(56, 279);
             this.btnCAMBIARCLAVE.Margin = new System.Windows.Forms.Padding(4);
             this.btnCAMBIARCLAVE.Name = "btnCAMBIARCLAVE";
             this.btnCAMBIARCLAVE.Size = new System.Drawing.Size(179, 188);
@@ -359,7 +410,7 @@
             this.btnMIPERFIL.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMIPERFIL.ForeColor = System.Drawing.SystemColors.Control;
             this.btnMIPERFIL.Image = ((System.Drawing.Image)(resources.GetObject("btnMIPERFIL.Image")));
-            this.btnMIPERFIL.Location = new System.Drawing.Point(13, 75);
+            this.btnMIPERFIL.Location = new System.Drawing.Point(56, 75);
             this.btnMIPERFIL.Margin = new System.Windows.Forms.Padding(4);
             this.btnMIPERFIL.Name = "btnMIPERFIL";
             this.btnMIPERFIL.Size = new System.Drawing.Size(179, 188);
@@ -369,72 +420,22 @@
             this.btnMIPERFIL.UseVisualStyleBackColor = false;
             this.btnMIPERFIL.Click += new System.EventHandler(this.btnMIPERFIL_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(36, 107);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(242, 210);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(284, 114);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 24);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Nombre de Usuario:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(284, 181);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(188, 24);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Nombre y Apellido:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(284, 255);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 24);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Mail:";
-            // 
-            // label
-            // 
-            this.label.AutoSize = true;
-            this.label.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.label.Location = new System.Drawing.Point(34, 345);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(88, 24);
-            this.label.TabIndex = 12;
-            this.label.Text = "Grupos:";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Black", 8F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(765, 670);
+            this.label4.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(913, 729);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(266, 19);
+            this.label4.Size = new System.Drawing.Size(220, 16);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Sistema de Biblioteca © 2019 UAI";
+            this.label4.Text = "Sistema de Libreria © 2019 UAI";
             // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkKhaki;
-            this.ClientSize = new System.Drawing.Size(1283, 716);
+            this.ClientSize = new System.Drawing.Size(1145, 754);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panDATOSUSUARIO);
             this.Controls.Add(this.btnLOGOUT);
@@ -444,7 +445,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMenuPrincipal";
-            this.Text = "Menu Principal";
+            this.Text = "Sistema de Libreria - MENU PRINCIPAL";
             this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

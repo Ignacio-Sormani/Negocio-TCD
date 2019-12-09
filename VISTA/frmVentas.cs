@@ -29,7 +29,7 @@ namespace VISTA
         public void armar_grilla()
         {
             dgvVENTAS.DataSource = null;
-            dgvVENTAS.DataSource = cVENTAS.obtener_ventas(txtVENTA.Text);
+            dgvVENTAS.DataSource = cVENTAS.obtener_ventas(txtCLIENTE.Text);
         }
 
         private void btnBUSCAR_Click(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace VISTA
 
         private void btnTODAS_Click(object sender, EventArgs e)
         {
-            txtVENTA.Text = "";
+            txtCLIENTE.Text = "";
             armar_grilla();
         }
 

@@ -42,7 +42,8 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(120, 0);
+            this.chart1.Location = new System.Drawing.Point(160, 0);
+            this.chart1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Stock;
@@ -50,28 +51,30 @@
             series1.Name = "Series1";
             series1.YValuesPerPoint = 4;
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(660, 480);
+            this.chart1.Size = new System.Drawing.Size(880, 591);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
             // btnGENERARREPORTE
             // 
-            this.btnGENERARREPORTE.Location = new System.Drawing.Point(671, 233);
+            this.btnGENERARREPORTE.Location = new System.Drawing.Point(895, 287);
+            this.btnGENERARREPORTE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGENERARREPORTE.Name = "btnGENERARREPORTE";
-            this.btnGENERARREPORTE.Size = new System.Drawing.Size(75, 23);
+            this.btnGENERARREPORTE.Size = new System.Drawing.Size(100, 28);
             this.btnGENERARREPORTE.TabIndex = 1;
             this.btnGENERARREPORTE.Text = "button1";
             this.btnGENERARREPORTE.UseVisualStyleBackColor = true;
             // 
             // frmReporte
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(789, 463);
+            this.ClientSize = new System.Drawing.Size(1052, 570);
             this.Controls.Add(this.btnGENERARREPORTE);
             this.Controls.Add(this.chart1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmReporte";
-            this.Text = "frmReporte";
+            this.Text = "Sistema de Libreria - REPORTE";
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 

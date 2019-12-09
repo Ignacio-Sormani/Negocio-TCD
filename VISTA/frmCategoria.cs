@@ -18,6 +18,8 @@ namespace VISTA
         public frmCategoria(MODELO.CATEGORIA miCategoria, string miAccion)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
+
 
             cCATEGORIAS = CONTROLADORA.cCATEGORIAS.obtener_instancia();
             oCategoria = miCategoria;
