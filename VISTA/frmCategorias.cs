@@ -34,6 +34,7 @@ namespace VISTA
         public frmCategorias(MODELO.PRODUCTO miProducto)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
 
             oProducto = miProducto;
             cCATEGORIAS = CONTROLADORA.cCATEGORIAS.obtener_instancia();

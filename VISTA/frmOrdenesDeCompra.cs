@@ -32,6 +32,7 @@ namespace VISTA
         public frmOrdenesDeCompra(MODELO.REMITODECOMPRA miREMITO)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
 
             oREMITO = miREMITO;
             cORDENESDECOMPRA = CONTROLADORA.cORDENESDECOMPRA.obtener_instancia();

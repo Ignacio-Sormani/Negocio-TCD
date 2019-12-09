@@ -55,10 +55,10 @@
             // 
             // btnCANCELAR
             // 
-            this.btnCANCELAR.Location = new System.Drawing.Point(98, 557);
+            this.btnCANCELAR.Location = new System.Drawing.Point(25, 506);
             this.btnCANCELAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCANCELAR.Name = "btnCANCELAR";
-            this.btnCANCELAR.Size = new System.Drawing.Size(259, 43);
+            this.btnCANCELAR.Size = new System.Drawing.Size(433, 43);
             this.btnCANCELAR.TabIndex = 88;
             this.btnCANCELAR.Text = "Cancelar";
             this.btnCANCELAR.UseVisualStyleBackColor = true;
@@ -153,10 +153,10 @@
             // 
             // btnGUARDAR
             // 
-            this.btnGUARDAR.Location = new System.Drawing.Point(98, 473);
+            this.btnGUARDAR.Location = new System.Drawing.Point(25, 397);
             this.btnGUARDAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGUARDAR.Name = "btnGUARDAR";
-            this.btnGUARDAR.Size = new System.Drawing.Size(259, 80);
+            this.btnGUARDAR.Size = new System.Drawing.Size(433, 80);
             this.btnGUARDAR.TabIndex = 76;
             this.btnGUARDAR.Text = "Guardar";
             this.btnGUARDAR.UseVisualStyleBackColor = true;
@@ -183,7 +183,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 661);
+            this.ClientSize = new System.Drawing.Size(480, 616);
             this.Controls.Add(this.lblLOCALIDAD);
             this.Controls.Add(this.btnCANCELAR);
             this.Controls.Add(this.txtEMAIL);
@@ -201,7 +201,7 @@
             this.Controls.Add(this.txtCUIT);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmProveedor";
-            this.Text = "frmProveedor";
+            this.Text = "Sistema de Libreria - PROVEEDOR";
             this.Load += new System.EventHandler(this.frmProveedor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

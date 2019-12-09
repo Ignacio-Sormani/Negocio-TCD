@@ -39,27 +39,26 @@
             // lblLOCALIDAD
             // 
             this.lblLOCALIDAD.AutoSize = true;
-            this.lblLOCALIDAD.Location = new System.Drawing.Point(20, 20);
-            this.lblLOCALIDAD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLOCALIDAD.Location = new System.Drawing.Point(27, 25);
             this.lblLOCALIDAD.Name = "lblLOCALIDAD";
-            this.lblLOCALIDAD.Size = new System.Drawing.Size(56, 13);
+            this.lblLOCALIDAD.Size = new System.Drawing.Size(73, 17);
             this.lblLOCALIDAD.TabIndex = 41;
             this.lblLOCALIDAD.Text = "Localidad:";
             // 
             // txtLOCALIDAD
             // 
-            this.txtLOCALIDAD.Location = new System.Drawing.Point(140, 20);
-            this.txtLOCALIDAD.Margin = new System.Windows.Forms.Padding(2);
+            this.txtLOCALIDAD.Location = new System.Drawing.Point(187, 25);
+            this.txtLOCALIDAD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLOCALIDAD.Name = "txtLOCALIDAD";
-            this.txtLOCALIDAD.Size = new System.Drawing.Size(194, 20);
+            this.txtLOCALIDAD.Size = new System.Drawing.Size(257, 22);
             this.txtLOCALIDAD.TabIndex = 40;
             // 
             // btnCANCELAR
             // 
-            this.btnCANCELAR.Location = new System.Drawing.Point(80, 174);
-            this.btnCANCELAR.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCANCELAR.Location = new System.Drawing.Point(30, 202);
+            this.btnCANCELAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCANCELAR.Name = "btnCANCELAR";
-            this.btnCANCELAR.Size = new System.Drawing.Size(194, 35);
+            this.btnCANCELAR.Size = new System.Drawing.Size(414, 43);
             this.btnCANCELAR.TabIndex = 39;
             this.btnCANCELAR.Text = "Cancelar";
             this.btnCANCELAR.UseVisualStyleBackColor = true;
@@ -67,10 +66,10 @@
             // 
             // btnGUARDAR
             // 
-            this.btnGUARDAR.Location = new System.Drawing.Point(80, 120);
-            this.btnGUARDAR.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGUARDAR.Location = new System.Drawing.Point(30, 125);
+            this.btnGUARDAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGUARDAR.Name = "btnGUARDAR";
-            this.btnGUARDAR.Size = new System.Drawing.Size(194, 35);
+            this.btnGUARDAR.Size = new System.Drawing.Size(414, 63);
             this.btnGUARDAR.TabIndex = 38;
             this.btnGUARDAR.Text = "Guardar";
             this.btnGUARDAR.UseVisualStyleBackColor = true;
@@ -79,35 +78,34 @@
             // lblCP
             // 
             this.lblCP.AutoSize = true;
-            this.lblCP.Location = new System.Drawing.Point(20, 60);
-            this.lblCP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCP.Location = new System.Drawing.Point(27, 74);
             this.lblCP.Name = "lblCP";
-            this.lblCP.Size = new System.Drawing.Size(75, 13);
+            this.lblCP.Size = new System.Drawing.Size(99, 17);
             this.lblCP.TabIndex = 43;
             this.lblCP.Text = "Codigo Postal:";
             // 
             // txtCP
             // 
-            this.txtCP.Location = new System.Drawing.Point(140, 60);
-            this.txtCP.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCP.Location = new System.Drawing.Point(187, 74);
+            this.txtCP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCP.Name = "txtCP";
-            this.txtCP.Size = new System.Drawing.Size(194, 20);
+            this.txtCP.Size = new System.Drawing.Size(257, 22);
             this.txtCP.TabIndex = 42;
             // 
             // frmLocalidad
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(360, 234);
+            this.ClientSize = new System.Drawing.Size(480, 288);
             this.Controls.Add(this.lblCP);
             this.Controls.Add(this.txtCP);
             this.Controls.Add(this.lblLOCALIDAD);
             this.Controls.Add(this.txtLOCALIDAD);
             this.Controls.Add(this.btnCANCELAR);
             this.Controls.Add(this.btnGUARDAR);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmLocalidad";
-            this.Text = "Localidad";
+            this.Text = "Sistema de Libreria - LOCALIDAD";
             this.Load += new System.EventHandler(this.frmLocalidad_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

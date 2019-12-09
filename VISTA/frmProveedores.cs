@@ -35,6 +35,7 @@ namespace VISTA
         public frmProveedores(MODELO.ORDENDECOMPRA miOrden)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
 
             cPROVEEDORES = CONTROLADORA.cPROVEEDORES.obtener_instancia();
             oOrden = miOrden;
