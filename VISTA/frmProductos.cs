@@ -54,7 +54,6 @@ namespace VISTA
                 {
                     cPRODUCTOS.modificar_producto(producto);
                 }
-
             }
             dgvPRODUCTOS.DataSource = null;
             dgvPRODUCTOS.DataSource = cPRODUCTOS.obtener_productos(txtBUSCAR.Text);

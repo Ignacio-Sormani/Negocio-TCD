@@ -55,7 +55,6 @@ namespace CONTROLADORA
             return oNegocio.LOCALIDADES.Find(codigo);
         }
 
-
         public bool verificar_localidad_existente(Int32 cp, string localidad)
         {
             if (oNegocio.LOCALIDADES.Count(e => (e.codigoPostal == cp) && (e.localidad == localidad)) > 0)

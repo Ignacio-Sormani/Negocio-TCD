@@ -46,7 +46,7 @@ namespace CONTROLADORA
             return categorias.ToList();
         }
 
-        public bool verificar_categoria_existente(string nombreCategoria) //falta hacerlo
+        public bool verificar_categoria_existente(string nombreCategoria)
         {
             if (oNegocio.CATEGORIAS.Count(_ => _.categoria == nombreCategoria) > 0)
                 return false;

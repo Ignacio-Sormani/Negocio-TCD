@@ -84,7 +84,7 @@ namespace CONTROLADORA
                          select grupo;
             return grupos.ToList();
         }
-        public bool verificar_usuario_existente(string nombreUsuario) //verificar esta funcion
+        public bool verificar_usuario_existente(string nombreUsuario)
         {
             if (oNegocio.USUARIOS.Count(_ => _.nombreDeUsuario == nombreUsuario) > 0)
                 return false;
