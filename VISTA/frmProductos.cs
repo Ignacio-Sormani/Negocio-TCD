@@ -99,6 +99,12 @@ namespace VISTA
                 return;
             }
             oProducto = cPRODUCTOS.obtener_producto(Convert.ToInt32(dgvPRODUCTOS.CurrentRow.Cells[0].Value));
+            if (oProducto.estadoActivo == false)
+            {
+                MessageBox.Show("El producto seleccionado esta desactivado y no se puede seleccionar");
+                oProducto = null;
+                return;
+            }
             this.Close();
         }
 
