@@ -66,7 +66,7 @@ namespace VISTA
             oProducto.precio = precio;
             oProducto.cantidadMinima = cant_minima;
             oProducto.cantidadOperativa = cant_operativa;
-            oProducto.asignar_estado(true);
+            oProducto.asignar_estado();
             oProducto.estadoActivo = ckbACTIVO.Checked;
 
             if (accion == "A")

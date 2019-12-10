@@ -18,21 +18,16 @@ namespace MODELO
         public Int32 cantidadOperativa { get; set; }
         public string estado { get; set; }
         public bool estadoActivo { get; set; }
-        public void asignar_estado(bool p)
+        public void asignar_estado()
         {
-            if (p == true)
-            {
-                if (cantidadActual == 0)
-                    estado = "Sin Stock";
-                else if (cantidadActual < cantidadMinima)
-                    estado = "Stock Faltante";
-                else if (cantidadActual < cantidadOperativa)
-                    estado = "Stock Minimo";
-                else
-                    estado = "Hay Stock";
-            }
+            if (cantidadActual == 0)
+                estado = "Sin Stock";
+            else if (cantidadActual < cantidadMinima)
+                estado = "Stock Faltante";
+            else if (cantidadActual < cantidadOperativa)
+                estado = "Stock Minimo";
             else
-                estado = "En pedido";
+                estado = "Hay Stock";
         }
         public override string ToString()
         {

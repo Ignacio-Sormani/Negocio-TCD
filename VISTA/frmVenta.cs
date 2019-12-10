@@ -106,6 +106,12 @@ namespace VISTA
             if (frmProductos.productoActual != null)
             {
                 oProducto = frmProductos.productoActual;
+                if (oProducto.cantidadActual == 0)
+                {
+                    MessageBox.Show("No hay stock del producto");
+                    oProducto = null;
+                    return;
+                }
                 lblPRODUCTO.Text = oProducto.ToString();
                 pPRODUCTO.Enabled = true;
                 nudCANTIDADPRODUCTO.Value = 1;
@@ -119,9 +125,15 @@ namespace VISTA
 
         private void btnCONFIRMARPRODUCTO_Click(object sender, EventArgs e)
         {
-             if (nudCANTIDADPRODUCTO.Value <= 0)
+
+            if (nudCANTIDADPRODUCTO.Value <= 0)
             {
                 MessageBox.Show("La cantidad debe ser mayor a 0");
+                return;
+            }
+            if (nudCANTIDADPRODUCTO.Value > oProducto.cantidadActual)
+            {
+                MessageBox.Show("No hay suficiente stock del producto para agregar a la venta");
                 return;
             }
             bool b = false;

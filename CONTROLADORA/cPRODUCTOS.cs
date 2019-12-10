@@ -38,6 +38,11 @@ namespace CONTROLADORA
             return oNegocio.PRODUCTOS.Find(codigo);
         }
 
+        public List<MODELO.PRODUCTO> listar_productos()
+        {
+            return oNegocio.PRODUCTOS.ToList();
+        }
+
         public System.Collections.IEnumerable obtener_productos(string valor)
         {
             var productos = from producto in oNegocio.PRODUCTOS.Include("marca").Include("categoria").ToList()

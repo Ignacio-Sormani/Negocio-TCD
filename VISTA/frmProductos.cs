@@ -19,6 +19,7 @@ namespace VISTA
         CONTROLADORA.cPRODUCTOS cPRODUCTOS;
         public MODELO.PRODUCTO productoActual { get { return oProducto; } }
         MODELO.PRODUCTO oProducto;
+        string estado;
         public frmProductos(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
@@ -45,6 +46,16 @@ namespace VISTA
 
         public void armarGrilla()
         {
+            foreach (MODELO.PRODUCTO producto in cPRODUCTOS.listar_productos())
+            {
+                estado = producto.estado;
+                producto.asignar_estado();
+                if (producto.estado != estado)
+                {
+                    cPRODUCTOS.modificar_producto(producto);
+                }
+
+            }
             dgvPRODUCTOS.DataSource = null;
             dgvPRODUCTOS.DataSource = cPRODUCTOS.obtener_productos(txtBUSCAR.Text);
         }
