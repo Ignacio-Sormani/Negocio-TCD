@@ -16,7 +16,7 @@ namespace VISTA
     [MODELO.accion(control = "btnMODIFICAR", descripcion = "Modificar Localidad", formulario = "frmLocalidades", modulo = "Gestiones")]
     public partial class frmLocalidades : Form
     {
-        CONTROLADORA.cLOCALIDADES cLOCALIDADES;
+        CONTROLADORA.cLOCALIDADES cLOCALIDADES;        
         public frmLocalidades(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
@@ -42,7 +42,6 @@ namespace VISTA
             btnSELECCIONAR.Visible = true;
         }
 
-
         MODELO.PROVEEDOR oProveedor;
         bool localidadAlProveedor = false;
         public frmLocalidades(MODELO.PROVEEDOR miProveedor)
@@ -53,8 +52,7 @@ namespace VISTA
             oProveedor = miProveedor;
             cLOCALIDADES = CONTROLADORA.cLOCALIDADES.obtener_instancia();
             armarGrilla();
-            btnSELECCIONAR.Visible = true;
-            
+            btnSELECCIONAR.Visible = true;            
         }
 
         public void armarGrilla()

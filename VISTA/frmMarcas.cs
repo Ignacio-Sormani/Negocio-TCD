@@ -41,7 +41,6 @@ namespace VISTA
             armar_grilla();
         }
 
-
         private void armar_grilla()
         {
             dgvMARCAS.DataSource = null;

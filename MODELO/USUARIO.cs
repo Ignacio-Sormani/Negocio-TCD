@@ -23,7 +23,6 @@ namespace MODELO
         public virtual ICollection<GRUPO> grupos { get; set; }
         public virtual ICollection<ACCESO> accesos { get; set; }
 
-
         public override string ToString()
         {
             return nombreDeUsuario;
@@ -39,7 +38,7 @@ namespace MODELO
             {
                 foreach (MODELO.GRUPO oGrupo in this.grupos)
                 {
-                    if (oGrupo.acciones.Count(acc => acc.control == control && acc.nombreFormulario == form) > 0)
+                    if (oGrupo.acciones.Count(acc => acc.control == control && acc.nombreFormulario == form) > 0 && oGrupo.estadoActivo == true)
                     {
                         return true;
                     }                    

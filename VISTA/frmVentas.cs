@@ -26,6 +26,7 @@ namespace VISTA
             btnCONSULTAR.Enabled = oUsuario.validar_acciones("btnCONSULTAR", "frmVentas");
             armar_grilla();
         }
+
         public void armar_grilla()
         {
             dgvVENTAS.DataSource = null;

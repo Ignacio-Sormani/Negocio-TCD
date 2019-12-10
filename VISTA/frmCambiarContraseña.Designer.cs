@@ -42,7 +42,7 @@
             // btnVOLVER
             // 
             this.btnVOLVER.Location = new System.Drawing.Point(207, 205);
-            this.btnVOLVER.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVOLVER.Margin = new System.Windows.Forms.Padding(2);
             this.btnVOLVER.Name = "btnVOLVER";
             this.btnVOLVER.Size = new System.Drawing.Size(150, 30);
             this.btnVOLVER.TabIndex = 18;
@@ -54,7 +54,7 @@
             // btnCAMBIARCONTRASEÑA
             // 
             this.btnCAMBIARCONTRASEÑA.Location = new System.Drawing.Point(27, 205);
-            this.btnCAMBIARCONTRASEÑA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCAMBIARCONTRASEÑA.Margin = new System.Windows.Forms.Padding(2);
             this.btnCAMBIARCONTRASEÑA.Name = "btnCAMBIARCONTRASEÑA";
             this.btnCAMBIARCONTRASEÑA.Size = new System.Drawing.Size(150, 30);
             this.btnCAMBIARCONTRASEÑA.TabIndex = 17;
@@ -67,6 +67,7 @@
             // 
             this.txtCONTRANUEVA2.Location = new System.Drawing.Point(196, 140);
             this.txtCONTRANUEVA2.Name = "txtCONTRANUEVA2";
+            this.txtCONTRANUEVA2.PasswordChar = '*';
             this.txtCONTRANUEVA2.Size = new System.Drawing.Size(144, 20);
             this.txtCONTRANUEVA2.TabIndex = 15;
             this.txtCONTRANUEVA2.UseWaitCursor = true;
@@ -75,6 +76,7 @@
             // 
             this.txtCONTRANUEVA1.Location = new System.Drawing.Point(196, 100);
             this.txtCONTRANUEVA1.Name = "txtCONTRANUEVA1";
+            this.txtCONTRANUEVA1.PasswordChar = '*';
             this.txtCONTRANUEVA1.Size = new System.Drawing.Size(144, 20);
             this.txtCONTRANUEVA1.TabIndex = 13;
             this.txtCONTRANUEVA1.UseWaitCursor = true;
@@ -117,6 +119,7 @@
             // 
             this.txtCONTRAVIEJA.Location = new System.Drawing.Point(196, 60);
             this.txtCONTRAVIEJA.Name = "txtCONTRAVIEJA";
+            this.txtCONTRAVIEJA.PasswordChar = '*';
             this.txtCONTRAVIEJA.Size = new System.Drawing.Size(144, 20);
             this.txtCONTRAVIEJA.TabIndex = 22;
             this.txtCONTRAVIEJA.UseWaitCursor = true;
@@ -145,9 +148,9 @@
             this.Controls.Add(this.txtCONTRANUEVA1);
             this.Controls.Add(this.lblCONTRANUEVA1);
             this.Controls.Add(this.lblCAMBIARCONTRA);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "frmCambiarContraseña";
             this.Text = "Sistema de Libreria - CAMBIAR CONTRASEÑA";
-            this.UseWaitCursor = true;
             this.ResumeLayout(false);
             this.PerformLayout();
 

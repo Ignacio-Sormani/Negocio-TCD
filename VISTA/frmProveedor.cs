@@ -64,7 +64,6 @@ namespace VISTA
             oProveedor.direccion = txtDIRECCION.Text;
             oProveedor.telefono = telefono;
             oProveedor.mail = txtEMAIL.Text;
-
             if (accion == "A") {
                 cPROVEEDORES.agregar_proveedor(oProveedor);
             }

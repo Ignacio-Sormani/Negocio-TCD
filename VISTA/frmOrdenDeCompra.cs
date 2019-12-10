@@ -79,6 +79,7 @@ namespace VISTA
             dgvPRODUCTOS.Columns["subtotal"].DisplayIndex = 3;
             dgvPRODUCTOS.Columns["subtotal"].HeaderText = "Subtotal";
         }
+
         public decimal calcular_total_productos()
         {
             decimal total = 0;

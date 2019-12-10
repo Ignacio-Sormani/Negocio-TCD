@@ -70,7 +70,7 @@ namespace VISTA
             if (ACCION == "C")
             {
                 dtpFECHAENTREGA.Value = oREMITO.fechaRecibida;
-                lblPROVEEDOR.Text = oREMITO.proveedor.ToString();
+                lblNOMBREPROVEEDOR.Text = oREMITO.proveedor.ToString();
                 lblORDENSELECCIONADA.Text = oREMITO.ordenCompra.ToString();
             }
             else
@@ -140,8 +140,8 @@ namespace VISTA
             }
             oITEM = (MODELO.ITEMRC)dgvPRODUCTOS.CurrentRow.DataBoundItem;
             lblPRODUCTO.Text = oITEM.producto.ToString();
-            nudCANTIDADPRODUCTO.Value = oITEM.cantidad;
             nudCANTIDADPRODUCTO.Maximum = oITEM.cantidad;
+            nudCANTIDADPRODUCTO.Value = oITEM.cantidad;
             txtPRECIOUNITARIO.Text = oITEM.precioUnitarioCompra.ToString();
             pPRODUCTO.Enabled = true;
         }
@@ -204,7 +204,6 @@ namespace VISTA
             }
             this.DialogResult = DialogResult.OK;
         }
-
 
         private void btnCANCELAR_Click(object sender, EventArgs e)
         {

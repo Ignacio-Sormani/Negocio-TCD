@@ -36,9 +36,11 @@ namespace VISTA
                 MessageBox.Show("El valor del nombre y apellido es incorrecto");
                 return;
             }
-
-            //validacion para que la fecha no sea mayor a la actual
-
+            if (dtpNACIMIENTO.Value >= System.DateTime.Today)
+            {
+                MessageBox.Show("La fecha de nacimiento debe ser una fecha pasada");
+                return;
+            }
             if (string.IsNullOrWhiteSpace(txtDIRECCION.Text))
             {
                 MessageBox.Show("El valor de la direccion es incorrecto");

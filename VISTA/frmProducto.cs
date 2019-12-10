@@ -60,15 +60,13 @@ namespace VISTA
             {
                 MessageBox.Show("El valor de la cantidad operativa es incorrecto");
                 return;
-            }
-            
+            }            
             oProducto.descripcion = txtDESCRIPCION.Text;
             oProducto.precio = precio;
             oProducto.cantidadMinima = cant_minima;
             oProducto.cantidadOperativa = cant_operativa;
             oProducto.asignar_estado();
             oProducto.estadoActivo = ckbACTIVO.Checked;
-
             if (accion == "A")
             {
                 oProducto.cantidadActual = 0;
@@ -107,6 +105,7 @@ namespace VISTA
 
         private void frmProducto_Load(object sender, EventArgs e)
         {
+            ckbACTIVO.Checked = true;
             if (accion == "M")
             {
                 completarCampos();
@@ -120,6 +119,7 @@ namespace VISTA
                 btnCANCELAR.Text = "Cerrar";
                 btnGUARDAR.Visible = false;
             }
+
         }
 
         public void completarCampos() {

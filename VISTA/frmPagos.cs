@@ -27,6 +27,7 @@ namespace VISTA
         }
         private void frmPagos_Load(object sender, EventArgs e)
         {
+            txtTOTALPAGOS.Enabled = false;
             if (ACCION == "C")
             {
                 btnAGREGARPAGO.Visible = false;
