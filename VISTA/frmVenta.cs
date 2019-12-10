@@ -14,6 +14,7 @@ namespace VISTA
     {
         CONTROLADORA.cVENTAS cVENTAS;
         CONTROLADORA.cITEMS cITEMS;
+        CONTROLADORA.cPRODUCTOS cPRODUCTOS;
         MODELO.VENTA oVENTA;
         MODELO.PRODUCTO oProducto;
         MODELO.ITEMV oITEM;
@@ -25,6 +26,7 @@ namespace VISTA
 
             cVENTAS = CONTROLADORA.cVENTAS.obtener_instancia();
             cITEMS = CONTROLADORA.cITEMS.obtener_instancia();
+            cPRODUCTOS = CONTROLADORA.cPRODUCTOS.obtener_instancia();
             oVENTA = miVENTA;
             ACCION = miACCION;            
         }
@@ -197,8 +199,12 @@ namespace VISTA
                 return;
             }
             cVENTAS.agregar_venta(oVENTA);
+            foreach (MODELO.ITEMV item in oVENTA.itemsv)
+            {
+                item.producto.cantidadActual -= item.cantidad;
+                cPRODUCTOS.modificar_producto(item.producto);
+            }
             this.DialogResult = DialogResult.OK;
-            //falta disminuir el stock
         }
 
         private void btnCANCELAR_Click(object sender, EventArgs e)

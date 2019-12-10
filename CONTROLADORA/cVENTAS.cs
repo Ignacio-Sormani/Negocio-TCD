@@ -52,26 +52,5 @@ namespace CONTROLADORA
                          };
             return ventas.ToList();
         }
-        /*
-        public string verificar_stock(MODELO.VENTA oMovimiento)
-        {
-            string msj = string.Empty;
-            foreach(var detalle in oMovimiento.detalleMovimiento)
-            {
-                if(detalle.cantidad < detalle.insumo.cantidadActual)
-                {
-                    msj += "El insumo " + detalle.insumo.nombre + " tiene una cantidad actual de " + detalle.insumo.cantidadActual + " " + detalle.insumo.unidadMedida.nombre + ". ";
-                    msj += "No se le puedes disminuir " + detalle.cantidad + " " + detalle.insumo.unidadMedida.nombre + ".\n";
-                }
-            }
-            return msj;
-        }
-
-        public void actualizar_stock() //no se si actualiza directamente en insumos
-        {
-                     
-        }
-        
-        */
     }
 }

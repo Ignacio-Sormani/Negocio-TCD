@@ -15,6 +15,7 @@ namespace VISTA
         CONTROLADORA.cREMITOSDECOMPRA cREMITOSDECOMPRA;
         CONTROLADORA.cITEMS cITEMS;
         CONTROLADORA.cORDENESDECOMPRA cORDENESDECOMPRA;
+        CONTROLADORA.cPRODUCTOS cPRODUCTOS;
         MODELO.REMITODECOMPRA oREMITO;
         MODELO.ITEMRC oITEM;
         string ACCION;
@@ -26,6 +27,7 @@ namespace VISTA
             cREMITOSDECOMPRA = CONTROLADORA.cREMITOSDECOMPRA.obtener_instancia();
             cITEMS = CONTROLADORA.cITEMS.obtener_instancia();
             cORDENESDECOMPRA = CONTROLADORA.cORDENESDECOMPRA.obtener_instancia();
+            cPRODUCTOS = CONTROLADORA.cPRODUCTOS.obtener_instancia();
             oREMITO = miREMITO;
             ACCION = miACCION;
         }
@@ -195,8 +197,11 @@ namespace VISTA
                 oREMITO.ordenCompra.estado = "Pedido Entregado Incompleto";
             }
             cORDENESDECOMPRA.modificar_orden(oREMITO.ordenCompra);
-
-            // falta disminuir stock
+            foreach (MODELO.ITEMRC item in oREMITO.itemsrc)
+            {
+                item.producto.cantidadActual += item.cantidad;
+                cPRODUCTOS.modificar_producto(item.producto);
+            }
             this.DialogResult = DialogResult.OK;
         }
 
