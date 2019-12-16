@@ -66,6 +66,7 @@
             this.btnCAMBIARCLAVE = new System.Windows.Forms.Button();
             this.btnMIPERFIL = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.verAuditoriasClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panDATOSUSUARIO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -217,7 +218,8 @@
             this.gestionarUsuariosToolStripMenuItem,
             this.gestionarGruposToolStripMenuItem,
             this.gestionarBackupsToolStripMenuItem,
-            this.verLoginsToolStripMenuItem});
+            this.verLoginsToolStripMenuItem,
+            this.verAuditoriasClientesToolStripMenuItem});
             this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
             this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.seguridadToolStripMenuItem.Text = "Seguridad";
@@ -316,7 +318,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(56, 86);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(202, 194);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -435,6 +437,13 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Sistema de Libreria © 2019 UAI";
             // 
+            // verAuditoriasClientesToolStripMenuItem
+            // 
+            this.verAuditoriasClientesToolStripMenuItem.Name = "verAuditoriasClientesToolStripMenuItem";
+            this.verAuditoriasClientesToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.verAuditoriasClientesToolStripMenuItem.Text = "Auditoria Clientes";
+            this.verAuditoriasClientesToolStripMenuItem.Click += new System.EventHandler(this.auditoriaClientesToolStripMenuItem_Click);
+            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -500,6 +509,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ToolStripMenuItem verLoginsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verAuditoriasClientesToolStripMenuItem;
     }
 }
 

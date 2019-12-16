@@ -7,13 +7,13 @@ namespace DATOS.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class asd : IMigrationMetadata
+    public sealed partial class final : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(asd));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(final));
         
         string IMigrationMetadata.Id
         {
-            get { return "201912101153314_asd"; }
+            get { return "201912161933257_final"; }
         }
         
         string IMigrationMetadata.Source

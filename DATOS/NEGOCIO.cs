@@ -140,7 +140,10 @@
                     ga.MapLeftKey("codigoGrupo");
                     ga.MapRightKey("codigoAccion");
                     ga.ToTable("GRUPO_ACCION");
-                });   
+                });
+
+            modelBuilder.Entity<MODELO.AUDITORIACLIENTE>()
+                .HasKey(_ => _.codigoAuditoriaCliente);
         }
         public DbSet<MODELO.LOCALIDAD> LOCALIDADES { get; set; }
         public DbSet<MODELO.PROVEEDOR> PROVEEDORES { get; set; }
@@ -160,10 +163,12 @@
         public DbSet<MODELO.GRUPO> GRUPOS { get; set; }
         public DbSet<MODELO.ACCION> ACCIONES { get; set; }
         public DbSet<MODELO.ACCESO> ACCESOS { get; set; }
-    // Agregue un DbSet para cada tipo de entidad que desee incluir en el modelo. Para obtener más información 
-    // sobre cómo configurar y usar un modelo Code First, vea http://go.microsoft.com/fwlink/?LinkId=390109.
+        public DbSet<MODELO.AUDITORIACLIENTE> AUDITORIASCLIENTE { get; set; }
 
-    // public virtual DbSet<MyEntity> MyEntities { get; set; }
+        // Agregue un DbSet para cada tipo de entidad que desee incluir en el modelo. Para obtener más información 
+        // sobre cómo configurar y usar un modelo Code First, vea http://go.microsoft.com/fwlink/?LinkId=390109.
+
+        // public virtual DbSet<MyEntity> MyEntities { get; set; }
     }
 
     //public class MyEntity

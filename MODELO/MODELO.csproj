@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="ACCION.cs" />
     <Compile Include="accion_formulario.cs" />
+    <Compile Include="AUDITORIACLIENTE.cs" />
     <Compile Include="CATEGORIA.cs" />
     <Compile Include="CLIENTE.cs" />
     <Compile Include="FORMAPAGO.cs" />

@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace MODELO
 {
-    public class CLIENTE
+    public class AUDITORIACLIENTE
     {
-        public CLIENTE()
-        {
-            ventas = new HashSet<MODELO.VENTA>();
-        }
-        public Int32 codigoCliente { get; set; }
+        public Int32 codigoAuditoriaCliente { get; set; }
         public Int64 dni { get; set; }
         public string nombreApellido { get; set; }
         public DateTime fechaNacimiento { get; set; }
@@ -20,14 +16,8 @@ namespace MODELO
         public LOCALIDAD localidad { get; set; }
         public Int64 telefono { get; set; }
         public string mail { get; set; }
-        public virtual ICollection<MODELO.VENTA> ventas { get; set; }
         public virtual USUARIO auditoriaUsuario { get; set; }
         public DateTime auditoriaFecha { get; set; }
         public string auditoriaMovimiento { get; set; }
-
-        public override string ToString()
-        {
-            return nombreApellido + " - DNI: " + dni;
-        }
     }
 }

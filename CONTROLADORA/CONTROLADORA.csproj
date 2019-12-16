@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="cACCIONES.cs" />
+    <Compile Include="cAUDITORIAS.cs" />
     <Compile Include="cCATEGORIAS.cs" />
     <Compile Include="cCLIENTES.cs" />
     <Compile Include="cGRUPOS.cs" />

@@ -16,13 +16,11 @@ namespace CONTROLADORA
             }
             return instancia;
         }
-
-
+        
         DATOS.NEGOCIO oNegocio;
         private cLOCALIDADES() {
             oNegocio = DATOS.NEGOCIO.obtener_instancia();
         }
-
 
         public void agregar_localidad(MODELO.LOCALIDAD oLocalidad)
         {

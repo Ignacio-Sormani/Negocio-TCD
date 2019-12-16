@@ -87,8 +87,7 @@ C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\DATOS\obj\Debug\DAT
 C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\DATOS\obj\Debug\DATOS.csproj.CoreCompileInputs.cache
 C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\DATOS\obj\Debug\DATOS.dll
 C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\DATOS\obj\Debug\DATOS.pdb
-C:\Users\Usuario\Desktop\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations.negocio1.resources
-C:\Users\Usuario\Desktop\Negocio-TCD\DATOS\obj\Debug\DATOS.csproj.GenerateResource.Cache
-C:\Users\Usuario\Desktop\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations.Negocio2.resources
 C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations.asd.resources
 C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\DATOS\obj\Debug\DATOS.csproj.GenerateResource.Cache
+C:\Users\Usuario\Desktop\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations.final.resources
+C:\Users\Usuario\Desktop\Negocio-TCD\DATOS\obj\Debug\DATOS.csproj.GenerateResource.Cache

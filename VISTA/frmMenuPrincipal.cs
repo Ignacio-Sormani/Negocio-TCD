@@ -101,6 +101,7 @@ namespace VISTA
                 gestionarUsuariosToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarUsuariosToolStripMenuItem", "frmUsuarios");
                 gestionarVentasToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarVentasToolStripMenuItem", "frmVentas");
                 verLoginsToolStripMenuItem.Enabled = oUsuario.validar_acciones("verLoginsToolStripMenuItem", "frmAuditoriaLogin");
+                verAuditoriasClientesToolStripMenuItem.Enabled = oUsuario.validar_acciones("verAuditoriasClientesToolStripMenuItem", "frmAuditoriaClient");
                 if (gestionarCategoriasToolStripMenuItem.Enabled == false && gestionarLocalidadesToolStripMenuItem.Enabled == false && gestionarMarcasToolStripMenuItem.Enabled == false && gestionarProductosToolStripMenuItem.Enabled == false)
                 {
                     gestionesToolStripMenuItem.Enabled = false;
@@ -133,16 +134,17 @@ namespace VISTA
                 {
                     ventasToolStripMenuItem.Enabled = true;
                 }
-                //if (generarArchivosDeDatosToolStripMenuItem.Enabled == false && gestionarReportesToolStripMenuItem.Enabled == false)
-                //{
-                gerenciaToolStripMenuItem.Enabled = true;
-                //}
-                //else
-                //{
-                //    gerenciaToolStripMenuItem.Enabled = true;
-                //}
+                if (generarArchivosDeDatosToolStripMenuItem.Enabled == false && gestionarReportesToolStripMenuItem.Enabled == false)
+                {
+                gerenciaToolStripMenuItem.Enabled = false;
+                }
+                else
+                {
+                    gerenciaToolStripMenuItem.Enabled = true;
+                }
                 if (gestionarBackupsToolStripMenuItem.Enabled == false && gestionarGruposToolStripMenuItem.Enabled == false &&
-                    gestionarUsuariosToolStripMenuItem.Enabled == false && verLoginsToolStripMenuItem.Enabled == false)
+                    gestionarUsuariosToolStripMenuItem.Enabled == false && verLoginsToolStripMenuItem.Enabled == false &&
+                    verAuditoriasClientesToolStripMenuItem.Enabled == false)
                 {
                     seguridadToolStripMenuItem.Enabled = false;
                 }
@@ -183,7 +185,7 @@ namespace VISTA
             if (cUSUARIOS.cantidad_usuarios_conectados() == 1)
             {
                 string dbname = "DATOS.Negocio";
-                string connectionString = @"Data Source=DESKTOP-PUG5ECE; Initial Catalog=" + dbname + "; Integrated Security=true; MultipleActiveResultSets=True;";
+                string connectionString = @"Data Source=DESKTOP-Q6GB95M; Initial Catalog=" + dbname + "; Integrated Security=true; MultipleActiveResultSets=True;";
                 CONTROLADORA.FACADEBACKUP oFacadeBackup = CONTROLADORA.FACADEBACKUP.obtener_instancia();
                 try
                 {
@@ -305,6 +307,12 @@ namespace VISTA
         {
             frmAuditoriaLogin frmAuditoriaLogins = new frmAuditoriaLogin();
             frmAuditoriaLogins.ShowDialog();
+        }
+
+        private void auditoriaClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAuditoriaCliente frmAuditoriaCliente = new frmAuditoriaCliente();
+            frmAuditoriaCliente.ShowDialog();
         }
     }
 }

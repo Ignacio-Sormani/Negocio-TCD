@@ -28,7 +28,7 @@ namespace VISTA
             btnGENERARBACKUP.Enabled = oUsuario.validar_acciones("btnGENERARBACKUP", "frmBackup");
             btnRECUPERARBACKUP.Enabled = oUsuario.validar_acciones("btnRECUPERARBACKUP", "frmBackup");
             dbname = "DATOS.Negocio";
-            connectionString = @"Data Source=DESKTOP-PUG5ECE; Initial Catalog=" + dbname + "; Integrated Security=true; MultipleActiveResultSets=True;";
+            connectionString = @"Data Source=DESKTOP-Q6GB95M; Initial Catalog=" + dbname + "; Integrated Security=true; MultipleActiveResultSets=True;";
         }
 
         private void btnRECUPERARBACKUP_Click_1(object sender, EventArgs e)

@@ -18,6 +18,7 @@ namespace VISTA
     {
         CONTROLADORA.cCLIENTES cCLIENTES;
         MODELO.VENTA oVenta;
+        MODELO.USUARIO oUSUARIO;
         public frmClientes(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
@@ -28,6 +29,7 @@ namespace VISTA
             btnAGREGAR.Enabled = oUsuario.validar_acciones("btnAGREGAR", "frmClientes");
             btnCONSULTAR.Enabled = oUsuario.validar_acciones("btnCONSULTAR", "frmClientes");
             btnMODIFICAR.Enabled = oUsuario.validar_acciones("btnMODIFICAR", "frmClientes");
+            oUSUARIO = oUsuario;
             armarGrilla();
         }
 
@@ -53,8 +55,8 @@ namespace VISTA
         }
 
         private void btnAGREGAR_Click(object sender, EventArgs e)
-        {
-            frmCliente frmCliente = new frmCliente(new MODELO.CLIENTE(), "A");
+        {            
+            frmCliente frmCliente = new frmCliente(new MODELO.CLIENTE(), "A", oUSUARIO);
             DialogResult dr = frmCliente.ShowDialog();
             if (dr == DialogResult.OK) {
                 armarGrilla();
@@ -70,7 +72,7 @@ namespace VISTA
             }
 
             MODELO.CLIENTE oCliente = cCLIENTES.obtener_cliente(Convert.ToInt32(dgvCLIENTES.CurrentRow.Cells[0].Value));
-            frmCliente frmCliente = new frmCliente(oCliente, "M");
+            frmCliente frmCliente = new frmCliente(oCliente, "M", oUSUARIO);
             DialogResult dr = frmCliente.ShowDialog();
             if (dr == DialogResult.OK) {
                 armarGrilla();
@@ -86,7 +88,7 @@ namespace VISTA
             }
 
             MODELO.CLIENTE oCliente = cCLIENTES.obtener_cliente(Convert.ToInt32(dgvCLIENTES.CurrentRow.Cells[0].Value));
-            frmCliente frmCliente = new frmCliente(oCliente, "C");
+            frmCliente frmCliente = new frmCliente(oCliente, "C", oUSUARIO);
             frmCliente.ShowDialog();
         }
 

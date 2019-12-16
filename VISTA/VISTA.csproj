@@ -69,6 +69,12 @@
     <Compile Include="frmArchivoDeDatos.Designer.cs">
       <DependentUpon>frmArchivoDeDatos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAuditoriaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAuditoriaCliente.Designer.cs">
+      <DependentUpon>frmAuditoriaCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBackup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -265,6 +271,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmArchivoDeDatos.resx">
       <DependentUpon>frmArchivoDeDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAuditoriaCliente.resx">
+      <DependentUpon>frmAuditoriaCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBackup.resx">
       <DependentUpon>frmBackup.cs</DependentUpon>

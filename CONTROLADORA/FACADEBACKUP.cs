@@ -68,7 +68,7 @@ namespace CONTROLADORA
                 connection.Open();
 
                 string str1 = "USE [" + dbname + "];";
-                string str2 = "BACKUP DATABASE [" + dbname + "] TO DISK = 'C:\\Users\\nacho\\Desktop\\Sistema_de_Libreria\\Backup_Sistemas\\Negocio-" + id + ".Bak' WITH FORMAT,MEDIANAME = 'Z_SQLserverBackups',NAME = 'full backup of " + dbname + "'";
+                string str2 = "BACKUP DATABASE [" + dbname + "] TO DISK = 'C:\\Users\\Usuario\\Desktop\\Backup_Sistemas\\Negocio-" + id + ".Bak' WITH FORMAT,MEDIANAME = 'Z_SQLserverBackups',NAME = 'full backup of " + dbname + "'";
                 SqlCommand cmd1 = new SqlCommand(str1, connection);
                 SqlCommand cmd2 = new SqlCommand(str2, connection);
 

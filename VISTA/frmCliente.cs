@@ -13,15 +13,19 @@ namespace VISTA
     public partial class frmCliente : Form
     {
         CONTROLADORA.cCLIENTES cCLIENTE;
+        CONTROLADORA.cAUDITORIAS cAUDITORIAS;
         MODELO.CLIENTE oCliente;
+        MODELO.USUARIO oUsuario;
         string accion;
-        public frmCliente(MODELO.CLIENTE miCliente, string miAccion)
+        public frmCliente(MODELO.CLIENTE miCliente, string miAccion, MODELO.USUARIO miUsuario)
         {
             InitializeComponent();
             FormStyle.defaultWindowStyle(this);
 
             cCLIENTE = CONTROLADORA.cCLIENTES.obtener_instancia();
+            cAUDITORIAS = CONTROLADORA.cAUDITORIAS.obtener_instancia();
             oCliente = miCliente;
+            oUsuario = miUsuario;
             accion = miAccion;
         }
 
@@ -62,19 +66,44 @@ namespace VISTA
                 MessageBox.Show("El valor del email es incorrecto");
                 return;
             }
+
+            if (accion == "M")
+            {
+                generar_auditoria();
+            }
             oCliente.dni = dni;
             oCliente.nombreApellido = txtNOMBREAPELLIDO.Text;
             oCliente.fechaNacimiento = dtpNACIMIENTO.Value;
             oCliente.direccion = txtDIRECCION.Text;
             oCliente.telefono = telefono;
             oCliente.mail = txtEMAIL.Text;
+            oCliente.auditoriaFecha = System.DateTime.Now;
+            oCliente.auditoriaUsuario = oUsuario;
 
             if (accion == "A") {
+                oCliente.auditoriaMovimiento = "ALTA";
                 cCLIENTE.agregar_cliente(oCliente);
             } else {
+                oCliente.auditoriaMovimiento = "MODIFICACION";
                 cCLIENTE.modificar_cliente(oCliente);
             }
             this.DialogResult = DialogResult.OK;
+        }
+
+        public void generar_auditoria()
+        {
+            MODELO.AUDITORIACLIENTE oAuditoria = new MODELO.AUDITORIACLIENTE();
+            oAuditoria.auditoriaFecha = oCliente.auditoriaFecha;
+            oAuditoria.auditoriaMovimiento = oCliente.auditoriaMovimiento;
+            oAuditoria.auditoriaUsuario = oCliente.auditoriaUsuario;
+            oAuditoria.direccion = oCliente.direccion;
+            oAuditoria.dni = oCliente.dni;
+            oAuditoria.fechaNacimiento = oCliente.fechaNacimiento;
+            oAuditoria.localidad = oCliente.localidad;
+            oAuditoria.mail = oCliente.mail;
+            oAuditoria.nombreApellido = oCliente.nombreApellido;
+            oAuditoria.telefono = oCliente.telefono;
+            cAUDITORIAS.agregar_auditoria(oAuditoria);
         }
 
         private void btnCANCELAR_Click(object sender, EventArgs e)

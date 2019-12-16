@@ -3,7 +3,7 @@ namespace DATOS.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class asd : DbMigration
+    public partial class final : DbMigration
     {
         public override void Up()
         {
@@ -57,6 +57,38 @@ namespace DATOS.Migrations
                 .PrimaryKey(t => t.codigoAccion);
             
             CreateTable(
+                "dbo.AUDITORIACLIENTE",
+                c => new
+                    {
+                        codigoAuditoriaCliente = c.Int(nullable: false, identity: true),
+                        dni = c.Long(nullable: false),
+                        nombreApellido = c.String(),
+                        fechaNacimiento = c.DateTime(nullable: false),
+                        direccion = c.String(),
+                        telefono = c.Long(nullable: false),
+                        mail = c.String(),
+                        auditoriaFecha = c.DateTime(nullable: false),
+                        auditoriaMovimiento = c.String(),
+                        auditoriaUsuario_codigoUsuario = c.Int(),
+                        localidad_codigoLocalidad = c.Int(),
+                    })
+                .PrimaryKey(t => t.codigoAuditoriaCliente)
+                .ForeignKey("dbo.USUARIO", t => t.auditoriaUsuario_codigoUsuario)
+                .ForeignKey("dbo.LOCALIDAD", t => t.localidad_codigoLocalidad)
+                .Index(t => t.auditoriaUsuario_codigoUsuario)
+                .Index(t => t.localidad_codigoLocalidad);
+            
+            CreateTable(
+                "dbo.LOCALIDAD",
+                c => new
+                    {
+                        codigoLocalidad = c.Int(nullable: false, identity: true),
+                        codigoPostal = c.Int(nullable: false),
+                        localidad = c.String(),
+                    })
+                .PrimaryKey(t => t.codigoLocalidad);
+            
+            CreateTable(
                 "dbo.CATEGORIA",
                 c => new
                     {
@@ -76,21 +108,16 @@ namespace DATOS.Migrations
                         direccion = c.String(),
                         telefono = c.Long(nullable: false),
                         mail = c.String(),
+                        auditoriaFecha = c.DateTime(nullable: false),
+                        auditoriaMovimiento = c.String(),
+                        auditoriaUsuario_codigoUsuario = c.Int(),
                         localidad_codigoLocalidad = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.codigoCliente)
+                .ForeignKey("dbo.USUARIO", t => t.auditoriaUsuario_codigoUsuario)
                 .ForeignKey("dbo.LOCALIDAD", t => t.localidad_codigoLocalidad)
+                .Index(t => t.auditoriaUsuario_codigoUsuario)
                 .Index(t => t.localidad_codigoLocalidad);
-            
-            CreateTable(
-                "dbo.LOCALIDAD",
-                c => new
-                    {
-                        codigoLocalidad = c.Int(nullable: false, identity: true),
-                        codigoPostal = c.Int(nullable: false),
-                        localidad = c.String(),
-                    })
-                .PrimaryKey(t => t.codigoLocalidad);
             
             CreateTable(
                 "dbo.VENTA",
@@ -279,6 +306,9 @@ namespace DATOS.Migrations
             DropForeignKey("dbo.PRODUCTO", "categoria_codigoCategoria", "dbo.CATEGORIA");
             DropForeignKey("dbo.VENTA", "cliente_codigoCliente", "dbo.CLIENTE");
             DropForeignKey("dbo.CLIENTE", "localidad_codigoLocalidad", "dbo.LOCALIDAD");
+            DropForeignKey("dbo.CLIENTE", "auditoriaUsuario_codigoUsuario", "dbo.USUARIO");
+            DropForeignKey("dbo.AUDITORIACLIENTE", "localidad_codigoLocalidad", "dbo.LOCALIDAD");
+            DropForeignKey("dbo.AUDITORIACLIENTE", "auditoriaUsuario_codigoUsuario", "dbo.USUARIO");
             DropForeignKey("dbo.ACCESO", "usuario_codigoUsuario", "dbo.USUARIO");
             DropForeignKey("dbo.USUARIO_GRUPO", "codigoGrupo", "dbo.GRUPO");
             DropForeignKey("dbo.USUARIO_GRUPO", "codigoUsuario", "dbo.USUARIO");
@@ -302,6 +332,9 @@ namespace DATOS.Migrations
             DropIndex("dbo.ITEM", new[] { "venta_codigoVenta" });
             DropIndex("dbo.VENTA", new[] { "cliente_codigoCliente" });
             DropIndex("dbo.CLIENTE", new[] { "localidad_codigoLocalidad" });
+            DropIndex("dbo.CLIENTE", new[] { "auditoriaUsuario_codigoUsuario" });
+            DropIndex("dbo.AUDITORIACLIENTE", new[] { "localidad_codigoLocalidad" });
+            DropIndex("dbo.AUDITORIACLIENTE", new[] { "auditoriaUsuario_codigoUsuario" });
             DropIndex("dbo.ACCESO", new[] { "usuario_codigoUsuario" });
             DropTable("dbo.USUARIO_GRUPO");
             DropTable("dbo.GRUPO_ACCION");
@@ -314,9 +347,10 @@ namespace DATOS.Migrations
             DropTable("dbo.PRODUCTO");
             DropTable("dbo.ITEM");
             DropTable("dbo.VENTA");
-            DropTable("dbo.LOCALIDAD");
             DropTable("dbo.CLIENTE");
             DropTable("dbo.CATEGORIA");
+            DropTable("dbo.LOCALIDAD");
+            DropTable("dbo.AUDITORIACLIENTE");
             DropTable("dbo.ACCION");
             DropTable("dbo.GRUPO");
             DropTable("dbo.USUARIO");

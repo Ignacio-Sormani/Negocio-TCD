@@ -99,19 +99,19 @@ namespace VISTA
             oUsuario.estadoActivo = ckbACTIVO.Checked;
             if (ACCION == "A")
             {
-                //nuevaClave = CONTROLADORA.FUNCIONES.generar_clave_aleatoria();
+                nuevaClave = CONTROLADORA.FUNCIONES.generar_clave_aleatoria();
                 nuevaClaveEncriptada = CONTROLADORA.FUNCIONES.encriptar_clave("nacho3");
                 oUsuario.clave = nuevaClaveEncriptada;
-                //string message = "Su nuevo usuario en el sistema es: " + oUsuario.nombreDeUsuario + " y su clave es: " + nuevaClave + ". Le recomendamos modificar su contraseña cuando acceda al sistema.";
-                //if (CONTROLADORA.FUNCIONES.enviar_mail("Nuevo usuario", message, oUsuario.mail))
-                //{
-                //    MessageBox.Show("Se ha enviado su nueva clave a la direccion de mail ingresada");
-                //}
-                //else
-                //{
-                //    MessageBox.Show("No se ha podido enviar la nueva clave a la direccion de mail ingresada");
-                //    return;
-                //}
+                string message = "Su nuevo usuario en el sistema es: " + oUsuario.nombreDeUsuario + " y su clave es: " + nuevaClave + ". Le recomendamos modificar su contraseña cuando acceda al sistema.";
+                if (CONTROLADORA.FUNCIONES.enviar_mail("Nuevo usuario", message, oUsuario.mail))
+                {
+                    MessageBox.Show("Se ha enviado su nueva clave a la direccion de mail ingresada");
+                }
+                else
+                {
+                    MessageBox.Show("No se ha podido enviar la nueva clave a la direccion de mail ingresada");
+                    return;
+                }
                 cUSUARIOS.agregar_usuario(oUsuario);
             }
             else
