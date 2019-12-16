@@ -94,66 +94,9 @@ namespace CONTROLADORA
             oApp.Quit();
         }
 
-        public static string generar_backup()
-        {
-            DateTime dia = DateTime.Now;
-            string id = dia.Day + "-" + dia.Month;
+        //public static string generar_backup(){}
 
-            string dbname = "DATOS.Negocio";
-            string connectionString = @"Data Source=DESKTOP-Q6GB95M; Initial Catalog=" + dbname + "; Integrated Security=true; MultipleActiveResultSets=True;";
-            SqlConnection connection = new SqlConnection(connectionString);
-            try
-            {
-                connection.Open();
-
-                string str1 = "USE [" + dbname + "];";
-                string str2 = "BACKUP DATABASE [" + dbname + "] TO DISK = 'C:\\Users\\Usuario\\Desktop\\Backup_Sistemas\\Negocio-" + id + ".Bak' WITH FORMAT,MEDIANAME = 'Z_SQLserverBackups',NAME = 'full backup of " + dbname + "'";
-                SqlCommand cmd1 = new SqlCommand(str1, connection);
-                SqlCommand cmd2 = new SqlCommand(str2, connection);
-
-                cmd1.ExecuteNonQuery();
-                cmd2.ExecuteNonQuery();
-
-                connection.Close();
-                return "true";
-            }
-            catch (Exception ex)
-            {
-                connection.Close();
-                return ex.Message;
-            }
-        }
-
-        public static bool recuperar_backup(string directorio)
-        {
-            string dbname = "DATOS.Negocio";
-            string connectionString = @"Data Source=DESKTOP-Q6GB95M; Initial Catalog=" + dbname + "; Integrated Security=true; MultipleActiveResultSets=True;";
-            SqlConnection connection = new SqlConnection(connectionString);
-            try
-            {
-                connection.Open();
-
-                string str1 = "USE master; ";
-                string str2 = "ALTER DATABASE [" + dbname + "] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;";
-                string str3 = "RESTORE DATABASE [" + dbname + "] FROM DISK = '" + directorio + "' WITH REPLACE ";
-
-                SqlCommand cmd1 = new SqlCommand(str1, connection);
-                SqlCommand cmd2 = new SqlCommand(str2, connection);
-                SqlCommand cmd3 = new SqlCommand(str3, connection);
-
-                cmd1.ExecuteNonQuery();
-                cmd2.ExecuteNonQuery();
-                cmd3.ExecuteNonQuery();
-
-                connection.Close();
-                return true;
-            }
-            catch (Exception)
-            {
-                connection.Close();
-                return false;
-            }
-        }
+        //public static bool recuperar_backup(string directorio){}
 
         #endregion
 

@@ -26,12 +26,23 @@ namespace VISTA
         private void armar_grilla()
         {
             dgvAUDITORIAS.DataSource = null;
-            dgvAUDITORIAS.DataSource = cACCESOS.obtener_accesos("");
+            dgvAUDITORIAS.DataSource = cACCESOS.obtener_accesos(txtBUSCAR.Text);
         }
 
         private void btnSALIR_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnBUSCAR_Click(object sender, EventArgs e)
+        {
+            armar_grilla();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txtBUSCAR.Text = "";
+            armar_grilla();
         }
     }
 }

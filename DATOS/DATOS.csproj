@@ -49,13 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201912090425016_negocio1.cs" />
-    <Compile Include="Migrations\201912090425016_negocio1.Designer.cs">
-      <DependentUpon>201912090425016_negocio1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201912090541024_Negocio2.cs" />
-    <Compile Include="Migrations\201912090541024_Negocio2.Designer.cs">
-      <DependentUpon>201912090541024_Negocio2.cs</DependentUpon>
+    <Compile Include="Migrations\201912101153314_asd.cs" />
+    <Compile Include="Migrations\201912101153314_asd.Designer.cs">
+      <DependentUpon>201912101153314_asd.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NEGOCIO.cs" />
@@ -76,11 +72,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201912090425016_negocio1.resx">
-      <DependentUpon>201912090425016_negocio1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201912090541024_Negocio2.resx">
-      <DependentUpon>201912090541024_Negocio2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201912101153314_asd.resx">
+      <DependentUpon>201912101153314_asd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

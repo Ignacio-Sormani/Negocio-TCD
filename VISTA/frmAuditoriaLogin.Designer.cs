@@ -47,6 +47,7 @@
             this.button1.TabIndex = 44;
             this.button1.Text = "Ver Todos";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblPRODUCTO
             // 
@@ -68,6 +69,7 @@
             this.btnBUSCAR.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBUSCAR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBUSCAR.UseVisualStyleBackColor = true;
+            this.btnBUSCAR.Click += new System.EventHandler(this.btnBUSCAR_Click);
             // 
             // btnSALIR
             // 
@@ -98,7 +100,7 @@
             this.dgvAUDITORIAS.Size = new System.Drawing.Size(639, 523);
             this.dgvAUDITORIAS.TabIndex = 35;
             // 
-            // frmAuditoriaLogins
+            // frmAuditoriaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -109,7 +111,7 @@
             this.Controls.Add(this.btnSALIR);
             this.Controls.Add(this.txtBUSCAR);
             this.Controls.Add(this.dgvAUDITORIAS);
-            this.Name = "frmAuditoriaLogins";
+            this.Name = "frmAuditoriaLogin";
             this.Text = "Sistema de Libreria - AUDITORIAS LOGIN";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAUDITORIAS)).EndInit();
             this.ResumeLayout(false);

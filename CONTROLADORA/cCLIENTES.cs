@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace CONTROLADORA
 {
@@ -50,6 +51,7 @@ namespace CONTROLADORA
                                Nombre = cliente.nombreApellido,
                                Direccion = (cliente.direccion + ", " + cliente.localidad),
                                Telefono = cliente.telefono,
+                               FechaNacimiento = cliente.fechaNacimiento,
                                Mail = cliente.mail
                            };
             return clientes.ToList();

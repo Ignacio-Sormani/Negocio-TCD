@@ -66,6 +66,8 @@
     <Compile Include="cREPORTES.cs" />
     <Compile Include="cUSUARIOS.cs" />
     <Compile Include="cVENTAS.cs" />
+    <Compile Include="FACADEBACKUP.cs" />
+    <Compile Include="FACTORYREPORTES.cs" />
     <Compile Include="FUNCIONES.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

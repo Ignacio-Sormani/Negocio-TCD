@@ -84,14 +84,11 @@ C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\DATOS\bin\Debug\MOD
 C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\DATOS\bin\Debug\EntityFramework.xml
 C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\DATOS\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\DATOS\obj\Debug\DATOS.csprojResolveAssemblyReference.cache
-C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations.negocio.resources
-C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations.n4.resources
-C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations.n5.resources
-C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations.n6.resources
-C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\DATOS\obj\Debug\DATOS.csproj.GenerateResource.Cache
 C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\DATOS\obj\Debug\DATOS.csproj.CoreCompileInputs.cache
 C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\DATOS\obj\Debug\DATOS.dll
 C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\DATOS\obj\Debug\DATOS.pdb
 C:\Users\Usuario\Desktop\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations.negocio1.resources
 C:\Users\Usuario\Desktop\Negocio-TCD\DATOS\obj\Debug\DATOS.csproj.GenerateResource.Cache
 C:\Users\Usuario\Desktop\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations.Negocio2.resources
+C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\DATOS\obj\Debug\DATOS.Migrations.asd.resources
+C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\DATOS\obj\Debug\DATOS.csproj.GenerateResource.Cache

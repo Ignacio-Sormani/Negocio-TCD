@@ -6,14 +6,33 @@ using System.Threading.Tasks;
 
 namespace CONTROLADORA
 {
-    public class cREPORTES
-    {
-        /*public System.Collections.IEnumerable LISTAR_PRODUCTORES(DateTime A, DateTime B)
-        {
-            var productores = from productor in oEmpresa.PRODUCTORES.Include("ORGANIZADOR").Include("POLIZAS").ToList()
-                              where productor.POLIZAS.Count( => (.VIGENCIA_DESDE.Date >= A && _.VIGENCIA_DESDE.Date <= B)) > 0
-                              select new { NOMBRE = productor.NOMBRE, POLIZAS = productor.POLIZAS.Count(_ => (_.VIGENCIA_DESDE.Date >= A && _.VIGENCIA_DESDE.Date <= B)) };
-            return productores.ToList();
-        }*/
-    }
+    //public class cREPORTES
+    //{
+    //}
+
+    //public abstract class Datos
+    //{
+    //}
+
+    //public class DatosDeVenta : Datos { }
+
+    //public class DatosDeOrdenesDeCompra : Datos { }
+
+
+    //public abstract class ReporteCreator
+    //{
+    //    public abstract void Crear_reporte();
+    //}
+
+    //public class ReportedeDeVentas : ReporteCreator
+    //{
+
+    //}
+
+    //public class ReporteDeOrdenesDeCompra : ReporteCreator
+    //{
+
+    //}
+
+
 }

@@ -57,7 +57,6 @@ C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\MODELO\bin\Debug\En
 C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\MODELO\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\MODELO\bin\Debug\EntityFramework.xml
 C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\MODELO\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\MODELO\obj\Debug\MODELO.csprojResolveAssemblyReference.cache
 C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\MODELO\obj\Debug\MODELO.csproj.CoreCompileInputs.cache
 C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\MODELO\obj\Debug\MODELO.dll
 C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\MODELO\obj\Debug\MODELO.pdb

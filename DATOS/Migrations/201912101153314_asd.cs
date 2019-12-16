@@ -3,7 +3,7 @@ namespace DATOS.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class negocio1 : DbMigration
+    public partial class asd : DbMigration
     {
         public override void Up()
         {
@@ -70,11 +70,11 @@ namespace DATOS.Migrations
                 c => new
                     {
                         codigoCliente = c.Int(nullable: false, identity: true),
-                        dni = c.Int(nullable: false),
+                        dni = c.Long(nullable: false),
                         nombreApellido = c.String(),
                         fechaNacimiento = c.DateTime(nullable: false),
                         direccion = c.String(),
-                        telefono = c.Int(nullable: false),
+                        telefono = c.Long(nullable: false),
                         mail = c.String(),
                         localidad_codigoLocalidad = c.Int(nullable: false),
                     })
@@ -207,10 +207,10 @@ namespace DATOS.Migrations
                 c => new
                     {
                         codigoProveedor = c.Int(nullable: false, identity: true),
-                        cuit = c.Int(nullable: false),
+                        cuit = c.Long(nullable: false),
                         razonSocial = c.String(),
                         direccion = c.String(),
-                        telefono = c.Int(nullable: false),
+                        telefono = c.Long(nullable: false),
                         mail = c.String(),
                         localidad_codigoLocalidad = c.Int(nullable: false),
                     })

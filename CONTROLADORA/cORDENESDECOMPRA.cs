@@ -57,5 +57,21 @@ namespace CONTROLADORA
                           };
             return ordenes.ToList();
         }
+        
+            public System.Collections.IEnumerable obtener_ordenes_fecha(DateTime fi, DateTime ff)
+        {
+            var ordenes = from orden in oNegocio.ORDENESDECOMPRA.Include("proveedor").ToList()
+                          where orden.fechaEntrega.Date <= ff.Date && orden.fechaEntrega.Date >= fi.Date
+                          select new
+                          {
+                              Codigo = orden.codigoOrdenCompra,
+                              Proveedor = orden.proveedor.razonSocial,
+                              FechaPedido = orden.fechaPedido,
+                              Estado = orden.estado,
+                              FechaEntrega = orden.fechaEntrega,
+                              PresupuestoTotal = orden.totalPedido
+                          };
+            return ordenes.ToList();
+        }
     }
 }

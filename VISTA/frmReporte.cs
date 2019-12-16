@@ -19,37 +19,76 @@ namespace VISTA
             InitializeComponent();
             FormStyle.defaultWindowStyle(this);
 
+            lblCANTIDADES.Text = "Estadisticas Generales";
             btnGENERARREPORTE.Enabled = oUsuario.validar_acciones("btnGENERARREPORTE", "frmReporte");
+            cmbTIPO.Items.Add("REPORTE DE VENTAS");
+            cmbTIPO.Items.Add("REPORTE DE ORD DE COMPRAS");
+            cmbTIPO.Items.Add("REPORTE DE PROVEEDORES");
+            cmbTIPO.Items.Add("REPORTE DE CLIENTES");
+            cmbTIPO.SelectedIndex = 0;
+            generarReporte(CONTROLADORA.TipoReporte.Ventas);
         }
-        /*
-        var cobranza = from row in dgvEconomia.Rows.Cast<DataGridViewRow>()
-                       group row by row.Cells["Fecha"].Value into g
-                       select new
-                       {
-                           FECHA = g.Key,
-                           TOTAL = g.Sum(x => Convert.ToDecimal(x.Cells["TOTAL"].Value))
-                       };
-        dgvEconomia.DataSource = cobranza.ToList();
-        */ //para hacer el group by de los listar en la grilla
 
-        /*
-        foreach (var series in chart2.Series)
+        public void generarReporte(CONTROLADORA.TipoReporte tipo)
         {
-            series.Points.Clear();
+            CONTROLADORA.REPORTE cReporte = new CONTROLADORA.REPORTE();
+            CONTROLADORA.DATOSDEREPORTE cDatosDeReporte = cReporte.CrearReporte(tipo);
+
+            //Generar Cantidades Generales
+            string nombreCantUno;
+            string nombreCantDos;
+            string nombreCantTres;
+            int CantUno;
+            int CantDos;
+            int CantTres;
+            cDatosDeReporte.Cantidades(Convert.ToDateTime(dtpINICIO.Value), Convert.ToDateTime(dtpFIN.Value)
+                , out nombreCantUno, out nombreCantDos, out nombreCantTres, out CantUno, out CantDos, out CantTres);
+            lblUNOTITLE.Text = nombreCantUno;
+            lblDOSTITLE.Text = nombreCantDos;
+            lblTRESTITLE.Text = nombreCantTres;
+            lblUNOCANTIDAD.Text = CantUno.ToString();
+            lblDOSCANTIDA.Text = CantDos.ToString();
+            lblTRESCANTIDAD.Text = CantTres.ToString();
+            //Generar Grafico 1
+            string nombreGrafico1;
+            dgvUNO.DataSource = null;
+            List<string> x1;
+            List<int> y1;
+            dgvUNO.DataSource = cDatosDeReporte.GenerarDatosParaGrafico1(Convert.ToDateTime(dtpINICIO.Value), Convert.ToDateTime(dtpFIN.Value), out nombreGrafico1, out x1, out y1);
+            lblNOMBREGRAFICOUNO.Text = nombreGrafico1;
+            chartGRAFICOUNO.Series[0].Points.DataBindXY(x1, y1);
+            //Generar Grafico 2
+            string nombreGrafico2;
+            dgvDOS.DataSource = null;
+            List<string> x2;
+            List<int> y2;
+            dgvDOS.DataSource = cDatosDeReporte.GenerarDatosParaGrafico2(Convert.ToDateTime(dtpINICIO.Value), Convert.ToDateTime(dtpFIN.Value),
+                out nombreGrafico2, out x2, out y2);
+            lblNOMBREGRAFICODOS.Text = nombreGrafico2;
+            chartGRAFICODOS.Series[0].Points.DataBindXY(x2, y2);
         }
-        */ // para limpiar el grafico
 
-        /* agregar el system.Drawing 
-        printdocument y printpreviewdialog (en el previewdialog ponerle en las propiedades el nombre del printdocument)
-         en printdocument, agrega el evento printpage y ponerle adentro  e.Graphics.DrawImage(bmp, 0, 0);
-         en el boton imprimir:
-                            Graphics g = this.CreateGraphics();
-                bmp = new Bitmap(this.Size.Width, this.Size.Height, g);
-                Graphics mg = Graphics.FromImage(bmp);
-                mg.CopyFromScreen(this.Location.X, this.Location.Y, 30, 50, this.Size);
-                CargarCliente();
+        private void btnSALIR_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
-                printPreviewDialog1.ShowDialog();
-         crear una variable Bitmap bmp;*/
+        private void btnGENERARREPORTE_Click(object sender, EventArgs e)
+        {
+            switch (cmbTIPO.SelectedIndex) {
+                case 0:
+                    generarReporte(CONTROLADORA.TipoReporte.Ventas);
+                    break;
+                case 1:
+                    generarReporte(CONTROLADORA.TipoReporte.OrdenesDeCompra);
+                    break;
+                case 2:
+                    generarReporte(CONTROLADORA.TipoReporte.Proveedores);
+                    break;
+                case 3:
+                    generarReporte(CONTROLADORA.TipoReporte.Clientes);
+                    break;
+            }
+        }
     }
 }

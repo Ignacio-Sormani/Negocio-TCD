@@ -38,11 +38,24 @@ namespace CONTROLADORA
             oNegocio.PAGOS.Include("formaPago").ToList();
             return oNegocio.VENTAS.Include("cliente").Include("pagos").Include("itemsv").FirstOrDefault(v => v.codigoVenta == codigo);
         }
-        
+       
         public System.Collections.IEnumerable obtener_ventas(string valor)
         {
             var ventas = from venta in oNegocio.VENTAS.Include("cliente").ToList()
                          where venta.cliente.nombreApellido.ToLower().Contains(valor.ToLower()) || venta.codigoVenta.ToString().Contains(valor)
+                         select new
+                         {
+                             Codigo = venta.codigoVenta,
+                             Cliente = venta.cliente.nombreApellido,
+                             Fecha = venta.fecha,
+                             Total = venta.precioTotal
+                         };
+            return ventas.ToList();
+        }
+        public System.Collections.IEnumerable obtener_ventas_fecha(DateTime fi, DateTime ff)
+        {
+            var ventas = from venta in oNegocio.VENTAS.Include("cliente").ToList()
+                         where venta.fecha.Date <= ff.Date && venta.fecha.Date >= fi.Date
                          select new
                          {
                              Codigo = venta.codigoVenta,

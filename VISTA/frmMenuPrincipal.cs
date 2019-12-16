@@ -32,7 +32,7 @@ namespace VISTA
 
             string mensaje = "";
             if (cACCIONES.verificar_grupos() == 0)
-            {                
+            {
                 MODELO.GRUPO oGrupo = new MODELO.GRUPO();
                 oGrupo.nombre = "Administrador del Sistema";
                 oGrupo.estadoActivo = true;
@@ -57,8 +57,8 @@ namespace VISTA
             }
             if (mensaje != "")
             {
-                MessageBox.Show(mensaje,"NUEVO USUARIO Y/O GRUPO");
-            }           
+                MessageBox.Show(mensaje, "NUEVO USUARIO Y/O GRUPO");
+            }
         }
 
         private void frmMenuPrincipal_Load(object sender, EventArgs e)
@@ -85,7 +85,7 @@ namespace VISTA
                 oAcceso.fechaLogout = System.DateTime.Now;
                 oAcceso.usuario = oUsuario;
                 cACCESOS.agregar_acceso(oAcceso);
-                
+
                 generarArchivosDeDatosToolStripMenuItem.Enabled = oUsuario.validar_acciones("generarArchivosDeDatosToolStripMenuItem", "frmArchivoDeDatos");
                 gestionarBackupsToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarBackupsToolStripMenuItem", "frmBackup");
                 gestionarCategoriasToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarCategoriasToolStripMenuItem", "frmCategorias");
@@ -101,7 +101,7 @@ namespace VISTA
                 gestionarUsuariosToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarUsuariosToolStripMenuItem", "frmUsuarios");
                 gestionarVentasToolStripMenuItem.Enabled = oUsuario.validar_acciones("gestionarVentasToolStripMenuItem", "frmVentas");
                 verLoginsToolStripMenuItem.Enabled = oUsuario.validar_acciones("verLoginsToolStripMenuItem", "frmAuditoriaLogin");
-                if (gestionarCategoriasToolStripMenuItem.Enabled == false && gestionarLocalidadesToolStripMenuItem.Enabled == false && gestionarMarcasToolStripMenuItem.Enabled == false && gestionarProductosToolStripMenuItem.Enabled == false )
+                if (gestionarCategoriasToolStripMenuItem.Enabled == false && gestionarLocalidadesToolStripMenuItem.Enabled == false && gestionarMarcasToolStripMenuItem.Enabled == false && gestionarProductosToolStripMenuItem.Enabled == false)
                 {
                     gestionesToolStripMenuItem.Enabled = false;
                 }
@@ -135,13 +135,13 @@ namespace VISTA
                 }
                 //if (generarArchivosDeDatosToolStripMenuItem.Enabled == false && gestionarReportesToolStripMenuItem.Enabled == false)
                 //{
-                    gerenciaToolStripMenuItem.Enabled = false;
+                gerenciaToolStripMenuItem.Enabled = true;
                 //}
                 //else
                 //{
                 //    gerenciaToolStripMenuItem.Enabled = true;
                 //}
-                if (gestionarBackupsToolStripMenuItem.Enabled == false && gestionarGruposToolStripMenuItem.Enabled == false && 
+                if (gestionarBackupsToolStripMenuItem.Enabled == false && gestionarGruposToolStripMenuItem.Enabled == false &&
                     gestionarUsuariosToolStripMenuItem.Enabled == false && verLoginsToolStripMenuItem.Enabled == false)
                 {
                     seguridadToolStripMenuItem.Enabled = false;
@@ -182,7 +182,17 @@ namespace VISTA
         {
             if (cUSUARIOS.cantidad_usuarios_conectados() == 1)
             {
-                CONTROLADORA.FUNCIONES.generar_backup();
+                string dbname = "DATOS.Negocio";
+                string connectionString = @"Data Source=DESKTOP-PUG5ECE; Initial Catalog=" + dbname + "; Integrated Security=true; MultipleActiveResultSets=True;";
+                CONTROLADORA.FACADEBACKUP oFacadeBackup = CONTROLADORA.FACADEBACKUP.obtener_instancia();
+                try
+                {
+                    oFacadeBackup.GenerarBackup(dbname, connectionString);
+                }
+                catch
+                {
+                    MessageBox.Show("Hubo un problema al intentar generar un backup de la sesion.");
+                }
             }
             oAcceso.fechaLogout = System.DateTime.Now;
             cACCESOS.modificar_acceso(oAcceso);

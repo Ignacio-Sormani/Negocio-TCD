@@ -15,20 +15,26 @@ namespace VISTA
     [MODELO.accion(control = "btnRECUPERARBACKUP", descripcion = "Recuperar Backup", formulario = "frmBackup", modulo = "Seguridad")]
 
     public partial class frmBackup : Form
-    {        
+    {
+        string dbname;
+        string connectionString;
+        CONTROLADORA.FACADEBACKUP oFACADEBACKUP;
         public frmBackup(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
             FormStyle.windowStyle(this);
+            oFACADEBACKUP = CONTROLADORA.FACADEBACKUP.obtener_instancia();
 
             btnGENERARBACKUP.Enabled = oUsuario.validar_acciones("btnGENERARBACKUP", "frmBackup");
             btnRECUPERARBACKUP.Enabled = oUsuario.validar_acciones("btnRECUPERARBACKUP", "frmBackup");
+            dbname = "DATOS.Negocio";
+            connectionString = @"Data Source=DESKTOP-PUG5ECE; Initial Catalog=" + dbname + "; Integrated Security=true; MultipleActiveResultSets=True;";
         }
 
         private void btnRECUPERARBACKUP_Click_1(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.InitialDirectory = @"C:\\Users\\Usuario\\Desktop\\Backup_Sistemas\\";
+            ofd.InitialDirectory = @"C:\Users\nacho\Desktop\Sistema_de_Libreria\Backup_Sistemas";
             ofd.Title = "Seleccionar archivo a restaurar";
             ofd.CheckFileExists = true;
             ofd.CheckPathExists = true;
@@ -40,13 +46,13 @@ namespace VISTA
             ofd.ShowReadOnly = true;
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                if (!CONTROLADORA.FUNCIONES.recuperar_backup(ofd.FileName))
+                if (oFACADEBACKUP.RecuperarBackup(ofd.FileName, dbname, connectionString))
                 {
-                    MessageBox.Show("Se produjo un error y no se pudo recuperar el sistema!");
+                    MessageBox.Show("Se recupero exitosamente el sistema.");
                 }
                 else
                 {
-                    MessageBox.Show("Se recupero exitosamente el sistema!");
+                    MessageBox.Show("Se produjo un error y no se pudo recuperar el sistema.");
                 }
             }
         }
@@ -58,7 +64,14 @@ namespace VISTA
 
         private void btnGENERARBACKUP_Click(object sender, EventArgs e)
         {
-            CONTROLADORA.FUNCIONES.generar_backup();
+            if (oFACADEBACKUP.GenerarBackup(dbname, connectionString))
+            {
+                MessageBox.Show("Se genero exitosamente el bakup del sistema.");
+            }
+            else
+            {
+                MessageBox.Show("Se produjo un error y no se pudo generar un backup el sistema.");
+            }
         }
     }
 }
