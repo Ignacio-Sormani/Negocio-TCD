@@ -38,15 +38,15 @@ namespace CONTROLADORA
             return oNegocio.CATEGORIAS.Find(codigo);
         }
 
-        public System.Collections.IEnumerable obtener_categorias(string nombreCategoria)
+        public System.Collections.IEnumerable obtener_categorias(string valor)
         {
             var categorias = from categoria in oNegocio.CATEGORIAS.ToList()
-                         where categoria.categoria.ToLower().Contains(nombreCategoria.ToLower())
-                         select categoria;
+                         where categoria.codigoCategoria.ToString().Contains(valor) || categoria.categoria.ToLower().Contains(valor.ToLower())
+                         select new { Codigo = categoria.codigoCategoria, Categoria = categoria.categoria };
             return categorias.ToList();
         }
 
-        public bool verificar_categoria_existente(string nombreCategoria) //falta hacerlo
+        public bool verificar_categoria_existente(string nombreCategoria)
         {
             if (oNegocio.CATEGORIAS.Count(_ => _.categoria == nombreCategoria) > 0)
                 return false;

@@ -52,14 +52,11 @@ namespace VISTA
                 MessageBox.Show("Debe ingresar un mail correcto");
                 return;
             }
-
             oUsuario.nombreDeUsuario = txtUSUARIO.Text;
             oUsuario.nombreApellido = txtNOMBRE.Text;
             oUsuario.mail = txtMAIL.Text;
-
             cUSUARIOS.modificar_usuario(oUsuario);
             this.DialogResult = DialogResult.OK;
-
         }
 
         private void btnCANCELAR_Click(object sender, EventArgs e)

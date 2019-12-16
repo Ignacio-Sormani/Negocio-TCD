@@ -49,10 +49,10 @@
             // 
             // btnCANCELAR
             // 
-            this.btnCANCELAR.Location = new System.Drawing.Point(108, 557);
+            this.btnCANCELAR.Location = new System.Drawing.Point(35, 526);
             this.btnCANCELAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCANCELAR.Name = "btnCANCELAR";
-            this.btnCANCELAR.Size = new System.Drawing.Size(259, 43);
+            this.btnCANCELAR.Size = new System.Drawing.Size(433, 43);
             this.btnCANCELAR.TabIndex = 69;
             this.btnCANCELAR.Text = "Cancelar";
             this.btnCANCELAR.UseVisualStyleBackColor = true;
@@ -156,10 +156,10 @@
             // 
             // btnGUARDAR
             // 
-            this.btnGUARDAR.Location = new System.Drawing.Point(108, 473);
+            this.btnGUARDAR.Location = new System.Drawing.Point(35, 426);
             this.btnGUARDAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGUARDAR.Name = "btnGUARDAR";
-            this.btnGUARDAR.Size = new System.Drawing.Size(259, 80);
+            this.btnGUARDAR.Size = new System.Drawing.Size(433, 80);
             this.btnGUARDAR.TabIndex = 54;
             this.btnGUARDAR.Text = "Guardar";
             this.btnGUARDAR.UseVisualStyleBackColor = true;
@@ -201,7 +201,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 661);
+            this.ClientSize = new System.Drawing.Size(489, 629);
             this.Controls.Add(this.lblLOCALIDAD);
             this.Controls.Add(this.dtpNACIMIENTO);
             this.Controls.Add(this.btnCANCELAR);
@@ -221,7 +221,7 @@
             this.Controls.Add(this.txtDNI);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCliente";
-            this.Text = "frmCliente";
+            this.Text = "Sistema de Libreria - CLIENTE";
             this.Load += new System.EventHandler(this.frmCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -20,7 +20,6 @@ namespace MODELO
         public decimal pagoTotal { get; set; }
         public virtual ICollection<ITEMV> itemsv { get; set; }
         public virtual ICollection<PAGO> pagos { get; set; }
-
         public override string ToString()
         {
             return "Compra de " + cliente.nombreApellido + " del dia" + fecha.ToShortDateString();

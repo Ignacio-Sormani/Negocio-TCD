@@ -41,18 +41,19 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblBACKUP.AutoSize = true;
             this.lblBACKUP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBACKUP.Location = new System.Drawing.Point(140, 20);
+            this.lblBACKUP.Location = new System.Drawing.Point(187, 25);
+            this.lblBACKUP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBACKUP.Name = "lblBACKUP";
-            this.lblBACKUP.Size = new System.Drawing.Size(104, 25);
+            this.lblBACKUP.Size = new System.Drawing.Size(132, 31);
             this.lblBACKUP.TabIndex = 11;
             this.lblBACKUP.Text = "BACKUP";
             // 
             // btnVOLVER
             // 
-            this.btnVOLVER.Location = new System.Drawing.Point(116, 113);
-            this.btnVOLVER.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVOLVER.Location = new System.Drawing.Point(155, 139);
+            this.btnVOLVER.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVOLVER.Name = "btnVOLVER";
-            this.btnVOLVER.Size = new System.Drawing.Size(150, 30);
+            this.btnVOLVER.Size = new System.Drawing.Size(200, 37);
             this.btnVOLVER.TabIndex = 19;
             this.btnVOLVER.Text = "Volver";
             this.btnVOLVER.UseVisualStyleBackColor = true;
@@ -60,10 +61,10 @@
             // 
             // btnRECUPERARBACKUP
             // 
-            this.btnRECUPERARBACKUP.Location = new System.Drawing.Point(197, 58);
-            this.btnRECUPERARBACKUP.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRECUPERARBACKUP.Location = new System.Drawing.Point(263, 71);
+            this.btnRECUPERARBACKUP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRECUPERARBACKUP.Name = "btnRECUPERARBACKUP";
-            this.btnRECUPERARBACKUP.Size = new System.Drawing.Size(150, 30);
+            this.btnRECUPERARBACKUP.Size = new System.Drawing.Size(200, 37);
             this.btnRECUPERARBACKUP.TabIndex = 59;
             this.btnRECUPERARBACKUP.Text = "Recuperar backup";
             this.btnRECUPERARBACKUP.UseVisualStyleBackColor = true;
@@ -71,10 +72,10 @@
             // 
             // btnGENERARBACKUP
             // 
-            this.btnGENERARBACKUP.Location = new System.Drawing.Point(37, 58);
-            this.btnGENERARBACKUP.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGENERARBACKUP.Location = new System.Drawing.Point(49, 71);
+            this.btnGENERARBACKUP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGENERARBACKUP.Name = "btnGENERARBACKUP";
-            this.btnGENERARBACKUP.Size = new System.Drawing.Size(150, 30);
+            this.btnGENERARBACKUP.Size = new System.Drawing.Size(200, 37);
             this.btnGENERARBACKUP.TabIndex = 58;
             this.btnGENERARBACKUP.Text = "Generar backup";
             this.btnGENERARBACKUP.UseVisualStyleBackColor = true;
@@ -82,15 +83,16 @@
             // 
             // frmBackup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 160);
+            this.ClientSize = new System.Drawing.Size(512, 197);
             this.Controls.Add(this.btnRECUPERARBACKUP);
             this.Controls.Add(this.btnGENERARBACKUP);
             this.Controls.Add(this.btnVOLVER);
             this.Controls.Add(this.lblBACKUP);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmBackup";
-            this.Text = "frmBackup";
+            this.Text = "Sistema de Libreria - BACKUP";
             this.ResumeLayout(false);
             this.PerformLayout();
 

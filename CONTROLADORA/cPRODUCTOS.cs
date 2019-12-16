@@ -38,23 +38,28 @@ namespace CONTROLADORA
             return oNegocio.PRODUCTOS.Find(codigo);
         }
 
-        public System.Collections.IEnumerable obtener_productos(string descripcionProducto) //terminar metodo
+        public List<MODELO.PRODUCTO> listar_productos()
+        {
+            return oNegocio.PRODUCTOS.ToList();
+        }
+
+        public System.Collections.IEnumerable obtener_productos(string valor)
         {
             var productos = from producto in oNegocio.PRODUCTOS.Include("marca").Include("categoria").ToList()
-                            where producto.descripcion.ToLower().Contains(descripcionProducto.ToLower())
+                            where producto.codigoProducto.ToString().Contains(valor) || producto.descripcion.ToLower().Contains(valor.ToLower()) ||
+                            producto.estado.ToLower().Contains(valor) || producto.marca.marca.ToLower().Contains(valor) || producto.categoria.categoria.ToLower().Contains(valor)
                             select new
                             {
-                                codigo = producto.codigoProducto,
-                                descripcion = producto.descripcion,
-                                marca = producto.marca,
-                                categoria = producto.categoria,
-                                precio = producto.precio,
-                                cantidadActual = producto.cantidadActual,
-                                cantidadMinima = producto.cantidadMinima,
-                                cantidadOperativa = producto.cantidadOperativa,
-                                estado = producto.estado,
-                                estadoActivo = producto.estadoActivo
-
+                                Codigo = producto.codigoProducto,
+                                Descripcion = producto.descripcion,
+                                Marca = producto.marca,
+                                Categoria = producto.categoria,
+                                Precio = producto.precio,
+                                CantidadActual = producto.cantidadActual,
+                                CantidadMinima = producto.cantidadMinima,
+                                CantidadOperativa = producto.cantidadOperativa,
+                                Estado = producto.estado,
+                                EstadoActivo = producto.estadoActivo ? "Activo" : "Inactivo"
                             };
             return productos.ToList();
         }

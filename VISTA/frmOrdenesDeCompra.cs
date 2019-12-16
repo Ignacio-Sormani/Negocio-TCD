@@ -32,6 +32,7 @@ namespace VISTA
         public frmOrdenesDeCompra(MODELO.REMITODECOMPRA miREMITO)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
 
             oREMITO = miREMITO;
             cORDENESDECOMPRA = CONTROLADORA.cORDENESDECOMPRA.obtener_instancia();
@@ -42,7 +43,7 @@ namespace VISTA
         public void armar_grilla()
         {
             dgvORDENES.DataSource = null;
-            dgvORDENES.DataSource = cORDENESDECOMPRA.obtener_ordenes(txtPROVEEDOR.Text);
+            dgvORDENES.DataSource = cORDENESDECOMPRA.obtener_ordenes(txtORDEN.Text);
         }
 
         private void btnBUSCAR_Click(object sender, EventArgs e)
@@ -52,7 +53,7 @@ namespace VISTA
 
         private void btnTODAS_Click(object sender, EventArgs e)
         {
-            txtPROVEEDOR.Text = "";
+            txtORDEN.Text = "";
             armar_grilla();
         }
 
@@ -89,6 +90,12 @@ namespace VISTA
                 return;
             }
             oREMITO.ordenCompra = cORDENESDECOMPRA.obtener_orden(Convert.ToInt32(dgvORDENES.CurrentRow.Cells[0].Value));
+            if (oREMITO.ordenCompra.estado !="Pedido Realizado" && oREMITO.ordenCompra.estado != "Pedido Entregado Incompleto")
+            {
+                MessageBox.Show("La orden de compra seleccionada no permite que se le agreguen remitos");
+                oREMITO.ordenCompra = null;
+                return;
+            }
             this.Close();
         }
     }

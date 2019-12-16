@@ -39,11 +39,11 @@ namespace CONTROLADORA
             return oNegocio.GRUPOS.Find(codigo);
         }
 
-        public System.Collections.IEnumerable obtener_grupos(string nombre)
+        public System.Collections.IEnumerable obtener_grupos(string valor)
         {
             var grupos = from grupo in oNegocio.GRUPOS.Include("usuarios").Include("acciones").ToList()
-                         where grupo.nombre.ToLower().Contains(nombre.ToLower())
-                         select grupo;
+                         where grupo.codigoGrupo.ToString().Contains(valor) || grupo.nombre.ToLower().Contains(valor.ToLower())
+                         select new { Codigo = grupo.codigoGrupo, Nombre = grupo.nombre, Estado = (grupo.estadoActivo == true ? "Activo" : "Inactivo") }; 
             return grupos.ToList();
         }
 
@@ -66,7 +66,7 @@ namespace CONTROLADORA
         }
 
 
-        public bool verificar_grupo_existente(string nombreGrupo) //verificar esta funcion
+        public bool verificar_grupo_existente(string nombreGrupo)
         {
             if (oNegocio.GRUPOS.Count(_ => _.nombre == nombreGrupo) > 0)
                 return false;

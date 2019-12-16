@@ -36,7 +36,7 @@
             this.lblRESETEARCONTRASEÑA = new System.Windows.Forms.Label();
             this.btnLOGIN = new System.Windows.Forms.Button();
             this.btnCERRAR = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblLOGIN
@@ -46,17 +46,17 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLOGIN.AutoSize = true;
             this.lblLOGIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLOGIN.Location = new System.Drawing.Point(50, 23);
+            this.lblLOGIN.Location = new System.Drawing.Point(50, 27);
             this.lblLOGIN.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLOGIN.Name = "lblLOGIN";
-            this.lblLOGIN.Size = new System.Drawing.Size(240, 31);
+            this.lblLOGIN.Size = new System.Drawing.Size(191, 31);
             this.lblLOGIN.TabIndex = 0;
-            this.lblLOGIN.Text = "INICIAR SESION";
+            this.lblLOGIN.Text = "Iniciar Sesion";
             // 
             // lblUSUARIO
             // 
             this.lblUSUARIO.AutoSize = true;
-            this.lblUSUARIO.Location = new System.Drawing.Point(53, 80);
+            this.lblUSUARIO.Location = new System.Drawing.Point(53, 85);
             this.lblUSUARIO.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUSUARIO.Name = "lblUSUARIO";
             this.lblUSUARIO.Size = new System.Drawing.Size(61, 17);
@@ -65,7 +65,7 @@
             // 
             // txtUSUARIO
             // 
-            this.txtUSUARIO.Location = new System.Drawing.Point(56, 101);
+            this.txtUSUARIO.Location = new System.Drawing.Point(56, 107);
             this.txtUSUARIO.Margin = new System.Windows.Forms.Padding(4);
             this.txtUSUARIO.Name = "txtUSUARIO";
             this.txtUSUARIO.Size = new System.Drawing.Size(280, 22);
@@ -73,7 +73,7 @@
             // 
             // txtCONTRASEÑA
             // 
-            this.txtCONTRASEÑA.Location = new System.Drawing.Point(56, 164);
+            this.txtCONTRASEÑA.Location = new System.Drawing.Point(56, 170);
             this.txtCONTRASEÑA.Margin = new System.Windows.Forms.Padding(4);
             this.txtCONTRASEÑA.Name = "txtCONTRASEÑA";
             this.txtCONTRASEÑA.PasswordChar = '*';
@@ -83,7 +83,7 @@
             // lblCONTRASEÑA
             // 
             this.lblCONTRASEÑA.AutoSize = true;
-            this.lblCONTRASEÑA.Location = new System.Drawing.Point(53, 143);
+            this.lblCONTRASEÑA.Location = new System.Drawing.Point(53, 148);
             this.lblCONTRASEÑA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCONTRASEÑA.Name = "lblCONTRASEÑA";
             this.lblCONTRASEÑA.Size = new System.Drawing.Size(85, 17);
@@ -95,7 +95,7 @@
             this.lblRESETEARCONTRASEÑA.AutoSize = true;
             this.lblRESETEARCONTRASEÑA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRESETEARCONTRASEÑA.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblRESETEARCONTRASEÑA.Location = new System.Drawing.Point(123, 206);
+            this.lblRESETEARCONTRASEÑA.Location = new System.Drawing.Point(123, 212);
             this.lblRESETEARCONTRASEÑA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRESETEARCONTRASEÑA.Name = "lblRESETEARCONTRASEÑA";
             this.lblRESETEARCONTRASEÑA.Size = new System.Drawing.Size(167, 18);
@@ -107,7 +107,7 @@
             // 
             // btnLOGIN
             // 
-            this.btnLOGIN.Location = new System.Drawing.Point(56, 246);
+            this.btnLOGIN.Location = new System.Drawing.Point(56, 252);
             this.btnLOGIN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLOGIN.Name = "btnLOGIN";
             this.btnLOGIN.Size = new System.Drawing.Size(280, 65);
@@ -118,7 +118,7 @@
             // 
             // btnCERRAR
             // 
-            this.btnCERRAR.Location = new System.Drawing.Point(56, 332);
+            this.btnCERRAR.Location = new System.Drawing.Point(56, 338);
             this.btnCERRAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCERRAR.Name = "btnCERRAR";
             this.btnCERRAR.Size = new System.Drawing.Size(280, 37);
@@ -127,22 +127,24 @@
             this.btnCERRAR.UseVisualStyleBackColor = true;
             this.btnCERRAR.Click += new System.EventHandler(this.btnCERRAR_Click);
             // 
-            // label1
+            // label4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(288, 17);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "___________________________________";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(178, 429);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(224, 18);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Sistema de Libreria © 2019 UAI";
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(415, 411);
+            this.ClientSize = new System.Drawing.Size(405, 452);
             this.ControlBox = false;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblLOGIN);
             this.Controls.Add(this.btnCERRAR);
             this.Controls.Add(this.btnLOGIN);
             this.Controls.Add(this.lblRESETEARCONTRASEÑA);
@@ -150,10 +152,9 @@
             this.Controls.Add(this.lblCONTRASEÑA);
             this.Controls.Add(this.txtUSUARIO);
             this.Controls.Add(this.lblUSUARIO);
-            this.Controls.Add(this.lblLOGIN);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLogin";
-            this.Text = "Iniciar Sesion";
+            this.Text = "Sistema de Libreria - LOGIN";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,6 +170,6 @@
         private System.Windows.Forms.Label lblRESETEARCONTRASEÑA;
         private System.Windows.Forms.Button btnLOGIN;
         private System.Windows.Forms.Button btnCERRAR;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
     }
 }

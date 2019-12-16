@@ -28,7 +28,6 @@ namespace VISTA
             btnCONSULTAR.Enabled = oUsuario.validar_acciones("btnCONSULTAR", "frmUsuarios");
             btnMODIFICAR.Enabled = oUsuario.validar_acciones("btnMODIFICAR", "frmUsuarios");
             btnCAMBIARESTADO.Enabled = oUsuario.validar_acciones("btnCAMBIARESTADO", "frmUsuarios");
-
             armar_grilla();
         }
 

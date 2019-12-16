@@ -39,12 +39,20 @@ namespace CONTROLADORA
             return oNegocio.REMITOSDECOMPRA.Include("proveedor").Include("ordenCompra").Include("itemsrc").FirstOrDefault(v => v.codigoRemitoCompra == codigo);
         }
 
-        public System.Collections.IEnumerable obtener_remitos(string proveedor, string numeroOrden)
+        public System.Collections.IEnumerable obtener_remitos(string valor)
         {
-            Int32 nro;
             var remitos = from remito in oNegocio.REMITOSDECOMPRA.Include("proveedor").Include("ordenCompra").Include("itemsrc").ToList()
-                          where remito.proveedor.razonSocial.ToLower().Contains(proveedor.ToLower()) && Int32.TryParse(numeroOrden, out nro) ? (nro == remito.ordenCompra.codigoOrdenCompra) : true
-                          select remito;
+                          where remito.codigoRemitoCompra.ToString().Contains(valor) || remito.proveedor.razonSocial.ToLower().Contains(valor) ||
+                          remito.ordenCompra.codigoOrdenCompra.ToString().Contains(valor)
+                          select new
+                          {
+                              Codigo = remito.codigoRemitoCompra,
+                              OrdenDeCompra = remito.ordenCompra.ToString(),
+                              Proveedor = remito.proveedor,
+                              FechaProgramada = remito.fechaEntrega,
+                              FechaRecibida = remito.fechaRecibida,
+                              PrecioFinal = remito.total
+                          };
             return remitos.ToList();
         }
 

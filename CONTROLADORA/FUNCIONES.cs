@@ -25,7 +25,6 @@ namespace CONTROLADORA
             return hashString;
         }
 
-
         public static string generar_clave_aleatoria()
         {
             char[] ValueAfanumeric = { 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
@@ -62,7 +61,7 @@ namespace CONTROLADORA
 
             cliente.Port = 587;
             cliente.EnableSsl = true;
-            cliente.Host = "smtp.gmail.com"; //mail.dominio.com
+            cliente.Host = "smtp.gmail.com";
 
             try
             {
@@ -94,7 +93,6 @@ namespace CONTROLADORA
             oBook.Close();
             oApp.Quit();
         }
-
 
         public static string generar_backup()
         {
@@ -160,7 +158,7 @@ namespace CONTROLADORA
         #endregion
 
         #region VALIDACIONES
-        public static bool validar_mail(string mail) //verificar que funcione
+        public static bool validar_mail(string mail)
         {
             string expresion;
             expresion = @"\A(\w+\.?\w*\@\w+\.)(com)\Z";

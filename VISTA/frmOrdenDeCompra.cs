@@ -34,9 +34,9 @@ namespace VISTA
             pPRODUCTO.Enabled = false;
             txtTOTALPRODUCTOS.Enabled = false;
             dtpFECHAPEDIDO.Format = DateTimePickerFormat.Custom;
-            dtpFECHAPEDIDO.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+            dtpFECHAPEDIDO.CustomFormat = "MM/dd/yyyy";
             dtpFECHAENTREGA.Format = DateTimePickerFormat.Custom;
-            dtpFECHAENTREGA.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+            dtpFECHAENTREGA.CustomFormat = "MM/dd/yyyy";
             if (ACCION == "C")
             {
                 pPRODUCTO.Visible = false;
@@ -67,7 +67,19 @@ namespace VISTA
         {
             dgvPRODUCTOS.DataSource = null;
             dgvPRODUCTOS.DataSource = oORDEN.itemsoc.ToList();
+
+            dgvPRODUCTOS.Columns["ordenCompra"].Visible = false;
+            dgvPRODUCTOS.Columns["codigoItem"].Visible = false;
+            dgvPRODUCTOS.Columns["producto"].DisplayIndex = 0;
+            dgvPRODUCTOS.Columns["producto"].HeaderText = "Producto";
+            dgvPRODUCTOS.Columns["cantidad"].DisplayIndex = 1;
+            dgvPRODUCTOS.Columns["cantidad"].HeaderText = "Cantidad";
+            dgvPRODUCTOS.Columns["precioUnitarioPresupuesto"].DisplayIndex = 2;
+            dgvPRODUCTOS.Columns["precioUnitarioPresupuesto"].HeaderText = "PrecioUnitario";
+            dgvPRODUCTOS.Columns["subtotal"].DisplayIndex = 3;
+            dgvPRODUCTOS.Columns["subtotal"].HeaderText = "Subtotal";
         }
+
         public decimal calcular_total_productos()
         {
             decimal total = 0;

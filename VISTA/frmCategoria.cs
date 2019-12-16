@@ -48,7 +48,7 @@ namespace VISTA
                 MessageBox.Show("Debe ingresar un valor de categoria correcto");
                 return;
             }
-            if (!cCATEGORIAS.verificar_categoria_existente(txtCATEGORIA.Text)) //verificar este doble if
+            if (!cCATEGORIAS.verificar_categoria_existente(txtCATEGORIA.Text))
             {
                 if (!(ACCION == "M" && oCategoria.categoria == txtCATEGORIA.Text))
                 { 

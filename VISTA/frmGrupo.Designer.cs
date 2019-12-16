@@ -43,38 +43,37 @@
             // lblACCIONES
             // 
             this.lblACCIONES.AutoSize = true;
-            this.lblACCIONES.Location = new System.Drawing.Point(20, 240);
-            this.lblACCIONES.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblACCIONES.Location = new System.Drawing.Point(27, 295);
             this.lblACCIONES.Name = "lblACCIONES";
-            this.lblACCIONES.Size = new System.Drawing.Size(54, 13);
+            this.lblACCIONES.Size = new System.Drawing.Size(69, 17);
             this.lblACCIONES.TabIndex = 41;
             this.lblACCIONES.Text = "Acciones:";
             // 
             // lblUSUARIOS
             // 
             this.lblUSUARIOS.AutoSize = true;
-            this.lblUSUARIOS.Location = new System.Drawing.Point(20, 100);
-            this.lblUSUARIOS.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUSUARIOS.Location = new System.Drawing.Point(27, 123);
             this.lblUSUARIOS.Name = "lblUSUARIOS";
-            this.lblUSUARIOS.Size = new System.Drawing.Size(51, 13);
+            this.lblUSUARIOS.Size = new System.Drawing.Size(68, 17);
             this.lblUSUARIOS.TabIndex = 40;
             this.lblUSUARIOS.Text = "Usuarios:";
             // 
             // clbUSUARIOS
             // 
             this.clbUSUARIOS.FormattingEnabled = true;
-            this.clbUSUARIOS.Location = new System.Drawing.Point(20, 120);
+            this.clbUSUARIOS.Location = new System.Drawing.Point(27, 148);
+            this.clbUSUARIOS.Margin = new System.Windows.Forms.Padding(4);
             this.clbUSUARIOS.Name = "clbUSUARIOS";
-            this.clbUSUARIOS.Size = new System.Drawing.Size(320, 109);
+            this.clbUSUARIOS.Size = new System.Drawing.Size(425, 123);
             this.clbUSUARIOS.TabIndex = 39;
             this.clbUSUARIOS.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbUSUARIOS_ItemCheck);
             // 
             // btnCANCELAR
             // 
-            this.btnCANCELAR.Location = new System.Drawing.Point(80, 478);
-            this.btnCANCELAR.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCANCELAR.Location = new System.Drawing.Point(30, 591);
+            this.btnCANCELAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCANCELAR.Name = "btnCANCELAR";
-            this.btnCANCELAR.Size = new System.Drawing.Size(194, 35);
+            this.btnCANCELAR.Size = new System.Drawing.Size(422, 43);
             this.btnCANCELAR.TabIndex = 38;
             this.btnCANCELAR.Text = "Cancelar";
             this.btnCANCELAR.UseVisualStyleBackColor = true;
@@ -82,10 +81,10 @@
             // 
             // btnGUARDAR
             // 
-            this.btnGUARDAR.Location = new System.Drawing.Point(80, 424);
-            this.btnGUARDAR.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGUARDAR.Location = new System.Drawing.Point(30, 509);
+            this.btnGUARDAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGUARDAR.Name = "btnGUARDAR";
-            this.btnGUARDAR.Size = new System.Drawing.Size(194, 35);
+            this.btnGUARDAR.Size = new System.Drawing.Size(422, 74);
             this.btnGUARDAR.TabIndex = 37;
             this.btnGUARDAR.Text = "Guardar";
             this.btnGUARDAR.UseVisualStyleBackColor = true;
@@ -94,37 +93,36 @@
             // lblGRUPO
             // 
             this.lblGRUPO.AutoSize = true;
-            this.lblGRUPO.Location = new System.Drawing.Point(20, 24);
-            this.lblGRUPO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGRUPO.Location = new System.Drawing.Point(27, 30);
             this.lblGRUPO.Name = "lblGRUPO";
-            this.lblGRUPO.Size = new System.Drawing.Size(94, 13);
+            this.lblGRUPO.Size = new System.Drawing.Size(126, 17);
             this.lblGRUPO.TabIndex = 36;
             this.lblGRUPO.Text = "Nombre de Grupo:";
             // 
             // txtGRUPO
             // 
-            this.txtGRUPO.Location = new System.Drawing.Point(140, 24);
-            this.txtGRUPO.Margin = new System.Windows.Forms.Padding(2);
+            this.txtGRUPO.Location = new System.Drawing.Point(187, 30);
+            this.txtGRUPO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtGRUPO.Name = "txtGRUPO";
-            this.txtGRUPO.Size = new System.Drawing.Size(194, 20);
+            this.txtGRUPO.Size = new System.Drawing.Size(257, 22);
             this.txtGRUPO.TabIndex = 35;
             // 
             // lblESTADO
             // 
             this.lblESTADO.AutoSize = true;
-            this.lblESTADO.Location = new System.Drawing.Point(20, 60);
-            this.lblESTADO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblESTADO.Location = new System.Drawing.Point(27, 74);
             this.lblESTADO.Name = "lblESTADO";
-            this.lblESTADO.Size = new System.Drawing.Size(43, 13);
+            this.lblESTADO.Size = new System.Drawing.Size(56, 17);
             this.lblESTADO.TabIndex = 43;
             this.lblESTADO.Text = "Estado:";
             // 
             // ckbACTIVO
             // 
             this.ckbACTIVO.AutoSize = true;
-            this.ckbACTIVO.Location = new System.Drawing.Point(140, 60);
+            this.ckbACTIVO.Location = new System.Drawing.Point(187, 74);
+            this.ckbACTIVO.Margin = new System.Windows.Forms.Padding(4);
             this.ckbACTIVO.Name = "ckbACTIVO";
-            this.ckbACTIVO.Size = new System.Drawing.Size(56, 17);
+            this.ckbACTIVO.Size = new System.Drawing.Size(68, 21);
             this.ckbACTIVO.TabIndex = 44;
             this.ckbACTIVO.Text = "Activo";
             this.ckbACTIVO.UseVisualStyleBackColor = true;
@@ -132,17 +130,18 @@
             // tvACCIONES
             // 
             this.tvACCIONES.CheckBoxes = true;
-            this.tvACCIONES.Location = new System.Drawing.Point(20, 260);
+            this.tvACCIONES.Location = new System.Drawing.Point(27, 320);
+            this.tvACCIONES.Margin = new System.Windows.Forms.Padding(4);
             this.tvACCIONES.Name = "tvACCIONES";
-            this.tvACCIONES.Size = new System.Drawing.Size(320, 140);
+            this.tvACCIONES.Size = new System.Drawing.Size(425, 171);
             this.tvACCIONES.TabIndex = 45;
             this.tvACCIONES.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.tvACCIONES_AfterCheck);
             // 
             // frmGrupo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(360, 537);
+            this.ClientSize = new System.Drawing.Size(480, 661);
             this.Controls.Add(this.tvACCIONES);
             this.Controls.Add(this.ckbACTIVO);
             this.Controls.Add(this.lblESTADO);
@@ -153,8 +152,9 @@
             this.Controls.Add(this.btnGUARDAR);
             this.Controls.Add(this.lblGRUPO);
             this.Controls.Add(this.txtGRUPO);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmGrupo";
-            this.Text = "frmGrupo";
+            this.Text = "Sistema de Libreria - GRUPO";
             this.Load += new System.EventHandler(this.frmGrupo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

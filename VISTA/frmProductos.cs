@@ -19,6 +19,7 @@ namespace VISTA
         CONTROLADORA.cPRODUCTOS cPRODUCTOS;
         public MODELO.PRODUCTO productoActual { get { return oProducto; } }
         MODELO.PRODUCTO oProducto;
+        string estado;
         public frmProductos(MODELO.USUARIO oUsuario)
         {
             InitializeComponent();
@@ -36,6 +37,7 @@ namespace VISTA
         public frmProductos()
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
             cPRODUCTOS = CONTROLADORA.cPRODUCTOS.obtener_instancia();
             btnSELECCIONAR.Visible = true;
 
@@ -44,6 +46,15 @@ namespace VISTA
 
         public void armarGrilla()
         {
+            foreach (MODELO.PRODUCTO producto in cPRODUCTOS.listar_productos())
+            {
+                estado = producto.estado;
+                producto.asignar_estado();
+                if (producto.estado != estado)
+                {
+                    cPRODUCTOS.modificar_producto(producto);
+                }
+            }
             dgvPRODUCTOS.DataSource = null;
             dgvPRODUCTOS.DataSource = cPRODUCTOS.obtener_productos(txtBUSCAR.Text);
         }
@@ -98,6 +109,12 @@ namespace VISTA
                 return;
             }
             oProducto = cPRODUCTOS.obtener_producto(Convert.ToInt32(dgvPRODUCTOS.CurrentRow.Cells[0].Value));
+            if (oProducto.estadoActivo == false)
+            {
+                MessageBox.Show("El producto seleccionado esta desactivado y no se puede seleccionar");
+                oProducto = null;
+                return;
+            }
             this.Close();
         }
 

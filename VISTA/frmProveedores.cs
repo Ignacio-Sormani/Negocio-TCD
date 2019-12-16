@@ -28,13 +28,13 @@ namespace VISTA
             btnAGREGAR.Enabled = oUsuario.validar_acciones("btnAGREGAR", "frmProveedores");
             btnCONSULTAR.Enabled = oUsuario.validar_acciones("btnCONSULTAR", "frmProveedores");
             btnMODIFICAR.Enabled = oUsuario.validar_acciones("btnMODIFICAR", "frmProveedores");
-
             armarGrilla();
         }
 
         public frmProveedores(MODELO.ORDENDECOMPRA miOrden)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
 
             cPROVEEDORES = CONTROLADORA.cPROVEEDORES.obtener_instancia();
             oOrden = miOrden;
@@ -68,7 +68,6 @@ namespace VISTA
                 MessageBox.Show("Debe seleccionar un proveedor");
                 return;
             }
-
             MODELO.PROVEEDOR oProveedor = cPROVEEDORES.obtener_proveedor(Convert.ToInt32(dgvPROVEEDORES.CurrentRow.Cells[0].Value));
             frmProveedor frmProveedor = new frmProveedor(oProveedor, "M");
             DialogResult dr = frmProveedor.ShowDialog();
@@ -84,7 +83,6 @@ namespace VISTA
                 MessageBox.Show("Debe seleccionar un proveedor");
                 return;
             }
-
             MODELO.PROVEEDOR oProveedor = cPROVEEDORES.obtener_proveedor(Convert.ToInt32(dgvPROVEEDORES.CurrentRow.Cells[0].Value));
             frmProveedor frmProveedor = new frmProveedor(oProveedor, "C");
             frmProveedor.ShowDialog();

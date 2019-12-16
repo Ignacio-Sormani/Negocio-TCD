@@ -36,10 +36,10 @@
             // 
             // btnCANCELAR
             // 
-            this.btnCANCELAR.Location = new System.Drawing.Point(80, 134);
-            this.btnCANCELAR.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCANCELAR.Location = new System.Drawing.Point(30, 158);
+            this.btnCANCELAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCANCELAR.Name = "btnCANCELAR";
-            this.btnCANCELAR.Size = new System.Drawing.Size(194, 35);
+            this.btnCANCELAR.Size = new System.Drawing.Size(414, 43);
             this.btnCANCELAR.TabIndex = 7;
             this.btnCANCELAR.Text = "Cancelar";
             this.btnCANCELAR.UseVisualStyleBackColor = true;
@@ -47,10 +47,10 @@
             // 
             // btnGUARDAR
             // 
-            this.btnGUARDAR.Location = new System.Drawing.Point(80, 80);
-            this.btnGUARDAR.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGUARDAR.Location = new System.Drawing.Point(30, 75);
+            this.btnGUARDAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGUARDAR.Name = "btnGUARDAR";
-            this.btnGUARDAR.Size = new System.Drawing.Size(194, 35);
+            this.btnGUARDAR.Size = new System.Drawing.Size(414, 70);
             this.btnGUARDAR.TabIndex = 6;
             this.btnGUARDAR.Text = "Guardar";
             this.btnGUARDAR.UseVisualStyleBackColor = true;
@@ -59,32 +59,32 @@
             // lblCATEGORIA
             // 
             this.lblCATEGORIA.AutoSize = true;
-            this.lblCATEGORIA.Location = new System.Drawing.Point(20, 24);
-            this.lblCATEGORIA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCATEGORIA.Location = new System.Drawing.Point(27, 30);
             this.lblCATEGORIA.Name = "lblCATEGORIA";
-            this.lblCATEGORIA.Size = new System.Drawing.Size(110, 13);
+            this.lblCATEGORIA.Size = new System.Drawing.Size(147, 17);
             this.lblCATEGORIA.TabIndex = 33;
             this.lblCATEGORIA.Text = "Nombre de Categoria:";
             // 
             // txtCATEGORIA
             // 
-            this.txtCATEGORIA.Location = new System.Drawing.Point(140, 24);
-            this.txtCATEGORIA.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCATEGORIA.Location = new System.Drawing.Point(187, 30);
+            this.txtCATEGORIA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCATEGORIA.Name = "txtCATEGORIA";
-            this.txtCATEGORIA.Size = new System.Drawing.Size(194, 20);
+            this.txtCATEGORIA.Size = new System.Drawing.Size(257, 22);
             this.txtCATEGORIA.TabIndex = 32;
             // 
             // frmCategoria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(360, 202);
+            this.ClientSize = new System.Drawing.Size(480, 249);
             this.Controls.Add(this.lblCATEGORIA);
             this.Controls.Add(this.txtCATEGORIA);
             this.Controls.Add(this.btnCANCELAR);
             this.Controls.Add(this.btnGUARDAR);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCategoria";
-            this.Text = "frmCategoria";
+            this.Text = "Sistema de Libreria - CATEGORIA";
             this.Load += new System.EventHandler(this.frmCategoria_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

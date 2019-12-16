@@ -34,6 +34,7 @@ namespace VISTA
         public frmClientes(MODELO.VENTA miVenta)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
 
             oVenta = miVenta;
             cCLIENTES = CONTROLADORA.cCLIENTES.obtener_instancia();
@@ -109,6 +110,11 @@ namespace VISTA
         {
             txtBUSCAR.Text = "";
             armarGrilla();
+        }
+
+        private void frmClientes_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

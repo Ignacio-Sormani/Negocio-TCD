@@ -26,7 +26,7 @@ namespace VISTA
 
         private void btnRESETEARCLAVE_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtMAIL.Text) || CONTROLADORA.FUNCIONES.validar_mail(txtMAIL.Text))
+            if (string.IsNullOrWhiteSpace(txtMAIL.Text) || !CONTROLADORA.FUNCIONES.validar_mail(txtMAIL.Text))
             {
                 MessageBox.Show("Debe ingresar un mail valido");
                 return;

@@ -92,26 +92,26 @@ namespace VISTA
                 MessageBox.Show("Debe ingresar un mail correcto");
                 return;
             }
-            nuevaClave = CONTROLADORA.FUNCIONES.generar_clave_aleatoria();
-            nuevaClaveEncriptada = CONTROLADORA.FUNCIONES.encriptar_clave(nuevaClave);
             oUsuario.nombreDeUsuario = txtUSUARIO.Text;
-            oUsuario.clave = nuevaClaveEncriptada;
             oUsuario.nombreApellido = txtNOMBRE.Text;
             oUsuario.mail = txtMAIL.Text;
             oUsuario.conectado = false;
-            oUsuario.estadoActivo = ckbACTIVO.Checked;
-            string message = "Su nuevo usuario en el sistema es: " + oUsuario.nombreDeUsuario + " y su clave es: " + nuevaClave + ". Le recomendamos modificar su contraseña cuando acceda al sistema.";
-            if (CONTROLADORA.FUNCIONES.enviar_mail("Nuevo usuario", message, oUsuario.mail ))
-            {
-                MessageBox.Show("Se ha enviado su nueva clave a la direccion de mail ingresada");
-            }
-            else
-            {
-                MessageBox.Show("No se ha podido enviar la nueva clave a la direccion de mail ingresada");
-                return;
-            }
+            oUsuario.estadoActivo = ckbACTIVO.Checked;            
             if (ACCION == "A")
             {
+                nuevaClave = CONTROLADORA.FUNCIONES.generar_clave_aleatoria();
+                nuevaClaveEncriptada = CONTROLADORA.FUNCIONES.encriptar_clave(nuevaClave);
+                oUsuario.clave = nuevaClaveEncriptada;
+                string message = "Su nuevo usuario en el sistema es: " + oUsuario.nombreDeUsuario + " y su clave es: " + nuevaClave + ". Le recomendamos modificar su contraseña cuando acceda al sistema.";
+                if (CONTROLADORA.FUNCIONES.enviar_mail("Nuevo usuario", message, oUsuario.mail))
+                {
+                    MessageBox.Show("Se ha enviado su nueva clave a la direccion de mail ingresada");
+                }
+                else
+                {
+                    MessageBox.Show("No se ha podido enviar la nueva clave a la direccion de mail ingresada");
+                    return;
+                }
                 cUSUARIOS.agregar_usuario(oUsuario);
             }
             else
@@ -128,8 +128,8 @@ namespace VISTA
 
         private void clbGRUPOS_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            if (bGrupo == false) return;
-
+            if (bGrupo == false)
+                return;
             MODELO.GRUPO oGrupo = (MODELO.GRUPO)clbGRUPOS.SelectedItem;
             if (e.NewValue == CheckState.Checked)
             {

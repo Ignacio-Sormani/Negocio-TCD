@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOrdenDeCompra));
             this.lblPROVEEDORNOMBRE = new System.Windows.Forms.Label();
             this.btnPROVEEDOR = new System.Windows.Forms.Button();
             this.pPRODUCTO = new System.Windows.Forms.Panel();
@@ -67,7 +68,7 @@
             // btnPROVEEDOR
             // 
             this.btnPROVEEDOR.Location = new System.Drawing.Point(305, 72);
-            this.btnPROVEEDOR.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPROVEEDOR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPROVEEDOR.Name = "btnPROVEEDOR";
             this.btnPROVEEDOR.Size = new System.Drawing.Size(142, 27);
             this.btnPROVEEDOR.TabIndex = 86;
@@ -108,7 +109,7 @@
             // btnCONFIRMARPRODUCTO
             // 
             this.btnCONFIRMARPRODUCTO.Location = new System.Drawing.Point(158, 55);
-            this.btnCONFIRMARPRODUCTO.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCONFIRMARPRODUCTO.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCONFIRMARPRODUCTO.Name = "btnCONFIRMARPRODUCTO";
             this.btnCONFIRMARPRODUCTO.Size = new System.Drawing.Size(102, 30);
             this.btnCONFIRMARPRODUCTO.TabIndex = 55;
@@ -153,23 +154,29 @@
             // 
             // btnELIMINARPRODUCTO
             // 
-            this.btnELIMINARPRODUCTO.Location = new System.Drawing.Point(11, 301);
-            this.btnELIMINARPRODUCTO.Margin = new System.Windows.Forms.Padding(2);
+            this.btnELIMINARPRODUCTO.Image = ((System.Drawing.Image)(resources.GetObject("btnELIMINARPRODUCTO.Image")));
+            this.btnELIMINARPRODUCTO.Location = new System.Drawing.Point(11, 366);
+            this.btnELIMINARPRODUCTO.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnELIMINARPRODUCTO.Name = "btnELIMINARPRODUCTO";
-            this.btnELIMINARPRODUCTO.Size = new System.Drawing.Size(116, 30);
+            this.btnELIMINARPRODUCTO.Size = new System.Drawing.Size(130, 45);
             this.btnELIMINARPRODUCTO.TabIndex = 84;
             this.btnELIMINARPRODUCTO.Text = "Eliminar Producto";
+            this.btnELIMINARPRODUCTO.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnELIMINARPRODUCTO.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnELIMINARPRODUCTO.UseVisualStyleBackColor = true;
             this.btnELIMINARPRODUCTO.Click += new System.EventHandler(this.btnELIMINARPRODUCTO_Click);
             // 
             // btnBUSCARPRODUCTO
             // 
+            this.btnBUSCARPRODUCTO.Image = ((System.Drawing.Image)(resources.GetObject("btnBUSCARPRODUCTO.Image")));
             this.btnBUSCARPRODUCTO.Location = new System.Drawing.Point(493, 125);
-            this.btnBUSCARPRODUCTO.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBUSCARPRODUCTO.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBUSCARPRODUCTO.Name = "btnBUSCARPRODUCTO";
             this.btnBUSCARPRODUCTO.Size = new System.Drawing.Size(279, 30);
             this.btnBUSCARPRODUCTO.TabIndex = 83;
             this.btnBUSCARPRODUCTO.Text = "Buscar Producto";
+            this.btnBUSCARPRODUCTO.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBUSCARPRODUCTO.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBUSCARPRODUCTO.UseVisualStyleBackColor = true;
             this.btnBUSCARPRODUCTO.Click += new System.EventHandler(this.btnBUSCARPRODUCTO_Click);
             // 
@@ -185,7 +192,7 @@
             // lblTOTALDETALLE
             // 
             this.lblTOTALDETALLE.AutoSize = true;
-            this.lblTOTALDETALLE.Location = new System.Drawing.Point(302, 304);
+            this.lblTOTALDETALLE.Location = new System.Drawing.Point(303, 375);
             this.lblTOTALDETALLE.Name = "lblTOTALDETALLE";
             this.lblTOTALDETALLE.Size = new System.Drawing.Size(45, 13);
             this.lblTOTALDETALLE.TabIndex = 81;
@@ -193,7 +200,7 @@
             // 
             // txtTOTALPRODUCTOS
             // 
-            this.txtTOTALPRODUCTOS.Location = new System.Drawing.Point(366, 301);
+            this.txtTOTALPRODUCTOS.Location = new System.Drawing.Point(367, 371);
             this.txtTOTALPRODUCTOS.Name = "txtTOTALPRODUCTOS";
             this.txtTOTALPRODUCTOS.Size = new System.Drawing.Size(100, 20);
             this.txtTOTALPRODUCTOS.TabIndex = 80;
@@ -231,13 +238,13 @@
             this.dgvPRODUCTOS.GridColor = System.Drawing.Color.CadetBlue;
             this.dgvPRODUCTOS.Location = new System.Drawing.Point(12, 125);
             this.dgvPRODUCTOS.Name = "dgvPRODUCTOS";
-            this.dgvPRODUCTOS.Size = new System.Drawing.Size(454, 171);
+            this.dgvPRODUCTOS.Size = new System.Drawing.Size(454, 235);
             this.dgvPRODUCTOS.TabIndex = 76;
             // 
             // btnCANCELAR
             // 
-            this.btnCANCELAR.Location = new System.Drawing.Point(438, 353);
-            this.btnCANCELAR.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCANCELAR.Location = new System.Drawing.Point(580, 472);
+            this.btnCANCELAR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCANCELAR.Name = "btnCANCELAR";
             this.btnCANCELAR.Size = new System.Drawing.Size(194, 35);
             this.btnCANCELAR.TabIndex = 89;
@@ -247,10 +254,10 @@
             // 
             // btnGUARDAR
             // 
-            this.btnGUARDAR.Location = new System.Drawing.Point(131, 353);
-            this.btnGUARDAR.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGUARDAR.Location = new System.Drawing.Point(580, 418);
+            this.btnGUARDAR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGUARDAR.Name = "btnGUARDAR";
-            this.btnGUARDAR.Size = new System.Drawing.Size(194, 35);
+            this.btnGUARDAR.Size = new System.Drawing.Size(194, 51);
             this.btnGUARDAR.TabIndex = 88;
             this.btnGUARDAR.Text = "Guardar";
             this.btnGUARDAR.UseVisualStyleBackColor = true;
@@ -277,7 +284,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 406);
+            this.ClientSize = new System.Drawing.Size(784, 516);
             this.Controls.Add(this.dtpFECHAPEDIDO);
             this.Controls.Add(this.lblFECHAPEDIDO);
             this.Controls.Add(this.btnCANCELAR);
@@ -295,7 +302,7 @@
             this.Controls.Add(this.lblPROVEEDOR);
             this.Controls.Add(this.dgvPRODUCTOS);
             this.Name = "frmOrdenDeCompra";
-            this.Text = "frmOrdenDeCompra";
+            this.Text = "Sistema de Libreria - ORDEN DE COMPRA";
             this.Load += new System.EventHandler(this.frmOrdenDeCompra_Load);
             this.pPRODUCTO.ResumeLayout(false);
             this.pPRODUCTO.PerformLayout();

@@ -84,7 +84,6 @@ namespace VISTA
             this.DialogResult = DialogResult.OK;
         }
 
-
         private void btnCANCELAR_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;

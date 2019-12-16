@@ -3,7 +3,7 @@ namespace DATOS.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class negocio : DbMigration
+    public partial class negocio1 : DbMigration
     {
         public override void Up()
         {
@@ -100,7 +100,6 @@ namespace DATOS.Migrations
                         fecha = c.DateTime(nullable: false),
                         precioTotal = c.Decimal(nullable: false, precision: 18, scale: 2),
                         pagoTotal = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        estado = c.Boolean(nullable: false),
                         cliente_codigoCliente = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.codigoVenta)
@@ -114,8 +113,9 @@ namespace DATOS.Migrations
                         codigoItem = c.Int(nullable: false, identity: true),
                         cantidad = c.Int(nullable: false),
                         precioUnitarioVenta = c.Decimal(precision: 18, scale: 2),
+                        precioUnitarioPresupuesto = c.Decimal(precision: 18, scale: 2),
                         precioUnitarioCompra = c.Decimal(precision: 18, scale: 2),
-                        Discriminator = c.String(nullable: true, maxLength: 128),
+                        Discriminator = c.String(nullable: false, maxLength: 128),
                         venta_codigoVenta = c.Int(),
                         ordenCompra_codigoOrdenCompra = c.Int(),
                         remitoCompra_codigoRemitoCompra = c.Int(),
@@ -137,7 +137,6 @@ namespace DATOS.Migrations
                     {
                         codigoProducto = c.Int(nullable: false, identity: true),
                         descripcion = c.String(),
-                        costo = c.Decimal(nullable: false, precision: 18, scale: 2),
                         precio = c.Decimal(nullable: false, precision: 18, scale: 2),
                         cantidadActual = c.Int(nullable: false),
                         cantidadMinima = c.Int(nullable: false),
@@ -195,7 +194,8 @@ namespace DATOS.Migrations
                         codigoOrdenCompra = c.Int(nullable: false, identity: true),
                         fechaPedido = c.DateTime(nullable: false),
                         fechaEntrega = c.DateTime(nullable: false),
-                        estado = c.Boolean(nullable: false),
+                        totalPedido = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        estado = c.String(),
                         proveedor_codigoProveedor = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.codigoOrdenCompra)

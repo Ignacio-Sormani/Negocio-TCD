@@ -228,3 +228,7 @@ C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\VISTA\obj\Debug\VIS
 C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\VISTA\obj\Debug\VISTA.csproj.CoreCompileInputs.cache
 C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\VISTA\obj\Debug\VISTA.exe
 C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\VISTA\obj\Debug\VISTA.pdb
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmPagos.resources
+C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\VISTA\obj\Debug\VISTA.frmPagos.resources
+C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\VISTA\obj\Debug\VISTA.frmAuditoriaLogins.resources
+C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmAuditoriaLogin.resources

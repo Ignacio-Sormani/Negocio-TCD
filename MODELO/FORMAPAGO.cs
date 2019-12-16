@@ -14,7 +14,17 @@ namespace MODELO
 
         public override string ToString()
         {
-            return this.GetType().ToString();
+            switch (GetType().ToString())
+            {
+                case "MODELO.EFECTIVO":
+                    return "EFECTIVO";
+                case "MODELO.CREDITO":
+                    return "CREDITO";
+                case "MODELO.DEBITO":
+                    return "DEBITO";
+                default:
+                    return "";
+            }
         }
     }
 

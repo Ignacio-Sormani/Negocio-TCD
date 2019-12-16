@@ -27,8 +27,8 @@ namespace VISTA
 
         private void btnGUARDAR_Click(object sender, EventArgs e)
         {
-            int dni;
-            if (!int.TryParse(txtDNI.Text, out dni)) {
+            Int64 dni;
+            if (!Int64.TryParse(txtDNI.Text, out dni)) {
                 MessageBox.Show("El valor del dni es incorrecto");
                 return;
             }
@@ -36,9 +36,11 @@ namespace VISTA
                 MessageBox.Show("El valor del nombre y apellido es incorrecto");
                 return;
             }
-
-            //validacion para que la fecha no sea mayor a la actual
-
+            if (dtpNACIMIENTO.Value >= System.DateTime.Today)
+            {
+                MessageBox.Show("La fecha de nacimiento debe ser una fecha pasada");
+                return;
+            }
             if (string.IsNullOrWhiteSpace(txtDIRECCION.Text))
             {
                 MessageBox.Show("El valor de la direccion es incorrecto");
@@ -49,8 +51,8 @@ namespace VISTA
                 MessageBox.Show("Debe seleccionar una localidad");
                 return;
             }
-            int telefono;
-            if (!int.TryParse(txtTELEFONO.Text, out telefono))
+            Int64 telefono;
+            if (!Int64.TryParse(txtTELEFONO.Text, out telefono))
             {
                 MessageBox.Show("El valor del telefono es incorrecto");
                 return;

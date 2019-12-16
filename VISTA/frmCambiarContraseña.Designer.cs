@@ -48,6 +48,7 @@
             this.btnVOLVER.TabIndex = 18;
             this.btnVOLVER.Text = "Cerrar";
             this.btnVOLVER.UseVisualStyleBackColor = true;
+            this.btnVOLVER.UseWaitCursor = true;
             this.btnVOLVER.Click += new System.EventHandler(this.btnVOLVER_Click);
             // 
             // btnCAMBIARCONTRASEÑA
@@ -59,21 +60,26 @@
             this.btnCAMBIARCONTRASEÑA.TabIndex = 17;
             this.btnCAMBIARCONTRASEÑA.Text = "Cambiar contraseña";
             this.btnCAMBIARCONTRASEÑA.UseVisualStyleBackColor = true;
+            this.btnCAMBIARCONTRASEÑA.UseWaitCursor = true;
             this.btnCAMBIARCONTRASEÑA.Click += new System.EventHandler(this.btnCAMBIARCONTRASEÑA_Click);
             // 
             // txtCONTRANUEVA2
             // 
-            this.txtCONTRANUEVA2.Location = new System.Drawing.Point(180, 140);
+            this.txtCONTRANUEVA2.Location = new System.Drawing.Point(196, 140);
             this.txtCONTRANUEVA2.Name = "txtCONTRANUEVA2";
-            this.txtCONTRANUEVA2.Size = new System.Drawing.Size(160, 20);
+            this.txtCONTRANUEVA2.PasswordChar = '*';
+            this.txtCONTRANUEVA2.Size = new System.Drawing.Size(144, 20);
             this.txtCONTRANUEVA2.TabIndex = 15;
+            this.txtCONTRANUEVA2.UseWaitCursor = true;
             // 
             // txtCONTRANUEVA1
             // 
-            this.txtCONTRANUEVA1.Location = new System.Drawing.Point(180, 100);
+            this.txtCONTRANUEVA1.Location = new System.Drawing.Point(196, 100);
             this.txtCONTRANUEVA1.Name = "txtCONTRANUEVA1";
-            this.txtCONTRANUEVA1.Size = new System.Drawing.Size(160, 20);
+            this.txtCONTRANUEVA1.PasswordChar = '*';
+            this.txtCONTRANUEVA1.Size = new System.Drawing.Size(144, 20);
             this.txtCONTRANUEVA1.TabIndex = 13;
+            this.txtCONTRANUEVA1.UseWaitCursor = true;
             // 
             // lblCONTRANUEVA1
             // 
@@ -83,6 +89,7 @@
             this.lblCONTRANUEVA1.Size = new System.Drawing.Size(98, 13);
             this.lblCONTRANUEVA1.TabIndex = 12;
             this.lblCONTRANUEVA1.Text = "Nueva contraseña:";
+            this.lblCONTRANUEVA1.UseWaitCursor = true;
             // 
             // lblCAMBIARCONTRA
             // 
@@ -96,6 +103,7 @@
             this.lblCAMBIARCONTRA.Size = new System.Drawing.Size(276, 25);
             this.lblCAMBIARCONTRA.TabIndex = 11;
             this.lblCAMBIARCONTRA.Text = "CAMBIAR CONTRASEÑA";
+            this.lblCAMBIARCONTRA.UseWaitCursor = true;
             // 
             // lblCONTRANUEVA2
             // 
@@ -105,13 +113,16 @@
             this.lblCONTRANUEVA2.Size = new System.Drawing.Size(133, 13);
             this.lblCONTRANUEVA2.TabIndex = 19;
             this.lblCONTRANUEVA2.Text = "Repetir nueva contraseña:";
+            this.lblCONTRANUEVA2.UseWaitCursor = true;
             // 
             // txtCONTRAVIEJA
             // 
-            this.txtCONTRAVIEJA.Location = new System.Drawing.Point(180, 60);
+            this.txtCONTRAVIEJA.Location = new System.Drawing.Point(196, 60);
             this.txtCONTRAVIEJA.Name = "txtCONTRAVIEJA";
-            this.txtCONTRAVIEJA.Size = new System.Drawing.Size(160, 20);
+            this.txtCONTRAVIEJA.PasswordChar = '*';
+            this.txtCONTRAVIEJA.Size = new System.Drawing.Size(144, 20);
             this.txtCONTRAVIEJA.TabIndex = 22;
+            this.txtCONTRAVIEJA.UseWaitCursor = true;
             // 
             // lblCONTRAVIEJA
             // 
@@ -121,6 +132,7 @@
             this.lblCONTRAVIEJA.Size = new System.Drawing.Size(102, 13);
             this.lblCONTRAVIEJA.TabIndex = 21;
             this.lblCONTRAVIEJA.Text = "Contraseña antigua:";
+            this.lblCONTRAVIEJA.UseWaitCursor = true;
             // 
             // frmCambiarContraseña
             // 
@@ -136,8 +148,9 @@
             this.Controls.Add(this.txtCONTRANUEVA1);
             this.Controls.Add(this.lblCONTRANUEVA1);
             this.Controls.Add(this.lblCAMBIARCONTRA);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "frmCambiarContraseña";
-            this.Text = "frmRecuperarClave";
+            this.Text = "Sistema de Libreria - CAMBIAR CONTRASEÑA";
             this.ResumeLayout(false);
             this.PerformLayout();
 

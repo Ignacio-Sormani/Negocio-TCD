@@ -42,11 +42,11 @@ namespace CONTROLADORA
             oNegocio.SaveChanges();
         }
 
-        public System.Collections.IEnumerable obtener_localidades(string nombreLocalidad)
+        public System.Collections.IEnumerable obtener_localidades(string valor)
         {
             var localidades = from localidad in oNegocio.LOCALIDADES.ToList()
-                             where localidad.localidad.ToLower().Contains(nombreLocalidad.ToLower())
-                             select localidad;
+                             where localidad.codigoPostal.ToString().Contains(valor) || localidad.localidad.ToLower().Contains(valor.ToLower())
+                             select new { Codigo = localidad.codigoLocalidad, CodigoPostal = localidad.codigoPostal, Localidad = localidad.localidad };
             return localidades.ToList();
         }
 
@@ -54,7 +54,6 @@ namespace CONTROLADORA
         {
             return oNegocio.LOCALIDADES.Find(codigo);
         }
-
 
         public bool verificar_localidad_existente(Int32 cp, string localidad)
         {

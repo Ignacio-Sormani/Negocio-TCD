@@ -37,17 +37,18 @@
             // 
             // txtMAIL
             // 
-            this.txtMAIL.Location = new System.Drawing.Point(100, 100);
+            this.txtMAIL.Location = new System.Drawing.Point(127, 78);
+            this.txtMAIL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMAIL.Name = "txtMAIL";
-            this.txtMAIL.Size = new System.Drawing.Size(240, 20);
+            this.txtMAIL.Size = new System.Drawing.Size(319, 22);
             this.txtMAIL.TabIndex = 29;
             // 
             // btnVOLVER
             // 
-            this.btnVOLVER.Location = new System.Drawing.Point(207, 205);
-            this.btnVOLVER.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVOLVER.Location = new System.Drawing.Point(275, 134);
+            this.btnVOLVER.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVOLVER.Name = "btnVOLVER";
-            this.btnVOLVER.Size = new System.Drawing.Size(150, 30);
+            this.btnVOLVER.Size = new System.Drawing.Size(200, 37);
             this.btnVOLVER.TabIndex = 27;
             this.btnVOLVER.Text = "Cerrar";
             this.btnVOLVER.UseVisualStyleBackColor = true;
@@ -55,10 +56,10 @@
             // 
             // btnRESETEARCLAVE
             // 
-            this.btnRESETEARCLAVE.Location = new System.Drawing.Point(27, 205);
-            this.btnRESETEARCLAVE.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRESETEARCLAVE.Location = new System.Drawing.Point(35, 134);
+            this.btnRESETEARCLAVE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRESETEARCLAVE.Name = "btnRESETEARCLAVE";
-            this.btnRESETEARCLAVE.Size = new System.Drawing.Size(150, 30);
+            this.btnRESETEARCLAVE.Size = new System.Drawing.Size(200, 37);
             this.btnRESETEARCLAVE.TabIndex = 26;
             this.btnRESETEARCLAVE.Text = "Resetear contraseña";
             this.btnRESETEARCLAVE.UseVisualStyleBackColor = true;
@@ -67,9 +68,10 @@
             // lblMAIL
             // 
             this.lblMAIL.AutoSize = true;
-            this.lblMAIL.Location = new System.Drawing.Point(40, 100);
+            this.lblMAIL.Location = new System.Drawing.Point(47, 78);
+            this.lblMAIL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMAIL.Name = "lblMAIL";
-            this.lblMAIL.Size = new System.Drawing.Size(29, 13);
+            this.lblMAIL.Size = new System.Drawing.Size(37, 17);
             this.lblMAIL.TabIndex = 24;
             this.lblMAIL.Text = "Mail:";
             // 
@@ -80,24 +82,26 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRESETEARCONTRA.AutoSize = true;
             this.lblRESETEARCONTRA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRESETEARCONTRA.Location = new System.Drawing.Point(40, 20);
+            this.lblRESETEARCONTRA.Location = new System.Drawing.Point(53, 25);
+            this.lblRESETEARCONTRA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRESETEARCONTRA.Name = "lblRESETEARCONTRA";
-            this.lblRESETEARCONTRA.Size = new System.Drawing.Size(295, 25);
+            this.lblRESETEARCONTRA.Size = new System.Drawing.Size(377, 31);
             this.lblRESETEARCONTRA.TabIndex = 21;
             this.lblRESETEARCONTRA.Text = "RESETEAR CONTRASEÑA";
             // 
             // frmResetearContraseña
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 261);
+            this.ClientSize = new System.Drawing.Size(512, 203);
             this.Controls.Add(this.txtMAIL);
             this.Controls.Add(this.btnVOLVER);
             this.Controls.Add(this.btnRESETEARCLAVE);
             this.Controls.Add(this.lblMAIL);
             this.Controls.Add(this.lblRESETEARCONTRA);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmResetearContraseña";
-            this.Text = "frmRESETEARCONTRASEÑA";
+            this.Text = "Sistema de Libreria - RESETEAR CONTRASEÑA";
             this.ResumeLayout(false);
             this.PerformLayout();
 

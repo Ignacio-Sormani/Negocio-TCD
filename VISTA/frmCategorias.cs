@@ -34,14 +34,13 @@ namespace VISTA
         public frmCategorias(MODELO.PRODUCTO miProducto)
         {
             InitializeComponent();
+            FormStyle.defaultWindowStyle(this);
 
             oProducto = miProducto;
             cCATEGORIAS = CONTROLADORA.cCATEGORIAS.obtener_instancia();
             btnSELECCIONAR.Visible = true;
             armar_grilla();
         }
-
-
 
         private void armar_grilla()
         {

@@ -43,7 +43,7 @@ namespace VISTA
                                    select accion;
                 foreach (var accionForm in accionesForm)
                 {
-                    if (accionForm.descripcionAccion.Contains("Gestionar"))
+                    if (accionForm.descripcionAccion.Contains("Gestionar") || accionForm.descripcionAccion.Contains("Ver"))
                     {
                         tnG.Text = accionForm.descripcionAccion;
                         if (oGrupo.acciones.Count(acc => (acc.descripcionAccion == tnG.Text)) > 0)
@@ -54,7 +54,7 @@ namespace VISTA
                     else
                     {
                         TreeNode tnA = new TreeNode();
-                        tnA.Text = accionForm.descripcionAccion;
+                        tnA.Text = accionForm.descripcionAccion != null ? accionForm.descripcionAccion : "Ver Logins";
                         tnG.Nodes.Add(tnA);
                         if (oGrupo.acciones.Count(acc => (acc.descripcionAccion == tnA.Text)) > 0)
                             tnA.Checked = true;
@@ -85,8 +85,12 @@ namespace VISTA
                 ckbACTIVO.Enabled = false;
                 btnCANCELAR.Text = "Cerrar";
                 btnGUARDAR.Visible = false;
-                clbUSUARIOS.Enabled = false;
                 tvACCIONES.Enabled = false;
+                if (ACCION =="C")
+                {
+
+                    clbUSUARIOS.Enabled = false;
+                }
             }
         }
 
