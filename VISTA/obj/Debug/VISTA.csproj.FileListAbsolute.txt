@@ -239,3 +239,4 @@ C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\bin\Debug\DocumentFormat.OpenXml.dll
 C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\bin\Debug\SpreadsheetLight.dll
 C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\bin\Debug\SpreadsheetLight.xml
 C:\Users\Usuario\Desktop\Negocio-TCD\VISTA\obj\Debug\VISTA.frmAuditoriaCliente.resources
+C:\Users\nacho\Documents\Diagramas\TRABAJO_FINAL\Negocio-TCD\VISTA\obj\Debug\VISTA.frmAuditoriaCliente.resources

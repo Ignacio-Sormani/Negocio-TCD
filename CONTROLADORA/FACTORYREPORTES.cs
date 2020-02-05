@@ -380,6 +380,7 @@ namespace CONTROLADORA
         }
 
     }
+
     public class DATOSDECLIENTES : DATOSDEREPORTE
     {
         DATOS.NEGOCIO oNegocio;

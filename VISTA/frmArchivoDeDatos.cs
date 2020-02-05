@@ -99,7 +99,16 @@ namespace VISTA
             }
             try
             {
-                var fecha = DateTime.Now.ToString("dd'-'MM'-'yyyy");
+                string fecha = "";
+                if (dtpDESDE.Visible == true && dtpHASTA.Visible == true)
+                {
+                    var fechaDesde = Convert.ToDateTime(dtpDESDE.Value);
+                    var fechaHasta = Convert.ToDateTime(dtpHASTA.Value);
+                    fecha = fechaDesde.ToString("dd'-'MM'-'yyyy") + "_Hasta_" + fechaHasta.ToString("dd'-'MM'-'yyyy");
+                }
+                else {
+                    fecha = DateTime.Now.ToString("dd'-'MM'-'yyyy");
+                }
                 sl.SaveAs(@"C:\Users\nacho\Desktop\Sistema_de_Libreria\Planillas\" + cmbTIPO.Text + "-"+ fecha +".xlsx");
                 MessageBox.Show("La planilla se ha generado con exito.");
             }
